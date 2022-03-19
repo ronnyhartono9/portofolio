@@ -37,7 +37,14 @@
                     // window.requestAnimationFrame(draw);
                 }
             }
-            function ajaxakudong(grace){
+            function ajaxakudong(grace,s){
+                                
+                for(i=1;i<=5;i++){
+                    document.getElementById(i+"a").style.background = 'white';
+                }
+                document.getElementById(s+"a").style.background = 'beige';
+
+
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function(){
 					if (this.readyState == 4 && this.status == 200){
@@ -230,11 +237,11 @@
                             <td style="width:60%">
                                 <table style="width: 100%;">
                                 <tr style="text-align: center;font-family:Arial, Helvetica, sans-serif;font-weight: bold;">
-                                    <td style="width:12%"><a href="#porto"class="apex" onclick="ajaxakudong()">Home</a></td>
-                                    <td style="width:12%"><a href="#coba"onclick="ajaxakudong()">Educations</a></td>
-                                    <td style="width:12%"><a href="#tiga"onclick="ajaxakudong()">Experiences</a></td>
-                                    <td style="width:12%"><a href="#empat"onclick="ajaxakudong('mycv.html')">CV</a></td>
-                                    <td style="width:12%"><a href="#limo"onclick="ajaxakudong()">Contacts</a></td>   
+                                    <td id="1a"style="width:20%"><a  href="#porto"class="apex" onclick="ajaxakudong('a','1')">Home</a></td>
+                                    <td id="2a"style="width:20%"><a  href="#coba"onclick="ajaxakudong('a','2')">Educations</a></td>
+                                    <td id="3a"style="width:20%"><a   href="#tiga"onclick="ajaxakudong('a','3')">Experiences</a></td>
+                                    <td id="4a"style="width:20%"><a   href="#empat"onclick="ajaxakudong('mycv.html','4')">CV</a></td>
+                                    <td id="5a"style="width:20%"><a   href="#limo"onclick="ajaxakudong('a','5')">Contacts</a></td>   
                                 </tr>
                                 </table> 
                             </td> 
