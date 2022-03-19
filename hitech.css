@@ -122,19 +122,18 @@ br {
   position: fixed;
   cursor:pointer;    
   top:50%;
-  width:100px;right:15px;
+  width:55px;right:15px; 
   color: rgb(0, 0, 0); 
   opacity: 1;
 }
 #k {
   border-radius: 14px;
   height:40px;
-  
   overflow:hidden;
   position: fixed;
   cursor:pointer;
   bottom:10%;
-  width:20%;left: 70%;
+  width:20%;right:15px; 
   height:40%;
   color: brown;
   background-color: khaki;
