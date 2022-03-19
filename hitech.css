@@ -1,0 +1,215 @@
+body, html{margin:0;padding:0;width:100%;}
+.wolpeper {   
+  background-image: url("back.png"); 
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+a:link { text-decoration: none; }
+.bunder{
+  border-radius:100%;
+  border:solid 2px grey;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  display: inline-block;
+}
+.hrku {
+  background: linear-gradient(to right,white, red, white);
+  border:0px;
+  height: 1px;
+}
+.blek {   
+  background-color:#524949;
+}
+br {
+  content: "";
+  margin: 0.5em;
+  display: block;
+  font-size: 24%;
+}
+.section{   
+  width: 100%; 
+  height: 100%;
+  box-shadow: 0 0 18px #fff; 
+  border: 0px solid black;
+  /* animation: example 1s infinite;
+  animation-direction: alternate; */
+}
+@keyframes example {
+  /*from {background: linear-gradient(#222, #222),linear-gradient(90deg, rgb(236, 13, 13), rgb(255, 217, 0));}
+  to {background: linear-gradient(#222, #222),linear-gradient(90deg,rgb(255, 217, 0),rgb(236, 13, 13)    );}*/
+  from{box-shadow: 0 0 28px rgb(255, 234, 114);} to {box-shadow: 0 0 0px white}
+}
+
+.section2{ height: 80%; background:white;
+  width: 80%;
+  border:1px solid black; 
+}
+.vl {
+  position: relative;
+  border-left: 6px solid green;
+  height: 100%;
+  top:-40%;
+}
+.m{
+  
+  opacity: 0;   
+  border-radius: 2px;
+  border: solid red 0px;
+  font-size: 2vw;
+  word-wrap: break-word;
+}
+.lab{
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: "203px";
+  color: #f35423;
+  opacity:0; 
+  left:800px;box-shadow: 5px 10px 18px #888888;
+}
+.a2{
+  font-size: 25px;font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(221, 44, 0);
+}
+.a3{
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;font-weight: bold;
+}
+.abo{
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(128, 29, 12);font-weight: bold;
+}
+.a4{position: relative;left:10px;
+  font-size: 21px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+  .section table{
+    height: 100%; background:transparent;
+    width: 100%;
+  }
+  #atas {
+    
+    height:35px;
+    text-align: center;
+    overflow:hidden;
+    position: fixed;
+    cursor:pointer;    
+    top: 0%;
+    width: 100%;
+    color: brown;
+    background-color: white;
+    opacity: 1;z-index: 200;
+}
+  #info {
+    border-radius: 14px;
+    height:40px;
+    overflow:hidden;
+    position: fixed;
+    cursor:pointer;    
+    bottom:0%;
+    width:20%;left: 80%;
+    color: brown;
+    background-color: khaki;
+    opacity: 1;
+}
+#tengen { 
+  height:150px;
+  overflow:hidden;
+  position: fixed;
+  cursor:pointer;    
+  top:50%;
+   
+  width:5%;right: 0%;
+  color: rgb(0, 0, 0); 
+  opacity: 1;
+}
+#k {
+  border-radius: 14px;
+  height:40px;
+  
+  overflow:hidden;
+  position: fixed;
+  cursor:pointer;
+  bottom:10%;
+  width:20%;left: 70%;
+  height:40%;
+  color: brown;
+  background-color: khaki;
+  opacity: 1;
+}
+div.bottom { text-align: center;
+  vertical-align: bottom;
+  position: relative;
+  text-align: center; 
+  height: 0%;
+  width: 100%;
+  bottom: 0%;
+  border: 0px solid #8c07c0;
+} 
+ 
+.lbl{
+  opacity: 0.5;
+  position: relative;
+  left:10px;
+  transition: all 2s ;
+  font-size: 10px;
+  cursor: pointer;
+}
+ 
+
+.dv {
+    border-radius: 4px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: all 2s ;
+    cursor: pointer;color:yellow;
+}
+.fadeout {
+ opacity: 0;
+}
+
+
+
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px; 
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button ooo { /*untuk tulisan */
+    cursor: pointer;
+    display: inline-block;
+    position: relative;    
+    transition: 0.5s;
+  }
+  
+  .button ooo:after {  /*untuk setelah tulisan di dalam*/
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover ooo {
+    padding-right: 25px; 
+  }
+  
+  .button:hover ooo:after {
+    opacity: 1;
+    right: 0;
+  }
