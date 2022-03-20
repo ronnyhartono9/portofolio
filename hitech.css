@@ -6,7 +6,7 @@ body, html{margin:0;padding:0;width:100%;}
 }
 .kelas {
  font-weight: bold;
- font-size: 25px;
+ font-size: 2vw;
  color:blue;
  vertical-align: middle;
  word-wrap: break-word;
