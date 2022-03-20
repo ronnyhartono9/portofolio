@@ -6,9 +6,11 @@ body, html{margin:0;padding:0;width:100%;}
 }
 .kelas {
  font-weight: bold;
- font-size: 1vw;
+ font-size: 25px;
  color:blue;
  vertical-align: middle;
+ word-wrap: break-word;
+
 }
 a:link { text-decoration: none; }
 .bunder{
