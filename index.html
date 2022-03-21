@@ -43,7 +43,7 @@
                     document.getElementById(i+"a").style.background = 'white';
                 }
                 document.getElementById(s+"a").style.background = 'beige';
-
+                document.getElementById(s+"a").style.transition = "all 0.5s";
 
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function(){
@@ -235,8 +235,7 @@
     <div style="overflow:scroll;position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">	
         <div style="background-color: transparent;" >
             <center>
-              <Div id="atas"> 
-
+              <Div id="atas">
                 <a href="#porto" onclick="ajaxakudong('a','1')" >
                     <div class="kelas" id="1a" style="border-radius:5px;background-color: white;height: 120%;float:left;width: 20%;";>
                         Home
