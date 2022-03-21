@@ -9,7 +9,9 @@ body, html{margin:0;padding:0;width:100%;}
  font-size: 1.5vw;
  color:blue;
  vertical-align: middle;
- word-wrap: break-word; 
+ word-wrap: break-word;
+ align-content: center;
+ 
 }
 
 @media screen and (max-width: 800px) {
