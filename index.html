@@ -42,7 +42,449 @@
             // }
 
             function ajaxakudong(grace,s,kelir){
+                                <!DOCTYPE html>
+<html>
+<meta name="theme-color"content="olivedrab"/>
+<meta name="viewport"content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css"href="hitech.css"> 
+    <head> 
+        <style>body, html {height: 100%;margin: 0;}.bg{background-image: url("back.png");height:100%;background-position: center;background-repeat: no-repeat;background-size: 100% 100%;}</style>
+        <script type="text/javascript">         
+        //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
+        //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
+            function init() { window.requestAnimationFrame(draw); }
+            function draw() {
+                var canvas = document.getElementById('ccku');
+              
+                if (canvas.getContext) {
+                    var time = new Date();
+                  var l = time.getSeconds();
+                
+                  console.log(" detike "+l);
+                    var ctx = canvas.getContext('2d');
+                    ctx.clearRect(0,0,canvas.width,canvas.height);
+                    ctx.beginPath();
+                    ctx.moveTo(75, 40);
+                    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+                    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+                    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+                    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+                    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+                    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+                    ctx.fillStyle="red";
+                    ctx.fill();
+
+                    // ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+                    // ctx.rotate(20 * Math.PI / 180);
+                    // ctx.clearRect(0,0,canvas.width,canvas.height);
+                    // ctx.translate(105, 0);
+                    // window.requestAnimationFrame(draw);
+                }
+            }
+            function ajaxakudong(grace,s){
                                 
+                for(i=1;i<=5;i++){
+                    document.getElementById(i+"a").style.background = 'white';
+                }
+                document.getElementById(s+"a").style.background = 'beige';
+
+
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function(){
+					if (this.readyState == 4 && this.status == 200){
+						document.getElementById("f").innerHTML=this.responseText;
+					}
+				};			
+				xhttp.open("GET",grace,true);xhttp.send();
+			}
+ 
+            var pro = new IntersectionObserver(function(entries) {
+                    var dot = document.getElementById("1");
+                    if(entries[0].isIntersecting === true){
+                    dot.style.backgroundColor = 'grey';
+                    dot.style.border = "0px";
+                    dot.style.borderColor = "white";
+                    dot.style.width = "18px";
+                    dot.style.height = "18px"; 
+                    }
+                    else{
+                        dot.style.backgroundColor = 'transparent';
+                        dot.style.border = "solid 2px grey";
+                        dot.style.width = "12px";
+                        dot.style.height = "12px"; 
+                    }
+                    dot.style.transition = "all 1s";
+                }, { threshold: [0.5] });     
+
+            var section2 = new IntersectionObserver(function(entries) {
+                var dot = document.getElementById("2");
+                if(entries[0].isIntersecting === true){
+                   
+                   tran3("masuk");
+                   dot.style.backgroundColor = 'grey';
+                   dot.style.border = "0px";
+                   dot.style.borderColor = "white";
+                   dot.style.width = "18px";
+                   dot.style.height = "18px"; 
+                }
+                else{  tran3("metu"); 
+                    dot.style.backgroundColor = 'transparent';
+                    dot.style.border = "solid 2px grey";
+                    dot.style.width = "12px";
+                    dot.style.height = "12px"; 
+                }
+                dot.style.transition = "all 1s";
+            }, { threshold: [0.5] });
+
+            var telu = new IntersectionObserver(function(entries) {
+                var dot = document.getElementById("3");
+                if(entries[0].isIntersecting === true){                  
+                    dot.style.backgroundColor = 'grey';
+                   dot.style.border = "0px";
+                   dot.style.borderColor = "white";
+                   dot.style.width = "18px";
+                   dot.style.height = "18px"; 
+                }
+                else{                    
+                    dot.style.backgroundColor = 'transparent';
+                    dot.style.border = "solid 2px grey";
+                    dot.style.width = "12px";
+                    dot.style.height = "12px"; 
+                }
+                dot.style.transition = "all 1s";
+            }, { threshold: [0.5] });
+
+            var papat = new IntersectionObserver(function(entries) {
+                var dot = document.getElementById("4");
+                if(entries[0].isIntersecting === true){                  
+                    dot.style.backgroundColor = 'grey';
+                   dot.style.border = "0px";
+                   dot.style.borderColor = "white";
+                   dot.style.width = "18px";
+                   dot.style.height = "18px"; 
+                }
+                else{                    
+                    dot.style.backgroundColor = 'transparent';
+                    dot.style.border = "solid 2px grey";
+                    dot.style.width = "12px";
+                    dot.style.height = "12px"; 
+                }
+                dot.style.transition = "all 1s";
+            }, { threshold: [0.5] });  
+
+            var lima = new IntersectionObserver(function(entries) {
+                var dot = document.getElementById("5");
+                if(entries[0].isIntersecting === true){                  
+                    dot.style.backgroundColor = 'grey';
+                   dot.style.border = "0px";
+                   dot.style.borderColor = "white";
+                   dot.style.width = "18px";
+                   dot.style.height = "18px"; 
+                }
+                else{                    
+                    dot.style.backgroundColor = 'transparent';
+                    dot.style.border = "solid 2px grey";
+                    dot.style.width = "12px";
+                    dot.style.height = "12px"; 
+                }
+                dot.style.transition = "all 1s";
+            }, { threshold: [0.5] });                          
+
+            function mlaku(){
+                 var element = document.getElementById("vd2"); 
+                 element.style.opacity= "0";
+                 pro.observe(document.querySelector("#porto")); 
+                 section2.observe(document.querySelector("#coba"));
+                 telu.observe(document.querySelector("#tiga"));
+                 papat.observe(document.querySelector("#empat"));
+                 lima.observe(document.querySelector("#limo"));
+                 draw();
+            }
+            function tran1(){
+                var element = document.getElementById("ll");         
+                if(element.style.left == "10px" || element.style.left == ""  ){
+                    element.style.left = "300px";
+                    element.style.fontSize= "100px";
+                    element.style.opacity= "1";  
+                }else{
+                    element.style.left = "10px";
+                    element.style.fontSize= "10px";
+                    element.style.opacity= "0.5";  
+                }
+                element.style.transition = "all 2s";
+            }
+            function tran2(){
+                var element = document.getElementById("vd");         
+                if(element.style.width == "100px" || element.style.width == ""  ){
+                    element.style.width = "300px";
+                    element.style.background = "blue";
+                }else{
+                    element.style.width = "100px";
+                    element.style.background = "red";
+                }
+                element.style.transition = "all 2s";
+            }
+            function tran3(st){
+                var element = document.getElementById("vd2");
+                element.style.opacity= "0";
+
+                    if(st=="masuk"){
+                        element.style.opacity= "1";
+                    }else{
+                        element.style.opacity= "0";
+                    }
+
+                
+                element.style.transition = "all 1.5s"; 
+            }
+            function popup(){
+                            var element = document.getElementById("info"); 
+                            var element2 = document.getElementById("ndelik"); 
+                            var element3 = document.getElementById("ndas");  
+
+                            if(element.style.height == "40px" || element.style.height == ""  ){
+                                element.style.bottom= "0%";element.style.height= "150px";
+                                document.getElementById("togel").innerHTML="Close(X)";
+                                element2.style.top= "0px";
+
+                            }else{
+                                element.style.bottom= "0%";element.style.height= "40px";
+                                document.getElementById("togel").innerHTML="Click me";
+                                element2.style.top= "460px";
+                                 
+                            }
+                            element.style.transition = "all 2s";                   
+                            element2.style.transition = "all 2s";
+                            element2.style.transitionDelay = "1s";
+                            element3.style.transition = "all 2s";
+            } 
+            function test(event){
+                var x = event.clientX;
+                var y = event.clientY;
+               // console.log(x);
+            }
+            init();
+        </script>
+    </head>
+
+<body onload="mlaku()" onmousemove="test(event)" style="background-color: grey;" >
+  <div class="bg"> 
+    <div style="overflow:scroll;position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">	
+        <div style="background-color: transparent;" >
+            <center>
+              <Div id="atas">
+
+                <div style="background-color: white;height: 100%;float:left;width:40%;";>
+                     
+                </div>
+
+                <a href="#porto"class="apex" onclick="ajaxakudong('a','1')" ><div class="kelas" id="1a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
+                    Home
+                </div></a>
+
+                <a  href="#coba"onclick="ajaxakudong('a','2')"><div class="kelas" id="2a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
+                    Educations
+                </div></a>
+
+                <a   href="#tiga"onclick="ajaxakudong('a','3')"><div class="kelas" id="3a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
+                    Experiences
+                </div></a>
+
+                <a   href="#empat"onclick="ajaxakudong('mycv.html','4')"><div class="kelas" id="4a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
+                    CV
+                </div></a>
+
+                <a   href="#limo"onclick="ajaxakudong('a','5')"><div class="kelas" id="5a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
+                    Contacts
+                </div></a> 
+                 
+              </Div>
+            </center> 
+        </div>
+        
+        <div id="k" style="background-color: transparent;" >
+            <center>                
+              <Div id="ndelik"style="width: 100px;height: 100px;background-color: gold;position: relative;top:460px;"> </Div>
+            </center> 
+        </div>
+        <div id="info"onclick="popup()">            
+            <center>
+                <a   style="cursor: pointer;"id="togel">Click me</a><br>
+                Ronny Hartono<br><br>
+                <img src="wait.jpg">
+            </center> 
+        </div>
+
+        <div id="tengen">
+            <center>
+                <table>
+                    <tr>
+                        <td><a href="#porto"></a><span id="1"class="bunder"></span></td>
+                        <td><a href="#porto">1</a></td>
+                    </tr>
+                    <tr>
+                        <td><span id="2"class="bunder"></span></td>
+                        <td><a href="#coba">2</a> </td>
+                    </tr>
+                    <tr>
+                        <td><span id="3"class="bunder"></span></td>
+                        <td><a href="#tiga">3</a></td>
+                    </tr> 
+                    <tr>
+                        <td><span id="4"class="bunder"></span></td>
+                        <td><a href="#empat">4</a> </td>
+                    </tr>
+                    <tr>
+                        <td><span id="5"class="bunder"></span></td>
+                        <td><a href="#limo">5</a> </td>
+                    </tr>                                                                                
+                </table> 
+            </center> 
+        </div>
+ 
+    
+
+        <div class="section" id="porto" style="background-color: transparent;">
+            <div style="height: 50px;">
+                 
+            </div>
+            <table class="table">
+                <tr style="height: 15%;">
+                    <td colspan="2" align="center">
+                      <table class="table"1>
+                          <tr style="font-size: 15px;font-weight: bold;font-family: Arial, Helvetica, sans-serif;">
+                              <td style="width: 30%;font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                                <br><br><br><br><br><br><br><br><br><br><strong>PortoFolio</strong></td>
+                              <td style="width: 70%;">
+                                  
+                             </td>
+                          </tr>
+                      </table>
+                    </td>
+                </tr>
+                <tr style="background-color: transparent; width:100%; height:85%; vertical-align: top;">
+                    <td><canvas id="ccku" width="200" height="200"></canvas>
+                         <div id="f"></div>
+                    </td> 
+                </tr>
+            </table> 
+        </div> 
+
+        <div class="section"style="background-color: white" id="coba">      
+            <table class="table" style="background-color: beige">
+                <tr align="left"style="height:10%; vertical-align: top;"><td>
+                    <div style="height: 50px;">
+                 
+                    </div>
+                    <h1>Education</h1> 
+                </td></tr>
+                <tr align="center"style="height:70%; ">
+                    <td>
+                        <a style="cursor: pointer;" id="p1" onclick="tran3()">Fade in !>></a>
+                        <div class="fadeout" id="vd2"style="background-color: rgb(177, 158, 158);height: 200px;width: 300px;vertical-align: middle;">
+                            <center>
+                                <table style="background-color: white; width:50%; height:50%;" border="1">
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            3
+                                        </td>
+                                    </tr>
+                                </table>
+                            </center>
+                        </div>                        
+                    </td>
+                </tr>
+                <tr align="center"style="height:20%; ">
+                    <td>
+                        <div class="bottom">
+                            <strong>God Will Always Love You </strong>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="tiga">
+            <table class="table" style="background-color: beige";>
+                <tr>
+                    <td colspan="2" align="left">
+                        <h1>Experiences</h1>
+                    </td>
+                </tr>
+                <tr style="background-color: white; width:100%; height:70%; vertical-align: top;">
+                    <td style="width: 50%;">
+                        <a style="cursor: pointer;" id="p1" onclick="tran1()">Zoom and slide ! >></a><br>
+                        <a class="lbl"id="ll">ease effect  </a><br> 
+                        <a style="cursor: pointer;" id="p1" onclick="tran2()">Stretch and change color ! >></a>
+                        <div class="dv"id="vd">trial</div><br>
+                        <button class="button"><ooo>Hover </ooo></button><br>
+                    </td>
+                    <td style="width: 50%;"> 
+                          
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" style="background-color: beige" id="empat">
+            <table class="table">
+                <tr align="left"style="height:10%; vertical-align: top;"><td>
+                    <div style="height: 50px;">
+                 
+                    </div>
+                    <h1>CV</h1>
+                </td></tr>
+                <tr align="center"style="height:70%; ">
+                    <td>
+                       content
+                    </td>
+                </tr>
+                <tr align="center"style="height:20%; ">
+                    <td>
+                        <div class="bottom">
+                            <strong>There is no end to God's Love </strong>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section"  id="limo">
+            <table  class="table" style="background-color: beige;">
+                <tr align="left"style="height:10%; vertical-align: top;"><td>
+                        <div style="height: 50px;">
+                     
+                        </div>
+                        <h1>Contacts</h1>
+                </td></tr>
+                <tr align="center"style="height:70%; ">
+                    <td>
+                       content
+                    </td>
+                </tr>
+                <tr align="center"style="height:20%; ">
+                    <td>
+                        <div class="bottom">
+                            <strong>There is no end to God's Love </strong>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+    </body>
+</html>
                 for(i=1;i<=5;i++){
                     document.getElementById(i+"a").style.background = 'white';
                 }
