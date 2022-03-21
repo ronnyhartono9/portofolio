@@ -14,7 +14,7 @@ body, html{margin:0;padding:0;width:100%;}
 
 @media screen and (max-width: 800px) {
   .kelas {
-    font-size: 12pt;
+    font-size: 9pt;
   }
 }
 
@@ -125,7 +125,8 @@ br {
     position: fixed;
     cursor:pointer;    
     bottom:0%;
-    width:150px;right: 0px;
+    width:300px;
+    right: -70px;
     color: brown;
     background-color: khaki;
     opacity: 1;
