@@ -44,7 +44,7 @@
                     document.getElementById(i+"a").style.background = 'white';
                 }
                 document.getElementById(s+"a").style.background = 'beige';
-
+                document.getElementById(s+"a").style.transition = "ease-in-out 0.5s";
 
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function(){
@@ -62,7 +62,8 @@
                     dot.style.border = "0px";
                     dot.style.borderColor = "white";
                     dot.style.width = "18px";
-                    dot.style.height = "18px"; 
+                    dot.style.height = "18px";
+                    ajaxakudong('a','1');
                     }
                     else{
                         dot.style.backgroundColor = 'transparent';
@@ -83,6 +84,7 @@
                    dot.style.borderColor = "white";
                    dot.style.width = "18px";
                    dot.style.height = "18px"; 
+                   ajaxakudong('a','2');
                 }
                 else{  tran3("metu"); 
                     dot.style.backgroundColor = 'transparent';
@@ -101,6 +103,7 @@
                    dot.style.borderColor = "white";
                    dot.style.width = "18px";
                    dot.style.height = "18px"; 
+                   ajaxakudong('a','3');
                 }
                 else{                    
                     dot.style.backgroundColor = 'transparent';
@@ -119,6 +122,7 @@
                    dot.style.borderColor = "white";
                    dot.style.width = "18px";
                    dot.style.height = "18px"; 
+                   ajaxakudong('a','4');
                 }
                 else{                    
                     dot.style.backgroundColor = 'transparent';
@@ -137,6 +141,7 @@
                    dot.style.borderColor = "white";
                    dot.style.width = "18px";
                    dot.style.height = "18px"; 
+                   ajaxakudong('a','5');
                 }
                 else{                    
                     dot.style.backgroundColor = 'transparent';
