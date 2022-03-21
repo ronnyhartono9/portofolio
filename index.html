@@ -4,40 +4,44 @@
 <meta name="viewport"content="width=device-width,initial-scale=1">
 <link rel="stylesheet" type="text/css"href="hitech.css"> 
     <head> 
-        <style>body, html {height: 100%;margin: 0;}.bg{background-image: url("back.png");height:100%;background-position: center;background-repeat: no-repeat;background-size: 100% 100%;}</style>
+        <style>body, html {height: 100%;margin: 0;}.bg{
+            background-color: white;
+            background-image: url("bagck.png");height:100%;background-position: center;background-repeat: no-repeat;background-size: 100% 100%;}</style>
         <script type="text/javascript">         
         //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
         //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
             function init() { window.requestAnimationFrame(draw); }
-            function draw() {
-                var canvas = document.getElementById('ccku');
+            
+            // function draw() {
+            //     var canvas = document.getElementById('ccku');
               
-                if (canvas.getContext) {
-                    var time = new Date();
-                  var l = time.getSeconds();
+            //     if (canvas.getContext) {
+            //         var time = new Date();
+            //       var l = time.getSeconds();
                 
-                  console.log(" detike "+l);
-                    var ctx = canvas.getContext('2d');
-                    ctx.clearRect(0,0,canvas.width,canvas.height);
-                    ctx.beginPath();
-                    ctx.moveTo(75, 40);
-                    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-                    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-                    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-                    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-                    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-                    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-                    ctx.fillStyle="red";
-                    ctx.fill();
+            //       console.log(" detike "+l);
+            //         var ctx = canvas.getContext('2d');
+            //         ctx.clearRect(0,0,canvas.width,canvas.height);
+            //         ctx.beginPath();
+            //         ctx.moveTo(75, 40);
+            //         ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+            //         ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+            //         ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+            //         ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+            //         ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+            //         ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+            //         ctx.fillStyle="red";
+            //         ctx.fill();
 
-                    // ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
-                    // ctx.rotate(20 * Math.PI / 180);
-                    // ctx.clearRect(0,0,canvas.width,canvas.height);
-                    // ctx.translate(105, 0);
-                    // window.requestAnimationFrame(draw);
-                }
-            }
-            function ajaxakudong(grace,s){
+            //         // ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+            //         // ctx.rotate(20 * Math.PI / 180);
+            //         // ctx.clearRect(0,0,canvas.width,canvas.height);
+            //         // ctx.translate(105, 0);
+            //         // window.requestAnimationFrame(draw);
+            //     }
+            // }
+
+            function ajaxakudong(grace,s,kelir){
                                 
                 for(i=1;i<=5;i++){
                     document.getElementById(i+"a").style.background = 'white';
@@ -63,15 +67,25 @@
                     dot.style.width = "18px";
                     dot.style.height = "18px";
                     ajaxakudong('a','1');
+                    document.getElementById("lef").style.left= "0px";
+                    document.getElementById("lef").style.opacity= 1;
+                    document.getElementById("lef").style.transition = "ease-in-out 2.5s";
+                    document.getElementById("rit").style.opacity= 1;
+                    document.getElementById("rit").style.transition = "ease-in-out 2.5s"; 
                     }
                     else{
                         dot.style.backgroundColor = 'transparent';
                         dot.style.border = "solid 2px grey";
                         dot.style.width = "12px";
-                        dot.style.height = "12px"; 
+                        dot.style.height = "12px";
+                        document.getElementById("lef").style.left= "-50%";
+                        document.getElementById("lef").style.opacity= 0;
+                        document.getElementById("lef").style.transition = "ease-in-out 0.5s";
+                        document.getElementById("rit").style.opacity= 0;
+                        document.getElementById("rit").style.transition = "ease-in-out 0.5s";
                     }
                     dot.style.transition = "all 1s";
-                }, { threshold: [0.5] });     
+                }, { threshold: [0.5] });
 
             var section2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("2");
@@ -158,7 +172,7 @@
                  telu.observe(document.querySelector("#tiga"));
                  papat.observe(document.querySelector("#empat"));
                  lima.observe(document.querySelector("#limo"));
-                 draw();
+                // draw();
             }
 
             function tran1(){
@@ -226,7 +240,7 @@
                // console.log(x);
             }
             
-            init();
+           // init();
         </script>
     </head>
 
@@ -236,12 +250,11 @@
         <div style="background-color: transparent;" >
             <center>
               <Div id="atas">
-                <a href="#porto" onclick="ajaxakudong('a','1')" >
+                <a href="#porto" onclick="ajaxakudong('a','1','white')" >
                     <div class="kelas" id="1a" style="border-radius:5px;background-color: white;height: 120%;float:left;width: 20%;";>
                         <div style="position: relative; top:15px">
                             Home
                         </div>
-                        
                     </div>
                 </a> 
 
@@ -307,35 +320,44 @@
  
     
 
-        <div class="section" id="porto" style="background-color: transparent;">
-            <div style="height: 50px;">
-                 
-            </div>
+        <div class="section" id="porto" style="background-color: beige;">
+        <table >
+            <tr style="height: 40px;">
+                <td>
+                    0
+                </td>
+            </tr>
+            <tr style="height: 30%;">
+                <td align="center">
+                    <div id="rit" style=" position: relative;opacity: 0; ">
+                        <img src="pp.jpg" style="  border-radius: 200px; width: 25%;height: 25%;"> 
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="vertical-align: top;  ">
+                     <div id="lef" style=" position: relative;font-size: 14pt; width: 70%; opacity: 0;word-wrap: break-word;
+                     left: -50%;text-align: center; background-color: transparent;">
+                        <center> 
+                            <a style="font-size: 25px;"> <strong>Ronny Hartono</strong></a>  <br> 
+                           Latar belakang pendidikan saya sangat memuaskan serta memiliki kemampuan manajemen dan marketing yang baik. saya menguasai beberapa bahasa pemrograman seperti Delphi, macro, Php, html, javascript serta Java dan saya 
+                            juga sangat menguasai bahasa-bahasa sql seperti SQL Server dan MySQL. Saya juga memiliki pengalaman bekerja dalam sebuah organisasi.  
+                          
+                        </center>
+                    </div>
+
+                   
+                </td>
+            </tr>
+        </table>
             
-            <table class="table">
-                <tr style="height: 15%;">
-                    <td colspan="2" align="center">
-                      <table class="table"1>
-                          <tr style="font-size: 15px;font-weight: bold;font-family: Arial, Helvetica, sans-serif;">
-                              <td style="width: 30%;font-size: 30px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-                                <br><br><br><br><br><br><br><br><br><br><strong>PortoFolio</strong></td>
-                              <td style="width: 70%;">
-                                  
-                             </td>
-                          </tr>
-                      </table>
-                    </td>
-                </tr>
-                <tr style="background-color: transparent; width:100%; height:85%; vertical-align: top;">
-                    <td><canvas id="ccku" width="200" height="200"></canvas>
-                         <div id="f"></div>
-                    </td> 
-                </tr>
-            </table> 
-        </div> 
+
+            <div id="f"></div> 
+
+        </div>
 
         <div class="section"style="background-color: white" id="coba">      
-            <table class="table" style="background-color: beige">
+            <table class="table" style="background-color: green">
                 <tr align="left"style="height:10%; vertical-align: top;"><td>
                     <div style="height: 50px;">
                  
@@ -371,7 +393,7 @@
                 <tr align="center"style="height:20%; ">
                     <td>
                         <div class="bottom">
-                            <strong>God Will Always Love You </strong>
+                             
                         </div>
                     </td>
                 </tr>
