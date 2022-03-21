@@ -61,7 +61,8 @@
                     dot.style.border = "0px";
                     dot.style.borderColor = "white";
                     dot.style.width = "18px";
-                    dot.style.height = "18px"; 
+                    dot.style.height = "18px";
+                    ajaxakudong('a','1');
                     }
                     else{
                         dot.style.backgroundColor = 'transparent';
@@ -74,14 +75,14 @@
 
             var section2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("2");
-                if(entries[0].isIntersecting === true){
-                   
+                if(entries[0].isIntersecting === true){                   
                    tran3("masuk");
                    dot.style.backgroundColor = 'grey';
                    dot.style.border = "0px";
                    dot.style.borderColor = "white";
                    dot.style.width = "18px";
-                   dot.style.height = "18px"; 
+                   dot.style.height = "18px";
+                   ajaxakudong('a','2');
                 }
                 else{  tran3("metu"); 
                     dot.style.backgroundColor = 'transparent';
@@ -99,7 +100,8 @@
                    dot.style.border = "0px";
                    dot.style.borderColor = "white";
                    dot.style.width = "18px";
-                   dot.style.height = "18px"; 
+                   dot.style.height = "18px";
+                   ajaxakudong('a','3');
                 }
                 else{                    
                     dot.style.backgroundColor = 'transparent';
@@ -117,7 +119,8 @@
                    dot.style.border = "0px";
                    dot.style.borderColor = "white";
                    dot.style.width = "18px";
-                   dot.style.height = "18px"; 
+                   dot.style.height = "18px";
+                   ajaxakudong('a','4');
                 }
                 else{                    
                     dot.style.backgroundColor = 'transparent';
@@ -135,7 +138,8 @@
                    dot.style.border = "0px";
                    dot.style.borderColor = "white";
                    dot.style.width = "18px";
-                   dot.style.height = "18px"; 
+                   dot.style.height = "18px";
+                   ajaxakudong('a','5');
                 }
                 else{                    
                     dot.style.backgroundColor = 'transparent';
@@ -156,6 +160,7 @@
                  lima.observe(document.querySelector("#limo"));
                  draw();
             }
+
             function tran1(){
                 var element = document.getElementById("ll");         
                 if(element.style.left == "10px" || element.style.left == ""  ){
@@ -169,6 +174,7 @@
                 }
                 element.style.transition = "all 2s";
             }
+
             function tran2(){
                 var element = document.getElementById("vd");         
                 if(element.style.width == "100px" || element.style.width == ""  ){
@@ -180,20 +186,18 @@
                 }
                 element.style.transition = "all 2s";
             }
+            
             function tran3(st){
                 var element = document.getElementById("vd2");
                 element.style.opacity= "0";
-
                     if(st=="masuk"){
                         element.style.opacity= "1";
-                        element.style.transition = "all 1.5s"; 
+                        element.style.transition = "all 1.5s";
                     }else{
                         element.style.opacity= "0";
                     }
-
-                
-               
             }
+            
             function popup(){
                             var element = document.getElementById("info"); 
                             var element2 = document.getElementById("ndelik"); 
@@ -215,11 +219,13 @@
                             element2.style.transitionDelay = "1s";
                             element3.style.transition = "all 2s";
             } 
+            
             function test(event){
                 var x = event.clientX;
                 var y = event.clientY;
                // console.log(x);
             }
+            
             init();
         </script>
     </head>
@@ -236,7 +242,7 @@
                         Home
                     </div>
                 </a> 
-                
+
                 <a  href="#coba"onclick="ajaxakudong('a','2')"><div class="kelas" id="2a" style="border-radius:5px;background-color: white;height: 120%;float:left;width: 20%;";>
                     Educations
                 </div></a>
