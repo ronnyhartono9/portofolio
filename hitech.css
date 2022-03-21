@@ -20,6 +20,12 @@ body, html{margin:0;padding:0;width:100%;}
   }
 }
 
+@media screen and (max-width: 800px) {
+  #lef {
+    font-size: 12pt;
+  }
+}
+
 a:link { text-decoration: none; }
 .bunder{
   border-radius:100%;
@@ -121,7 +127,7 @@ br {
     opacity: 1;z-index: 200;
 }
   #info {
-    border-radius: 14px;
+    border-radius: 6px;
     height:90px;
     overflow:hidden;
     position: fixed;
@@ -131,6 +137,7 @@ br {
     color: brown;
     background-color: khaki;
     opacity: 1;
+    text-align: left;
 }
 #tengen { 
   height:150px;
