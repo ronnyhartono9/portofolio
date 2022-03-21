@@ -110,10 +110,10 @@ br {
   #atas {
     height:40px;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: text-bottom;
     overflow:hidden;
     position: fixed;
-    cursor:pointer;    
+    cursor:pointer;
     top: 0%;
     width: 100%;
     color: brown;
