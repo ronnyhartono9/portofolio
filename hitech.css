@@ -9,19 +9,11 @@ body, html{margin:0;padding:0;width:100%;}
  font-size: 1.5vw;
  color:blue;
  vertical-align: middle;
- word-wrap: break-word;
- align-content: center;
- 
+ word-wrap: break-word; 
 }
 
 @media screen and (max-width: 800px) {
   .kelas {
-    font-size: 9pt;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #lef {
     font-size: 12pt;
   }
 }
@@ -114,12 +106,12 @@ br {
     width: 100%;
   }
   #atas {
-    height:40px;
+    height:50px;
     text-align: center;
-    vertical-align: text-bottom;
+    vertical-align: middle;
     overflow:hidden;
     position: fixed;
-    cursor:pointer;
+    cursor:pointer;    
     top: 0%;
     width: 100%;
     color: brown;
@@ -127,17 +119,16 @@ br {
     opacity: 1;z-index: 200;
 }
   #info {
-    border-radius: 6px;
-    height:90px;
+    border-radius: 14px;
+    height:40px;
     overflow:hidden;
     position: fixed;
     cursor:pointer;    
-    bottom:-9%;
-    width:150px;right: 0px;
+    bottom:0%;
+    width:300px;right: 0px;
     color: brown;
     background-color: khaki;
     opacity: 1;
-    text-align: left;
 }
 #tengen { 
   height:150px;
