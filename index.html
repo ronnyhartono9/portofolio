@@ -186,12 +186,13 @@
 
                     if(st=="masuk"){
                         element.style.opacity= "1";
+                        element.style.transition = "all 1.5s"; 
                     }else{
                         element.style.opacity= "0";
                     }
 
                 
-                element.style.transition = "all 1.5s"; 
+               
             }
             function popup(){
                             var element = document.getElementById("info"); 
@@ -228,29 +229,27 @@
     <div style="overflow:scroll;position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">	
         <div style="background-color: transparent;" >
             <center>
-              <Div id="atas">
+              <Div id="atas"> 
 
-                <div style="background-color: white;height: 100%;float:left;width:40%;";>
-                     
-                </div>
-
-                <a href="#porto"class="apex" onclick="ajaxakudong('a','1')" ><div class="kelas" id="1a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
-                    Home
-                </div></a>
-
-                <a  href="#coba"onclick="ajaxakudong('a','2')"><div class="kelas" id="2a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
+                <a href="#porto" onclick="ajaxakudong('a','1')" >
+                    <div class="kelas" id="1a" style="border-radius:5px;background-color: white;height: 120%;float:left;width: 20%;";>
+                        Home
+                    </div>
+                </a> 
+                
+                <a  href="#coba"onclick="ajaxakudong('a','2')"><div class="kelas" id="2a" style="border-radius:5px;background-color: white;height: 120%;float:left;width: 20%;";>
                     Educations
                 </div></a>
 
-                <a   href="#tiga"onclick="ajaxakudong('a','3')"><div class="kelas" id="3a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
+                <a   href="#tiga"onclick="ajaxakudong('a','3')"><div class="kelas" id="3a" style="border-radius:5px;background-color: white;height: 120%;float:left;width: 20%;";>
                     Experiences
                 </div></a>
 
-                <a   href="#empat"onclick="ajaxakudong('mycv.html','4')"><div class="kelas" id="4a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
+                <a   href="#empat"onclick="ajaxakudong('mycv.html','4')"><div class="kelas" id="4a" style="border-radius:5px;background-color: white;height: 120%;float:left;width: 20%;";>
                     CV
                 </div></a>
 
-                <a   href="#limo"onclick="ajaxakudong('a','5')"><div class="kelas" id="5a" style="border-radius:15px;background-color: white;height: 120%;float:left;width: 12%;";>
+                <a   href="#limo"onclick="ajaxakudong('a','5')"><div class="kelas" id="5a" style="border-radius:5px;background-color: white;height: 120%;float:left;width: 20%;";>
                     Contacts
                 </div></a> 
                  
