@@ -141,7 +141,7 @@ br {
     right: -70px;
     color: brown;
     background-color: khaki;
-    opacity: 1;
+    opacity: 1;z-index:6677;
 }
 #tengen { 
   height:150px;
