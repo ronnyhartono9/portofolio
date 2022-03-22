@@ -18,6 +18,18 @@ body, html{margin:0;padding:0;width:100%;}
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .leh {
+    font-size: 8pt;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hel {
+    font-size: 10pt;
+  }
+}
+
 a:link { text-decoration: none; }
 .bunder{
   border-radius:100%;
@@ -139,7 +151,7 @@ br {
   top:50%;
   width:55px;right:15px; 
   color: rgb(0, 0, 0); 
-  opacity: 1;
+  opacity: 1;z-index: 2002;
 }
 #k {
   border-radius: 14px;
