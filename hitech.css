@@ -46,11 +46,11 @@ vertical-align: middle;
 word-wrap: break-word; 
 }
 
-/* @media screen and (max-width: 800px) {
+ @media screen and (max-width: 800px) {
   .lhe {
-    font-size: 15pt;
+    font-size: 15.5pt;
   }
-} */
+} 
 
 @media screen and (max-width: 800px) {
   .leh {
