@@ -5,13 +5,13 @@
 <link rel="stylesheet" type="text/css"href="hitech.css"> 
     <head> 
         <style>body, html {height: 100%;margin: 0;}
-         .bg{background-image: url("bacfk.png");height:100%;background-position: center;background-repeat: no-repeat;background-size: 100% 100%;}
-       </style>
+         .bg{background-image: url("pp.jpg");height:100%;background-position: center;background-repeat: no-repeat;background-size: 100% 100%;}
+        </style>
         <script type="text/javascript">         
         //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
         //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
         //https://colorlib.com/wp/template/personalportfolio/
-        var myit;var detik = 0;var posakhir;
+        var myit;var detik = 0;var posakhir;var ss;
         const keles = ["navajowhite", "lightskyblue", "palegoldenrod","pink","palegreen"];
             function init() { window.requestAnimationFrame(draw); }
             
@@ -60,6 +60,7 @@
                   document.getElementById(s+"a").style.background =keles[s-1];
 
                   document.getElementById(s+"a").style.transition = "ease-in-out 0.5s";
+                  ss = s;
 
                 clearInterval(myit);
                 detik=0;
@@ -116,10 +117,8 @@
                     //  location.href = "#tiga";
                 }
                 dot.style.transition = "all 1s";
-            }, { threshold: [0.5] });
-            // var section2 = new IntersectionObserver(function(entries) {
-            //      sekalitok=true;
-            // }, { threshold: [1] });
+            }, { threshold: [0.8] });
+           
 
             var telu = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("3");
@@ -138,10 +137,8 @@
                     dot.style.height = "12px"; 
                 }
                 dot.style.transition = "all 1s";
-            }, { threshold: [0.5] });
-            // var telu = new IntersectionObserver(function(entries) {
-            //      sekalitok=true;
-            // }, { threshold: [1] });
+            }, { threshold: [0.8] });
+          
 
             var papat = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("4");
@@ -152,6 +149,7 @@
                    dot.style.width = "18px";
                    dot.style.height = "18px"; 
                     ajaxakudong('a','4');posakhir="empat";
+                    
                 }
                 else{                    
                     dot.style.backgroundColor = 'transparent';
@@ -160,11 +158,8 @@
                     dot.style.height = "12px"; 
                 }
                 dot.style.transition = "all 1s";
-            }, { threshold: [0.5] });
-            // var papat = new IntersectionObserver(function(entries) {
-            //      sekalitok=true;
-            // }, { threshold: [1] });
-
+            }, { threshold: [0.8] });
+           
             var lima = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("5");
                 if(entries[0].isIntersecting === true){                  
@@ -174,6 +169,9 @@
                    dot.style.width = "18px";
                    dot.style.height = "18px"; 
                    ajaxakudong('a','5');posakhir="limo";
+
+                   alert(ss);
+                   
                 }
                 else{                    
                     dot.style.backgroundColor = 'transparent';
@@ -181,12 +179,10 @@
                     dot.style.width = "12px";
                     dot.style.height = "12px"; 
                 }
+               
                 dot.style.transition = "all 1s";
-            }, { threshold: [0.5] });
-            // var lima = new IntersectionObserver(function(entries) {
-            //      sekalitok=true;
-            // }, { threshold: [1] });
-
+            }, { threshold: [0.8] });
+           
             function mlaku(){
                  var element = document.getElementById("vd2"); 
                  element.style.opacity= "0";
@@ -279,14 +275,14 @@
         </script>
     </head>
 
-<body   onload="mlaku()" onmousemove="test(event)" style="background-color: grey;"  >
+<body onload="mlaku()" onmousemove="test(event)" style="background-color: grey;"  >
   <div class="bg"> 
     <div onscroll="sekerol()" id="ooo"style="scroll-behavior: smooth; overflow:scroll;position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">	
         <div style="background-color: transparent;" >
             <center>
               <Div id="atas">
                 <div class="kelas" style="background-color: white;height: 100%;float:left;width:25%;";>
-                    PortoFolio
+                     
                 </div>
 
                 <a href="#porto"onclick="ajaxakudong('a','1','beige')" >
@@ -356,19 +352,76 @@
                     </tr>                                                                                
                 </table> 
             </center> 
-        </div>
- 
-    
+        </div> 
 
-        <div class="section" id="porto" style="background-color: navajowhite;">
-             <table>
-                 <tr style="height: 50px;"><td>
-                    <div style="height: 50px;">
+        <div  id="porto" style="background-color: navajowhite;width: 100%;">
+             <table > 
+                 <tr>
+                     <td style="height: 8%;"> 
+                       <div style="height: 20px;">   </div>
+                    </td>                   
+                 </tr>
+                 <tr>
+                        <td style="height: 92%; vertical-align: top;">
+                                <table  > 
+                                    <tr>
+                                        <td style="width: 2%;">
+                                        </td>
+                                        <td style="width: 98%;">
+                                            <table>
+                                                <tr style="height: 15%;">
+                                                    <td style="vertical-align: top;"> 
+                                                        <div class="hel">
+                                                            <h1>Senior Developer<br>
+                                                                 Ronny Hartono
+                                                            </h1>
+                                                        </div> 
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 30%;">
+                                                    <td>
+                                                        <table >
+                                                            <tr>
+                                                                <td style="width: 70%;vertical-align: middle;">
+                                                                   <div class="lhe">
+                                                                        I have a great background education and have a good management skill. 
+                                                                   <br>
+                                                                        I mastering several programming language such as Delphi, macro, Php, html, 
+                                                                        javascript and Java, I also mastering sql language such as Sql Server and MySql<br>
+                                                                        I also have a experience in working at organization  
+                                                                    </div> 
+                                                                   
+                                                                </td>
+                                                                <td style="width: 30%;height: 50%; vertical-align: middle;">
+                                                                    <img src="pp.jpg" class="responsive" width="177" height="177">
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 55%;vertical-align: top;">
+                                                    <td>
+                                                        <div class="leh">
+                                                            
+                                                         </div>
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                         </td> 
+                                    </tr>
+                                </table>
+                                                
+                        </td>
+                 </tr>
+
+
                  
-                    </div>
-                 </td></tr>
-                 <tr><td>
-                   <table  >
+                    
+                    
+
+
+<!-- 
                        <tr>
                            <td style="width: 10%;"></td>
                            <td style="width: 40%;">
@@ -393,15 +446,9 @@
                                                         I mastering several programming language such as Delphi, macro, Php, html, 
                                                         javascript and Java, I also mastering sql language such as Sql Server and MySql, 
                                                         I also have a experience in working at organization  
-                                                           <!-- I also have a experience in working at organization  
-                                                        I also have a experience in working at organization
-                                                        I also have a experience in working at organization
-                                                        I also have a experience in working at organization
-                                                        I also have a experience in working at organization    -->
-                                                    </center>
-                                                        
-                                                    </a>  
-                                                    <!-- <div style="background-color: yellow; height: 1000px;"></div> -->
+                                                     
+                                                    </center> 
+                                                    </a>   
                                                 </div>
                                                 </p>
                                         </h2>
@@ -413,9 +460,10 @@
                            </td>
                            <td style="width: 50%;">
                              <img src="back.jpg" style="  border-radius: 4px; width: 100%;height: auto;">
-                        
                           </td>
-                       </tr>
+                       </tr> -->
+ 
+
                    </table>
                 </td></tr>
              </table>
