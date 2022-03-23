@@ -12,15 +12,47 @@ body, html{margin:0;padding:0;width:100%;}
  word-wrap: break-word; 
 }
 
+.hel {
+  font-weight: bold;
+  font-size: 15pt; 
+  vertical-align: middle;
+  word-wrap: break-word; 
+ }
+ .responsive {border-radius: 5px;
+  width: 95%;
+  height: auto;
+}
+ .lhe  
+  {
+  font-weight: bold;
+  font-size: 22pt; 
+  vertical-align: middle;
+  word-wrap: break-word; 
+ }
+
+ .leh  
+ {
+ font-weight: bold;
+ font-size: 12pt; 
+ vertical-align: middle;
+ word-wrap: break-word; 
+}
+
 @media screen and (max-width: 800px) {
   .kelas {
     font-size: 8pt;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 800px) {
+  .lhe {
+    font-size: 9pt;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .leh {
-    font-size: 10pt;
+    font-size: 18pt;
   }
 }
 
@@ -117,7 +149,7 @@ br {
     height: 100%; background:transparent;
     width: 100%;
   }
-  #atas {
+  #atas { 
     height:50px;
     text-align: center;
     vertical-align: middle;
