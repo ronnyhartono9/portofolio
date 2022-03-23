@@ -13,36 +13,36 @@
         //https://colorlib.com/wp/template/personalportfolio/
         var myit;var detik = 0;var posakhir;var ss;
         const keles = ["navajowhite", "lightskyblue", "palegoldenrod","pink","palegreen"];
-            function init() { window.requestAnimationFrame(draw); }
+            // function init() { window.requestAnimationFrame(draw); }
             
-            function draw() {
-                var canvas = document.getElementById('ccku');
+            // function draw() {
+            //     var canvas = document.getElementById('ccku');
               
-                if (canvas.getContext) {
-                    var time = new Date();
-                  var l = time.getSeconds();
+            //     if (canvas.getContext) {
+            //         var time = new Date();
+            //       var l = time.getSeconds();
                 
-                  console.log(" detike "+l);
-                    var ctx = canvas.getContext('2d');
-                    ctx.clearRect(0,0,canvas.width,canvas.height);
-                    ctx.beginPath();
-                    ctx.moveTo(75, 40);
-                    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-                    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-                    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-                    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-                    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-                    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-                    ctx.fillStyle="red";
-                    ctx.fill();
+            //       console.log(" detike "+l);
+            //         var ctx = canvas.getContext('2d');
+            //         ctx.clearRect(0,0,canvas.width,canvas.height);
+            //         ctx.beginPath();
+            //         ctx.moveTo(75, 40);
+            //         ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+            //         ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+            //         ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+            //         ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+            //         ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+            //         ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+            //         ctx.fillStyle="red";
+            //         ctx.fill();
 
-                    // ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
-                    // ctx.rotate(20 * Math.PI / 180);
-                    // ctx.clearRect(0,0,canvas.width,canvas.height);
-                    // ctx.translate(105, 0);
-                    // window.requestAnimationFrame(draw);
-                }
-            }
+            //         // ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+            //         // ctx.rotate(20 * Math.PI / 180);
+            //         // ctx.clearRect(0,0,canvas.width,canvas.height);
+            //         // ctx.translate(105, 0);
+            //         // window.requestAnimationFrame(draw);
+            //     }
+            // }
             
             function ngitung(){
                 detik++;
@@ -256,7 +256,7 @@
                 var y = event.clientY;
                // console.log(x);
             }
-            init();
+            // init();
              //     pro.observe(document.querySelector("#porto")); 
                 //  section2.observe(document.querySelector("#coba"));
                 //  telu.observe(document.querySelector("#tiga"));
@@ -319,6 +319,7 @@
               <Div id="ndelik"style="width: 100px;height: 100px;background-color: gold;position: relative;top:460px;"> </Div>
             </center> 
         </div>
+
         <div id="info"onclick="popup()">            
             <center>
                 <a   style="cursor: pointer;"id="togel">Click me</a><br>
@@ -394,7 +395,14 @@
                                                                 </td>
                                                                 <td style="width:50%;height: 50%; vertical-align: middle;">
                                                                       <!-- <img src="pp.jpg" style="width: 100%;   height: auto; border-radius: 5px;" >   -->
-                                                                   
+                                                                     
+                                                                        <table class="bg"border="1" style="width: 100%;height: 100%;">
+                                                                            <tr>
+                                                                                <td > 
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -531,7 +539,7 @@
             </table>
         </div>
         
+     </div>
     </div>
-    </div>
-    </body>
+  </body>
 </html>
