@@ -93,8 +93,8 @@
 
             var section2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("2");
-                if(entries[0].isIntersecting === true){                   
-                   tran3("masuk");
+                if(entries[0].isIntersecting === true){
+                //    tran3("masuk");
                    dot.style.backgroundColor = 'grey';
                    dot.style.border = "0px";
                    dot.style.borderColor = "white";
@@ -103,7 +103,8 @@
                    ajaxakudong('a','2');
                    posakhir="coba";
                 }
-                else{  tran3("metu"); 
+                else{  
+                    // tran3("metu"); 
                     dot.style.backgroundColor = 'transparent';
                     dot.style.border = "solid 2px grey";
                     dot.style.width = "12px";
@@ -132,7 +133,6 @@
                 dot.style.transition = "all 1s";
             }, { threshold: [0.8] });
           
-
             var papat = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("4");
                 if(entries[0].isIntersecting === true){                  
@@ -173,16 +173,61 @@
                
                 dot.style.transition = "all 1s";
             }, { threshold: [0.3] });
+
+            var y1 = new IntersectionObserver(function(entries) {
+                var dot = document.getElementById("yell");
+                if(entries[0].isIntersecting === true){
+                   dot.style.opacity = 0.5;
+                }
+                else{
+                    dot.style.opacity = 0;
+                }
+                dot.style.transition = "all 1s";
+            }, { threshold: [0.5] });
+
+            var y2 = new IntersectionObserver(function(entries) {
+                var dot = document.getElementById("yell");
+                if(entries[0].isIntersecting === true){
+                    dot.style.opacity = 1;
+                }else{                    
+                    dot.style.opacity = 0.5;                
+                }
+                dot.style.transition = "all 1s";
+            }, { threshold: [1] });
+
+            var g1 = new IntersectionObserver(function(entries) {
+                var dot = document.getElementById("gell");
+                if(entries[0].isIntersecting === true){
+                   dot.style.opacity = 0.5;
+                }
+                else{
+                    dot.style.opacity = 0;
+                }
+                dot.style.transition = "all 1s";
+            }, { threshold: [0.5] });
+
+            var g2 = new IntersectionObserver(function(entries) {
+                var dot = document.getElementById("gell");
+                if(entries[0].isIntersecting === true){
+                    dot.style.opacity = 1;
+                }else{                    
+                    dot.style.opacity = 0.5;                
+                }
+                dot.style.transition = "all 1s";
+            }, { threshold: [1] });
            
             function mlaku(){
-                 var element = document.getElementById("vd2"); 
-                 element.style.opacity= "0";
+                //  var element = document.getElementById("vd2"); 
+                // element.style.opacity= "0";
                  pro.observe(document.querySelector("#porto")); 
                  section2.observe(document.querySelector("#coba"));
                  telu.observe(document.querySelector("#tiga"));
                  papat.observe(document.querySelector("#empat"));
                  lima.observe(document.querySelector("#limo"));
-                 
+                    y1.observe(document.querySelector("#yell"));
+                    y2.observe(document.querySelector("#yell"));
+                    g1.observe(document.querySelector("#gell"));
+                    g2.observe(document.querySelector("#gell"));
             }
             function tran1(){
                 var element = document.getElementById("ll");         
@@ -209,9 +254,8 @@
                 element.style.transition = "all 2s";
             }
             function tran3(st){
-                var element = document.getElementById("vd2");
+                // var element = document.getElementById("vd2");
                 element.style.opacity= "0";
-
                     if(st=="masuk"){
                         element.style.opacity= "1";
                         element.style.transition = "all 1.5s"; 
@@ -254,31 +298,28 @@
                 //  papat.observe(document.querySelector("#empat"));
                 //  lima.observe(document.querySelector("#limo")); 
             const divs = ["porto", "coba", "tiga","empat","limo"];
-          
-            function sekerol(){ //kelemahan ku yang terkutuk
+            
+            function sekerol(){ //kelemahan ku yang terkutuk 
                
             }
             function cek(){
                  alert(document.getElementById('lagi').offsetHeight +" "+ document.getElementById('gila').offsetHeight);
             }
             const d = new Date();
+            function nguli(){ }
 
-            function nguli(){                
-                let seconds = d.getSeconds();
-                console.log(seconds);
-            }
-
-                // clearInterval(myit); 
-                // myit = setInterval(nguli, 1000);
+                //   clearInterval(myit); 
+                //   myit = setInterval(nguli, 1000);
 
             // function init() { window.requestAnimationFrame(nguli); }
             // init();
+
         </script>
     </head>
 
 <body onload="mlaku()" onmousemove="test(event)" style="background-color: grey;"  >
   <div class="bg"> 
-    <div onscroll="sekerol()" id="ooo"style="scroll-behavior: smooth; overflow:scroll;position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">	
+    <div onscroll="sekerol()" id="ooo" style="scroll-behavior: smooth; overflow:scroll;position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">	
         <div style="background-color: transparent;" >
             <center>
               <Div id="atas">
@@ -356,8 +397,7 @@
             </center> 
         </div> 
 
-        <div id="porto" style="background-color: navajowhite;width: 100%;height: 100%;">
-        
+        <div id="porto" style="overflow:hidden;background-color: navajowhite;width: 100%;height: 100%;">        
                 <table border="1" style="width: 100%; height: 100%;">
                     <tr>
                         <td align="">
@@ -400,54 +440,33 @@
          
         </div>
 
-        <div class="section"style="background-color: white" id="coba">
-            <table class="table" style="background-color: lightskyblue">
-                <tr align="left"style="height:10%; vertical-align: top;"><td>
-                    <div style="height: 50px;">
-                 
-                    </div>
-                    <h1>Education</h1> 
-                </td></tr>
-                <tr align="center"style="height:70%; ">
-                    <td>
-                        <a style="cursor: pointer;" id="p1" onclick="tran3()">Fade in !>></a>
-                        <center>
-                            <div class="fadeout" id="vd2"style=" float:left;background-color: rgb(177, 158, 158);height: 200px;width: 300px;vertical-align: middle;">
-                                <center>
-                                    <table style="background-color: white; width:50%; height:50%;" border="1">
-                                        <tr>
-                                            <td>
-                                                1
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                2
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                3
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </center>
-                            </div>
-                            <div id="sing" style="width: 100px; height: 200px; float: left; background-color: yellow;">
-
-                            </div>
-                        </center>
-
-                    </td>
-                </tr>
-                <tr align="center"style="height:20%; ">
-                    <td>
-                        <div class="bottom">
-                             
-                        </div>
-                    </td>
-                </tr>
-            </table>
+        <div style="overflow:hidden;background-color: lightskyblue;width: 100%;height: 100%; " id="coba">    
+            <div style=" overflow: scroll;width: 100%; height: 100%; background-color: lightskyblue;">               
+                  <table style="background-color: lightskyblue;width: 100%; " >
+                                <tr align="left"style="height:10%; vertical-align: top;"><td>
+                                    <div style="height: 20px;">
+                                
+                                    </div>
+                                    <h1>Education</h1> 
+                                </td></tr>
+                                <tr align="center"style="height:70%; ">
+                                    <td>
+                                        <table style="width: 100%; overflow: scroll;">
+                                            <tr>
+                                                <td align="right" >
+                                                    <div id="yell" style="border-radius:5px;width: 300px; height: 400px;  background-color: yellow;opacity: 0;">
+                                            
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div id="gell" style="border-radius:5px;width: 300px; height: 400px;  background-color: red;opacity: 0;">  </div>
+                                                </td>
+                                            </tr>
+                                        </table> 
+                                    </td>
+                                </tr> 
+                            </table>  
+            </div>
         </div>
 
         <div class="section" id="tiga">
