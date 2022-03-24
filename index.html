@@ -13,7 +13,7 @@
         //https://colorlib.com/wp/template/personalportfolio/
         var myit;var detik = 0;var posakhir;var ss;
         const keles = ["navajowhite", "lightskyblue", "palegoldenrod","pink","palegreen"];
-            // function init() { window.requestAnimationFrame(draw); }
+             
             
             // function draw() {
             //     var canvas = document.getElementById('ccku');
@@ -60,13 +60,7 @@
                   document.getElementById(s+"a").style.background =keles[s-1];
 
                   document.getElementById(s+"a").style.transition = "ease-in-out 0.5s";
-                  ss = s;
-
-                clearInterval(myit);
-                detik=0;
-                myit = setInterval(ngitung, 1000);
-
-
+                  ss = s; 
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function(){
 					if (this.readyState == 4 && this.status == 200){
@@ -168,9 +162,7 @@
                    dot.style.width = "18px";
                    dot.style.height = "18px"; 
                    ajaxakudong('a','5');posakhir="limo";
-
-                   alert(ss);
-                   
+                   console.log(ss);
                 }
                 else{                    
                     dot.style.backgroundColor = 'transparent';
@@ -180,7 +172,7 @@
                 }
                
                 dot.style.transition = "all 1s";
-            }, { threshold: [0.8] });
+            }, { threshold: [0.3] });
            
             function mlaku(){
                  var element = document.getElementById("vd2"); 
@@ -269,7 +261,18 @@
             function cek(){
                  alert(document.getElementById('lagi').offsetHeight +" "+ document.getElementById('gila').offsetHeight);
             }
-           
+            const d = new Date();
+
+            function nguli(){                
+                let seconds = d.getSeconds();
+                console.log(seconds);
+            }
+
+                // clearInterval(myit); 
+                // myit = setInterval(nguli, 1000);
+
+            // function init() { window.requestAnimationFrame(nguli); }
+            // init();
         </script>
     </head>
 
@@ -425,7 +428,7 @@
                                     </table>
                                 </center>
                             </div>
-                            <div style="width: 100px; height: 200px; float: left; background-color: yellow;">
+                            <div id="sing" style="width: 100px; height: 200px; float: left; background-color: yellow;">
 
                             </div>
                         </center>
@@ -466,24 +469,7 @@
 
         <div style="background-color: pink;height: 100%;" id="empat">
             
-            <table border=1 style="width: 100%; height: 100%;">
-                <tr>
-                    <td colspan="2">
-                        <div style="height: 38px;">
-
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="width: 50%;">
-                         
-                    </td>
-                    <td style="width: 50%;">
-                        <img src="rb.jpg" style="width: 100%;  max-width:300px;  height: auto;">  
-        
-                    </td>
-                </tr>
-            </table>
+            
 
         </div>
 
