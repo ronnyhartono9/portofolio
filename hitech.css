@@ -52,6 +52,8 @@ word-wrap: break-word;
   }
 } 
 
+ 
+
 @media screen and (max-width: 800px) {
   .leh {
     font-size: 18pt;
