@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css"href="hitech.css"> 
     <head> 
         <style>body, html {height: 100%;margin: 0;}
-         .bg{background-image: url("back.jpg");height:100%;background-position: center;background-repeat: no-repeat;background-size: 100% 100%;}
+         .bg{background-image: url("backd.jpg");height:100%;background-position: center;background-repeat: no-repeat;background-size: 100% 100%;}
         </style>
         <script type="text/javascript">         
         //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
@@ -119,7 +119,6 @@
                 dot.style.transition = "all 1s";
             }, { threshold: [0.8] });
            
-
             var telu = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("3");
                 if(entries[0].isIntersecting === true){                  
@@ -262,9 +261,8 @@
                 //  telu.observe(document.querySelector("#tiga"));
                 //  papat.observe(document.querySelector("#empat"));
                 //  lima.observe(document.querySelector("#limo")); 
-
             const divs = ["porto", "coba", "tiga","empat","limo"];
-           
+          
             function sekerol(){ //kelemahan ku yang terkutuk
                
             }
@@ -355,27 +353,31 @@
             </center> 
         </div> 
 
-        <div id="porto" style="background-color: transparent;width: 100%;height: 100%;">
+        <div id="porto" style="background-color: navajowhite;width: 100%;height: 100%;">
+           <center>
             <table style="width: 100%;">
                 <tr>
                     <td>
                        <div style="height: 50px;"></div>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>
                         <h1>Senior Developer<br>
                             Ronny Hartono
                        </h1>
                     </td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>
                         
-                        <table  style="width: 100%;">
+                        <table style="width: 100%;">
                             <tr>
                                     <td style="width: 50%; vertical-align: top;">
                                         <div class="lhe">
+                                            <h2>Senior Developer<br>
+                                                Ronny Hartono</h2>
+                                           <div style="height: 30px;"></div>
                                                 I have da great background education and have a good management skill. 
                                                     <br>
                                                 I mastering several programming language such as Delphi, macro, Php, html, 
@@ -383,7 +385,10 @@
                                                 I also have a experience in working at organization  
                                         </div> 
                                     </td>
-                                    <td style="width: 50%; vertical-align: top;"> <img src="rb.jpg" width="100%" height=auto style="max-width: 250px;" > </td>
+                                    <td style="width: 50%; vertical-align: bottom; "> <center>
+                                        <img src="rb.jpg" width="100%" height=auto style="max-width: 250px; border: 10px;" > 
+                                        </center>
+                                    </td>
                             </tr>
                     
                         </table>
@@ -391,6 +396,7 @@
                     </td>
                 </tr>
             </table>
+            </center>
         </div>
 
         <div class="section"style="background-color: white" id="coba">
