@@ -411,7 +411,7 @@
             </center> 
         </div> 
 
-        <div id="porto" style="overflow:scroll;background-color: navajowhite;width: 100%;height: 100%;">            
+        <div id="porto" style="overflow:hidden;background-color: navajowhite;width: 100%;height: 100%;">            
                 <table style="width: 100%; height: 100%; ">                    
                     <tr style="height: 10%;">
                         <td>
@@ -431,7 +431,7 @@
                                     Ronny Hartono
                                     <div style="height: 10px;"></div>
                                     
-                                    <div class="lhel" style="text-align: center;"><br>
+                                    <div id="t1" class="lhel" style="text-align: center;"><br>
                                         I have great background education and have a good management skill.<br>
                                         I have some skills and my hobby is learning about technology.
                                     </div>
@@ -507,30 +507,30 @@
                 </div>
             </div>
 
-            <div style="float:left; overflow: scroll; opacity: 1; width: 100%; height: 70%;">
-                <table style="width: 100%; height: 100%;">
+            <div id="molor" style="float:left; overflow: scroll; opacity: 1; width: 100%; height: 60%;">
+                <table   style="width: 100%; height: 100%; ">
                     <tr>
-                        <td>
+                        <td style="vertical-align: top;">
                             <div style="width: 450px; height: 400px; background-color: purple;">
 
                             </div>
                         </td>
-                        <td>
+                        <td style="vertical-align: top;">
                             <div style="width: 450px; height: 400px; background-color: purple;">
 
                             </div>
                         </td>
-                        <td>
+                        <td style="vertical-align: top;">
                             <div style="width: 450px; height: 400px; background-color: purple;">
 
                             </div>
                         </td>
-                        <td>
+                        <td style="vertical-align: top;">
                             <div style="width: 450px; height: 400px; background-color: purple;">
 
                             </div>
                         </td>
-                        <td>
+                        <td style="vertical-align: top;">
                             <div style="width: 450px; height: 400px; background-color: purple;">
 
                             </div>
@@ -538,6 +538,17 @@
                     </tr>
                 </table>
             </div>
+
+            <div  id="titik" style="width: 100%; height: 10%;  text-align: center;  "> 
+
+                <div class="dot" ></div>
+                <div class="dot" ></div>
+                <div class="dot" ></div>
+                <div class="dot" ></div>
+                <div class="dot" ></div>
+
+            </div>
+
         </div>
 
         <div style="background-color: pink;width:100%;height: 100%;" id="empat">
@@ -615,6 +626,24 @@
                       i=0;
                     }, 150);
                 }, false);
+
+                function testOver(){
+                    el = document.getElementById("porto");
+                    var curOverflow = el.style.overflow;
+
+                    var isOverflowing = el.clientWidth < el.scrollWidth || el.clientHeight < el.scrollHeight; 
+                    var StillOverflowing= false;
+
+                    if(isOverflowing){
+                        // do iterasi
+
+                        // document.getElementById("t1").style.fontSize = "10px";
+                    }
+                     
+                }
+
+                testOver();
+
     </script>
   </body>
 </html>
