@@ -535,17 +535,37 @@
 
                             </div>
                         </td>
+                        <td style="vertical-align: top;">
+                            <div style="width: 450px; height: 550px; background-color: purple;">
+
+                            </div>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div style="width: 450px; height: 550px; background-color: purple;">
+
+                            </div>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div style="width: 450px; height: 550px; background-color: purple;">
+
+                            </div>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div style="width: 450px; height: 550px; background-color: purple;">
+
+                            </div>
+                        </td>
                     </tr>
                 </table>
             </div>
 
-            <div  id="titik" style="width: 100%; height: 10%;  text-align: center;  "> 
+            <div id="titik" style="width: 100%; height: 10%;  text-align: center;  "> 
 
+                <!-- <div class="dot" ></div>
                 <div class="dot" ></div>
                 <div class="dot" ></div>
                 <div class="dot" ></div>
-                <div class="dot" ></div>
-                <div class="dot" ></div>
+                <div class="dot" ></div> -->
 
             </div>
 
@@ -599,14 +619,11 @@
      </div>
     </div>
 
-
     <script>
             var i=0;
-            var timer = null;
-            
+            var timer = null;            
             elemst = document.getElementById("ooo");
-            var poscawal = 0; 
-        
+            var poscawal = 0;         
             elemst.addEventListener('scroll', function() {
                 if(i==0){
                     poscawal = elemst.scrollTop;
@@ -629,21 +646,29 @@
 
                 function testOver(){
                     el = document.getElementById("porto");
+                   
                     var curOverflow = el.style.overflow;
-
-                    var isOverflowing = el.clientWidth < el.scrollWidth || el.clientHeight < el.scrollHeight; 
+                    var isOverflowing = el.clientWidth < el.scrollWidth || el.clientHeight < el.scrollHeight;
                     var StillOverflowing= false;
-
                     if(isOverflowing){
                         // do iterasi
 
                         // document.getElementById("t1").style.fontSize = "10px";
-                    }
-                     
+                    }                     
+                   
                 }
+                function makeDot(){                   
+                    el = document.getElementById("titik");
+                    ell = document.getElementById("molor");
+                    console.log("lho "+ Math.ceil(ell.scrollWidth / ell.clientWidth) );
 
+                    for(i=1;i<= Math.ceil(ell.scrollWidth / ell.clientWidth) ;i++){
+                        el.innerHTML = el.innerHTML + " <div class='dot' ></div> ";
+                    }                  
+                    
+                }
                 testOver();
-
+               makeDot();
     </script>
   </body>
 </html>
