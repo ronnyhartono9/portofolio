@@ -177,14 +177,14 @@
                
                 dot.style.transition = "all 1s";
             }, { threshold: [0.3] });
-
+            var n=0;
             var y1 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("yell");
                 if(entries[0].isIntersecting === true){
                    dot.style.opacity = 0.5;
                 }
                 else{
-                    dot.style.opacity = 0;
+                    dot.style.opacity = 0;n--;document.getElementById("pg").innerHTML = n;
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [0.5] });
@@ -193,6 +193,8 @@
                 var dot = document.getElementById("yell");
                 if(entries[0].isIntersecting === true){
                     dot.style.opacity = 1;
+                    n++;
+                    document.getElementById("pg").innerHTML = n;
                 }else{                    
                     dot.style.opacity = 0.5;                
                 }
@@ -205,7 +207,8 @@
                    dot.style.opacity = 0.5;
                 }
                 else{
-                    dot.style.opacity = 0;
+                    dot.style.opacity = 0;n--;
+                    document.getElementById("pg").innerHTML = n;
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [0.5] });
@@ -213,7 +216,7 @@
             var g2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("gell");
                 if(entries[0].isIntersecting === true){
-                    dot.style.opacity = 1;
+                    dot.style.opacity = 1;n++;document.getElementById("pg").innerHTML = n;
                 }else{                    
                     dot.style.opacity = 0.5;                
                 }
@@ -296,12 +299,7 @@
                  y = event.clientY;
                // console.log(x);
             }
-            // init();
-             //     pro.observe(document.querySelector("#porto")); 
-                //  section2.observe(document.querySelector("#coba"));
-                //  telu.observe(document.querySelector("#tiga"));
-                //  papat.observe(document.querySelector("#empat"));
-                //  lima.observe(document.querySelector("#limo")); 
+            // init();            
             const divs = ["porto", "coba", "tiga","empat","limo"];
             var posawal=0; posakhir=0;
 
@@ -312,12 +310,7 @@
             function cek(){
                  alert(document.getElementById('lagi').offsetHeight +" "+ document.getElementById('gila').offsetHeight);
             }
-            const d = new Date();
-            function nguli(){ }
-
-                //   clearInterval(myit); 
-                //   myit = setInterval(nguli, 1000);
-
+            const d = new Date(); 
             // function init() { window.requestAnimationFrame(nguli); }
             // init();
             var posyawal = 0;var posyakhir = 0;
@@ -448,7 +441,7 @@
             <div style="height: 30px;"> </div>
             <h1>Education</h1>
             <center>
-              <strong> <a id="pg">1 </a> of 2</strong>
+              <strong> <a id="pg"></a> of 2</strong>
             <div style=" overflow: scroll;width: 90%; height: 100%;">               
                 <table style="background-color: lightskyblue;width: 100%; " >
                                 <tr align="left"style="height:10%; vertical-align: top;">
@@ -668,7 +661,7 @@
                     var StillOverflowing= false;
                     if( (el.clientWidth < el.scrollWidth) || (el.clientHeight < el.scrollHeight) ){
                                 f = document.getElementById("ai").style.fontSize.replace("pt","");
-                                f = f-8; 
+                                f = f-8;
                                 //g = f-5;
                                 document.getElementById("ai").style.fontSize = f+"pt";
                                 document.getElementById("ai").style.transition = "ease-in-out 0.2s";
