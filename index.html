@@ -184,7 +184,7 @@
                    dot.style.opacity = 0.5;
                 }
                 else{
-                    dot.style.opacity = 0;n--;document.getElementById("pg").innerHTML = n;
+                    dot.style.opacity = 0;
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [0.5] });
@@ -192,9 +192,8 @@
             var y2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("yell");
                 if(entries[0].isIntersecting === true){
-                    dot.style.opacity = 1;
-                    n++;
-                    document.getElementById("pg").innerHTML = n;
+                    dot.style.opacity = 1;                    
+                    document.getElementById("pg").innerHTML = "1";
                 }else{                    
                     dot.style.opacity = 0.5;                
                 }
@@ -207,8 +206,8 @@
                    dot.style.opacity = 0.5;
                 }
                 else{
-                    dot.style.opacity = 0;n--;
-                    document.getElementById("pg").innerHTML = n;
+                    dot.style.opacity = 0; 
+                    
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [0.5] });
@@ -216,7 +215,8 @@
             var g2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("gell");
                 if(entries[0].isIntersecting === true){
-                    dot.style.opacity = 1;n++;document.getElementById("pg").innerHTML = n;
+                    dot.style.opacity = 1; 
+                    document.getElementById("pg").innerHTML = "2";
                 }else{                    
                     dot.style.opacity = 0.5;                
                 }
