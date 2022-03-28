@@ -13,7 +13,7 @@
         //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
         //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
         //https://colorlib.com/wp/template/personalportfolio/
-        var myit;var detik = 0;var posakhir;var ss;
+        var detik = 0;var posakhir;var ss;
         const keles = ["navajowhite", "lightskyblue", "palegoldenrod","pink","palegreen"];
              
             
@@ -411,8 +411,8 @@
             </center> 
         </div> 
 
-        <div id="porto" style="overflow:hidden;background-color: navajowhite;width: 100%;height: 100%;">            
-                <table  border=1 style="width: 100%; height: 100%; ">                    
+        <div id="porto" style="overflow:hidden;background-color: navajowhite;width: 100%;height: 100%;">
+                <table style="width: 100%; height: 100%; ">
                     <tr style="height: 10%;">
                         <td>
                             <div style="height: 50px;"></div>
@@ -420,7 +420,7 @@
                     </tr>
                     <tr style="height: 45%;">
                         <td align="center"> 
-                            <img src="pp.jpg" style="border-radius: 10px; width: 100%; height: auto; max-width: 450px;"
+                            <img src="pp.jpg" style="border-radius: 10px; width: 100%; height: auto; max-width: 300px;"
                         </td>
                     </tr>
                    
@@ -430,11 +430,12 @@
                                 Senior Developer<br>
                                     Ronny Hartono
                                     <div style="height: 10px;"></div>
-                                    
-                                    <div id="t1" class="lhel" style="text-align: center;"><br>
-                                        I have great background education and have a good management skill.<br>
-                                        I have some skills and my hobby is learning about technology.
-                                    </div>
+                                    <!-- class="lhel" -->
+                                   
+                            </div>
+                            <div id="ai" style="text-align: center; font-size: 35px;font-weight: bold;"><br>                                 
+                                I have great background education and have a good management skill.<br>
+                                I have some skills and my hobby is learning about technology.                               
                             </div>
                         </td>
                     </tr>
@@ -511,27 +512,27 @@
                 <table style="width: 100%; height: 100%; ">
                     <tr>
                         <td style="vertical-align: top;">
-                            <div style="width: 450px; height: 450px; background-color: purple;">
+                            <div style="width: 450px; height: 420px; background-color: purple;">
 
                             </div>
                         </td>
                         <td style="vertical-align: top;">
-                            <div style="width: 450px; height: 450px; background-color: purple;">
+                            <div style="width: 450px; height: 420px; background-color: purple;">
 
                             </div>
                         </td>
                         <td style="vertical-align: top;">
-                            <div style="width: 450px; height: 450px; background-color: purple;">
+                            <div style="width: 450px; height: 420px; background-color: purple;">
 
                             </div>
                         </td>
                         <td style="vertical-align: top;">
-                            <div style="width: 450px; height: 450px; background-color: purple;">
+                            <div style="width: 450px; height: 420px; background-color: purple;">
 
                             </div>
                         </td>
                         <td style="vertical-align: top;">
-                            <div style="width: 450px; height: 450px; background-color: purple;">
+                            <div style="width: 450px; height: 420px; background-color: purple;">
 
                             </div>
                         </td>
@@ -558,7 +559,7 @@
 
            
             <div style="  align-items: center; overflow: scroll; background-color: white; opacity: 1; width: 100%; height: 85%;">
-                <embed type="application/pdf" src="cv.pdf" style="width: 100%; height: 100%;"></embed>
+                <!-- <embed type="application/pdf" src="cv.pdf" style="width: 100%; height: 100%;"></embed> -->
             </div>
         </div>
     
@@ -595,7 +596,11 @@
 
     <script>
             var i=0;
-            var timer = null;            
+            var timer = null;
+            var myit;
+
+
+                
             elemst = document.getElementById("ooo");
             var poscawal = 0;         
             elemst.addEventListener('scroll', function() {
@@ -619,18 +624,26 @@
                 }, false);
 
                 function testOver(){
-                    el = document.getElementById("porto");
-                   
+                    
+                    el = document.getElementById("porto"); 
                     var curOverflow = el.style.overflow;
-                    var isOverflowing = el.clientWidth < el.scrollWidth || el.clientHeight < el.scrollHeight;
+                    
+                    var isOverflowing = el.clientWidth < el.scrollWidth  || el.clientHeight < el.scrollHeight;
                     var StillOverflowing= false;
-                    if(isOverflowing){
+                    if( (el.clientWidth < el.scrollWidth) || (el.clientHeight < el.scrollHeight) ){
                         // do iterasi
-
+                                f = document.getElementById("ai").style.fontSize.replace("px","");
+                                f = f-1;
+                              // alert(f);
+                                document.getElementById("ai").style.fontSize = f+"px";
+                                document.getElementById("ai").style.transition = "ease-in-out 0.2s";
+                               // alert(document.getElementById("ai").style.fontSize);
                         // document.getElementById("t1").style.fontSize = "10px";
-                    }
+                    } 
                 }
-                function makeDot(){                   
+
+                myit = setInterval(testOver, 200);
+                function makeDot(){
                     el = document.getElementById("titik");
                     ell = document.getElementById("molor");
                // ell.scrollLeft = ell.scrollWidth % ell.clientWidth;
