@@ -682,6 +682,11 @@
                 }
 
                 function dt(s){dtujuan = s;
+                     
+                     el = document.getElementById(s+"s");
+                     
+                   //  alert( s+"s"  );
+
                      elm = document.getElementById("d-"+dtakhir);
                      elm.style.backgroundColor = "#bbb";
                      let ss = s.split("-");
@@ -693,6 +698,7 @@
                     elll = document.getElementById(s);
                     elll.style.backgroundColor = "black"; 
                     dtakhir = ss[1];
+
 
                   //  myat = setInterval(ngulung, 1000);
                 }
