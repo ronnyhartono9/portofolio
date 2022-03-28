@@ -508,7 +508,7 @@
                 <table style="width: 100%; height: 90%; ">
                     <tr>
                         <td style="vertical-align: top;">
-                            <div style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                            <div id="d-1s" style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
                                 <table style="width: 100%; height: 100%;">
                                     <tr style="height: 90%;"><td class="bg2">
                                         
@@ -524,7 +524,7 @@
                             </div>
                         </td>
                         <td style="vertical-align: top;">
-                            <div style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                            <div id="d-2s" style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
                                 <table  style="width: 100%; height: 100%;">
                                     <tr style="height: 90%;"><td class="bg2">
                                         
@@ -536,7 +536,7 @@
                             </div>
                         </td>
                         <td style="vertical-align: top;">
-                            <div style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                            <div id="d-3s"style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
                                 <table  style="width: 100%; height: 100%;">
                                     <tr style="height: 90%;"><td class="bg2">
                                         
@@ -549,7 +549,7 @@
                             </div>
                         </td>
                         <td style="vertical-align: top;">
-                            <div style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                            <div id="d-4s"style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
                                 <table  style="width: 100%; height: 100%;">
                                     <tr style="height: 90%;"><td class="bg2">
                                      
@@ -561,7 +561,7 @@
                             </div>
                         </td>
                         <td style="vertical-align: top;">
-                            <div style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                            <div id="d-5s"style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
                                 <table  style="width: 100%; height: 100%;">
                                     <tr style="height: 90%;"><td class="bg2">
                                         
@@ -631,7 +631,7 @@
     <script>
             var i=0;
             var timer = null;
-            var myit;  
+            var myit; var myat;
             elemst = document.getElementById("ooo");
             var poscawal = 0;         
             elemst.addEventListener('scroll', function() {
@@ -666,15 +666,25 @@
                         document.getElementById("ai").style.fontSize = f+"pt";
                         document.getElementById("ai").style.transition = "ease-in-out 0.2s";
                     }
-                  
                    document.getElementById("pg").innerHTML = "y ="+ny1+" g ="+ng1;
                 }
                 var modar=0;
-                var dtakhir=1;
-                function dt(s){
-                    elm = document.getElementById("d-"+dtakhir);
-                    elm.style.backgroundColor = "#bbb";
-                    let ss = s.split("-");
+                var dtakhir=1;var dtujuan=0;
+
+                function ngulung(){
+                     ell = document.getElementById("molor");
+                     ell.scrollLeft = ell.scrollLeft + 1;
+
+                    //console.log(r);
+                    elll = document.getElementById(dtujuan+"s");
+                   // alert(elll.style.left);
+
+                }
+
+                function dt(s){dtujuan = s;
+                     elm = document.getElementById("d-"+dtakhir);
+                     elm.style.backgroundColor = "#bbb";
+                     let ss = s.split("-");
                    
                     ell = document.getElementById("molor");
                     ell.scrollLeft = 0;
@@ -684,12 +694,13 @@
                     elll.style.backgroundColor = "black"; 
                     dtakhir = ss[1];
 
+                  //  myat = setInterval(ngulung, 1000);
                 }
-                
+               
                 myit = setInterval(testOver, 200);
                 function makeDot(){
                     el = document.getElementById("titik");
-                    ell = document.getElementById("molor");                 
+                    ell = document.getElementById("molor");
                     var penambah = ell.scrollWidth / ell.clientWidth  -  (Math.floor( ell.scrollWidth / ell.clientWidth));    
                     if(penambah > 0.5){   penambah = penambah + 1;  }else{ penambah = 0;} 
                     for(i=1;i<= Math.floor(ell.scrollWidth / ell.clientWidth) +  penambah;i++){
