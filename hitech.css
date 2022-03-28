@@ -222,13 +222,6 @@ br {
   background-color: khaki;
   opacity: 1;
 }
-.dot {
-  height: 8px;
-  width: 8px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
 div.bottom { text-align: center;
   vertical-align: bottom;
   position: relative;
@@ -261,6 +254,8 @@ div.bottom { text-align: center;
 .fadeout {
  opacity: 0;
 }
+
+
 
 .button {
     border-radius: 4px;
