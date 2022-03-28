@@ -510,7 +510,7 @@
                 </div>
             </div>
 
-            <div id="molor" style=" background-color: chocolate; overflow: scroll; opacity: 1; width: 100%; height: 78%; ">
+            <div id="molor" style=" background-color: chocolate; overflow: scroll; opacity: 1; width: 100%; height: 73%; ">
                 <table  border=1 style="width: 100%; height: 90%; ">
                     <tr>
                         <td style="vertical-align: top;">
@@ -576,11 +576,11 @@
                             </div>
                         </td>
                     </tr>
-                </table>
-                <!-- <div id="titik" style="  vertical-align: top;  text-align: center; height: 5%;   ">
+                </table> 
+            </div>
+               <div id="titik" style="  vertical-align: top;  text-align: center; height: 5%;   ">
                  
-                </div>  -->
-            </div>  
+                </div>   
         </div>
 
         <div style="background-color: pink;width:100%;height: 100%;" id="empat">
@@ -670,7 +670,6 @@
                                 document.getElementById("ai").style.fontSize = f+"pt";
                                 document.getElementById("ai").style.transition = "ease-in-out 0.2s";
                     }
-                    //else{  document.getElementById("ai").style.fontSize = (g)+"px";  }
                 }
 
                 myit = setInterval(testOver, 200);
@@ -678,7 +677,7 @@
                     el = document.getElementById("titik");
                     ell = document.getElementById("molor"); 
                     for(i=1;i<= Math.ceil(ell.scrollWidth / ell.clientWidth) ;i++){
-                        ell.innerHTML = ell.innerHTML + " <div class='dot'></div> ";
+                        el.innerHTML = el.innerHTML + " <div class='dot'></div> ";
                     } 
                 }
                 testOver();
