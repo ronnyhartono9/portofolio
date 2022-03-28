@@ -177,14 +177,16 @@
                
                 dot.style.transition = "all 1s";
             }, { threshold: [0.3] });
-            var n=0;
+
+            var ny1=0;
             var y1 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("yell");
                 if(entries[0].isIntersecting === true){
                    dot.style.opacity = 0.5;
+                   ny1 = ny1+0.5;
                 }
                 else{
-                    dot.style.opacity = 0;
+                    dot.style.opacity = 0; ny1 = ny1-0.5;
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [0.5] });
@@ -192,22 +194,24 @@
             var y2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("yell");
                 if(entries[0].isIntersecting === true){
-                    dot.style.opacity = 1;                    
-                    document.getElementById("pg").innerHTML = "1";
+                    dot.style.opacity = 1; ny1 = ny1+0.5;
+                   
                 }else{                    
-                    dot.style.opacity = 0.5;                
+                    dot.style.opacity = 0.5; ny1 = ny1-0.5;
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [1] });
 
+            var ng1=0;
             var g1 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("gell");
                 if(entries[0].isIntersecting === true){
                    dot.style.opacity = 0.5;
+                   ng1 = ng1+0.5;
                 }
                 else{
-                    dot.style.opacity = 0; 
-                    
+                    dot.style.opacity = 0;ng1 = ng1-0.5;
+                                     
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [0.5] });
@@ -215,10 +219,9 @@
             var g2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("gell");
                 if(entries[0].isIntersecting === true){
-                    dot.style.opacity = 1; 
-                    document.getElementById("pg").innerHTML = "2";
+                    dot.style.opacity = 1;ng1 = ng1+0.5;
                 }else{                    
-                    dot.style.opacity = 0.5;                
+                    dot.style.opacity = 0.5;ng1 = ng1-0.5;
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [1] });
@@ -439,7 +442,7 @@
             <div style="height: 30px;"> </div>
             <h1>Education</h1>
             <center>
-              <strong> <a id="pg"></a> of 2</strong>
+              <strong> <a id="pg"></a> </strong>
             <div style=" overflow: scroll;width: 90%; height: 100%;">               
                 <table style="background-color: lightskyblue;width: 100%; " >
                                 <tr align="left"style="height:10%; vertical-align: top;">
@@ -501,7 +504,7 @@
                 </div>
             </div>
 
-            <div id="molor" style=" overflow: scroll; opacity: 1; width: 100%; height: 73%; ">
+            <div id="molor" style=" overflow: hidden; opacity: 1; width: 100%; height: 73%; ">
                 <table style="width: 100%; height: 90%; ">
                     <tr>
                         <td style="vertical-align: top;">
@@ -572,7 +575,7 @@
                     </tr>
                 </table> 
             </div>
-            <div id="titik" style="  vertical-align: top;  text-align: center; height: 5%;">
+            <div id="titik" style=" width: 100%;  vertical-align: top;  text-align: center; height: 5%;">
                 
             </div>
         </div>
@@ -658,20 +661,45 @@
                     var isOverflowing = el.clientWidth < el.scrollWidth  || el.clientHeight < el.scrollHeight;
                     var StillOverflowing= false;
                     if( (el.clientWidth < el.scrollWidth) || (el.clientHeight < el.scrollHeight) ){
-                                f = document.getElementById("ai").style.fontSize.replace("pt","");
-                                f = f-7;                              
-                                document.getElementById("ai").style.fontSize = f+"pt";
-                                document.getElementById("ai").style.transition = "ease-in-out 0.2s";
+                        f = document.getElementById("ai").style.fontSize.replace("pt","");
+                        f = f-7;
+                        document.getElementById("ai").style.fontSize = f+"pt";
+                        document.getElementById("ai").style.transition = "ease-in-out 0.2s";
                     }
+                  
+                   document.getElementById("pg").innerHTML = "y ="+ny1+" g ="+ng1;
                 }
+                var modar=0;
+                var dtakhir=1;
+                function dt(s){
+                    elm = document.getElementById("d-"+dtakhir);
+                    elm.style.backgroundColor = "#bbb";
+                    let ss = s.split("-");
+                   
+                    ell = document.getElementById("molor");
+                    ell.scrollLeft = 0;
+                    ell.scrollLeft = ell.scrollLeft+(modar * (ss[1] - 1)) ; 
 
+                    elll = document.getElementById(s);
+                    elll.style.backgroundColor = "black"; 
+                    dtakhir = ss[1];
+
+                }
+                
                 myit = setInterval(testOver, 200);
                 function makeDot(){
                     el = document.getElementById("titik");
-                    ell = document.getElementById("molor"); 
-                    for(i=1;i<= Math.ceil(ell.scrollWidth / ell.clientWidth) ;i++){
-                        el.innerHTML = el.innerHTML + " <div class='dot'></div> ";
-                    } 
+                    ell = document.getElementById("molor");                 
+                    var penambah = ell.scrollWidth / ell.clientWidth  -  (Math.floor( ell.scrollWidth / ell.clientWidth));    
+                    if(penambah > 0.5){   penambah = penambah + 1;  }else{ penambah = 0;} 
+                    for(i=1;i<= Math.floor(ell.scrollWidth / ell.clientWidth) +  penambah;i++){
+                        if(i==1){
+                            el.innerHTML = el.innerHTML + " <div class='dit'  id='d-"+i+"' onclick=dt('d-"+i+"')  ></div>&nbsp; ";
+                        }else{
+                            el.innerHTML = el.innerHTML + " <div class='dot'  id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
+                        }                        
+                    }
+                    modar = ell.scrollWidth/(i-1) ; 
                 }
                 testOver();
                 makeDot();
