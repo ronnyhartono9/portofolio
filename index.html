@@ -17,7 +17,7 @@
         //https://colorlib.com/wp/template/personalportfolio/
         var detik = 0;var posakhir;var ss;
         const keles = ["navajowhite", "lightskyblue", "palegoldenrod","pink","palegreen"];
-             
+        var order="";     
             
             // function draw() {
             //     var canvas = document.getElementById('ccku');
@@ -184,6 +184,7 @@
                 if(entries[0].isIntersecting === true){
                    dot.style.opacity = 0.5;
                    ny1 = ny1+0.5;
+                   order=1;
                 }
                 else{
                     dot.style.opacity = 0; ny1 = ny1-0.5;
@@ -195,9 +196,10 @@
                 var dot = document.getElementById("yell");
                 if(entries[0].isIntersecting === true){
                     dot.style.opacity = 1; ny1 = ny1+0.5;
-                   
+                    order=1;
                 }else{                    
                     dot.style.opacity = 0.5; ny1 = ny1-0.5;
+                    order=1;
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [1] });
@@ -208,6 +210,7 @@
                 if(entries[0].isIntersecting === true){
                    dot.style.opacity = 0.5;
                    ng1 = ng1+0.5;
+                   order=2;
                 }
                 else{
                     dot.style.opacity = 0;ng1 = ng1-0.5;
@@ -220,8 +223,10 @@
                 var dot = document.getElementById("gell");
                 if(entries[0].isIntersecting === true){
                     dot.style.opacity = 1;ng1 = ng1+0.5;
+                    order=2;
                 }else{                    
                     dot.style.opacity = 0.5;ng1 = ng1-0.5;
+                    order=2;
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [1] });
@@ -666,7 +671,7 @@
                         document.getElementById("ai").style.fontSize = f+"pt";
                         document.getElementById("ai").style.transition = "ease-in-out 0.2s";
                     }
-                   document.getElementById("pg").innerHTML = "y ="+ny1+" g ="+ng1;
+                   document.getElementById("pg").innerHTML = order;
                 }
                 var modar=0;
                 var dtakhir=1;var dtujuan=0;
