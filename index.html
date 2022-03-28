@@ -595,7 +595,7 @@
     <script>
             var i=0;
             var timer = null;
-            var myit;                
+            var myit;  
             elemst = document.getElementById("ooo");
             var poscawal = 0;         
             elemst.addEventListener('scroll', function() {
@@ -617,19 +617,21 @@
                       i=0;
                     }, 150);
                 }, false);
-
+              
                 function testOver(){                    
                     el = document.getElementById("porto"); 
                     var curOverflow = el.style.overflow;
-                     var g = 0;
+                   
                     var isOverflowing = el.clientWidth < el.scrollWidth  || el.clientHeight < el.scrollHeight;
                     var StillOverflowing= false;
                     if( (el.clientWidth < el.scrollWidth) || (el.clientHeight < el.scrollHeight) ){
                                 f = document.getElementById("ai").style.fontSize.replace("px","");
-                                f = f-1; g = f-5;
+                                f = f-3; 
+                                //g = f-5;
                                 document.getElementById("ai").style.fontSize = f+"px";
                                 document.getElementById("ai").style.transition = "ease-in-out 0.2s";
-                    }else{  document.getElementById("ai").style.fontSize = (g)+"px";  }
+                    }
+                    //else{  document.getElementById("ai").style.fontSize = (g)+"px";  }
                 }
 
                 myit = setInterval(testOver, 200);
