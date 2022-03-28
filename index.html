@@ -433,7 +433,7 @@
                                     <!-- class="lhel" -->
                                    
                             </div>
-                            <div id="ai" style="text-align: center; font-size: 35px;font-weight: bold;"><br>                                 
+                            <div id="ai" style="text-align: center; font-size: 25pt;"><br>                                 
                                 I have great background education and have a good management skill.<br>
                                 I have some skills and my hobby is learning about technology.                               
                             </div>
@@ -625,10 +625,10 @@
                     var isOverflowing = el.clientWidth < el.scrollWidth  || el.clientHeight < el.scrollHeight;
                     var StillOverflowing= false;
                     if( (el.clientWidth < el.scrollWidth) || (el.clientHeight < el.scrollHeight) ){
-                                f = document.getElementById("ai").style.fontSize.replace("px","");
-                                f = f-3; 
+                                f = document.getElementById("ai").style.fontSize.replace("pt","");
+                                f = f-8; 
                                 //g = f-5;
-                                document.getElementById("ai").style.fontSize = f+"px";
+                                document.getElementById("ai").style.fontSize = f+"pt";
                                 document.getElementById("ai").style.transition = "ease-in-out 0.2s";
                     }
                     //else{  document.getElementById("ai").style.fontSize = (g)+"px";  }
