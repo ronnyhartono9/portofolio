@@ -17,8 +17,8 @@
         //https://colorlib.com/wp/template/personalportfolio/
         var detik = 0;var posakhir;var ss;
         const keles = ["navajowhite", "lightskyblue", "palegoldenrod","pink","palegreen"];
-        var order="";     
-            
+        const urutan = [0, 0, 0,0,0];
+        var order="";            
             // function draw() {
             //     var canvas = document.getElementById('ccku');
               
@@ -178,16 +178,17 @@
                 dot.style.transition = "all 1s";
             }, { threshold: [0.3] });
 
-            var ny1=0;
+          
             var y1 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("yell");
                 if(entries[0].isIntersecting === true){
                    dot.style.opacity = 0.5;
-                   ny1 = ny1+0.5;
-                   order=1;
+                   urutan[0] = 1;                  
                 }
                 else{
-                    dot.style.opacity = 0; ny1 = ny1-0.5;
+                    dot.style.opacity = 0; 
+                    urutan[0] = 0;
+                    ny1 = ny1-0.5;
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [0.5] });
@@ -195,11 +196,11 @@
             var y2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("yell");
                 if(entries[0].isIntersecting === true){
-                    dot.style.opacity = 1; ny1 = ny1+0.5;
-                    order=1;
+                    dot.style.opacity = 1; 
+                    urutan[0] = 1; 
                 }else{                    
-                    dot.style.opacity = 0.5; ny1 = ny1-0.5;
-                    order=1;
+                    dot.style.opacity = 0.5;
+                    urutan[0] = 1; 
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [1] });
@@ -209,12 +210,11 @@
                 var dot = document.getElementById("gell");
                 if(entries[0].isIntersecting === true){
                    dot.style.opacity = 0.5;
-                   ng1 = ng1+0.5;
-                   order=2;
+                   urutan[1] = 1; 
                 }
                 else{
-                    dot.style.opacity = 0;ng1 = ng1-0.5;
-                                     
+                    dot.style.opacity = 0;
+                    urutan[1] = 0; 
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [0.5] });
@@ -222,11 +222,11 @@
             var g2 = new IntersectionObserver(function(entries) {
                 var dot = document.getElementById("gell");
                 if(entries[0].isIntersecting === true){
-                    dot.style.opacity = 1;ng1 = ng1+0.5;
-                    order=2;
+                    dot.style.opacity = 1;
+                    urutan[1] = 1; 
                 }else{                    
-                    dot.style.opacity = 0.5;ng1 = ng1-0.5;
-                    order=2;
+                    dot.style.opacity = 0.5;
+                    urutan[1] = 1; 
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [1] });
@@ -277,8 +277,7 @@
                     }else{
                         element.style.opacity= "0";
                         element.style.transition = "all 0.5s"; 
-                    } 
-                
+                    }                
             }
             function popup(){
                             var element = document.getElementById("info"); 
@@ -509,76 +508,77 @@
                 </div>
             </div>
 
-            <div id="molor" style=" overflow: scroll; opacity: 1; width: 100%; height: 73%; ">
-                <table style="width: 100%; height: 90%; ">
-                    <tr>
-                        <td style="vertical-align: top;">
-                            <div id="d-1s" style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                <table style="width: 100%; height: 100%;">
-                                    <tr style="height: 90%;"><td class="bg2">
-                                        
-                                    </td></tr>
-                                    <tr style="height: 10%;"><td align="center">
-                                        <strong>
-                                            HTML,JavaScript and CSS
+            <div id="molor" style="float:left; scroll-behavior: smooth;  overflow: scroll; opacity: 1; width: 100%; height: 73%; ">
+                <div id="panel" style="float:left; background-color: pink; width: 100%; height: 100%;">
+                    <table style="width: 100%; height: 90%; ">
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <div id="d-1s" style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                                    <table style="width: 100%; height: 100%;">
+                                        <tr style="height: 90%;"><td class="bg2">
+                                            
+                                        </td></tr>
+                                        <tr style="height: 10%;"><td align="center">
+                                            <strong>
+                                                HTML,JavaScript and CSS 
+                                            </strong>
 
-                                        </strong>
+                                        </td></tr>
+                                    </table>
+                                </div>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <div id="d-2s" style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                                    <table  style="width: 100%; height: 100%;">
+                                        <tr style="height: 90%;"><td class="bg2">
+                                            
+                                        </td></tr>
+                                        <tr style="height: 10%;"><td align="center">
+                                            <strong>PHP , Laravel and CodeIgniter</strong>
+                                        </td></tr>
+                                    </table>
+                                </div>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <div id="d-3s"style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                                    <table  style="width: 100%; height: 100%;">
+                                        <tr style="height: 90%;"><td class="bg2">
+                                            
+                                        </td></tr>
+                                        <tr style="height: 10%;"><td align="center">
+                                            <strong>Java </strong>
 
-                                    </td></tr>
-                                </table>
-                            </div>
-                        </td>
-                        <td style="vertical-align: top;">
-                            <div id="d-2s" style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                <table  style="width: 100%; height: 100%;">
-                                    <tr style="height: 90%;"><td class="bg2">
+                                        </td></tr>
+                                    </table>
+                                </div>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <div id="d-4s"style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                                    <table  style="width: 100%; height: 100%;">
+                                        <tr style="height: 90%;"><td class="bg2">
                                         
-                                    </td></tr>
-                                    <tr style="height: 10%;"><td align="center">
-                                        <strong>PHP , Laravel and CodeIgniter</strong>
-                                    </td></tr>
-                                </table>
-                            </div>
-                        </td>
-                        <td style="vertical-align: top;">
-                            <div id="d-3s"style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                <table  style="width: 100%; height: 100%;">
-                                    <tr style="height: 90%;"><td class="bg2">
-                                        
-                                    </td></tr>
-                                    <tr style="height: 10%;"><td align="center">
-                                        <strong>Java </strong>
-
-                                    </td></tr>
-                                </table>
-                            </div>
-                        </td>
-                        <td style="vertical-align: top;">
-                            <div id="d-4s"style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                <table  style="width: 100%; height: 100%;">
-                                    <tr style="height: 90%;"><td class="bg2">
-                                     
-                                    </td></tr>
-                                    <tr style="height: 10%;"><td align="center">
-                                        <strong>SQLServer & MySql</strong>
-                                    </td></tr>
-                                </table>
-                            </div>
-                        </td>
-                        <td style="vertical-align: top;">
-                            <div id="d-5s"style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                <table  style="width: 100%; height: 100%;">
-                                    <tr style="height: 90%;"><td class="bg2">
-                                        
-                                    </td></tr>
-                                    <tr style="height: 10%;"><td align="center">
-                                        <strong>Android </strong>
-                                    </td></tr>
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                </table> 
+                                        </td></tr>
+                                        <tr style="height: 10%;"><td align="center">
+                                            <strong>SQLServer & MySql</strong>
+                                        </td></tr>
+                                    </table>
+                                </div>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <div id="d-5s"style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                                    <table  style="width: 100%; height: 100%;">
+                                        <tr style="height: 90%;"><td class="bg2">
+                                            
+                                        </td></tr>
+                                        <tr style="height: 10%;"><td align="center">
+                                            <strong>Android </strong>
+                                        </td></tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="titik" style=" width: 100%;  vertical-align: top;  text-align: center; height: 5%;">
                 
@@ -671,7 +671,12 @@
                         document.getElementById("ai").style.fontSize = f+"pt";
                         document.getElementById("ai").style.transition = "ease-in-out 0.2s";
                     }
-                   document.getElementById("pg").innerHTML = order;
+                    var max=0
+                    for(j=0;j<=4;j++){
+                       if(urutan[j] == 1){
+                           if(j >= max){max = j;}
+                       }
+                    }document.getElementById("pg").innerHTML = max+1; 
                 }
                 var modar=0;
                 var dtakhir=1;var dtujuan=0;
@@ -685,13 +690,9 @@
                    // alert(elll.style.left);
 
                 }
-
-                function dt(s){dtujuan = s;
-                     
-                     el = document.getElementById(s+"s");
-                     
-                   //  alert( s+"s"  );
-
+                var panellen = 0;
+                function dt(s){dtujuan = s;                     
+                     el = document.getElementById(s+"s"); 
                      elm = document.getElementById("d-"+dtakhir);
                      elm.style.backgroundColor = "#bbb";
                      let ss = s.split("-");
@@ -705,23 +706,35 @@
                     dtakhir = ss[1];
 
 
-                  //  myat = setInterval(ngulung, 1000);
+                    pan = document.getElementById("molor");
+                    pan.scrollLeft = panellen * (ss[1] - 1);
+                   // alert(panellen* (ss[1] - 1));
+                  // location.href = "#d-3s";
                 }
                
                 myit = setInterval(testOver, 200);
                 function makeDot(){
                     el = document.getElementById("titik");
                     ell = document.getElementById("molor");
-                    var penambah = ell.scrollWidth / ell.clientWidth  -  (Math.floor( ell.scrollWidth / ell.clientWidth));    
-                    if(penambah > 0.5){   penambah = penambah + 1;  }else{ penambah = 0;} 
-                    for(i=1;i<= Math.floor(ell.scrollWidth / ell.clientWidth) +  penambah;i++){
-                        if(i==1){
-                            el.innerHTML = el.innerHTML + " <div class='dit'  id='d-"+i+"' onclick=dt('d-"+i+"')  ></div>&nbsp; ";
-                        }else{
+                    elll = document.getElementById("panel");
+                    panellen = (elll.clientWidth);
+                    
+                    // var penambah = ell.scrollWidth / ell.clientWidth  -  (Math.floor( ell.scrollWidth / ell.clientWidth));    
+                    // if(penambah > 0.5){   penambah = penambah + 1;  }else{ penambah = 0;} 
+                    // for(i=1;i<= Math.floor(ell.scrollWidth / ell.clientWidth) +  penambah;i++){
+                    //     if(i==1){
+                    //         el.innerHTML = el.innerHTML + " <div class='dit'  id='d-"+i+"' onclick=dt('d-"+i+"')  ></div>&nbsp; ";
+                    //     }else{
+                    //         el.innerHTML = el.innerHTML + " <div class='dot'  id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
+                    //     }
+                    // }
+                    // modar = ell.scrollWidth/(i-1) ;
+                        
+                        for(i=1;i<=   Math.ceil( (450*5)  /   ell.clientWidth) ;i++){
                             el.innerHTML = el.innerHTML + " <div class='dot'  id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
-                        }                        
-                    }
-                    modar = ell.scrollWidth/(i-1) ; 
+                        }                       
+                        elll.style.width =  (( Math.ceil( (450)  /   ell.clientWidth) ) * 100) + "%";
+                      //  elll.innerHTML = elll.innerHTML + "<div style=' float:left;  background-color:green; width:450px'>ttt</div>";
                 }
                 testOver();
                 makeDot();
