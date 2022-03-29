@@ -187,8 +187,7 @@
                 }
                 else{
                     dot.style.opacity = 0; 
-                    urutan[0] = 0;
-                    ny1 = ny1-0.5;
+                    urutan[0] = 0; 
                 }
                 dot.style.transition = "all 1s";
             }, { threshold: [0.5] });
@@ -230,6 +229,37 @@
                 dot.style.transition = "all 1s";
             }, { threshold: [1] });
            
+
+            var giliran ="d-1s";
+            var memper = 0.9;
+            var mode = "maju";
+            var d1 = new IntersectionObserver(function(entries) {
+                if(entries[0].isIntersecting === true){  giliran ="d-2s";
+               
+            } 
+            }, { threshold: [memper] });
+            var d2 = new IntersectionObserver(function(entries) { 
+                if(entries[0].isIntersecting === true){  giliran ="d-3s";
+                
+            }
+            }, { threshold: [memper] });
+            var d3 = new IntersectionObserver(function(entries) { 
+                if(entries[0].isIntersecting === true){  giliran ="d-4s";
+                
+            } 
+            }, { threshold: [memper] });
+            var d4 = new IntersectionObserver(function(entries) {
+                if(entries[0].isIntersecting === true){  giliran ="d-5s";  
+                 
+            } 
+            }, { threshold: [memper] });
+            var d5 = new IntersectionObserver(function(entries) { 
+                if(entries[0].isIntersecting === true){  ;  
+            
+                
+            } 
+            }, { threshold: [memper] });
+
             function mlaku(){
                 //  var element = document.getElementById("vd2"); 
                 // element.style.opacity= "0";
@@ -241,7 +271,14 @@
                     y1.observe(document.querySelector("#yell"));
                     y2.observe(document.querySelector("#yell"));
                     g1.observe(document.querySelector("#gell"));
-                    g2.observe(document.querySelector("#gell"));
+                    g2.observe(document.querySelector("#gell")); 
+
+                    d1.observe(document.querySelector("#d-1s"));
+                    d2.observe(document.querySelector("#d-2s"));
+                    d3.observe(document.querySelector("#d-3s"));
+                    d4.observe(document.querySelector("#d-4s"));
+                    d5.observe(document.querySelector("#d-5s")); 
+
             }
             function tran1(){
                 var element = document.getElementById("ll");         
@@ -497,7 +534,7 @@
                     
                 </td></tr>
                 <tr style="height: 90%;"><td>
-                <h1 onclick="cekNearest()" >Skills</h1>  
+                <h1 onclick="cekNearest()" >Skills</h1> 
             </td></tr>
             </table>
 
@@ -526,7 +563,8 @@
                                         </td></tr>
                                         <tr style="height: 10%;"><td align="center">
                                             <strong>
-                                                HTML,JavaScript and CSS 
+                                                <!-- HTML,JavaScript and CSS  -->
+                                                1
                                             </strong>
 
                                         </td></tr>
@@ -540,7 +578,11 @@
                                             
                                         </td></tr>
                                         <tr style="height: 10%;"><td align="center">
-                                            <strong>PHP , Laravel and CodeIgniter</strong>
+                                            <strong>
+                                                <!-- PHP , Laravel and CodeIgniter -->
+                                                        2
+
+                                            </strong>
                                         </td></tr>
                                     </table>
                                 </div>
@@ -552,7 +594,11 @@
                                             
                                         </td></tr>
                                         <tr style="height: 10%;"><td align="center">
-                                            <strong>Java </strong>
+                                            <strong>
+                                                <!-- Java  -->
+                                                    3
+
+                                            </strong>
 
                                         </td></tr>
                                     </table>
@@ -565,7 +611,12 @@
                                         
                                         </td></tr>
                                         <tr style="height: 10%;"><td align="center">
-                                            <strong>SQLServer & MySql</strong>
+                                            <strong>
+                                                
+                                                <!-- SQLServer & MySql -->
+                                                    4
+
+                                            </strong>
                                         </td></tr>
                                     </table>
                                 </div>
@@ -577,7 +628,11 @@
                                             
                                         </td></tr>
                                         <tr style="height: 10%;"><td align="center">
-                                            <strong>Android </strong>
+                                            <strong>
+                                                <!-- Android  -->
+
+                                                5
+                                            </strong>
                                         </td></tr>
                                     </table>
                                 </div>
@@ -690,10 +745,13 @@
                 
                 var panellen = 0;
                 function cekNearest(){
-                    elll = document.getElementById("molor");
-                    alert( elll.scrollLeft );
+                    alert(giliran +" "+mode);
                 }
-                function dt(s){dtujuan = s;
+                function dt(s){
+                     let bef = s.split("-");
+                      //alert("tadi "+   dtakhir  +" "+ bef[1]);
+                        if(dtakhir > bef[1] ){mode='mundur';}else{mode='maju';}
+                     dtujuan = s;
                      el = document.getElementById(s+"s"); 
                      elm = document.getElementById("d-"+dtakhir);
                      elm.style.backgroundColor = "#bbb";
