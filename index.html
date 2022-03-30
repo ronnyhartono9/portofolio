@@ -527,7 +527,7 @@
                                     </td>
                                     <td style="width: 60%;"  > 
                                             <div id="ai" style=" padding-left: 18px; text-align: left; 
-                                            font-size: 2pt; display: inline-block; ">
+                                            font-size: 22pt; display: inline-block; ">
                                                 <br> 
                                                     I have great background education and have a good management skill.<br>
                                                     I have some skills and my hobby is learning about technology.<br>
@@ -823,22 +823,22 @@
             el = document.getElementById("porto");
 
 
-            if((document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth) <= 0.9 ){
-                f = document.getElementById("ai").style.fontSize.replace("pt", "");
-                    f = f + 2;
-                document.getElementById("ai").style.fontSize = f + "pt";
-            }
+            // if((document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth) <= 0.9 ){
+            //     f = document.getElementById("ai").style.fontSize.replace("pt", "");
+            //         f = f + 2;
+            //     document.getElementById("ai").style.fontSize = f + "pt";
+            // }
             
             // else{
-            //     if ((el.clientWidth < el.scrollWidth) || (el.clientHeight < el.scrollHeight)) {
-            //         f = document.getElementById("ai").style.fontSize.replace("pt", "");
-            //         f = f - 1;
-            //         document.getElementById("ai").style.fontSize = f + "pt";
-                    
-            //        // document.getElementById("ai").style.transition = "ease-in-out 0.2s";
- 
-            //     } 
+            //    
             // }
+            if ((el.clientWidth < el.scrollWidth) || (el.clientHeight < el.scrollHeight)) {
+                    f = document.getElementById("ai").style.fontSize.replace("pt", "");
+                    f = f - 1;
+                    document.getElementById("ai").style.fontSize = f + "pt"; 
+                   // document.getElementById("ai").style.transition = "ease-in-out 0.2s";
+ 
+            }             
 
                     var max = 0
                     for (j = 0; j <= 4; j++) {
