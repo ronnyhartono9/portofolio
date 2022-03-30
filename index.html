@@ -1,969 +1,334 @@
-<!DOCTYPE html>
-<html>
-<meta name="theme-color" content="chocolate" />
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" type="text/css" href="hitech.css">
-<head>
-    <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-        }
-        .bg {
-            background-image: url("back.jpg");
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-        }
-
-        .bg2 {
-            background-image: url("back.jpg");
-            height: 90%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-        }
-    </style>
-
-<script type="text/javascript">
-        //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
-        //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
-        //https://colorlib.com/wp/template/personalportfolio/
-        var detik = 0;
-        var posakhir;
-        var ss;
-        const keles = ["navajowhite", "lightskyblue", "palegoldenrod", "pink", "palegreen"];
-        const urutan = [0, 0, 0, 0, 0];
-        var order = "";
-        // function draw() {
-        //     var canvas = document.getElementById('ccku');
-
-        //     if (canvas.getContext) {
-        //         var time = new Date();
-        //       var l = time.getSeconds();
-
-        //       console.log(" detike "+l);
-        //         var ctx = canvas.getContext('2d');
-        //         ctx.clearRect(0,0,canvas.width,canvas.height);
-        //         ctx.beginPath();
-        //         ctx.moveTo(75, 40);
-        //         ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-        //         ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-        //         ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-        //         ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-        //         ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-        //         ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-        //         ctx.fillStyle="red";
-        //         ctx.fill();
-
-        //         // ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
-        //         // ctx.rotate(20 * Math.PI / 180);
-        //         // ctx.clearRect(0,0,canvas.width,canvas.height);
-        //         // ctx.translate(105, 0);
-        //         // window.requestAnimationFrame(draw);
-        //     }
-        // }
-
-        function ngitung() {
-            detik++;
-
-            if (detik == 1) {
-                //  console.log("iki saate"); 
-
-            }
-        }
-
-        function ajaxakudong(grace, s, kelir) {
-            for (i = 1; i <= 5; i++) {
-                document.getElementById(i + "a").style.background = 'white';
-            }
-            document.getElementById(s + "a").style.background = keles[s - 1];
-
-            document.getElementById(s + "a").style.transition = "ease-in-out 0.5s";
-            ss = s;
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("f").innerHTML = this.responseText;
-                }
-            };
-            xhttp.open("GET", grace, true);
-            xhttp.send();
-        }
-
-        // var pro = new IntersectionObserver(function (entries) {
-        //     var dot = document.getElementById("1");
-        //     if (entries[0].isIntersecting === true) {
-        //         dot.style.backgroundColor = 'grey';
-        //         dot.style.border = "0px";
-        //         dot.style.borderColor = "white";
-        //         dot.style.width = "18px";
-        //         dot.style.height = "18px";
-        //         ajaxakudong('a', '1');
-        //         posakhir = "porto";
-        //     } else {
-        //         dot.style.backgroundColor = 'transparent';
-        //         dot.style.border = "solid 2px grey";
-        //         dot.style.width = "12px";
-        //         dot.style.height = "12px";
-
-        //     }
-        //     dot.style.transition = "all 1s";
-        // }, {
-        //     threshold: [0.5]
-        // });
-
-        // var section2 = new IntersectionObserver(function (entries) {
-        //     var dot = document.getElementById("2");
-        //     if (entries[0].isIntersecting === true) {
-        //         //    tran3("masuk");
-        //         dot.style.backgroundColor = 'grey';
-        //         dot.style.border = "0px";
-        //         dot.style.borderColor = "white";
-        //         dot.style.width = "18px";
-        //         dot.style.height = "18px";
-        //         ajaxakudong('a', '2');
-        //         posakhir = "coba";
-        //     } else {
-        //         // tran3("metu"); 
-        //         dot.style.backgroundColor = 'transparent';
-        //         dot.style.border = "solid 2px grey";
-        //         dot.style.width = "12px";
-        //         dot.style.height = "12px";
-        //         //  location.href = "#tiga";
-        //     }
-        //     dot.style.transition = "all 1s";
-        // }, {
-        //     threshold: [0.8]
-        // });
-
-        // var telu = new IntersectionObserver(function (entries) {
-        //     var dot = document.getElementById("3");
-        //     if (entries[0].isIntersecting === true) {
-        //         dot.style.backgroundColor = 'grey';
-        //         dot.style.border = "0px";
-        //         dot.style.borderColor = "white";
-        //         dot.style.width = "18px";
-        //         dot.style.height = "18px";
-        //         ajaxakudong('a', '3');
-        //         posakhir = "tiga";
-        //     } else {
-        //         dot.style.backgroundColor = 'transparent';
-        //         dot.style.border = "solid 2px grey";
-        //         dot.style.width = "12px";
-        //         dot.style.height = "12px";
-        //     }
-        //     dot.style.transition = "all 1s";
-        // }, {
-        //     threshold: [0.8]
-        // });
-
-        // var papat = new IntersectionObserver(function (entries) {
-        //     var dot = document.getElementById("4");
-        //     if (entries[0].isIntersecting === true) {
-        //         dot.style.backgroundColor = 'grey';
-        //         dot.style.border = "0px";
-        //         dot.style.borderColor = "white";
-        //         dot.style.width = "18px";
-        //         dot.style.height = "18px";
-        //         ajaxakudong('a', '4');
-        //         posakhir = "empat";
-
-        //     } else {
-        //         dot.style.backgroundColor = 'transparent';
-        //         dot.style.border = "solid 2px grey";
-        //         dot.style.width = "12px";
-        //         dot.style.height = "12px";
-        //     }
-        //     dot.style.transition = "all 1s";
-        // }, {
-        //     threshold: [0.8]
-        // });
-
-        // var lima = new IntersectionObserver(function (entries) {
-        //     var dot = document.getElementById("5");
-        //     if (entries[0].isIntersecting === true) {
-        //         dot.style.backgroundColor = 'grey';
-        //         dot.style.border = "0px";
-        //         dot.style.borderColor = "white";
-        //         dot.style.width = "18px";
-        //         dot.style.height = "18px";
-        //         ajaxakudong('a', '5');
-        //         posakhir = "limo";
-        //         console.log(ss);
-        //     } else {
-        //         dot.style.backgroundColor = 'transparent';
-        //         dot.style.border = "solid 2px grey";
-        //         dot.style.width = "12px";
-        //         dot.style.height = "12px";
-        //     }
-
-        //     dot.style.transition = "all 1s";
-        // }, {
-        //     threshold: [0.3]
-        // });
-
-
-        var y1 = new IntersectionObserver(function (entries) {
-            var dot = document.getElementById("yell");
-            if (entries[0].isIntersecting === true) {
-                dot.style.opacity = 0.5;
-                urutan[0] = 1;
-            } else {
-                dot.style.opacity = 0;
-                urutan[0] = 0;
-            }
-            dot.style.transition = "all 1s";
-        }, {
-            threshold: [0.5]
-        });
-
-        var y2 = new IntersectionObserver(function (entries) {
-            var dot = document.getElementById("yell");
-            if (entries[0].isIntersecting === true) {
-                dot.style.opacity = 1;
-                urutan[0] = 1;
-            } else {
-                dot.style.opacity = 0.5;
-                urutan[0] = 1;
-            }
-            dot.style.transition = "all 1s";
-        }, {
-            threshold: [1]
-        });
-
-        var g1 = new IntersectionObserver(function (entries) {
-            var dot = document.getElementById("gell");
-            if (entries[0].isIntersecting === true) {
-                dot.style.opacity = 0.5;
-                urutan[1] = 1;
-            } else {
-                dot.style.opacity = 0;
-                urutan[1] = 0;
-            }
-            dot.style.transition = "all 1s";
-        }, {
-            threshold: [0.5]
-        });
-
-        var g2 = new IntersectionObserver(function (entries) {
-            var dot = document.getElementById("gell");
-            if (entries[0].isIntersecting === true) {
-                dot.style.opacity = 1;
-                urutan[1] = 1;
-            } else {
-                dot.style.opacity = 0.5;
-                urutan[1] = 1;
-            }
-            dot.style.transition = "all 1s";
-        }, {
-            threshold: [1]
-        });
-
-        var kutukan = "";
-        var giliran = "d-1s";
-        var memper = 0.7;
-        var mode = "maju";
-
-        var d1 = new IntersectionObserver(function (entries) {
-            if (entries[0].isIntersecting === true) {
-                giliran = "d-2s";
-                kutukan = kutukan + "d1, ";
-            } else {
-                kutukan = kutukan.replace("d1, ", "");
-            }
-        }, {
-            threshold: [memper]
-        });
-        var d2 = new IntersectionObserver(function (entries) {
-            if (entries[0].isIntersecting === true) {
-                giliran = "d-3s";
-                kutukan = kutukan + "d2, ";
-
-            } else {
-                kutukan = kutukan.replace("d2, ", "");
-            }
-
-        }, {
-            threshold: [memper]
-        });
-        var d3 = new IntersectionObserver(function (entries) {
-            if (entries[0].isIntersecting === true) {
-                giliran = "d-4s";
-                kutukan = kutukan + "d3, ";
-
-            } else {
-                kutukan = kutukan.replace("d3, ", "");
-            }
-        }, {
-            threshold: [memper]
-        });
-        var d4 = new IntersectionObserver(function (entries) {
-            if (entries[0].isIntersecting === true) {
-                giliran = "d-5s";
-                kutukan = kutukan + "d4, ";
-
-            } else {
-                kutukan = kutukan.replace("d4, ", "");
-            }
-        }, {
-            threshold: [memper]
-        });
-        var d5 = new IntersectionObserver(function (entries) {
-            if (entries[0].isIntersecting === true) {
-                kutukan = kutukan + "d5, ";
-
-            } else {
-                kutukan = kutukan.replace("d5, ", "");
-            }
-        }, {
-            threshold: [memper]
-        });
-
-        function mlaku() { 
-            // pro.observe(document.querySelector("#porto"));
-            // section2.observe(document.querySelector("#coba"));
-            // telu.observe(document.querySelector("#tiga"));
-            // papat.observe(document.querySelector("#empat"));
-            // lima.observe(document.querySelector("#limo"));
-            y1.observe(document.querySelector("#yell"));
-            y2.observe(document.querySelector("#yell"));
-            g1.observe(document.querySelector("#gell"));
-            g2.observe(document.querySelector("#gell"));
-
-            d1.observe(document.querySelector("#d-1s"));
-            d2.observe(document.querySelector("#d-2s"));
-            d3.observe(document.querySelector("#d-3s"));
-            d4.observe(document.querySelector("#d-4s"));
-            d5.observe(document.querySelector("#d-5s")); 
-        }
-
-        function tran1() {
-            var element = document.getElementById("ll");
-            if (element.style.left == "10px" || element.style.left == "") {
-                element.style.left = "300px";
-                element.style.fontSize = "100px";
-                element.style.opacity = "1";
-            } else {
-                element.style.left = "10px";
-                element.style.fontSize = "10px";
-                element.style.opacity = "0.5";
-            }
-            element.style.transition = "all 2s";
-        }
-
-        function tran2() {
-            var element = document.getElementById("vd");
-            if (element.style.width == "100px" || element.style.width == "") {
-                element.style.width = "300px";
-                element.style.background = "blue";
-            } else {
-                element.style.width = "100px";
-                element.style.background = "red";
-            }
-            element.style.transition = "all 2s";
-        }
-
-        function tran3(st) {
-            // var element = document.getElementById("vd2");
-            element.style.opacity = "0";
-            if (st == "masuk") {
-                element.style.opacity = "1";
-                element.style.transition = "all 1.5s";
-            } else {
-                element.style.opacity = "0";
-                element.style.transition = "all 0.5s";
-            }
-        }
-
-        function popup() {
-            var element = document.getElementById("info");
-            var element2 = document.getElementById("ndelik");
-            var element3 = document.getElementById("ndas");
-
-            if (element.style.height == "40px" || element.style.height == "") {
-                element.style.bottom = "0%";
-                element.style.height = "150px";
-                document.getElementById("togel").innerHTML = "Close(X)";
-                element2.style.top = "0px";
-
-            } else {
-                element.style.bottom = "0%";
-                element.style.height = "40px";
-                document.getElementById("togel").innerHTML = "Click me";
-                element2.style.top = "460px";
-
-            }
-            element.style.transition = "all 2s";
-            element2.style.transition = "all 2s";
-            element2.style.transitionDelay = "1s";
-            element3.style.transition = "all 2s";
-        }
-        
-        var x = 0;
-        var y = 0;
-
-        function test(event) {
-            x = event.clientX;
-            y = event.clientY;
-            // console.log(x);
-        }
-        // init();            
-        const divs = ["porto", "coba", "tiga", "empat", "limo"];
-        var posawal = 0;
-        posakhir = 0;
-
-        function sekerol() {
-            var ele = document.getElementById("ooo");
-            // console.log(ele.scrollTop);
-        }
-
-        function cek() {
-            alert(document.getElementById('lagi').offsetHeight + " " + document.getElementById('gila').offsetHeight);
-        }
-        const d = new Date();
-        // function init() { window.requestAnimationFrame(nguli); }
-        // init();
-        var posyawal = 0;
-        var posyakhir = 0;
-
-        function upe(from) {
-            posyakhir = y;
-            if (posyakhir > posyawal) {
-                console.log('mudun');
-            } else {
-                console.log('munggah');
-            }
-        }
-
-        function downe() {
-            posyawal = y;
-            console.log(" pos awal = " + posyawal);
-        }
-    </script>
-</head>
-
-<body onload="mlaku()" onmousemove="test(event)" style="background-color: grey;">
-    <div class="bg">        
-
-        <div onscroll="sekerol()" data-role="page" id="ooo" style="  scroll-behavior: smooth; overflow:hidden; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">
-            <div style="background-color: transparent;">
-                <center>
-                    <Div id="atas">
-                        <div class="kelas" style="background-color: white;height: 100%;float:left;width:25%;" ;>
-
-                        </div>
-
-                        <a href="#porto" onclick="ajaxakudong('a','1','beige')">
-                            <div class="kelas" id="1a"
-                                style="border-radius:5px;background-color: white;height: 36px;float:left;width: 15%;" ;>
-                                Home
-                            </div>
-                        </a>
-
-                        <a href="#coba" onclick="ajaxakudong('a','2','limegreen')">
-                            <div class="kelas" id="2a"
-                                style="  border-radius:5px;background-color: white;height: 36px;float:left;width: 15%;"
-                                ;>
-                                Education
-                            </div>
-                        </a>
-
-                        <a href="#tiga" onclick="ajaxakudong('a','3','gold')">
-                            <div class="kelas" id="3a"
-                                style="border-radius:5px;background-color: white;height: 36px;float:left;width: 15%;" ;>
-                                Skills
-                            </div>
-                        </a>
-
-                        <a href="#empat" onclick="ajaxakudong('mycv.html','4','pink')">
-                            <div class="kelas" id="4a"
-                                style="border-radius:5px;background-color: white;height: 36px;float:left;width: 15%;" ;>
-                                CV
-                            </div>
-                        </a>
-
-                        <a href="#limo" onclick="ajaxakudong('a','5','blue')">
-                            <div class="kelas" id="5a"
-                                style="border-radius:5px;background-color: white;height: 36px;float:left;width: 15%;" ;>
-                                Contacts
-                            </div>
-                        </a>
-
-                    </Div>
-                </center>
-            </div>
-
-             <!-- <div id="k" style="background-color: transparent;">
-                <center>
-                    <Div id="ndelik"
-                        style="width: 100px;height: 100px;background-color: gold;position: relative;top:460px;"> </Div>
-                </center>
-            </div>  -->
-            
-            <div id="info" onclick="popup()">
-                <center>
-                    <a style="cursor: pointer;" id="togel">Click me</a><br>
-                    Ronny Hartono<br><br>
-                    <img src="wait.jpg">
-                </center>
-            </div>
-
-            <div id="tombol">
-                <table style="width: 100%; height: 100%;">
-                    <tr>
-                        <td>
-                            Prev
-                        </td>
-                        <td align="right">
-                            Next
-                        </td>
-                    </tr>
-                </table>
-                <center>
-                     
-                </center>
-            </div>
-
-            <div id="porto" style="overflow:hidden;background-color: navajowhite;width: 100%;height: 100%;">
-          
-                
-                <table style="width: 100%; height: 100%; ">
-                    <tr style="height: 10%;">
-                        <td>
-                            <div style="height: 50px;"></div>
-                        </td>
-                    </tr>
-
-                    <tr style="height: 45%;">
-                        <td align="center">
-                            <img src="pp.jpg" style="border-radius: 10px; width: 100%; height: auto; max-width: 300px;"
-                        </td> 
-                    </tr> 
-
-                    <tr style="height: 45%;">
-                        <td style="vertical-align: top;">
-                            <table  id="babi" style=" width: 100%; height: 100%;">
-                                <tr>
-                                    <td style="width: 40%;">
-                                        <a id="mesage" style="display: none;"></a>
-                                        <div class="lhe">
-                                            Senior Developer<br>
-                                            Ronny Hartono
-                                            
-                                            <div style="height: 10px;"></div>
-                                        </div>
-                                    </td>
-                                    <td style="width: 60%;"  > 
-                                            <div id="ai" style=" padding-left: 18px; text-align: left; 
-                                            font-size: 22pt; display: inline-block; ">
-                                                <br> 
-                                                    I have great background education and have a good management skill.<br>
-                                                    I have some skills and my hobby is learning about technology.<br>
-                                                     
-                                                 
-                                            </div>
-
-
-                                    </td>
-                                </tr>
-                            </table> 
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <div style="overflow:scroll;background-color: lightskyblue;width: 100%;height: 100%; " id="coba">
-                <div style="height: 30px;"> </div>
-                <h1>Education</h1>
-                <center>
-                    <strong> <a id="pg"></a> </strong>
-                    <div id="panell" style=" overflow: scroll;width: 90%; height: 100%;">
-                        <table style="background-color: lightskyblue;width: 100%; ">
-                            <tr align="left" style="height:10%; vertical-align: top;">
-                                <td></td>
-                            </tr>
-                            <tr align="center" style="height:70%; ">
-                                <td>
-                                    <table style="width: 100%; overflow: scroll;">
-                                        <tr>
-                                            <td align="right">
-                                                <div id="yell"
-                                                    style="  background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold);   overflow: SCROLL;  text-align: center;  border-radius:5px;width: 350px; height: 420px;  opacity: 0;">
-                                                    <div style="  width: 100%; height: 10%; float: left;">
-                                                        <strong> <A style="font-size: 19px;">D3 MANAJEMEN
-                                                                INFORMATIKA</A></strong>
-
-                                                    </div>
-                                                    <div
-                                                        style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; ">
-                                                        <img src="skul.png">
-                                                    </div>
-                                                    <div style="  width: 100%; height: 10%; float: left;">
-                                                        <strong> <A style="font-size: 22px;">2004 - 2007</A></strong>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div id="gell"
-                                                    style="  background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold); overflow: SCROLL; text-align: center; border-radius:5px;width: 350px; height: 420px;  background-color: red;opacity: 0;">
-                                                    <div style="  width: 100%; height: 10%; float: left;">
-                                                        <strong> <A style="font-size: 19px;">S1 SISTEM INFORMASI
-                                                                BISNIS</A></strong>
-                                                    </div>
-                                                    <div
-                                                        style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; ">
-                                                        <img src="skul.png">
-                                                    </div>
-                                                    <div style="  width: 100%; height: 10%; float: left;">
-                                                        <strong> <A style="font-size: 22px;">2007 - 2009</A></strong>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </center>
-            </div>
-
-            <div style=" align-content: center; width: 100%;height: 100%;  overflow: scroll;background-color: palegoldenrod;"
-                id="tiga">
-                <table style="width: 100%;height: 15%" ;>
-                    <tr style="height: 5%;">
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr style="height: 90%;">
-                        <td>
-                            <h1 onclick="cekNearest()">Skills</h1>
-                        </td>
-                    </tr>
-                </table>
-
-                <div style="width: 100%; height: 7%;">
-                    <div class="lhel" style="text-align: center;"><br>
-                        Here My Skill Lists
-                    </div>
-                </div>
-
-                <div id="molor"
-                    style="  scroll-behavior: smooth;  overflow: scroll; opacity: 1; width: 100%; height: 73%; ">
-                    <div id="panel" style=" width: 100%; height: 100%;">
-
-                        <table id="hope" style="width: 100%; height: 90%; ">
-                            <tr>
-                                <td style="vertical-align: top;">
-                                    <div id="d-1s"
-                                        style=" position: relative;  border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                        <table style="width: 100%; height: 100%;">
-                                            <tr style="height: 90%;">
-                                                <td class="bg2">
-
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 10%;">
-                                                <td align="center">
-                                                    <strong>
-                                                        HTML,JavaScript and CSS
-                                                    </strong>
-
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </td>
-                                <td style="vertical-align: top;">
-                                    <div id="d-2s"
-                                        style=" position: relative; border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                        <table style="width: 100%; height: 100%;">
-                                            <tr style="height: 90%;">
-                                                <td class="bg2">
-
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 10%;">
-                                                <td align="center">
-                                                    <strong>
-                                                        PHP , Laravel and CodeIgniter
-                                                    </strong>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </td>
-                                <td style="vertical-align: top;">
-                                    <div id="d-3s"
-                                        style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                        <table style="width: 100%; height: 100%;">
-                                            <tr style="height: 90%;">
-                                                <td class="bg2">
-
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 10%;">
-                                                <td align="center">
-                                                    <strong>
-                                                        Java
-                                                    </strong>
-
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </td>
-                                <td style="vertical-align: top;">
-                                    <div id="d-4s"
-                                        style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                        <table style="width: 100%; height: 100%;">
-                                            <tr style="height: 90%;">
-                                                <td class="bg2">
-
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 10%;">
-                                                <td align="center">
-                                                    <strong>
-                                                        SQLServer & MySql
-                                                    </strong>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </td>
-                                <td style="vertical-align: top;">
-                                    <div id="d-5s"
-                                        style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
-                                        <table style="width: 100%; height: 100%;">
-                                            <tr style="height: 90%;">
-                                                <td class="bg2">
-
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 10%;">
-                                                <td align="center">
-                                                    <strong>
-                                                        Android
-                                                    </strong>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div id="titik" style=" width: 100%;  vertical-align: top;  text-align: center; height: 5%;">
-
-                </div>
-            </div>
-
-            <div style="background-color: pink;width:100%;height: 100%;" id="empat">
-                <table style="width: 100%;height: 15%" ;>
-                    <tr style="height: 5%;">
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr style="height: 90%;">
-                        <td>
-                            <h1>CV</h1>
-                        </td>
-                    </tr>
-                </table>
-                <!-- https://www.malasngoding.com/menampilkan-file-pdf-di-html-dengan-mudah/ -->
-
-
-                <div
-                    style="  align-items: center; overflow: scroll; background-color: white; opacity: 1; width: 100%; height: 85%;">
-                    <!-- <embed type="application/pdf" src="cv.pdf" style="width: 100%; height: 100%;"></embed> -->
-                </div>
-            </div>
-
-            <div id="limo" style="width:100%; height: 100%;">
-                <table style="background-color: palegreen; width: 100%; height: 100%;">
-                    <tr align="left" style="height:10%; vertical-align: top;">
-                        <td>
-                            <div style="height: 50px;">
-
-                            </div>
-                            <h1>Contacts</h1>
-                        </td>
-                    </tr>
-                    <tr align="center" style="height:90%; ">
-                        <td>
-                            <table style="width: 100%; height: 100%; ">
-                                <tr style="height: 10%; vertical-align: top;">
-                                    <td>
-                                        <hr>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        sdfsdfd
-                                    </td>
-                                </tr>
-                            </table>>
-                        </td>
-                    </tr>
-                </table>
-                burek
-            </div>
-
-        </div>
-    </div>
-
-    <script>
-        var i = 0;
-        var timer = null;
-        var myit;
-        var myat;
-        elemst = document.getElementById("ooo");
-        var poscawal = 0;
-        elemst.addEventListener('scroll', function () {
-            if (i == 0) {
-                poscawal = elemst.scrollTop;
-            }
-            i++;
-            if (timer !== null) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(function () {
-                if (i >= 5) {
-                    if (poscawal > 0) {
-                        //alert(posakhir+" sc awal "+ poscawal +" sc akhir"+elemst.scrollTop);
-                        //location.href="#coba";
-                    }
-                    poscawal = 0;
-                }
-                i = 0;
-            }, 150);
-        }, false);
+body, html{margin:0;padding:0;width:100%; height: 100%;}
+.wolpeper {   
+  background-image: url("back.png"); 
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.kelas {
+ font-weight: bold;
+ font-size: 1.5vw;
+ color:blue;
+ vertical-align: middle;
+ word-wrap: break-word; 
+}
+
+.hel {
+  font-weight: bold;
+  font-size: 15pt; 
+  vertical-align: middle;
+  word-wrap: break-word; 
+ }
+ .responsive {border-radius: 5px;
+  width: 95%;
+  height: auto;
+}
+
+
+ .leh  
+ {
+ font-weight: bold;
+ font-size: 12pt; 
+ vertical-align: middle;
+ word-wrap: break-word; 
+}
+
+@media screen and (max-width: 800px) {
+  .kelas {
+    font-size: 8pt;
+  }
+}
+
+.lhe  
+{
+font-weight: bold;
+ font-size:4vw;
+color:darkblue; 
+vertical-align: middle;
+word-wrap: break-word; 
+}
+.lhel
+{
+font-weight: bold;
+ font-size:2vw;; 
+vertical-align: middle;
+word-wrap: break-word; 
+}
+
+ @media screen and (max-width: 800px) {
+  .lhe {
+    font-size: 7.2vw;
+  }
+} 
+
+@media screen and (max-width: 800px) {
+  .lhel {
+    font-size: 4.2vw;
+  }
+} 
+
+@media screen and (max-width: 800px) {
+  img {
+    max-width: 250px;
+  }
+} 
  
-     
 
-        function testOver() {
-            document.getElementById("mesage").innerHTML = (document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth);
-             
-            el = document.getElementById("porto"); 
-            // if((document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth) <= 0.9 ){
-            //     f = document.getElementById("ai").style.fontSize.replace("pt", "");
-            //         f = f + 2;
-            //     document.getElementById("ai").style.fontSize = f + "pt";
-            // }
-            
-            // else{
-            //    
-            // }
-            if ((el.clientWidth < el.scrollWidth) || (el.clientHeight < el.scrollHeight)) {
-                    f = document.getElementById("ai").style.fontSize.replace("pt", "");
-                    f = f - 1;
-                    document.getElementById("ai").style.fontSize = f + "pt"; 
-                   // document.getElementById("ai").style.transition = "ease-in-out 0.2s"; 
-            }             
+@media screen and (max-width: 800px) {
+  .leh {
+    font-size: 18pt;
+  }
+}
 
-                    var max = 0
-                    for (j = 0; j <= 4; j++) {
-                        if (urutan[j] == 1) {
-                            if (j >= max) {
-                                max = j;
-                            }
-                        }
-                    }
-                    document.getElementById("pg").innerHTML = (max + 1) + " of 2"; 
-        }
+@media screen and (max-width: 800px) {
+  .hel {
+    font-size: 10pt;
+  }
+}
+
+a:link { text-decoration: none; }
+.bunder{
+  border-radius:100%;
+  border:solid 2px grey;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  display: inline-block;
+}
+.hrku {
+  background: linear-gradient(to right,white, red, white);
+  border:0px;
+  height: 1px;
+}
+.blek {   
+  background-color:#524949;
+}
+br {
+  content: "";
+  margin: 0.5em;
+  display: block;
+  font-size: 24%;
+}
+.section{
+  width: 100%; 
+  height: 100%;
+  box-shadow: 0 0 18px #fff; 
+  border: 0px solid black;
+  /* animation: example 1s infinite;
+  animation-direction: alternate; */
+}
+@keyframes example {
+  /*from {background: linear-gradient(#222, #222),linear-gradient(90deg, rgb(236, 13, 13), rgb(255, 217, 0));}
+  to {background: linear-gradient(#222, #222),linear-gradient(90deg,rgb(255, 217, 0),rgb(236, 13, 13)    );}*/
+  from{box-shadow: 0 0 28px rgb(255, 234, 114);} to {box-shadow: 0 0 0px white}
+}
+
+.section2{ height: 80%; background:white;
+  width: 80%;
+  border:1px solid black; 
+}
+.vl {
+  position: relative;
+  border-left: 6px solid green;
+  height: 100%;
+  top:-40%;
+}
+.m{
+  
+  opacity: 0;   
+  border-radius: 2px;
+  border: solid red 0px;
+  font-size: 2vw;
+  word-wrap: break-word;
+}
+.lab{
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: "203px";
+  color: #f35423;
+  opacity:0; 
+  left:800px;box-shadow: 5px 10px 18px #888888;
+}
+.a2{
+  font-size: 25px;font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(221, 44, 0);
+}
+.a3{
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;font-weight: bold;
+}
+.abo{
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(128, 29, 12);font-weight: bold;
+}
+.a4{position: relative;left:10px;
+  font-size: 21px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+  .section table{
+    height: 100%; background:transparent;
+    width: 100%;
+  }
+
+  .dot{
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .dit{
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  #atas {
+     /* visibility: hidden; */
+    height:30px;
+    text-align: center;
+    vertical-align: middle;
+    overflow:hidden;
+    position: fixed;
+    cursor:pointer;    
+    top: 0%;
+    width: 100%;
+    color: brown;
+    background-color: white;
+    opacity: 1;z-index: 200;
+}
+  #info {
+    visibility: hidden;
+    border-radius: 14px;
+    height:40px;
+    overflow:hidden;
+    position: fixed;
+    cursor:pointer;    
+    bottom:0%;
+    width:300px;
+    right: -70px;
+    color: brown;
+    background-color: khaki;
+    opacity: 1;z-index:6677;
+}
+
+#tombol {
+  /* visibility: hidden; */ 
+  border-radius: 5px;
+  height:30px;
+  overflow:hidden;
+  position: fixed;
+  cursor:pointer;    
+  top:5%;
+  left:70%;
+  width:30%;
+ 
+  color: white; 
+  opacity: 0.8;z-index:6677;
+ 
+  background-color: coral;
+  box-shadow: 10px 10px 5px lightblue;
+}
+
+#tengen { 
+  height:150px;
+  overflow:hidden;
+  position: fixed;
+  cursor:pointer;    
+  top:50%;
+  width:55px;right:15px; 
+  color: rgb(0, 0, 0); 
+  opacity: 1;z-index: 2002;
+}
+#k {
+  border-radius: 14px;
+  height:40px;
+  overflow:hidden;
+  position: fixed;
+  cursor:pointer;
+  bottom:10%;
+  width:20%;right:15px; 
+  height:40%;
+  color: brown;
+  background-color: khaki;
+  opacity: 1;
+}
+div.bottom { text-align: center;
+  vertical-align: bottom;
+  position: relative;
+  text-align: center; 
+  height: 0%;
+  width: 100%;
+  bottom: 0%;
+  border: 0px solid #8c07c0;
+} 
+ 
+.lbl{
+  opacity: 0.5;
+  position: relative;
+  left:10px;
+  transition: all 2s ;
+  font-size: 10px;
+  cursor: pointer;
+}
+ 
+
+.dv {
+    border-radius: 4px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: all 2s ;
+    cursor: pointer;color:yellow;
+}
+.fadeout {
+ opacity: 0;
+}
 
 
-        var modar = 0;
-        var dtakhir = 1;
-        var dtujuan = 0;
 
-
-        var panellen = 0;
-
-        function cekNearest() {
-            var elementleft = document.getElementById('panel').offsetTop;
-            var divleft = document.getElementById('d-2s').offsetTop;
-            var elementRelativeleft = elementleft - divleft;
-
-            alert(kutukan);
-        }
-       
-        function dt(s) {
-            let bef = s.split("-");
-            //alert("tadi "+   dtakhir  +" "+ bef[1]);
-            if (dtakhir > bef[1]) {
-                mode = 'mundur';
-            } else {
-                mode = 'maju';
-            }
-            dtujuan = s;
-            el = document.getElementById(s + "s");
-            elm = document.getElementById("d-" + dtakhir);
-            elm.style.backgroundColor = "#bbb";
-            let ss = s.split("-");
-
-            elll = document.getElementById(s);
-            elll.style.backgroundColor = "black";
-            dtakhir = ss[1];
-
-            pan = document.getElementById("molor");
-            pan.scrollLeft = panellen * (ss[1] - 1);
-
-        }
-
-        myit = setInterval(testOver, 20);
-
-        function makeDot() {
-            el = document.getElementById("titik");
-            ell = document.getElementById("molor");
-            elll = document.getElementById("panel");
-            panellen = (ell.clientWidth);
-            for (i = 1; i <= Math.ceil((450 * 5) / ell.clientWidth); i++) {
-                //  el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
-            }
-            elll.style.width = ((Math.ceil((450 * 5) / ell.clientWidth)) * 100) + "%";
-
-        }
-        testOver();
-        makeDot();
-    </script>
-
-</body> 
-</html> 
-<!-- 
-
-
-  -->
-<!-- <div id="tengen">
-                <center>
-                    <table>
-                        <tr>
-                            <td><a href="#porto"></a><span id="1" class="bunder"></span></td>
-                            <td><a href="#porto">1</a></td>
-                        </tr>
-                        <tr>
-                            <td><span id="2" class="bunder"></span></td>
-                            <td><a href="#coba">2</a> </td>
-                        </tr>
-                        <tr>
-                            <td><span id="3" class="bunder"></span></td>
-                            <td><a href="#tiga">3</a></td>
-                        </tr>
-                        <tr>
-                            <td><span id="4" class="bunder"></span></td>
-                            <td><a href="#empat">4</a> </td>
-                        </tr>
-                        <tr>
-                            <td><span id="5" class="bunder"></span></td>
-                            <td><a href="#limo">5</a> </td>
-                        </tr>
-                    </table>
-                </center>
-            </div> -->
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px; 
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button ooo { /*untuk tulisan */
+    cursor: pointer;
+    display: inline-block;
+    position: relative;    
+    transition: 0.5s;
+  }
+  
+  .button ooo:after {  /*untuk setelah tulisan di dalam*/
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover ooo {
+    padding-right: 25px; 
+  }
+  
+  .button:hover ooo:after {
+    opacity: 1;
+    right: 0;
+  }
