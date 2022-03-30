@@ -226,13 +226,15 @@ br {
   overflow:hidden;
   position: fixed;
   cursor:pointer;    
-  bottom:0%;
+  bottom:4%;
   left:40%;
   width:300px;
  
-  color: brown;
-  background-color: white;
+  color: white; 
   opacity: 0.8;z-index:6677;
+ 
+  background-color: coral;
+  box-shadow: 10px 10px 5px lightblue;
 }
 
 #tengen { 
