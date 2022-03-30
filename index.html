@@ -229,35 +229,52 @@
                 dot.style.transition = "all 1s";
             }, { threshold: [1] });
            
-
+            var kutukan = "";
             var giliran ="d-1s";
             var memper = 0.7;
             var mode = "maju";
+
             var d1 = new IntersectionObserver(function(entries) {
                 if(entries[0].isIntersecting === true){  giliran ="d-2s";
-               
-            } 
+                kutukan = kutukan + "d1, ";  
+            }else{
+                kutukan = kutukan.replace("d1, ", "");
+            }
             }, { threshold: [memper] });
+
+
             var d2 = new IntersectionObserver(function(entries) { 
                 if(entries[0].isIntersecting === true){  giliran ="d-3s";
+                kutukan = kutukan + "d2, ";
                 
+            }else{
+                kutukan = kutukan.replace("d2, ", "");
             }
+
             }, { threshold: [memper] });
             var d3 = new IntersectionObserver(function(entries) { 
                 if(entries[0].isIntersecting === true){  giliran ="d-4s";
+                kutukan = kutukan + "d3, ";
                 
-            } 
+            }else{
+                kutukan = kutukan.replace("d3, ", "");
+            }
             }, { threshold: [memper] });
             var d4 = new IntersectionObserver(function(entries) {
                 if(entries[0].isIntersecting === true){  giliran ="d-5s";  
+                kutukan = kutukan + "d4, ";
                  
-            } 
+            }else{
+                kutukan = kutukan.replace("d4, ", "");
+            }
             }, { threshold: [memper] });
             var d5 = new IntersectionObserver(function(entries) { 
-                if(entries[0].isIntersecting === true){  ;  
-            
+                if(entries[0].isIntersecting === true){ 
+                    kutukan = kutukan + "d5, ";
                 
-            } 
+            }else{
+                kutukan = kutukan.replace("d5, ", "");
+            }
             }, { threshold: [memper] });
 
             function mlaku(){
@@ -277,7 +294,7 @@
                     d2.observe(document.querySelector("#d-2s"));
                     d3.observe(document.querySelector("#d-3s"));
                     d4.observe(document.querySelector("#d-4s"));
-                    d5.observe(document.querySelector("#d-5s")); 
+                    d5.observe(document.querySelector("#d-5s"));  
 
             }
             function tran1(){
@@ -482,8 +499,8 @@
             <div style="height: 30px;"> </div>
             <h1>Education</h1>
             <center>
-              <strong> <a id="pg"></a> </strong>
-            <div style=" overflow: scroll;width: 90%; height: 100%;">               
+                <a id="p"> Prev   </a> <strong> <a id="pg"></a> </strong> <a id="n">   next </a>
+            <div id="panell" style=" overflow: scroll;width: 90%; height: 100%;">               
                 <table style="background-color: lightskyblue;width: 100%; " >
                                 <tr align="left"style="height:10%; vertical-align: top;">
                                     <td></td>
@@ -545,18 +562,17 @@
             </div>
 
             <div id="molor" style="  scroll-behavior: smooth;  overflow: scroll; opacity: 1; width: 100%; height: 73%; ">
-                <div id="panel" style="width: 100%; height: 100%;">
-                    
+                <div id="panel" style=" width: 100%; height: 100%;">                    
                     <!-- <table id="hope" border=1 style="width: 100%; height: 90%; ">
                      <tr>
                          <td>sampai mati </td>
-                     </tr>
+                     </tr> aturan kalo mundur beneran maju tidak
                     </table> -->
 
-                    <table id="hope"  style="width: 100%; height: 90%; ">
+                    <table id="hope" style="width: 100%; height: 90%; ">
                         <tr>
                             <td style="vertical-align: top;">
-                                <div id="d-1s" style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                                <div id="d-1s" style=" position: relative;  border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
                                     <table style="width: 100%; height: 100%;">
                                         <tr style="height: 90%;"><td class="bg2">
                                             
@@ -572,7 +588,7 @@
                                 </div>
                             </td>
                             <td style="vertical-align: top;">
-                                <div id="d-2s" style=" border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
+                                <div id="d-2s" style=" position: relative; border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
                                     <table  style="width: 100%; height: 100%;">
                                         <tr style="height: 90%;"><td class="bg2">
                                             
@@ -706,7 +722,7 @@
                 }
                     i++;
                     if(timer !== null) {
-                        clearTimeout(timer);        
+                        clearTimeout(timer);
                     }
                     timer = setTimeout(function() {
                       if(i>=5){
@@ -738,6 +754,24 @@
                            if(j >= max){max = j;}
                        }
                     }document.getElementById("pg").innerHTML = (max+1) +" of 2"; 
+                    document.getElementById("p").style.opacity = 0;
+                    document.getElementById("n").style.opacity = 0;
+                    console.log(         document.getElementById("panell").scrollLeft      );
+                  // alert(  document.getElementById("panell").scrollLeft );
+                    //  if( document.getElementById("panell").scrollLeft > 0  ){
+                        document.getElementById("p").style.opacity = 1;
+                        document.getElementById("n").style.opacity = 1;
+                     
+                        if(   max+1 >= 2 ){
+                            document.getElementById("p").style.opacity = 1;
+                            document.getElementById("n").style.opacity = 0;
+                        } 
+                        if(   max+1 <= 1 ){
+                            document.getElementById("p").style.opacity = 0;
+                            document.getElementById("n").style.opacity = 1;
+                        } 
+                    //   }
+
                 }
                 var modar=0;
                 var dtakhir=1;var dtujuan=0;
@@ -745,7 +779,11 @@
                 
                 var panellen = 0;
                 function cekNearest(){
-                    alert(giliran +" "+mode);
+                    var elementleft = document.getElementById('panel').offsetTop;
+                    var divleft = document.getElementById('d-2s').offsetTop;
+                    var elementRelativeleft = elementleft - divleft;
+
+                   alert(kutukan);
                 }
                 function dt(s){
                      let bef = s.split("-");
