@@ -32,7 +32,8 @@
         //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
         //https://colorlib.com/wp/template/personalportfolio/
         var detik = 0;
-        var posakhir;
+        const divs = ["porto", "coba", "tiga", "empat", "limo"];
+        var pposakhir;
         var ss;
         const keles = ["navajowhite", "lightskyblue", "palegoldenrod", "pink", "palegreen"];
         const urutan = [0, 0, 0, 0, 0];
@@ -91,24 +92,26 @@
             };
             xhttp.open("GET", grace, true);
             xhttp.send();
+
+            pposakhir =  (divs[s-1]);
         }
 
         // var pro = new IntersectionObserver(function (entries) {
-        //     var dot = document.getElementById("1");
+        //     // var dot = document.getElementById("1");
         //     if (entries[0].isIntersecting === true) {
-        //         dot.style.backgroundColor = 'grey';
-        //         dot.style.border = "0px";
-        //         dot.style.borderColor = "white";
-        //         dot.style.width = "18px";
-        //         dot.style.height = "18px";
+        //         // dot.style.backgroundColor = 'grey';
+        //         // dot.style.border = "0px";
+        //         // dot.style.borderColor = "white";
+        //         // dot.style.width = "18px";
+        //         // dot.style.height = "18px";
         //         ajaxakudong('a', '1');
-        //         posakhir = "porto";
+        //         pposakhir = "porto";
+                
         //     } else {
-        //         dot.style.backgroundColor = 'transparent';
-        //         dot.style.border = "solid 2px grey";
-        //         dot.style.width = "12px";
-        //         dot.style.height = "12px";
-
+        //         // dot.style.backgroundColor = 'transparent';
+        //         // dot.style.border = "solid 2px grey";
+        //         // dot.style.width = "12px";
+        //         // dot.style.height = "12px";
         //     }
         //     dot.style.transition = "all 1s";
         // }, {
@@ -125,7 +128,7 @@
         //         dot.style.width = "18px";
         //         dot.style.height = "18px";
         //         ajaxakudong('a', '2');
-        //         posakhir = "coba";
+        //         pposakhir = "coba";
         //     } else {
         //         // tran3("metu"); 
         //         dot.style.backgroundColor = 'transparent';
@@ -148,7 +151,7 @@
         //         dot.style.width = "18px";
         //         dot.style.height = "18px";
         //         ajaxakudong('a', '3');
-        //         posakhir = "tiga";
+        //         pposakhir = "tiga";
         //     } else {
         //         dot.style.backgroundColor = 'transparent';
         //         dot.style.border = "solid 2px grey";
@@ -169,7 +172,7 @@
         //         dot.style.width = "18px";
         //         dot.style.height = "18px";
         //         ajaxakudong('a', '4');
-        //         posakhir = "empat";
+        //         pposakhir = "empat";
 
         //     } else {
         //         dot.style.backgroundColor = 'transparent';
@@ -191,7 +194,7 @@
         //         dot.style.width = "18px";
         //         dot.style.height = "18px";
         //         ajaxakudong('a', '5');
-        //         posakhir = "limo";
+        //         pposakhir = "limo";
         //         console.log(ss);
         //     } else {
         //         dot.style.backgroundColor = 'transparent';
@@ -405,13 +408,21 @@
         var x = 0;
         var y = 0;
 
+        function prev(){
+            alert("bef "+pposakhir);
+        }
+
+        function next(){
+            alert("next "+pposakhir);
+        }
+
         function test(event) {
             x = event.clientX;
             y = event.clientY;
             // console.log(x);
         }
         // init();            
-        const divs = ["porto", "coba", "tiga", "empat", "limo"];
+        
         var posawal = 0;
         posakhir = 0;
 
@@ -515,10 +526,10 @@
                 <table style="width: 100%; height: 100%;">
                     <tr>
                         <td>
-                            Prev
+                           <a onclick="prev()">  Prev </a> 
                         </td>
                         <td align="right">
-                            Next
+                            <a onclick="next()">  Next </a>
                         </td>
                     </tr>
                 </table>
@@ -527,9 +538,7 @@
                 </center>
             </div>
 
-            <div id="porto" style="overflow:hidden;background-color: navajowhite;width: 100%;height: 100%;">
-          
-                
+            <div id="porto" style="overflow:hidden;background-color: navajowhite;width: 100%;height: 100%;"> 
                 <table style="width: 100%; height: 100%; ">
                     <tr style="height: 10%;">
                         <td>
