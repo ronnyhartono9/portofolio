@@ -794,15 +794,12 @@
                     el = document.getElementById("titik");
                     ell = document.getElementById("molor");
                     elll = document.getElementById("panel");
-                    panellen = (ell.clientWidth);
-                    
+                    panellen = (ell.clientWidth); 
                         for(i=1;i<= Math.ceil( (450*5)  /   ell.clientWidth);i++){
-                            el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
-                        }
-                        
+                          //  el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
+                        } 
                         elll.style.width =  (( Math.ceil( ( 450 *5 )  /   ell.clientWidth) ) * 100) + "%";
-                         //alert(panellen);
-                      //  elll.innerHTML = elll.innerHTML + "<div style=' float:left;  background-color:green; width:450px'>ttt</div>";
+                        
                 }
                 testOver();
                 makeDot();
