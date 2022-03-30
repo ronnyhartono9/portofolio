@@ -446,9 +446,9 @@
 </head>
 
 <body onload="mlaku()" onmousemove="test(event)" style="background-color: grey;">
-    <div class="bg">
-        <div onscroll="sekerol()" data-role="page" id="ooo"
-            style="  scroll-behavior: smooth; overflow:hidden; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">
+    <div class="bg">        
+
+        <div onscroll="sekerol()" data-role="page" id="ooo" style="  scroll-behavior: smooth; overflow:hidden; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">
             <div style="background-color: transparent;">
                 <center>
                     <Div id="atas">
@@ -493,6 +493,37 @@
                         </a>
 
                     </Div>
+                </center>
+            </div>
+
+             <!-- <div id="k" style="background-color: transparent;">
+                <center>
+                    <Div id="ndelik"
+                        style="width: 100px;height: 100px;background-color: gold;position: relative;top:460px;"> </Div>
+                </center>
+            </div>  -->
+            
+            <div id="info" onclick="popup()">
+                <center>
+                    <a style="cursor: pointer;" id="togel">Click me</a><br>
+                    Ronny Hartono<br><br>
+                    <img src="wait.jpg">
+                </center>
+            </div>
+
+            <div id="tombol">
+                <table style="width: 100%; height: 100%;">
+                    <tr>
+                        <td>
+                            Prev
+                        </td>
+                        <td align="right">
+                            Next
+                        </td>
+                    </tr>
+                </table>
+                <center>
+                     
                 </center>
             </div>
 
@@ -820,9 +851,7 @@
         function testOver() {
             document.getElementById("mesage").innerHTML = (document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth);
              
-            el = document.getElementById("porto");
-
-
+            el = document.getElementById("porto"); 
             // if((document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth) <= 0.9 ){
             //     f = document.getElementById("ai").style.fontSize.replace("pt", "");
             //         f = f + 2;
@@ -836,8 +865,7 @@
                     f = document.getElementById("ai").style.fontSize.replace("pt", "");
                     f = f - 1;
                     document.getElementById("ai").style.fontSize = f + "pt"; 
-                   // document.getElementById("ai").style.transition = "ease-in-out 0.2s";
- 
+                   // document.getElementById("ai").style.transition = "ease-in-out 0.2s"; 
             }             
 
                     var max = 0
@@ -906,22 +934,13 @@
         testOver();
         makeDot();
     </script>
+
 </body> 
 </html> 
-<!-- <div id="k" style="background-color: transparent;">
-    <center>
-        <Div id="ndelik"
-            style="width: 100px;height: 100px;background-color: gold;position: relative;top:460px;"> </Div>
-    </center>
-</div>
+<!-- 
 
-<div id="info" onclick="popup()">
-    <center>
-        <a style="cursor: pointer;" id="togel">Click me</a><br>
-        Ronny Hartono<br><br>
-        <img src="wait.jpg">
-    </center>
-</div>  -->
+
+  -->
 <!-- <div id="tengen">
                 <center>
                     <table>
