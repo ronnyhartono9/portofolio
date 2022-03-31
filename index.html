@@ -325,7 +325,8 @@
             threshold: [memper]
         });
 
-        function mlaku() { 
+        function mlaku() {
+            document.getElementById('gambar').style.visibility = "hidden";
             // pro.observe(document.querySelector("#porto"));
             // section2.observe(document.querySelector("#coba"));
             // telu.observe(document.querySelector("#tiga"));
@@ -408,12 +409,26 @@
         var x = 0;
         var y = 0;
 
-        function prev(){
-            alert("bef "+pposakhir);
+        function blereg(){
+            document.getElementById('gambar').style.visibility ="visible";
+             document.getElementById('tung').style.opacity=0.3;
+            
         }
 
-        function next(){
-            alert("next "+pposakhir);
+        function terang(){
+            document.getElementById('gambar').style.visibility ="hidden";
+              document.getElementById('tung').style.opacity=1;
+             
+         }
+
+        function prev(){ 
+            location.href =   "#"+      divs[   divs.indexOf(pposakhir) - 1  ] ;  
+            ajaxakudong('a', divs.indexOf(pposakhir)  );
+        }
+
+        function next(){  
+            location.href =  "#"+  divs[   divs.indexOf(pposakhir)+ 1  ] ; 
+            ajaxakudong('a', divs.indexOf(pposakhir) +2);
         }
 
         function test(event) {
@@ -456,9 +471,22 @@
     </script>
 </head>
 
-<body onload="mlaku()" onmousemove="test(event)" style="background-color: grey;">
-    <div class="bg">
-        <div onscroll="sekerol()" data-role="page" id="ooo" style="  scroll-behavior: smooth; overflow:hidden; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1">
+<body onload="mlaku()" onmousemove="test(event)" style="background-color: white;">
+
+    <div id="gambar" style="width: 40%; height: 40%;  text-align: center;  vertical-align: middle;"> 
+           <center><a onclick="terang()"> klik me </a>
+               <table>
+                   <tr>
+                       <td>    <a href="#" class="previous round">&#8249;</a>    </td>
+                       <td> <img  id="g" src="skill 1.jpg"  style=" width: 100%; height: auto; max-width: 300px;"> </td>
+                       <td>   <a href="#" class="next round">&#8250;</a>                  </td>
+                   </tr>
+               </table>
+           </center>
+    </div>
+
+    <div id="canva" class="b1g" style="background-color: white;">
+        <div id="tung" onscroll="sekerol()" data-role="page" id="ooo" style="  scroll-behavior: smooth; overflow:hidden; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
             <div style="background-color: transparent;">
                 <center>
                     <Div id="atas">
@@ -531,12 +559,9 @@
                             <a onclick="next()">  Next </a>
                         </td>
                     </tr>
-                </table>
-                <center>
-                     
-                </center>
-            </div>
-
+                </table> 
+            </div> 
+            
             <div id="porto" style="overflow:hidden;background-color: cornsilk;width: 100%; height: 100%;  "> 
                 <table style="width: 100%; height: 100%; ">
                     <tr style="height: 10%;">
@@ -671,14 +696,18 @@
                                         style=" position: relative;  border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
                                         <table style="width: 100%; height: 100%;">
                                             <tr style="height: 90%;">
-                                                <td class="bg2">
+                                                <td class="bg2" onclick="blereg()">
 
                                                 </td>
                                             </tr>
                                             <tr style="height: 10%;">
-                                                <td align="center">
+                                                <td align="center" onclick="blereg()">
                                                     <strong>
+                                                       
+                                                        
                                                         HTML,JavaScript and CSS
+                                                    
+                                                     
                                                     </strong>
 
                                                 </td>
