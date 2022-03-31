@@ -50,7 +50,7 @@ word-wrap: break-word;
 .lhel
 {
 font-weight: bold;
- font-size:2vw;; 
+ font-size:30pt;
 vertical-align: middle;
 word-wrap: break-word; 
 }
@@ -63,7 +63,7 @@ word-wrap: break-word;
 
 @media screen and (max-width: 800px) {
   .lhel {
-    font-size: 30pt;
+    font-size: 22pt;
   }
 } 
 
