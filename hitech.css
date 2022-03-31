@@ -46,6 +46,7 @@ color:darkblue;
 vertical-align: middle;
 word-wrap: break-word; 
 }
+
 .lhel
 {
 font-weight: bold;
@@ -62,7 +63,7 @@ word-wrap: break-word;
 
 @media screen and (max-width: 800px) {
   .lhel {
-    font-size: 4.2vw;
+    font-size: 30pt;
   }
 } 
 
