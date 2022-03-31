@@ -886,7 +886,6 @@
                     document.getElementById("pg").innerHTML = (max + 1) + " of 2"; 
         }
 
-
         var modar = 0;
         var dtakhir = 1;
         var dtujuan = 0;
@@ -933,7 +932,7 @@
             elll = document.getElementById("panel");
             panellen = (ell.clientWidth);
             for (i = 1; i <= Math.ceil((450 * 5) / ell.clientWidth); i++) {
-                //  el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
+                  el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
             }
             elll.style.width = ((Math.ceil((450 * 5) / ell.clientWidth)) * 100) + "%";
 
