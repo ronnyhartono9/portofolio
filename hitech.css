@@ -264,8 +264,8 @@ br {
   border-radius: 5px;  
   position: fixed;
   cursor:pointer;    
-  top:30%;
-  left:30%;
+  top:5%;
+  left:20%;
   z-index:61677; 
 }
 
