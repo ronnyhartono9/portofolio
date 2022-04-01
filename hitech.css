@@ -1,8 +1,5 @@
 body, html{margin:0;padding:0;width:100%; height: 100%;scroll-behavior: smooth;}
 
- 
- 
-
 .previous {
   text-decoration: none;
   display: inline-block;
@@ -28,6 +25,7 @@ body, html{margin:0;padding:0;width:100%; height: 100%;scroll-behavior: smooth;}
   background-repeat: no-repeat;
   background-size: cover; 
 }
+
 .kelas {
  font-weight: bold;
  font-size: 1.5vw;
@@ -42,11 +40,11 @@ body, html{margin:0;padding:0;width:100%; height: 100%;scroll-behavior: smooth;}
   vertical-align: middle;
   word-wrap: break-word; 
  }
+
  .responsive {border-radius: 5px;
   width: 95%;
   height: auto;
 }
-
 
  .leh  
  {
@@ -109,7 +107,6 @@ word-wrap: break-word;
     max-width: 250px;
   }
 } 
- 
 
 @media screen and (max-width: 800px) {
   .leh {
@@ -132,20 +129,24 @@ a:link { text-decoration: none; }
   background-color: transparent;
   display: inline-block;
 }
+
 .hrku {
   background: linear-gradient(to right,white, red, white);
   border:0px;
   height: 1px;
 }
+
 .blek {   
   background-color:#524949;
 }
+
 br {
   content: "";
   margin: 0.5em;
   display: block;
   font-size: 24%;
 }
+
 .section{
   width: 100%; 
   height: 100%;
@@ -154,22 +155,38 @@ br {
   /* animation: example 1s infinite;
   animation-direction: alternate; */
 }
+
 @keyframes example {
   /*from {background: linear-gradient(#222, #222),linear-gradient(90deg, rgb(236, 13, 13), rgb(255, 217, 0));}
   to {background: linear-gradient(#222, #222),linear-gradient(90deg,rgb(255, 217, 0),rgb(236, 13, 13)    );}*/
   from{box-shadow: 0 0 28px rgb(255, 234, 114);} to {box-shadow: 0 0 0px white}
 }
 
+#tangan{
+  position: relative;  left:-40px;
+  opacity: 0;
+  animation: maju 1.5s infinite;
+  animation-direction: alternate;  
+}
+
+@keyframes maju {
+  /*from {background: linear-gradient(#222, #222),linear-gradient(90deg, rgb(236, 13, 13), rgb(255, 217, 0));}
+  to {background: linear-gradient(#222, #222),linear-gradient(90deg,rgb(255, 217, 0),rgb(236, 13, 13)    );}*/
+  from{left:-40px;opacity: 0;} to {left:0px;opacity: 1;}
+}
+
 .section2{ height: 80%; background:white;
   width: 80%;
   border:1px solid black; 
 }
+
 .vl {
   position: relative;
   border-left: 6px solid green;
   height: 100%;
   top:-40%;
 }
+
 .m{ 
   opacity: 0;   
   border-radius: 2px;
@@ -177,6 +194,7 @@ br {
   font-size: 2vw;
   word-wrap: break-word;
 }
+
 .lab{
   position: relative;
   font-family: 'Times New Roman', Times, serif;
@@ -185,26 +203,31 @@ br {
   opacity:0; 
   left:800px;box-shadow: 5px 10px 18px #888888;
 }
+
 .a2{
   font-size: 25px;font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
   color: rgb(221, 44, 0);
 }
+
 .a3{
   font-size: 22px;
   font-family: 'Times New Roman', Times, serif;
   color: black;font-weight: bold;
 }
+
 .abo{
   font-size: 25px;
   font-family: 'Times New Roman', Times, serif;
   color: rgb(128, 29, 12);font-weight: bold;
 }
+
 .a4{position: relative;left:10px;
   font-size: 21px;
   font-family: 'Times New Roman', Times, serif;
   color: black;
 }
+
   .section table{
     height: 100%; background:transparent;
     width: 100%;
@@ -323,7 +346,6 @@ div.bottom { text-align: center;
   cursor: pointer;
 }
  
-
 .dv {
     border-radius: 4px;
     text-align: center;
@@ -333,11 +355,10 @@ div.bottom { text-align: center;
     transition: all 2s ;
     cursor: pointer;color:yellow;
 }
+
 .fadeout {
  opacity: 0;
 }
-
-
 
 .button {
     border-radius: 4px;
