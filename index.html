@@ -404,21 +404,11 @@
             element2.style.transition = "all 2s";
             element2.style.transitionDelay = "1s";
             element3.style.transition = "all 2s";
-        }
-        
+        }        
         var x = 0;
-        var y = 0;
+        var y = 0; 
 
-        function blereg(){
-            document.getElementById('gambar').style.visibility ="visible";
-            document.getElementById('ooo').style.opacity=0.3;
-            
-        }
 
-        function terang(){
-              document.getElementById('gambar').style.visibility ="hidden";
-              document.getElementById('ooo').style.opacity=1; 
-         }
 
         function prev(){ 
             location.href =   "#"+      divs[   divs.indexOf(pposakhir) - 1  ] ;  
@@ -467,45 +457,95 @@
             posyawal = y;
             console.log(" pos awal = " + posyawal);
         }
-        function smut(){
-            document.getElementById('gb2').scrollIntoView();
+        
+        
+        let exs = [
+            [ " ", " ", "", "", ""],
+            [ "skill 1.jpg", "skill 5.jpg","skill 3.jpg"],
+            [ "skill 2.jpg", "skill 5.jpg" ],
+            [ "skill 3.jpg", "skill 5.jpg"],
+            [ "skill 4.jpg", "skill 5.jpg"],
+            [ "skill 5.jpg", "skill 5.jpg"]
+        ];
+
+        let notes = [
+            [ " ", " ", "", "", ""],
+            [ "ini contoh 1", "permainan tictac dengan javascript", "x2"],
+            [ "ini contoh 2", ""],
+            [ "ini contoh 3", ""],
+            [ "ini contoh 4", ""],
+            [ "ini contoh 5", ""],
+        ];        
+        var k=1;
+        var emak=0;
+
+        function terang(){
+              document.getElementById('gambar').style.visibility ="hidden";
+              document.getElementById('ooo').style.opacity=1; 
+              document.getElementById('ooo').disabled=false;
+         }
+
+        function blereg(i){            
+          //alert(exs[i].length);
+          emak = exs[i].length;          
+            document.getElementById('gambar').style.visibility ="visible";
+                let meBeYourHeroBaby = "";
+                let isi ="";
+                for(j=1;j<=exs[i].length;j++){
+                   // if(j>1){meBeYourHeroBaby = "margin-left: 100%;"}
+                        isi = isi + 
+                    " <div id='gb"+j+"' style='"+meBeYourHeroBaby+" width: 100%; height: 100%; float: left;  overflow: scroll;'> "+
+                        "<table style='width: 100%;'>"+
+                            " <tr>"+
+                                "<td align='center'> "+
+                                    "<img  id='g"+j+"' src='"+exs[i][j-1]+"'  style=' opacity:0; border-radius: 7px;  width: 100%; height: auto; max-width: 300px;'>"+
+                                    "<br>"+
+                                        "<a class='ex'>"+
+                                            notes[i][j-1] +
+                                        "</a>"+
+                                "</td>"+
+                            "</tr>"+
+                        "</table>"+
+                    "</div> <br> ";
+                }
+                document.getElementById('pp').innerHTML = isi;
+                document.getElementById('gb1').scrollIntoView();
+              //  alert(isi);
+                // <div id="gb2" style="margin-left: 100%;  width: 100%;  height: 100%; background-color: blue; overflow: hidden;"> 
+                // Right Div
+                // </div> 
+            document.getElementById('ooo').style.opacity=0;
+            document.getElementById('g'+1).style.opacity=1;
+            document.getElementById('ooo').style.transition = "ease-in-out 1.26s"; 
         }
-        function muts(){
-            document.getElementById('gb1').scrollIntoView();
+        
+        function smut(mode){ 
+            if(mode=="next"){
+                if( k< emak){ k++; }                
+            }else{
+                if(k>1){ k--; } 
+            }
+          //   document.getElementById('gb'+k).style.opacity=0;
+             //document.getElementById('gb'+k).style.opacity=1;
+             document.getElementById('g'+k).style.opacity=0;
+             document.getElementById('g'+k).style.opacity=1;
+             document.getElementById('g'+k).style.transition = "ease-in-out 0.5s";
+            document.getElementById('gb'+k).scrollIntoView();
         }
     </script>
 </head>
 
 <body onload="mlaku()" onmousemove="test(event)" style="background-color: white;">
-
-    <div id="gambar" style=" width: 60%; height: 80%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; "> 
-        <a href="#"onclick="muts()" class="previous round">&#8249;</a>  
+    <div id="gambar" style=" width: 60%; height: 80%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
+        <a href="#"onclick="smut('')" class="previous round">&#8249;</a>
           <a onclick="terang()"> Close Me </a>
-        <a href="#" class="next round" onclick="smut()">&#8250; </a>   
-        <div style="width: 100%; height: 100%; overflow: hidden; border:10px solid coral; border-radius: 7px; ">
-                <div id="gb1" style="width: 100%; height: 100%; float: left;  overflow: scroll;"> 
-                        <table style="width: 100%;">
-                            <tr>                                
-                                <td align="center"> 
-                                    <img  id="g" src="skill 1.jpg"  style=" border-radius: 7px;  width: 100%; height: auto; max-width: 300px;">
-                                   <br> 
-                                    <a class="ex">
-                                        ini adalah contoh 1
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
-                </div>
-
-                <div id="gb2" style="margin-left: 100%;  width: 100%;  height: 100%; background-color: blue; overflow: hidden;"> 
-                    Right Div
-                </div>
-        </div> 
-       
+        <a href="#" class="next round" onclick="smut('next')">&#8250; </a>   
+        <div id="pp" style="width: 100%; height: 100%; overflow: hidden; border:10px solid coral; border-radius: 7px; "> 
+        </div>
     </div>
 
     <div id="canva" class="b1g" style="background-color: white;">
-        <div i  onscroll="sekerol()" data-role="page" id="ooo" style="  scroll-behavior: smooth; overflow:hidden; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
+        <div onscroll="sekerol()" data-role="page" id="ooo" style="  scroll-behavior: smooth; overflow:hidden; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
             <div style="background-color: transparent;">
                 <center>
                     <Div id="atas">
@@ -553,18 +593,17 @@
                 </center>
             </div>
 
-             <!-- <div id="k" style="background-color: transparent;">
+             <div id="k" style="background-color: transparent;">
                 <center>
                     <Div id="ndelik"
                         style="width: 100px;height: 100px;background-color: gold;position: relative;top:460px;"> </Div>
                 </center>
-            </div>  -->
+            </div> 
             
             <div id="info" onclick="popup()">
                 <center>
                     <a style="cursor: pointer;" id="togel">Click me</a><br>
-                    Ronny Hartono<br><br>
-                    <img src="wait.jpg">
+                    Ronny Hartono<br><br> 
                 </center>
             </div>
 
@@ -597,35 +636,28 @@
 
                     <tr style="height: 45%;">
                         <td style="vertical-align: top;">
-                            <table    id="babi" style=" width: 100%; height: 100%;">
+                            <table id="babi" style=" width: 100%; height: 100%;">
                                 <tr>
                                     <td style="width: 40%; vertical-align: top; ">
                                         <a id="mesage" style="display: none;"></a>
                                         <div class="lhe">
                                             Senior Developer<br>
-                                            Ronny Hartono
-                                            
+                                            Ronny Hartono                                            
                                             <div style="height: 10px;"></div>
                                         </div>
                                     </td>
-                                    <td style="width: 60%; vertical-align: top;"  > 
-                                            <div id="ai" class="lhel" style=" padding-left: 18px; text-align: left;  
-                                            display: inline-block; ">
-                                                <br> 
-                                                    I have great background education and have a good management skill.<br>
-                                                    I have some skills and my hobby is learning about technology.<br>
-                                                     
-                                                 
-                                            </div>
-
-
+                                    <td style="width: 60%; vertical-align: top;"> 
+                                        <div id="ai" class="lhel" style=" padding-left: 18px; text-align: left; display: inline-block; ">
+                                            <br> 
+                                                I have great background education and have a good management skill.<br>
+                                                I have some skills and my hobby is learning about technology.<br> 
+                                        </div>
                                     </td>
                                 </tr>
-                            </table> 
+                            </table>
                         </td>
                     </tr>
                 </table>
-
             </div>
 
             <div style="overflow:scroll;background-color: lightskyblue;width: 100%;height: 100%; " id="coba">
@@ -646,9 +678,7 @@
                                                 <div id="yell"
                                                     style="  background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold);   overflow: SCROLL;  text-align: center;  border-radius:5px;width: 350px; height: 420px;  opacity: 0;">
                                                     <div style="  width: 100%; height: 10%; float: left;">
-                                                        <strong> <A style="font-size: 19px;">D3 MANAJEMEN
-                                                                INFORMATIKA</A></strong>
-
+                                                        <strong> <A style="font-size: 19px;">D3 MANAJEMEN INFORMATIKA</A></strong> 
                                                     </div>
                                                     <div
                                                         style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; ">
@@ -663,8 +693,7 @@
                                                 <div id="gell"
                                                     style="  background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold); overflow: SCROLL; text-align: center; border-radius:5px;width: 350px; height: 420px;  background-color: red;opacity: 0;">
                                                     <div style="  width: 100%; height: 10%; float: left;">
-                                                        <strong> <A style="font-size: 19px;">S1 SISTEM INFORMASI
-                                                                BISNIS</A></strong>
+                                                        <strong> <A style="font-size: 19px;">S1 SISTEM INFORMASI BISNIS</A></strong>
                                                     </div>
                                                     <div
                                                         style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; ">
@@ -714,14 +743,12 @@
                                         style=" position: relative;  border-radius: 10px; border:2px solid silver;  width: 450px; height: 400px; background-color: white;">
                                         <table style="width: 100%; height: 100%;">
                                             <tr style="height: 90%;">
-                                                <td class="bg2" >
-
-                                                </td>
+                                                <td class="bg2" > </td>
                                             </tr>
                                             <tr style="height: 10%;">
                                                 <td align="center" >
                                                     <strong> 
-                                                        HTML,JavaScript and CSS <a href="#" onclick="blereg()"> Example  </a>
+                                                        HTML,JavaScript and CSS <a href="#" onclick="blereg(1)"> Example  </a>
                                                     </strong> 
                                                 </td>
                                             </tr>
@@ -740,7 +767,7 @@
                                             <tr style="height: 10%;">
                                                 <td align="center">
                                                     <strong>
-                                                        PHP , Laravel and CodeIgniter
+                                                        PHP , Laravel and CodeIgniter <a href="#" onclick="blereg(2)"> Example  </a>
                                                     </strong>
                                                 </td>
                                             </tr>
@@ -759,7 +786,7 @@
                                             <tr style="height: 10%;">
                                                 <td align="center">
                                                     <strong>
-                                                        Java
+                                                        Java <a href="#" onclick="blereg(3)"> Example  </a>
                                                     </strong>
 
                                                 </td>
@@ -779,7 +806,7 @@
                                             <tr style="height: 10%;">
                                                 <td align="center">
                                                     <strong>
-                                                        SQLServer & MySql
+                                                        SQLServer & MySql <a href="#" onclick="blereg(4)"> Example  </a>
                                                     </strong>
                                                 </td>
                                             </tr>
@@ -798,7 +825,7 @@
                                             <tr style="height: 10%;">
                                                 <td align="center">
                                                     <strong>
-                                                        Android
+                                                        Android <a href="#" onclick="blereg(5)"> Example  </a>
                                                     </strong>
                                                 </td>
                                             </tr>
