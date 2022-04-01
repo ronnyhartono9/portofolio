@@ -79,6 +79,19 @@ vertical-align: middle;
 word-wrap: break-word; 
 }
 
+.ex
+{
+font-weight: bold;
+ font-size:25pt; 
+word-wrap: break-word; 
+} 
+
+@media screen and (max-width: 800px) {
+  .ex {
+    font-size: 3vw;
+  }
+} 
+
  @media screen and (max-width: 800px) {
   .lhe {
     font-size: 7.2vw;
@@ -157,8 +170,7 @@ br {
   height: 100%;
   top:-40%;
 }
-.m{
-  
+.m{ 
   opacity: 0;   
   border-radius: 2px;
   border: solid red 0px;
