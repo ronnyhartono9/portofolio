@@ -35,7 +35,8 @@
         const divs = ["porto", "coba", "tiga", "empat", "limo"];
         var pposakhir;
         var ss;
-        const keles = ["navajowhite", "lightskyblue", "lightcoral", "indianred", "palegreen"];
+        const keles = ["navajowhite", "linear-gradient(45deg,lightskyblue,rgb(7, 150, 207))", "linear-gradient(45deg,coral,rgb(238, 130, 42))", "linear-gradient(45deg,yellow,goldenrod)", "linear-gradient(45deg,rgb(46, 167, 46),palegreen)"]; 
+        //ikiloh
         const urutan = [0, 0, 0, 0, 0];
         var order = "";
         // function draw() {
@@ -79,9 +80,10 @@
         function ajaxakudong(grace, s, kelir) {
             for (i = 1; i <= 5; i++) {
                 document.getElementById(i + "a").style.background = 'white';
+                document.getElementById(i + "a").style.color = 'blue';
             }
             document.getElementById(s + "a").style.background = keles[s - 1];
-
+            document.getElementById(s + "a").style.color = "white";
             document.getElementById(s + "a").style.transition = "ease-in-out 0.5s";
             ss = s;
             var xhttp = new XMLHttpRequest();
@@ -406,17 +408,15 @@
             element3.style.transition = "all 2s";
         }        
         var x = 0;
-        var y = 0; 
-
-
+        var y = 0;
 
         function prev(){ 
-            location.href =   "#"+      divs[   divs.indexOf(pposakhir) - 1  ] ;  
+            location.href =   "#"+      divs[   divs.indexOf(pposakhir) - 1  ];
             ajaxakudong('a', divs.indexOf(pposakhir)  );
         }
 
         function next(){  
-            location.href =  "#"+  divs[   divs.indexOf(pposakhir)+ 1  ] ; 
+            location.href =  "#"+  divs[   divs.indexOf(pposakhir)+ 1  ];           
             ajaxakudong('a', divs.indexOf(pposakhir) +2);
         }
 
@@ -457,8 +457,7 @@
             posyawal = y;
             console.log(" pos awal = " + posyawal);
         }
-        
-        
+                
         let exs = [
             [ " ", " ", "", "", ""],
             [ "skill 1.jpg", "skill 5.jpg","skill 3.jpg"],
@@ -661,7 +660,7 @@
             </div>
 
             <div style="overflow:scroll; 
-            background:linear-gradient(45deg,lightskyblue,rgb(7, 150, 207),lightskyblue,rgb(7, 150, 207),lightskyblue);
+            background:linear-gradient(45deg,lightskyblue,rgb(7, 150, 207));
             width: 100%;height: 100%; " id="coba">
                 <div style="height: 30px;"> </div>
                 <h1>Education</h1>
@@ -716,7 +715,7 @@
             </div>
 
             <div style=" align-content: center; width: 100%;height: 100%;  overflow: scroll;
-            background:linear-gradient(45deg,rgb(252, 185, 185),rgb(230, 78, 78),rgb(252, 185, 185),rgb(230, 78, 78),rgb(252, 185, 185));
+            background:linear-gradient(45deg,coral,rgb(238, 130, 42));
           
             "
                 id="tiga">
@@ -857,8 +856,8 @@
 
                 </div>
             </div>
-
-            <div style="background-color: indianred;width:100%;height: 100%;" id="empat">
+            linear-gradient(45deg,lightskyblue,rgb(7, 150, 207))
+            <div style="background: linear-gradient(45deg,yellow,goldenrod);      width:100%;height: 100%;" id="empat">
                 <table style="width: 100%;height: 15%" ;>
                     <tr style="height: 5%;">
                         <td>
@@ -879,7 +878,12 @@
             </div>
 
             <div id="limo" style="width:100%; height: 100%;">
-                <table style="background-color: palegreen; width: 100%; height: 100%;">
+                <table style="
+                background:linear-gradient(45deg,rgb(46, 167, 46),palegreen);
+                
+                
+                
+                width: 100%; height: 100%;">
                     <tr align="left" style="height:10%; vertical-align: top;">
                         <td>
                             <div style="height: 50px;">
