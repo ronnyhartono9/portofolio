@@ -482,13 +482,14 @@
             document.getElementById('gb'+k).scrollIntoView();
         }
 
+      
         const numSteps = 20.0;
         let boxElement;let gel; let ix;let jx; let kx;
         let prevRatio = 0.0;
         let increasingColor = "rgba(40, 40, 190, ratio)";
         let decreasingColor = "rgba(190, 40, 40, ratio)";
         const ratios = [0, 0, 0, 0, 0];
-     
+        var cntawal = 0;
         window.addEventListener("load", (event) => {
             boxElement = document.querySelector("#g");
             gel = document.querySelector("#h"); 
@@ -555,9 +556,13 @@
             return thresholds;
         }
 
+        var singtampil;
         function handleIntersect(entries, observer) {
             entries.forEach((entry) => {
-                ratios[0] = entry.intersectionRatio;
+                ratios[0] = entry.intersectionRatio;    
+                     if(ratios[0] == 1){
+                        singtampil = "1";
+                     }
                 prevRatio = entry.intersectionRatio;
             });
         }
@@ -565,6 +570,7 @@
         function handleIntersect2(entries, observer) {
             entries.forEach((entry) => {                 
                 ratios[1] = entry.intersectionRatio;
+                
                 prevRatio = entry.intersectionRatio;
             });
         }
@@ -572,6 +578,7 @@
         function handleIntersect3(entries, observer) {
             entries.forEach((entry) => {            
                 ratios[2] = entry.intersectionRatio;
+                 
                 prevRatio = entry.intersectionRatio;
             });
         } 
@@ -579,6 +586,7 @@
         function handleIntersect4(entries, observer) {
             entries.forEach((entry) => {
                 ratios[3] = entry.intersectionRatio;
+                 
                 prevRatio = entry.intersectionRatio;
             });
         }
@@ -586,15 +594,16 @@
         function handleIntersect5(entries, observer) {
             entries.forEach((entry) => {
                 ratios[4] = entry.intersectionRatio;
+                 
                 prevRatio = entry.intersectionRatio;
             });
-        }
-
+        } 
         var p; 
         const kotaks = ["g", "h", "ii", "jj", "kk"];
         function ketarik(){ 
              document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  ratios.indexOf( Math.max(...ratios) ) +"px";
              document.getElementById('hopef').scrollIntoView();
+             
         }
         
     </script>
@@ -798,7 +807,7 @@
 
                     <div id="panel" style=" width: 100%; height: 100%;">
                         <div style="width: 100%; height: 23%;"></div>
-                        <table  id="thope" style="width: 100%; height: 77%; ">
+                        <table id="thope" style="width: 100%; height: 77%; ">
                             <tr>
                                 <td align="center" style="vertical-align: top; ">
                                     <div id="g" style=" position: relative;  border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
@@ -882,7 +891,59 @@
                                             </tr>
                                         </table>
                                     </div>
+                                </td> 
+
+                                <!-- <td align="center" style="vertical-align: top;">
+                                    <div id="kk" style=" border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 5.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(5)">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        a
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </td>
+                                <td align="center" style="vertical-align: top;">
+                                    <div id="kk" style=" border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 5.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(5)">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        b
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td align="center" style="vertical-align: top;">
+                                    <div id="kk" style=" border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 5.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(5)">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        c
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td> --> 
                             </tr>
                         </table>
                     </div>                    
@@ -1041,9 +1102,14 @@
             }, 250);
         }, false);
 
+        function awal(){
+            pan = document.getElementById("molor");
+            pan.scrollLeft = 0;
+            
+        }
+
         function dt(s) {
-            let bef = s.split("-");
-            //alert("tadi "+   dtakhir  +" "+ bef[1]);
+            let bef = s.split("-"); 
             if (dtakhir > bef[1]) {
                 mode = 'mundur';
             } else {
@@ -1059,32 +1125,52 @@
             elll.style.backgroundColor = "black";
             dtakhir = ss[1];
 
-            pan = document.getElementById("molor");
-            pan.scrollLeft = panellen * (ss[1] - 1); 
+            // pan = document.getElementById("molor");
+            // pan.scrollLeft = panellen * (ss[1] - 1); 
+
+              var m = parseInt(bef[1]);
+              m = (m-1) *   Math.floor(  celltampil) ;
+          
+            document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  m +"px";
+            document.getElementById('hopef').scrollIntoView();
+
         }
 
         myit = setInterval(testOver, 20);
-
+        var celltampil;
         function makeDot() {
             el = document.getElementById("titik");
             ell = document.getElementById("molor");
-            elll = document.getElementById("panel");
-         //  alert( elll.clientWidth +" "+ ell.clientWidth );
-            var cell = document.getElementById('thope').rows[0].cells[1].offsetWidth ;
-     
+            elll = document.getElementById("panel"); 
+            var cell = document.getElementById('thope').rows[0].cells[1].offsetWidth ; 
             panellen = (ell.clientWidth);
-            for (i = 1; i <= Math.ceil( (cell * 5) / ell.clientWidth); i++) {  //
-                
-                     if(i==1){
+            
+            // for (i = 1; i <= Math.ceil( (cell * 5) / ell.clientWidth); i++) {                
+            //     if(i==1){
+            //         el.innerHTML = el.innerHTML + " <div class='dit' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
+            //     }else{
+            //         el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
+            //     }
+            // }
+
+            elll.style.width = ((Math.ceil((400 * 5) / ell.clientWidth)) * 100) + "%";
+           
+            var cell2 = document.getElementById('thope').rows[0].cells[1].offsetWidth ;
+            celltampil = ell.clientWidth/ cell2; 
+            //alert( Math.ceil  ( 5 / ( Math.floor(  celltampil ) )) );
+
+            for(  i = 1; i <= Math.ceil  ( 5 / ( Math.floor(  celltampil ) )); i++ ){
+                if(i==1){
                     el.innerHTML = el.innerHTML + " <div class='dit' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
-                  }else{
+                }else{
                     el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
-                  }
+                }
             }
-            elll.style.width = ((Math.ceil((400 * 5) / ell.clientWidth)) * 100) + "%"; 
-        }
+
+        }       
         testOver();
         makeDot();
+        awal();
     </script>
 </body> 
 </html> 
