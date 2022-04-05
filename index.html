@@ -201,28 +201,31 @@
         //     threshold: [0.8]
         // });
 
-        // var lima = new IntersectionObserver(function (entries) {
-        //     var dot = document.getElementById("5");
-        //     if (entries[0].isIntersecting === true) {
-        //         dot.style.backgroundColor = 'grey';
-        //         dot.style.border = "0px";
-        //         dot.style.borderColor = "white";
-        //         dot.style.width = "18px";
-        //         dot.style.height = "18px";
-        //         ajaxakudong('a', '5');
-        //         pposakhir = "limo";
-        //         console.log(ss);
-        //     } else {
-        //         dot.style.backgroundColor = 'transparent';
-        //         dot.style.border = "solid 2px grey";
-        //         dot.style.width = "12px";
-        //         dot.style.height = "12px";
-        //     }
+        var lima = new IntersectionObserver(function (entries) {
+            // var dot = document.getElementById("5");
+            if (entries[0].isIntersecting === true) {
+                // dot.style.backgroundColor = 'grey';
+                // dot.style.border = "0px";
+                // dot.style.borderColor = "white";
+                // dot.style.width = "18px";
+                // dot.style.height = "18px";
+                // ajaxakudong('a', '5');
+                // pposakhir = "limo";
+                // console.log(ss);
+               bletak();
+            } else {
+                takble();
+                // dot.style.backgroundColor = 'transparent';
+                // dot.style.border = "solid 2px grey";
+                // dot.style.width = "12px";
+                // dot.style.height = "12px";
+              
+            }
 
-        //     dot.style.transition = "all 1s";
-        // }, {
-        //     threshold: [0.3]
-        // });
+            // dot.style.transition = "all 1s";
+        }, {
+            threshold: [0.3]
+        });
 
 
         var y1 = new IntersectionObserver(function (entries) {
@@ -287,7 +290,7 @@
             // section2.observe(document.querySelector("#coba"));
             // telu.observe(document.querySelector("#tiga"));
             // papat.observe(document.querySelector("#empat"));
-            // lima.observe(document.querySelector("#limo"));
+            lima.observe(document.querySelector("#limo"));
 
             y1.observe(document.querySelector("#yell"));
             y2.observe(document.querySelector("#yell"));
@@ -994,27 +997,37 @@
                             <table style="width: 100%; height: 100%; ">
                                 <tr style="height: 10%; vertical-align: top;">
                                     <td style="width: 50%;">
-                                       
+                                        <table id="tb" style="width: 100%; height: 100%;">
+                                            <tr><td> 
+                                                <div id="cl1" class="kelas2" style="position: relative; left:20%">
+                                                  <img src="ig.png" width="50px" height="50px">
+                                                </div>
+                                            </td></tr>
+                                            <tr><td>
+                                                <div id="cl2" class="kelas2" style="position: relative; left:60%">
+                                                    <img src="fb.png" width="50px" height="50px">
+                                                </div>
+                                            </td></tr>
+                                            <tr><td> 
+                                                <div id="cl3" class="kelas2" style="position: relative; left:20%">
+                                                 <img src="lin.png" width="50px" height="50px"> 
+                                                </div>
+                                            </td></tr>
+                                        </table>                                        
                                     </td>
                                     
                                     <td>
-                                        <table border="1" style="width: 100%; height: 100%;">
-                                            <tr><td>  Instagram   </td></tr>
-                                            <tr><td>  FaceBook  </td></tr>
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr><td> <div id="cr1" class="kelas2" style="position: relative; left:80%">  Instagram  </div> </td></tr>
+                                            <tr><td> <div id="cr2" class="kelas2" style="position: relative; left:40%">  FaceBook </div> </td></tr>
                                             <tr><td> 
-                                                <table border="1" style="width: 100%; height: 100%;">
-                                                    <tr>
-                                                        <td style="width: 5%;">   <img src="lin.png" width="50px" height="50px">      </td>
-                                                        <td>
-                                                            <a target="tg" href="https://www.linkedin.com/in/ronny-hartono-77033a16a/">
-                                                                https://www.linkedin.com/in/ronny-hartono-77033a16a/
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </table> 
-                                                
+                                                <div  id="cr3"class="kelas2"style="position: relative; left:80%"> 
+                                                    <a target="tg" href="https://www.linkedin.com/in/ronny-hartono-77033a16a/">
+                                                        https://www.linkedin.com/in/ronny-hartono-77033a16a/
+                                                    </a>
+                                                </div>   
                                             </td></tr>
-                                        </table>                                        
+                                        </table>
                                     </td>
                                 </tr>
                                 <!-- <tr>
@@ -1109,8 +1122,7 @@
 
         function awal(){
             pan = document.getElementById("molor");
-            pan.scrollLeft = 0;
-            
+            pan.scrollLeft = 0; 
         }
 
         function dt(s) {
@@ -1137,9 +1149,58 @@
               m = (m-1) *   Math.floor(  celltampil) ;
           
             document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  m +"px";
-            document.getElementById('hopef').scrollIntoView();
-
+            document.getElementById('hopef').scrollIntoView(); 
         }
+
+        function bletak(){
+            let go = document.getElementById('tb').rows[0].cells[0].offsetWidth;            
+            go =  ( (go-50) /  go  ) * 100;
+             
+
+            document.getElementById("cl1").style.left = go+"%";
+            document.getElementById("cl1").style.opacity = "1";
+            document.getElementById("cl1").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cl2").style.left = go+"%";
+            document.getElementById("cl2").style.opacity = "1";
+            document.getElementById("cl2").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cl3").style.left = go+"%";
+            document.getElementById("cl3").style.opacity = "1";
+            document.getElementById("cl3").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cr1").style.left = "0%";
+            document.getElementById("cr1").style.opacity = "1";
+            document.getElementById("cr1").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cr2").style.left = "0%";
+            document.getElementById("cr2").style.opacity = "1";
+            document.getElementById("cr2").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cr3").style.left = "0%";
+            document.getElementById("cr3").style.opacity = "1";
+            document.getElementById("cr3").style.transition = "ease-in-out 1.5s";
+        }
+        function takble(){
+            document.getElementById("cl1").style.left = "20%";
+            document.getElementById("cl1").style.opacity = "0";
+
+            document.getElementById("cl2").style.left = "60%";
+            document.getElementById("cl2").style.opacity = "0"; 
+
+            document.getElementById("cl3").style.left = "20%";
+            document.getElementById("cl3").style.opacity = "0"; 
+
+            document.getElementById("cr1").style.left = "80%";
+            document.getElementById("cr1").style.opacity = "0"; 
+
+            document.getElementById("cr2").style.left = "40%";
+            document.getElementById("cr2").style.opacity = "0"; 
+
+            document.getElementById("cr3").style.left = "80%";
+            document.getElementById("cr3").style.opacity = "0";
+        }
+
 
         myit = setInterval(testOver, 20);
         var celltampil;
@@ -1161,7 +1222,7 @@
             elll.style.width = ((Math.ceil((400 * 5) / ell.clientWidth)) * 100) + "%";
            
             var cell2 = document.getElementById('thope').rows[0].cells[1].offsetWidth ;
-            celltampil = ell.clientWidth/ cell2; 
+            celltampil = ell.clientWidth/ cell2;
             //alert( Math.ceil  ( 5 / ( Math.floor(  celltampil ) )) );
 
             for(  i = 1; i <= Math.ceil  ( 5 / ( Math.floor(  celltampil ) )); i++ ){
@@ -1171,11 +1232,11 @@
                     el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
                 }
             }
-
         }       
         testOver();
         makeDot();
         awal();
+       
     </script>
 </body> 
 </html> 
