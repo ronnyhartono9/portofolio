@@ -96,11 +96,13 @@ word-wrap: break-word;
 
 .lhell
 {
+  border-radius: 5px;
 background-color: beige;
 font-weight: bold;
- font-size:20pt;
-vertical-align: middle;
-word-wrap: break-word;
+font-size:20pt;
+vertical-align: top;
+word-wrap: break-word;  
+height: 100%;
 }
 
 .ex
