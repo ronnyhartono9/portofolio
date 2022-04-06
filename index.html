@@ -738,8 +738,9 @@
                                     <td style="width: 60%; vertical-align: top;"> 
                                         <div id="ai" class="lhel" style=" padding-left: 18px; text-align: left; display: inline-block; ">
                                             <br> 
-                                                I have great background education and have a good management skill.<br>
-                                                I have some skills and my hobby is learning about technology.<br> 
+                                                I have great background education and have a good management skill.
+                                                <hr class="hrkuk">
+                                                I have some skills and my hobby is learning about technology.
                                         </div>
                                     </td>
                                 </tr>
@@ -999,19 +1000,18 @@
                                     </td>
                                     <td style=" width: 39%;"> 
                                         <table  style="height: 100%; width: 100%; table-layout: fixed;">
-                                            <tr style="height: 35%;" >
+                                            <tr style="height: 100%;" >
                                                 <td style="vertical-align: top;">
-                                                    <table  id ="tmolor" style="width: 100%; height: 100%;">
-                                                        <tr style="height: 25%; background-color: transparent;">
+                                                    <table  border=1  id ="tmolor" style="width: 100%; height: 100%;">
+                                                        <tr style="height: 10%; background-color: transparent;">
                                                             <td style="vertical-align: top;">
-                                                                <div id="bio" class="lhel" 
-                                                                 style=" overflow: hidden; color: rgb(235, 117, 8); text-shadow: 10px -3px 3px #c7c0c0;">
+                                                                <div id="bio" class="lhel" style=" overflow: hidden; color: rgb(235, 117, 8); text-shadow: 10px -3px 3px #c7c0c0;">
                                                                     Biodata
                                                                 </div>
                                                                 <hr class="hrkuk">
                                                             </td>
                                                         </tr>
-                                                        <tr style="height: 75%;">
+                                                        <tr style="height: 30%;">
                                                             <td>
                                                                 <div id="data"class="lhell" style="   overflow: hidden;">
                                                                     bio 1<br>
@@ -1019,52 +1019,45 @@
                                                                     bio 3<br>
                                                                     bio 4<br>
                                                                     bio 5<br>
-                                                                    bio 1<br>
-                                                                    bio 1<br>
-                                                                    bio 1<br>
-                                                                    bio 1<br>
-                                                                    bio 1<br>
-                                                                    bio 1<br>
-                                                                    bio 1<br>
+                                                                    bio 6<br>
+                                                                    bio 7<br>
+                                                                    bio 8<br>
+                                                                    bio 9<br>
+                                                                    bio 10<br>
+                                                                    bio 11<br>
+                                                                    bio 12<br>
                                                                 </div>
                                                             </td>
                                                         </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr style="height: 65%;">
-                                                <td style="vertical-align: top;">
 
-                                                    <table  id ="tmolor2" style="width: 100%; height: 90%;">
-                                                        <tr style="height: 10%; background-color: transparent;">
-                                                            <td style="vertical-align: top;">
-                                                                <div id="bio" class="lhel" 
-                                                                 style=" overflow: hidden; color: rgb(235, 117, 8); text-shadow: 10px -3px 3px #c7c0c0;">
+                                                        <tr style="height: 10%;">
+                                                            <td>
+                                                                <div id="bio2" class="lhel" style=" overflow: hidden; color: rgb(235, 117, 8); text-shadow: 10px -3px 3px #c7c0c0;">
                                                                     Experiences
                                                                 </div>
                                                                 <hr class="hrkuk">
                                                             </td>
                                                         </tr>
-                                                        <tr style="height: 90%;">
+
+                                                        <tr style="height: 50%;">
                                                             <td>
-                                                                <div id="data2" class="lhell" style="overflow: hidden;">
-                                                                    ini aku<br>
-                                                                    <!-- ini aku<br>
-                                                                    ini aku<br>
-                                                                    ini aku<br>
-                                                                    ini aku<br>
-                                                                    ini aku<br>
-                                                                    ini aku<br>
-                                                                    ini aku<br>
-                                                                    ini aku<br>
-                                                                    ini aku<br>
-                                                                    ini aku<br>
-                                                                    ini aku<br> -->
+                                                                <div id="data2"class="lhell" style="   overflow: hidden;">
+                                                                    ex 1<br>
+                                                                    <!-- ex 2<br>
+                                                                    ex 3<br>
+                                                                    ex 4<br>
+                                                                    ex 5<br>
+                                                                    ex 6<br>
+                                                                    ex 7<br>
+                                                                    ex 8<br>
+                                                                    ex 9<br>
+                                                                    ex 10<br>
+                                                                    ex 11<br>
+                                                                    ex 12<br> -->
                                                                 </div>
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                                                             
                                                 </td>
                                             </tr>
                                          </table>
@@ -1235,7 +1228,15 @@
             pan = document.getElementById("molor");
             pan.scrollLeft = 0; 
 
-          
+
+            
+
+            //alert(   document.getElementById('tmolor').rows[2].cells[0].offsetHeight+"px" );
+            //alert(   document.getElementById('tmolor').rows[3].cells[0].offsetHeight+"px" );
+            // document.getElementById('data2').style.display = "none";
+            // document.getElementById('data2').style.height =  document.getElementById('tmolor').rows[3].cells[0].offsetHeight+"px";               //"238px";
+            
+
             document.getElementById('bio').style.display = "none";
                 document.getElementById('data').style.display = "none";
                 document.getElementById('data').style.height = document.getElementById('tmolor').rows[1].cells[0].offsetHeight+"px";
@@ -1243,12 +1244,7 @@
             document.getElementById('bio').style.height = document.getElementById('tmolor').rows[0].cells[0].offsetHeight+"px";
             document.getElementById('bio').style.display= "block";
 
-                // alert( document.getElementById('tmolor2').rows[1].cells[0].offsetHeight );
-
-                // document.getElementById('data2').style.display = "none";
-                // document.getElementById('data2').style.height = document.getElementById('tmolor2').rows[1].cells[0].offsetHeight+"px";
-                // document.getElementById('data2').style.display = "block"; 
-
+            document.getElementById('data2').style.display = "block";
              
         }
 
