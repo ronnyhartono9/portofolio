@@ -986,7 +986,7 @@
                 <table  style="height: 85%; width: 100%;">
                     <tr>
                         <td>
-                            <table style="height: 100%; width: 100%;"> 
+                            <table  style="height: 100%; width: 100%;"> 
                                 <tr>
                                     <td align="center" style=" width: 60%; vertical-align: top;  "> 
                                         <a href="cv.pdf" download  style=" font-size: 30px; z-index: 90009"><br>
@@ -998,24 +998,73 @@
                                         <div class="vl2"> </div>
                                     </td>
                                     <td style=" width: 39%;"> 
-                                        <table style="height: 100%; width: 100%;">
-                                            <tr style="height: 35%;">
+                                        <table  style="height: 100%; width: 100%; table-layout: fixed;">
+                                            <tr style="height: 35%;" >
                                                 <td style="vertical-align: top;">
-                                                    <!-- <div id="inisatu"style=" background-color: beige;  overflow: hidden;">  </div> -->
-
-                                                    <div class="lhel" style="color: rgb(235, 117, 8); text-shadow: 10px 6px 3px #c7c0c0;">
-                                                      Biodata
-                                                    </div>
-                                                    <hr class="hrkuk" style="height: 2px;">
+                                                    <table  id ="tmolor" style="width: 100%; height: 100%;">
+                                                        <tr style="height: 25%; background-color: transparent;">
+                                                            <td style="vertical-align: top;">
+                                                                <div id="bio" class="lhel" 
+                                                                 style=" overflow: hidden; color: rgb(235, 117, 8); text-shadow: 10px -3px 3px #c7c0c0;">
+                                                                    Biodata
+                                                                </div>
+                                                                <hr class="hrkuk">
+                                                            </td>
+                                                        </tr>
+                                                        <tr style="height: 75%;">
+                                                            <td>
+                                                                <div id="data"class="lhell" style="   overflow: hidden;">
+                                                                    bio 1<br>
+                                                                    bio 2<br>
+                                                                    bio 3<br>
+                                                                    bio 4<br>
+                                                                    bio 5<br>
+                                                                    bio 1<br>
+                                                                    bio 1<br>
+                                                                    bio 1<br>
+                                                                    bio 1<br>
+                                                                    bio 1<br>
+                                                                    bio 1<br>
+                                                                    bio 1<br>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr style="height: 65%;">
                                                 <td style="vertical-align: top;">
-                                                    <!-- <div id="inidua" style="overflow: hidden;  height: 320px;">  </div> -->
-                                                    <div class="lhel" style="color: rgb(235, 117, 8); text-shadow: 10px 6px 3px #c7c0c0;">
-                                                             Experiences
-                                                    </div>
-                                                    <hr class="hrkuk" style="height: 2px;">
+
+                                                    <table  id ="tmolor2" style="width: 100%; height: 90%;">
+                                                        <tr style="height: 10%; background-color: transparent;">
+                                                            <td style="vertical-align: top;">
+                                                                <div id="bio" class="lhel" 
+                                                                 style=" overflow: hidden; color: rgb(235, 117, 8); text-shadow: 10px -3px 3px #c7c0c0;">
+                                                                    Experiences
+                                                                </div>
+                                                                <hr class="hrkuk">
+                                                            </td>
+                                                        </tr>
+                                                        <tr style="height: 90%;">
+                                                            <td>
+                                                                <div id="data2" class="lhell" style="overflow: hidden;">
+                                                                    ini aku<br>
+                                                                    <!-- ini aku<br>
+                                                                    ini aku<br>
+                                                                    ini aku<br>
+                                                                    ini aku<br>
+                                                                    ini aku<br>
+                                                                    ini aku<br>
+                                                                    ini aku<br>
+                                                                    ini aku<br>
+                                                                    ini aku<br>
+                                                                    ini aku<br>
+                                                                    ini aku<br> -->
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                                                             
                                                 </td>
                                             </tr>
                                          </table>
@@ -1104,8 +1153,7 @@
                             </table>
                         </td>
                     </tr>
-                </table>
-                burek
+                </table> 
             </div>
 
         </div>
@@ -1186,6 +1234,22 @@
         function awal(){
             pan = document.getElementById("molor");
             pan.scrollLeft = 0; 
+
+          
+            document.getElementById('bio').style.display = "none";
+                document.getElementById('data').style.display = "none";
+                document.getElementById('data').style.height = document.getElementById('tmolor').rows[1].cells[0].offsetHeight+"px";
+                document.getElementById('data').style.display = "block"; 
+            document.getElementById('bio').style.height = document.getElementById('tmolor').rows[0].cells[0].offsetHeight+"px";
+            document.getElementById('bio').style.display= "block";
+
+                // alert( document.getElementById('tmolor2').rows[1].cells[0].offsetHeight );
+
+                // document.getElementById('data2').style.display = "none";
+                // document.getElementById('data2').style.height = document.getElementById('tmolor2').rows[1].cells[0].offsetHeight+"px";
+                // document.getElementById('data2').style.display = "block"; 
+
+             
         }
 
         function dt(s) {
