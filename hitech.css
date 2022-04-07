@@ -94,12 +94,14 @@ vertical-align: middle;
 word-wrap: break-word;  
 }
 
+
 .lhell
 {
-  border-radius: 5px;
+color:orangered;
+border-radius: 5px;
 background-color: beige;
 font-weight: bold;
-font-size:20pt;
+font-size:17pt;
 vertical-align: top;
 word-wrap: break-word;  
 height: 100%;
@@ -131,11 +133,16 @@ word-wrap: break-word;
 } 
 
 @media screen and (max-width: 800px) {
-  .lhel ,.lhell{
+  .lhel {
     font-size: 17pt;
   }
 } 
 
+@media screen and (max-width: 800px) {
+  .lhell{
+    font-size: 10pt;
+  }
+} 
 
 @media screen and (max-width: 800px) {
   img {
