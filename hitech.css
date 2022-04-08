@@ -132,13 +132,13 @@ font-weight: bold;
 
 @media screen and (max-width: 800px) {
   .lhel {
-    font-size: 17pt;
+    font-size: 12pt;
   }
 } 
 
 @media screen and (max-width: 800px) {
   .lhell{
-    font-size: 10pt;
+    font-size: 8pt;
   }
 } 
 
