@@ -133,7 +133,7 @@ word-wrap: break-word;
 
 @media screen and (max-width: 800px) {
   .lhell{
-    font-size: 13pt;
+    font-size: 80%;
     color: blue;
   }
 }
