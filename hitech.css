@@ -95,11 +95,10 @@ word-wrap: break-word;
 
 .lhell
 {
-color:orangered;
-border-radius: 5px;
+  border-radius: 5px;
 background-color: beige;
 font-weight: bold;
-font-size:12pt;
+font-size:20pt;
 vertical-align: top;
 word-wrap: break-word;  
 height: 100%;
@@ -131,14 +130,8 @@ font-weight: bold;
 } 
 
 @media screen and (max-width: 800px) {
-  .lhel {
-    font-size: 12pt;
-  }
-} 
-
-@media screen and (max-width: 800px) {
-  .lhell{
-    font-size: 8pt;
+  .lhel ,.lhell{
+    font-size: 17pt;
   }
 } 
 
