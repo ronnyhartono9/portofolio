@@ -109,7 +109,7 @@ height: 100%;
 {
 font-weight: bold;
  font-size:25pt; 
-word-wrap: break-word; 
+ word-wrap: break-word; 
 } 
 
 @media screen and (max-width: 800px) {
