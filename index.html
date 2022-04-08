@@ -1,447 +1,1356 @@
-body, html{margin:0;padding:0;width:100%; height: 100%;scroll-behavior: smooth;}
-
-.previous {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.next {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #04AA6D;
-  color: white;
-}
-
-.round {
-  border-radius: 50%;
-}
-
-.wolpeper {   
-  background-image: url("back.png"); 
-  background-repeat: no-repeat;
-  background-size: cover; 
-}
-
-.kelas {
- font-weight: bold;
- font-size: 1.5vw;
- color:blue;
- vertical-align: middle;
- word-wrap: break-word;  
-}
-
-.kelas2 {
-  font-weight: bold;
-  font-size: 2.5vw;
-  color:blue;
-  vertical-align: middle;
-  word-wrap: break-word; 
-   opacity: 0; 
- }
-
- .vl2 {
-   position: relative;
-  border-right: 2px solid gold;
-  /* linear-gradient(to right,gold,  white,gold); */
-  top:0%;
-  height: 100%; 
-}
-.hel {
-  font-weight: bold;
-  font-size: 15pt; 
-  vertical-align: middle;
-  word-wrap: break-word; 
- }
-
- .responsive {border-radius: 5px;
-  width: 95%;
-  height: auto;
-}
-
- .leh  
- {
- font-weight: bold;
- font-size: 12pt; 
- vertical-align: middle;
- word-wrap: break-word; 
-}
-
-@media screen and (max-width: 800px) {
-  .kelas {
-    font-size: 8pt;
-  }
-}
-
-.lhe  
-{
-font-weight: bold;
- font-size:4vw;
-color:darkblue; 
-vertical-align: middle;
-word-wrap: break-word; 
-}
-
-.lhel
-{
-font-weight: bold;
- font-size:29pt;
-vertical-align: middle;
-word-wrap: break-word;  
-}
-
-.lhell
-{
-color:orangered;
-border-radius: 5px;
-background-color: beige;
-font-weight: bold;
-font-size:12pt;
-vertical-align: top;
-word-wrap: break-word;  
-height: 100%;
-}
-
-.ex
-{
-font-weight: bold;
- font-size:25pt; 
- word-wrap: break-word; 
-} 
-
-@media screen and (max-width: 800px) {
-  .kelas2 {
-    font-size: 4vw;
-  }
-} 
-
-@media screen and (max-width: 800px) {
-  .ex {
-    font-size: 3vw;
-  }
-} 
-
- @media screen and (max-width: 800px) {
-  .lhe {
-    font-size: 7.2vw;
-  }
-} 
-
-@media screen and (max-width: 800px) {
-  .lhel {
-    font-size: 12pt;
-  }
-} 
-
-@media screen and (max-width: 800px) {
-  .lhell{
-    font-size: 8pt;
-  }
-} 
-
-@media screen and (max-width: 800px) {
-  img {
-    max-width: 250px;
-  }
-} 
-
-@media screen and (max-width: 800px) {
-  .leh {
-    font-size: 18pt;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .hel {
-    font-size: 10pt;
-  }
-}
-
-a:link { text-decoration: none; }
-.bunder{
-  border-radius:100%;
-  border:solid 2px grey;
-  width: 12px;
-  height: 12px;
-  background-color: transparent;
-  display: inline-block;
-}
-
-.hrku {
-  background: linear-gradient(to right,white, red, white);
-  border:0px;
-  height: 1px;
-}
-
-.hrkuk {
-  background: linear-gradient(to right,gold,  white,gold);
-  border:0px;
-  height: 1px;
-}
-.blek {   
-  background-color:#524949;
-}
-
-br {
-  content: "";
-  margin: 0.5em;
-  display: block;
-  font-size: 24%;
-}
-
-.section{
-  width: 100%; 
-  height: 100%;
-  box-shadow: 0 0 18px #fff; 
-  border: 0px solid black;
-  /* animation: example 1s infinite;
-  animation-direction: alternate; */
-}
-
-@keyframes example {
-  /*from {background: linear-gradient(#222, #222),linear-gradient(90deg, rgb(236, 13, 13), rgb(255, 217, 0));}
-  to {background: linear-gradient(#222, #222),linear-gradient(90deg,rgb(255, 217, 0),rgb(236, 13, 13)    );}*/
-  from{box-shadow: 0 0 28px rgb(255, 234, 114);} to {box-shadow: 0 0 0px white}
-} 
-
-#tangan{
-  position: relative;  left:-40px;
-   top:6px;
-  opacity: 0;
-  animation: maju 1.5s infinite;
-  animation-direction: alternate;
-}
-
-@keyframes maju {
-  /*from {background: linear-gradient(#222, #222),linear-gradient(90deg, rgb(236, 13, 13), rgb(255, 217, 0));}
-  to {background: linear-gradient(#222, #222),linear-gradient(90deg,rgb(255, 217, 0),rgb(236, 13, 13)    );}*/
-  from{left:-40px;opacity: 0;} to {left:0px;opacity: 1;}
-}
-
-.section2{ height: 80%; background:white;
-  width: 80%;
-  border:1px solid black; 
-}
-
-.vl {
-  position: relative;
-  border-left: 6px solid green;
-  height: 100%;
-  top:-40%;
-}
-
-.m{ 
-  opacity: 0;   
-  border-radius: 2px;
-  border: solid red 0px;
-  font-size: 2vw;
-  word-wrap: break-word;
-}
-
-.lab{
-  position: relative;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: "203px";
-  color: #f35423;
-  opacity:0; 
-  left:800px;box-shadow: 5px 10px 18px #888888;
-}
-
-.a2{
-  font-size: 25px;font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(221, 44, 0);
-}
-
-.a3{
-  font-size: 22px;
-  font-family: 'Times New Roman', Times, serif;
-  color: black;font-weight: bold;
-}
-
-.abo{
-  font-size: 25px;
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(128, 29, 12);font-weight: bold;
-}
-
-.a4{position: relative;left:10px;
-  font-size: 21px;
-  font-family: 'Times New Roman', Times, serif;
-  color: black;
-}
-
-  .section table{
-    height: 100%; background:transparent;
-    width: 100%;
-  }
-
-  .dot{
-    height: 10px;
-    width: 10px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-  }
-  .dit{
-    height: 10px;
-    width: 10px;
-    background-color: black;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-  }
-
-  #atas {
-     /* visibility: hidden; */
-    height:5%;
-    text-align: center;
-    vertical-align: middle;
-    overflow:hidden;
-    position: fixed;
-    cursor:pointer;    
-    top: 0%;
-    width: 100%;
-    color: brown;
-    background-color: white;
-    opacity: 1;z-index: 200;
-}
-  #info {
-    visibility: hidden;
-    border-radius: 14px;
-    height:40px;
-    overflow:hidden;
-    position: fixed;
-    cursor:pointer;    
-    bottom:0%;
-    width:300px;
-    right: -70px;
-    color: brown;
-    background-color: khaki;
-    opacity: 1;z-index:6677;
-}
-
-#tombol {
-  /* visibility: hidden; */ 
-  border-radius: 5px;
-  height:30px;
-  overflow:hidden;
-  position: fixed;
-  cursor:pointer;    
-  top:5%;
-  left:35%;
-  width:30%; 
-  color: white; 
-  opacity: 1;z-index:6677; 
-  background: linear-gradient(45deg,grey,silver,grey,silver);
-  box-shadow: 10px 8px 5px grey;
-}
-
-#gambar { 
-  /* overflow:hidden; */
-  border-radius: 5px;  
-  position: fixed;
-  cursor:pointer;    
-  top:5%;
-  left:15%;
-  z-index:61677; 
-  border: 1px solid gold; 
-}
-
-#tengen { 
-  height:150px;
-  overflow:hidden;
-  position: fixed;
-  cursor:pointer;    
-  top:50%;
-  width:55px;right:15px; 
-  color: rgb(0, 0, 0); 
-  opacity: 1;z-index: 2002;
-}
-#k {
-  border-radius: 14px;
-  height:40px;
-  overflow:hidden;
-  position: fixed;
-  cursor:pointer;
-  bottom:10%;
-  width:20%;right:15px; 
-  height:40%;
-  color: brown;
-  background-color: khaki;
-  opacity: 1;
-}
-div.bottom { text-align: center;
-  vertical-align: bottom;
-  position: relative;
-  text-align: center; 
-  height: 0%;
-  width: 100%;
-  bottom: 0%;
-  border: 0px solid #8c07c0;
-} 
  
-.lbl{
-  opacity: 0.5;
-  position: relative;
-  left:10px;
-  transition: all 2s ;
-  font-size: 10px;
-  cursor: pointer;
-}
+<html>
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
+<meta name="theme-color" content="chocolate" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="hitech.css">
+<head>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        .bg {
+            background-image: url("back.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .bg2 {
+            background-image: url("back.jpg");
+            height: 90%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 90% 90%;
+        }
+        .bg2 {
+            background-image: url("pr.jpg");
+            height: 90%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 90% 90%;
+        }
+    </style>
+
+<script type="text/javascript">
+        //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
+        //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
+        //https://colorlib.com/wp/template/personalportfolio/
+
+        var detik = 0;
+        const divs = ["porto", "coba", "tiga", "empat", "limo"];
+        var pposakhir;
+        var ss;//background:linear-gradient(45deg,rgb(255, 255, 255),rgb(199, 114, 255),rgb(255, 255, 255));"
+        const keles = ["linear-gradient(45deg,lightgrey,rgb(209, 207, 207),lightgrey,rgb(209, 207, 207))", "linear-gradient(45deg,lightskyblue,rgb(7, 150, 207))", "linear-gradient(45deg,rgb(250, 189, 242),rgb(199, 114, 255))", "linear-gradient(45deg,yellow,goldenrod)", "linear-gradient(45deg,rgb(46, 167, 46),palegreen)"]; 
+        //ikiloh
+        const urutan = [0, 0, 0, 0, 0];
+        var order = "";
+        // function draw() {
+        //     var canvas = document.getElementById('ccku');
+
+        //     if (canvas.getContext) {
+        //         var time = new Date();
+        //       var l = time.getSeconds();
+
+        //       console.log(" detike "+l);
+        //         var ctx = canvas.getContext('2d');
+        //         ctx.clearRect(0,0,canvas.width,canvas.height);
+        //         ctx.beginPath();
+        //         ctx.moveTo(75, 40);
+        //         ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+        //         ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+        //         ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+        //         ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+        //         ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+        //         ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+        //         ctx.fillStyle="red";
+        //         ctx.fill();
+
+        //         // ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+        //         // ctx.rotate(20 * Math.PI / 180);
+        //         // ctx.clearRect(0,0,canvas.width,canvas.height);
+        //         // ctx.translate(105, 0);
+        //         // window.requestAnimationFrame(draw);
+        //     }
+        // }
+
+        function ngitung() {
+            detik++;
+
+            if (detik == 1) {
+                //  console.log("iki saate"); 
+
+            }
+        }
+
+        function ajaxakudong(grace, s, kelir) {            
+            for (i = 1; i <= 5; i++) {
+                document.getElementById(i + "a").style.background = 'white';
+                document.getElementById(i + "a").style.color = 'blue';
+            }
+            document.getElementById(s + "a").style.background = keles[s - 1];
+            document.getElementById(s + "a").style.color = "white";
+            document.getElementById(s + "a").style.transition = "ease-in-out 0.5s";
+            ss = s;
+            if( s != "3"  ){
+                document.getElementById("sikil").style.opacity="0";
+                document.getElementById("likis").style.opacity="0";
+                document.getElementById("sikil").style.transition = "ease-in-out 0.5s";
+                document.getElementById("likis").style.transition = "ease-in-out 0.5s";
+            }else{
+               
+                document.getElementById("sikil").style.opacity="1";
+                document.getElementById("likis").style.opacity="1";
+                document.getElementById("sikil").style.transition = "ease-in-out 0.5s";
+                document.getElementById("likis").style.transition = "ease-in-out 0.5s";
+            }
+           
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("f").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", grace, true);
+            xhttp.send();
+
+            pposakhir =  (divs[s-1]);
+        }
+
+        // var pro = new IntersectionObserver(function (entries) {
+        //     // var dot = document.getElementById("1");
+        //     if (entries[0].isIntersecting === true) {
+        //         // dot.style.backgroundColor = 'grey';
+        //         // dot.style.border = "0px";
+        //         // dot.style.borderColor = "white";
+        //         // dot.style.width = "18px";
+        //         // dot.style.height = "18px";
+        //         ajaxakudong('a', '1');
+        //         pposakhir = "porto";
+                
+        //     } else {
+        //         // dot.style.backgroundColor = 'transparent';
+        //         // dot.style.border = "solid 2px grey";
+        //         // dot.style.width = "12px";
+        //         // dot.style.height = "12px";
+        //     }
+        //     dot.style.transition = "all 1s";
+        // }, {
+        //     threshold: [0.5]
+        // });
+
+        // var section2 = new IntersectionObserver(function (entries) {
+        //     var dot = document.getElementById("2");
+        //     if (entries[0].isIntersecting === true) {
+        //         //    tran3("masuk");
+        //         dot.style.backgroundColor = 'grey';
+        //         dot.style.border = "0px";
+        //         dot.style.borderColor = "white";
+        //         dot.style.width = "18px";
+        //         dot.style.height = "18px";
+        //         ajaxakudong('a', '2');
+        //         pposakhir = "coba";
+        //     } else {
+        //         // tran3("metu"); 
+        //         dot.style.backgroundColor = 'transparent';
+        //         dot.style.border = "solid 2px grey";
+        //         dot.style.width = "12px";
+        //         dot.style.height = "12px";
+        //         //  location.href = "#tiga";
+        //     }
+        //     dot.style.transition = "all 1s";
+        // }, {
+        //     threshold: [0.8]
+        // });
+
+        // var telu = new IntersectionObserver(function (entries) {
+        //     var dot = document.getElementById("3");
+        //     if (entries[0].isIntersecting === true) {
+        //         dot.style.backgroundColor = 'grey';
+        //         dot.style.border = "0px";
+        //         dot.style.borderColor = "white";
+        //         dot.style.width = "18px";
+        //         dot.style.height = "18px";
+        //         ajaxakudong('a', '3');
+        //         pposakhir = "tiga";
+        //     } else {
+        //         dot.style.backgroundColor = 'transparent';
+        //         dot.style.border = "solid 2px grey";
+        //         dot.style.width = "12px";
+        //         dot.style.height = "12px";
+        //     }
+        //     dot.style.transition = "all 1s";
+        // }, {
+        //     threshold: [0.8]
+        // });
+
+        // var papat = new IntersectionObserver(function (entries) {
+        //     var dot = document.getElementById("4");
+        //     if (entries[0].isIntersecting === true) {
+        //         dot.style.backgroundColor = 'grey';
+        //         dot.style.border = "0px";
+        //         dot.style.borderColor = "white";
+        //         dot.style.width = "18px";
+        //         dot.style.height = "18px";
+        //         ajaxakudong('a', '4');
+        //         pposakhir = "empat";
+
+        //     } else {
+        //         dot.style.backgroundColor = 'transparent';
+        //         dot.style.border = "solid 2px grey";
+        //         dot.style.width = "12px";
+        //         dot.style.height = "12px";
+        //     }
+        //     dot.style.transition = "all 1s";
+        // }, {
+        //     threshold: [0.8]
+        // });
+
+        var lima = new IntersectionObserver(function (entries) {
+            // var dot = document.getElementById("5");
+            if (entries[0].isIntersecting === true) {
+                // dot.style.backgroundColor = 'grey';
+                // dot.style.border = "0px";
+                // dot.style.borderColor = "white";
+                // dot.style.width = "18px";
+                // dot.style.height = "18px";
+                // ajaxakudong('a', '5');
+                // pposakhir = "limo";
+                // console.log(ss);
+               bletak();
+            } else {
+                takble();
+                // dot.style.backgroundColor = 'transparent';
+                // dot.style.border = "solid 2px grey";
+                // dot.style.width = "12px";
+                // dot.style.height = "12px";
+              
+            }
+
+            // dot.style.transition = "all 1s";
+        }, {
+            threshold: [0.3]
+        });
+
+
+        var y1 = new IntersectionObserver(function (entries) {
+            var dot = document.getElementById("yell");
+            if (entries[0].isIntersecting === true) {
+                dot.style.opacity = 0.5;
+                urutan[0] = 1;
+            } else {
+                dot.style.opacity = 0;
+                urutan[0] = 0;
+            }
+            dot.style.transition = "all 1s";
+        }, {
+            threshold: [0.5]
+        });
+
+        var y2 = new IntersectionObserver(function (entries) {
+            var dot = document.getElementById("yell");
+            if (entries[0].isIntersecting === true) {
+                dot.style.opacity = 1;
+                urutan[0] = 1;
+            } else {
+                dot.style.opacity = 0.5;
+                urutan[0] = 1;
+            }
+            dot.style.transition = "all 1s";
+        }, {
+            threshold: [1]
+        });
+
+        var g1 = new IntersectionObserver(function (entries) {
+            var dot = document.getElementById("gell");
+            if (entries[0].isIntersecting === true) {
+                dot.style.opacity = 0.5;
+                urutan[1] = 1;
+            } else {
+                dot.style.opacity = 0;
+                urutan[1] = 0;
+            }
+            dot.style.transition = "all 1s";
+        }, {
+            threshold: [0.5]
+        });
+
+        var g2 = new IntersectionObserver(function (entries) {
+            var dot = document.getElementById("gell");
+            if (entries[0].isIntersecting === true) {
+                dot.style.opacity = 1;
+                urutan[1] = 1;
+            } else {
+                dot.style.opacity = 0.5;
+                urutan[1] = 1;
+            }
+            dot.style.transition = "all 1s";
+        }, {
+            threshold: [1]
+        });
+
+        function mlaku() {
+            document.getElementById('gambar').style.visibility = "hidden";
+            // pro.observe(document.querySelector("#porto"));
+            // section2.observe(document.querySelector("#coba"));
+            // telu.observe(document.querySelector("#tiga"));
+            // papat.observe(document.querySelector("#empat"));
+            lima.observe(document.querySelector("#limo"));
+            y1.observe(document.querySelector("#yell"));
+            y2.observe(document.querySelector("#yell"));
+            g1.observe(document.querySelector("#gell"));
+            g2.observe(document.querySelector("#gell"));
+        }
+
+        function tran1() {
+            var element = document.getElementById("ll");
+            if (element.style.left == "10px" || element.style.left == "") {
+                element.style.left = "300px";
+                element.style.fontSize = "100px";
+                element.style.opacity = "1";
+            } else {
+                element.style.left = "10px";
+                element.style.fontSize = "10px";
+                element.style.opacity = "0.5";
+            }
+            element.style.transition = "all 2s";
+        }
+
+        function tran2() {
+            var element = document.getElementById("vd");
+            if (element.style.width == "100px" || element.style.width == "") {
+                element.style.width = "300px";
+                element.style.background = "blue";
+            } else {
+                element.style.width = "100px";
+                element.style.background = "red";
+            }
+            element.style.transition = "all 2s";
+        }
+
+        function tran3(st) {
+            // var element = document.getElementById("vd2");
+            element.style.opacity = "0";
+            if (st == "masuk") {
+                element.style.opacity = "1";
+                element.style.transition = "all 1.5s";
+            } else {
+                element.style.opacity = "0";
+                element.style.transition = "all 0.5s";
+            }
+        }
+
+        function popup() {
+            var element = document.getElementById("info");
+            var element2 = document.getElementById("ndelik");
+            var element3 = document.getElementById("ndas");
+
+            if (element.style.height == "40px" || element.style.height == "") {
+                element.style.bottom = "0%";
+                element.style.height = "150px";
+                document.getElementById("togel").innerHTML = "Close(X)";
+                element2.style.top = "0px";
+
+            } else {
+                element.style.bottom = "0%";
+                element.style.height = "40px";
+                document.getElementById("togel").innerHTML = "Click me";
+                element2.style.top = "460px";
+
+            }
+            element.style.transition = "all 2s";
+            element2.style.transition = "all 2s";
+            element2.style.transitionDelay = "1s";
+            element3.style.transition = "all 2s";
+        }        
+        var x = 0;
+        var y = 0;
+
+        function prev(){ 
+            location.href =   "#"+      divs[   divs.indexOf(pposakhir) - 1  ];
+            ajaxakudong('a', divs.indexOf(pposakhir)  );
+        }
+
+        function next(){  
+            location.href =  "#"+  divs[   divs.indexOf(pposakhir)+ 1  ];           
+            ajaxakudong('a', divs.indexOf(pposakhir) +2);
+        }
+
+        function test(event) {
+            x = event.clientX;
+            y = event.clientY;
+            // console.log(x);
+        }
+        // init();            
+        
+        var posawal = 0;
+        posakhir = 0;
+
+        function sekerol() {
+            var ele = document.getElementById("ooo");
+            // console.log(ele.scrollTop);
+        }
+
+        function cek() {
+            alert(document.getElementById('lagi').offsetHeight + " " + document.getElementById('gila').offsetHeight);
+        }
+        const d = new Date();
+        // function init() { window.requestAnimationFrame(nguli); }
+        // init();
+        var posyawal = 0;
+        var posyakhir = 0;
+
+        function upe(from) {
+            posyakhir = y;
+            if (posyakhir > posyawal) {
+                console.log('mudun');
+            } else {
+                console.log('munggah');
+            }
+        }
+
+        function downe() {
+            posyawal = y;
+            console.log(" pos awal = " + posyawal);
+        }
+                
+        let exs = [
+            [ " ", " ", "", "", ""],
+            [ "ht1.png", "ht2.png","ht3.png"],
+            [ "php1.png", "php2.png", ""],
+            [ "jv1.png"],
+            [ "jv1.png", "php1.png"],
+            [ "skill 5.jpg", "skill 5.jpg","skill 5.jpg"]
+        ];
+
+        let sx = [1,1,1,1,1];
+        
+        let notes = [
+            [ " ", " ", "", "", ""],
+            [ "ini contoh 1", "permainan tictac dengan pure javascript https://ronnyhartono9.github.io/tictac/tictac.html", "cv online dengan css https://ronnyhartono9.github.io/ronny9/mycv.html"],
+            [ "dengan pure php tanpa framework", "dengan Laravel","dengan CodeIgniter"],
+            [ "mini erp dengan pure java dengan jumlah item lebih dari 1000 "],
+            [ "aplikasi mini erp dengan SqlServer", "web online store dengan MySql"],
+            [ "Face recognition dengan tensorflow", "OCR ","digital Signature"],
+        ];        
+        var k=1;
+        var emak=0;
+
+        function terang(){
+              document.getElementById('gambar').style.visibility ="hidden";
+              document.getElementById('ooo').style.opacity=1; 
+              document.getElementById('ooo').disabled=false;
+         }
+        var posx;
+        function blereg(i){
+         posx=i;         
+         document.getElementById("singitan").innerHTML =sx[posx-1]+" of "+exs[i].length
+          
+          emak = exs[i].length;          
+            document.getElementById('gambar').style.visibility ="visible";
+                let meBeYourHeroBaby = "";
+                let isi ="";
+                    for(j=1;j<=exs[i].length;j++){
+                            isi = isi + 
+                        " <div id='gb"+j+"' style='"+meBeYourHeroBaby+" background-color:beige;width: 100%; height: 100%;'> "+
+                            "<table style='width: 100%;'>"+
+                                " <tr>"+
+                                    "<td align='center'> "+
+                                        "<img  id='g"+j+"' src='"+exs[i][j-1]+"' style=' box-shadow: 10px 5px 8px #fcc201; opacity:0; border-radius: 7px;  width: 100%; height: auto; max-width:350px '>"+
+                                        "<br>"+
+                                            "<a class='ex'>"+
+                                                notes[i][j-1] +
+                                            "</a> "+
+                                    "</td>"+
+                                "</tr>"+
+                            "</table>"+
+                        "</div> <br> ";
+                    }
+              document.getElementById('pp').innerHTML = isi;
+                document.getElementById('gb'+ sx[posx-1]).scrollIntoView();               
+            document.getElementById('ooo').style.opacity=0;
+            document.getElementById('g'+sx[posx-1]).style.opacity=1;
+            document.getElementById('ooo').style.transition = "ease-in-out 1.26s"; 
+        }
+        
+        function smut(mode){
+            if(mode=="next"){
+                if( sx[posx-1] < emak){ k++;
+                    sx[posx -1 ]++;                    
+                    document.getElementById("singitan").innerHTML = sx[posx-1]+" of "+exs[posx].length;
+                }                
+            }else{
+                if(sx[posx-1]>1){ k--; 
+                    sx[posx -1 ]--;                    
+                    document.getElementById("singitan").innerHTML = sx[posx-1]+" of "+exs[posx].length;
+                }
+            }
+              document.getElementById('g'+sx[posx-1]).style.opacity=0;
+              document.getElementById('g'+sx[posx-1]).style.opacity=1;
+             document.getElementById('g'+sx[posx-1]).style.transition = "ease-in-out 0.5s";
+             document.getElementById('gb'+sx[posx-1]).scrollIntoView(); 
+        } 
+      
+        const numSteps = 20.0;
+        let boxElement;let gel; let ix;let jx; let kx;
+        let prevRatio = 0.0;
+        let increasingColor = "rgba(40, 40, 190, ratio)";
+        let decreasingColor = "rgba(190, 40, 40, ratio)";
+        const ratios = [0, 0, 0, 0, 0];
+        var cntawal = 0;
+        window.addEventListener("load", (event) => {
+            boxElement = document.querySelector("#g");
+            gel = document.querySelector("#h"); 
+            ix = document.querySelector("#ii");
+            jx = document.querySelector("#jj");
+            kx = document.querySelector("#kk");  
+        createObserver();
+        }, false);
+
+        function createObserver() {
+            let observer; let gobserver;
+                let ixerver;let jxerver;let kxerver;
+
+                    let options = {
+                        root: null,
+                        rootMargin: "0px",
+                        threshold: buildThresholdList()
+                    };
+                    let options2 = {
+                        root: null,
+                        rootMargin: "0px",
+                        threshold: buildThresholdList()
+                    };
+                    let options3 = {
+                        root: null,
+                        rootMargin: "0px",
+                        threshold: buildThresholdList()
+                    };
+                    let options4 = {
+                        root: null,
+                        rootMargin: "0px",
+                        threshold: buildThresholdList()
+                    };
+                    let options5 = {
+                        root: null,
+                        rootMargin: "0px",
+                        threshold: buildThresholdList()
+                    };
+
+            observer = new IntersectionObserver(handleIntersect, options);
+            observer.observe(boxElement);
+
+            gobserver = new IntersectionObserver(handleIntersect2, options2);
+            gobserver.observe(gel);
+
+            ixerver = new IntersectionObserver(handleIntersect3, options3);
+            ixerver.observe(ix);
+
+            jxerver = new IntersectionObserver(handleIntersect4, options4);
+            jxerver.observe(jx);
+
+            kxerver = new IntersectionObserver(handleIntersect5, options5);
+            kxerver.observe(kx);
+        }
+
+        function buildThresholdList() {
+            let thresholds = [];
+            let numSteps = 20; 
+            for (let i=1.0; i<=numSteps; i++) {
+                let ratio = i/numSteps;
+                thresholds.push(ratio);
+            } 
+            thresholds.push(0);
+            return thresholds;
+        }
+
+        
+        function handleIntersect(entries, observer) {
+            entries.forEach((entry) => {
+                ratios[0] = entry.intersectionRatio;    
+                  
+                prevRatio = entry.intersectionRatio;
+            });
+        }
+
+        function handleIntersect2(entries, observer) {
+            entries.forEach((entry) => {                 
+                ratios[1] = entry.intersectionRatio;                
+                prevRatio = entry.intersectionRatio;
+            });
+        }
+
+        function handleIntersect3(entries, observer) {
+            entries.forEach((entry) => {            
+                ratios[2] = entry.intersectionRatio;
+                 
+                prevRatio = entry.intersectionRatio;
+            });
+        } 
+
+        function handleIntersect4(entries, observer) {
+            entries.forEach((entry) => {
+                ratios[3] = entry.intersectionRatio;
+                 
+                prevRatio = entry.intersectionRatio;
+            });
+        }
+
+        function handleIntersect5(entries, observer) {
+            entries.forEach((entry) => {
+                ratios[4] = entry.intersectionRatio;
+                 
+                prevRatio = entry.intersectionRatio;
+            });
+        } 
+        var p; 
+        const kotaks = ["g", "h", "ii", "jj", "kk"];
+        function ketarik(){ 
+             document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  ratios.indexOf( Math.max(...ratios) ) +"px";
+             document.getElementById('hopef').scrollIntoView();
+        }        
+    </script>
+</head>
+
+<body onload="mlaku()" onmousemove="test(event)" style="background-color: white;">
+    <div id="gambar" style="background-color:beige; width: 70%; height: 90%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
+        <div style="width: 100%; height: 5%; background:  linear-gradient(45deg,yellow,goldenrod); ">
+            <a id="singitan" style="font-weight: bold;"> </a>
+        </div>
+        <a href="#"onclick="smut('')" class="previous round" >&#8249;</a>
+          <a onclick="terang()" style="color:red; background-color:beige"> <strong> Close Me (X)</strong> </a>
+        <a href="#" class="next round" onclick="smut('next')" >&#8250; </a>
+        <br> 
+        <div id="pp" style="width: 100%; height: 80%; overflow: hidden;"> </div>
+    </div> 
+
+    <div id="canva" class="b1g" style="background-color: white;">
+        <div onscroll="sekerol()" data-role="page" id="ooo" style="  scroll-behavior: smooth; overflow:hidden; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
+            <div style="background-color: transparent;">
+                <center>
+                    <Div id="atas">
+                        <div class="kelas" style="background-color: white;height: 100%;float:left;width:25%;" ;>
+
+                        </div>
+
+                        <a href="#porto" onclick="ajaxakudong('a','1','beige')">
+                            <div class="kelas" id="1a"
+                                style="border-radius:5px;background-color: white;height: 200%;float:left;width: 15%;" ;>
+                                Home
+                            </div>
+                        </a>
+
+                        <a href="#coba" onclick="ajaxakudong('a','2','limegreen')">
+                            <div class="kelas" id="2a" style="  border-radius:5px;background-color: white;height: 200%;float:left;width: 15%;"
+                                ;>
+                                Edu
+                            </div>
+                        </a>
+
+                        <a href="#tiga" onclick="ajaxakudong('a','3','gold')">
+                            <div class="kelas" id="3a"
+                                style="border-radius:5px;background-color: white;height: 200%;float:left;width: 15%;" ;>
+                                Skills
+                            </div>
+                        </a>
+
+                        <a href="#empat" onclick="ajaxakudong('mycv.html','4','pink')">
+                            <div class="kelas" id="4a"
+                                style="border-radius:5px;background-color: white;height: 200%;float:left;width: 15%;" ;>
+                                CV
+                            </div>
+                        </a>
+
+                        <a href="#limo" onclick="ajaxakudong('a','5','blue')">
+                            <div class="kelas" id="5a"
+                                style="border-radius:5px;background-color: white;height: 200%;float:left;width: 15%;" ;>
+                                Contacts
+                            </div>
+                        </a>
+
+                    </Div>
+                </center>
+            </div>
+
+            <div id="tombol">
+                <table style="width: 100%; height: 100%;">
+                    <tr>
+                        <td>
+                           <a onclick="prev()">  Prev </a> 
+                        </td>
+                        <td align="right">
+                            <a onclick="next()">  Next </a>
+                        </td>
+                    </tr>
+                </table> 
+            </div> 
+             <!-- <div id="k" style="background-color: transparent;">
+                <center>
+                    <Div id="ndelik"
+                        style="width: 100px;height: 100px;background-color: gold;position: relative;top:460px;"> </Div>
+                </center>
+            </div> 
+            
+            <div id="info" onclick="popup()">
+                <center>
+                    <a style="cursor: pointer;" id="togel">Click me</a><br>
+                    Ronny Hartono<br><br> 
+                </center>
+            </div> --> 
+            
+            <div id="porto" style="overflow:hidden;background: white;width: 100%; height: 100%;  "> 
+                <table style="width: 100%; height: 100%; ">
+                    <tr style="height: 10%;">
+                        <td>
+                            <div style="height: 50px;"></div>
+                        </td>
+                    </tr>
+
+                    <tr style="height: 45%;">
+                        <td align="center">
+                            <img src="pp.jpg" style="border-radius: 10px; width: 100%; height: auto; max-width: 300px;"
+                        </td> 
+                    </tr> 
+
+                    <tr style="height: 45%;">
+                        <td style="vertical-align: top;">
+                            <table id="babi" style=" width: 100%; height: 100%;">
+                                <tr>
+                                    <td style="width: 40%; vertical-align: top; ">
+                                        <a id="mesage" style="display: none;"></a>
+                                        <div class="lhe">
+                                            Senior Developer<br>
+                                            Ronny Hartono                                            
+                                            <div style="height: 10px;"></div>
+                                        </div>
+                                    </td>
+                                    <td style="width: 60%; vertical-align: top;"> 
+                                        <div id="ai" class="lhel" style=" padding-left: 18px; text-align: left; display: inline-block; ">
+                                            <br> 
+                                                I have great background education and have a good management skill.
+                                                <hr class="hrkuk">
+                                                I have some skills and my hobby is learning about technology.
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="overflow:scroll;width: 100%;height: 100%; " id="coba">                 
+                <div style="height:50px ; width: 100%; background:linear-gradient(45deg,lightskyblue,rgb(7, 150, 207));">
+                    <h1>Education</h1>
+                </div>                
+                <center>
+                    <strong> <a id="pg"></a> </strong>
+                    <div id="panell" style=" overflow: scroll;width: 90%; height: 100%;">
+                        <table style="width: 100%; ">
+                            <tr align="left" style="height:10%; vertical-align: top;">
+                                <td></td>
+                            </tr>
+                            <tr align="center" style="height:70%; ">
+                                <td>
+                                    <table style="width: 100%; overflow: scroll;">
+                                        <tr>
+                                            <td align="right">
+                                                <div id="yell"
+                                                    style=" box-shadow: 10px -5px 8px #888888; background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold); text-align: center;  border-radius:5px;width: 350px; height: 420px;  opacity: 0;">
+                                                    <div style="  width: 100%; height: 10%; float: left;">
+                                                        <strong> <A style="font-size: 19px;">D3 MANAJEMEN INFORMATIKA</A></strong> 
+                                                    </div>
+                                                    <div
+                                                        style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; ">
+                                                        <img src="skul.png">
+                                                    </div>
+                                                    <div style="  width: 100%; height: 10%; float: left;">
+                                                        <strong> <A style="font-size: 22px;">2004 - 2007</A></strong>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div id="gell"
+                                                    style=" box-shadow: 10px -5px 8px #888888; background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold); text-align: center; border-radius:5px;width: 350px; height: 420px;  background-color: red;opacity: 0;">
+                                                    <div style="  width: 100%; height: 10%; float: left;">
+                                                        <strong> <A style="font-size: 19px;">S1 SISTEM INFORMASI BISNIS</A></strong>
+                                                    </div>
+                                                    <div
+                                                        style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; ">
+                                                        <img src="skul.png">
+                                                    </div>
+                                                    <div style="  width: 100%; height: 10%; float: left;">
+                                                        <strong> <A style="font-size: 22px;">2007 - 2009</A></strong>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </center>
+            </div>
+
+            <div style=" align-content: center; width: 100%;height: 100%;  overflow: scroll;"id="tiga">
+                <div id="sikil"style="width: 100%;  position: fixed; top:3%; opacity: 0; background: linear-gradient(45deg,rgb(250, 189, 242),rgb(199, 114, 255));">                     
+                    <h1 > Skills</h1>
+                    <div id="likis"style="width: 100%;  position: fixed; top:16%; opacity: 0; ">
+                        <div class="lhel" style="text-align: center; font-size: 13pt;">
+                            Here My Skill Lists
+                        </div>
+                    </div>
+                </div>
+
+                <div id="molor" style="  scroll-behavior: smooth;  overflow: scroll; opacity: 1; width: 100%; height: 95%; "> 
+                    <div id="hopef" style=" opacity: 0; visibility: visible; position: relative; top:10px;   background-color: purple; width: 100%;"> 
+                       <hr>
+                    </div>
+                    <div id="panel" style=" width: 100%; height: 100%;">
+                        <div style="width: 100%; height: 23%;"></div>
+                        <table id="thope" style="width: 100%; height: 77%; ">
+                            <tr>
+                                <td align="center" style="vertical-align: top; ">
+                                    <div id="g" style=" box-shadow: 10px 10px 8px #888888; position: relative;  border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 1.jpg');"></td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(1)" style="cursor: pointer">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        HTML,JavaScript and CSS
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td align="center" style="vertical-align: top;">
+                                    <div id="h" style=" box-shadow: 10px 10px 8px #888888; position: relative; border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 2.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(2)"style="cursor: pointer">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        PHP , Laravel and CodeIgniter
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td align="center" style="vertical-align: top;">
+                                    <div id="ii" style=" box-shadow: 10px 10px 8px #888888; border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 4.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(3)"style="cursor: pointer">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong> Java </strong> 
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td align="center" style="vertical-align: top;">
+                                    <div id="jj" style=" box-shadow: 10px 10px 8px #888888; border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 3.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center"onclick="blereg(4)"style="cursor: pointer">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        SQLServer & MySql 
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td align="center" style="vertical-align: top;">
+                                    <div id="kk" style=" box-shadow: 10px 10px 8px #888888; border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 5.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(5)"style="cursor: pointer">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        Android
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td> 
+
+                                <!-- <td align="center" style="vertical-align: top;">
+                                    <div id="kk" style=" border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 5.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(5)">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        a
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td align="center" style="vertical-align: top;">
+                                    <div id="kk" style=" border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 5.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(5)">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        b
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                <td align="center" style="vertical-align: top;">
+                                    <div id="kk" style=" border-radius: 10px; border:2px solid silver;  width: 400px; height: 400px; background-color: white;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr style="height: 90%;">
+                                                <td class="bg2" style="background-image: url('skill 5.jpg');"> </td>
+                                            </tr>
+                                            <tr style="height: 10%;">
+                                                <td align="center" onclick="blereg(5)">
+                                                    <img id="tangan" src="h.jpg" width="42.5" height="34" >
+                                                    <strong>
+                                                        c
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td> --> 
+                            </tr>
+                        </table>
+                    </div>                    
+                </div>
+
+                <div id="titik" style=" width: 100%;  vertical-align: top;  text-align: center; height: 5%;">
+
+                </div>
+            </div>
+            
+            <div style=" overflow:hidden; width:100%;height: 100%;" id="empat">
+                <table style="background: linear-gradient(45deg,yellow,goldenrod); width: 100%;height: 15%" ;>
+                    <tr style="height: 5%;">
+                        <td>
+
+                        </td>
+                    </tr>
+
+                    <tr style="height: 90%;">
+                        <td>
+                            <h1>CV</h1>
+                        </td>
+                    </tr>
+                </table>
+                <!-- https://www.malasngoding.com/menampilkan-file-pdf-di-html-dengan-mudah/ -->
+              
+                <table  style="height: 85%; width: 100%;">
+                    <tr>
+                        <td>
+                            <table  style="height: 100%; width: 100%;"> 
+                                <tr>
+                                    <td align="center" style=" width: 60%; vertical-align: top;  "> 
+                                        <a href="cv.pdf" download  style=" font-size: 30px; z-index: 90009"><br>
+                                             <a href="cv.pdf" download  style="z-index: 90009">Download</a><br>
+                                             <img  href="cv.pdf" download src="pr.jpg" style=" width: 100%; height: auto; max-width: 400px;z-index: 9009">
+                                        </a>            
+                                    </td>
+                                    <td style=" width: 1%;">
+                                        <div class="vl2"> </div>
+                                    </td>
+                                    <td style=" width: 39%;"> 
+                                        <table  style="height: 100%; width: 100%; table-layout: fixed;">
+                                            <tr style="height: 100%;" >
+                                                <td style="vertical-align: top;">
+                                                    <table id ="tmolor" style="width: 100%; height: 100%;">
+                                                        <tr style="height: 10%; background-color: transparent;">
+                                                            <td style="vertical-align: top;">
+                                                                <div id="bio" class="lhel" style=" overflow: hidden; color: rgb(235, 117, 8); text-shadow: 10px -3px 3px #c7c0c0;">
+                                                                    Biodata
+                                                                </div>
+                                                                <hr class="hrkuk">
+                                                            </td>
+                                                        </tr>
+                                                        <tr style="height: 30%;">
+                                                            <td>
+                                                                <div id="data"class="lhell" style="   overflow: hidden;">
+                                                                    Place and Date of Birth<br>
+                                                                       <a style="color: black;"> Surabaya, 15-11-1984</a>
+                                                                    <hr class="hrkuk">
+                                                                    Address <br>
+                                                                    <a style="color: black;"> Kapasan Kidul 3 / 2 , Surabaya </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr style="height: 10%;">
+                                                            <td>
+                                                                <div id="bio2" class="lhel" style=" overflow: hidden; color: rgb(235, 117, 8); text-shadow: 10px -3px 3px #c7c0c0;">
+                                                                    Experiences
+                                                                </div>
+                                                                <hr class="hrkuk">
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr style="height: 50%;">
+                                                            <td>
+                                                                <div id="data2"class="lhell" style="   overflow: hidden;">
+                                                                    PT. Surya Timur Sakti Jatim , April 2009 – October 2009
+                                                                    <hr class="hrkuk">
+                                                                    PT. Tohitindo Multicraft Industries , July 2010 – December 2010
+                                                                    <hr class="hrkuk">
+                                                                    PT. Sadhana , December 2010 – now
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                         </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- <div
+                    style="  align-items: center; overflow: scroll; background-color: white; opacity: 1; width: 100%; height: 85%;">
+                    <embed type="application/pdf" src="cv.pdf" style="width: 100%; height: 100%;"></embed>
+                </div> -->
+            </div>
+
+            <div id="limo" style="width:100%; height: 100%; ">
+                <table style="background:linear-gradient(45deg,rgb(46, 167, 46),palegreen);width: 100%; height: 100%;">
+                    <tr align="left" style="height:10%; vertical-align: top;">
+                        <td>
+                            <div style="height: 50px;">
+
+                            </div>
+                            <h1>Contacts</h1>
+                            <A class="a3" href="mailto: ronnyhartono9@gmail.com">Ronnyhartono9@gmail.com</A> <hr class="hrku">
+                        </td>
+                    </tr>
+                    <tr align="center" style="height:90%; ">
+                        <td>
+                            <table style="width: 100%; height: 100%; ">
+                                <tr style="height: 10%; vertical-align: top;">
+                                    <td style="width: 50%;">
+                                        <table   id="tb" style="width: 100%; height: 100%;">
+                                            <tr><td>                                                
+                                                <div id="cl1" class="kelas2" style="position: relative; left:20%; ">
+                                                  <img src="ig.png" width="50px" height="50px">
+                                                </div>
+                                            </td></tr>
+                                            <tr><td> 
+                                                <div id="cl2" class="kelas2" style="  position: relative; left:60%"> 
+                                                    <img src="fb.png" width="50px" height="50px" >
+                                                </div>                                               
+                                                    <hr class="hrkuk"> 
+                                            </td></tr>
+                                            <tr><td> 
+                                                <div id="cl3" class="kelas2" style="position: relative; left:20%">
+                                                 <img src="lin.png" width="50px" height="50px"> 
+                                                </div>
+                                            </td></tr>
+                                        </table>                                        
+                                    </td>
+                                    
+                                    <td style="width: 50%;">
+                                        <table style="width: 100%; height: 100%;">
+                                            <tr><td> 
+                                                <div id="cr1" class="kelas2" style="position: relative; left:80%">  
+                                                    Instagram 
+                                                </div> 
+                                                <hr  class="hrkuk"> 
+                                            </td></tr>
+                                            <tr><td> 
+                                                <div id="cr2" class="kelas2" style="position: relative; left:40%"> 
+                                                     FaceBook  
+                                                </div> 
+                                            </td></tr>
+                                            <tr><td> 
+                                                <div  id="cr3"class="kelas2"style="position: relative; left:80%"> 
+                                                    <a target="tg" href="https://www.linkedin.com/in/ronny-hartono-77033a16a/"> 
+                                                        linkedin
+                                                    </a>
+                                                </div>
+                                                <hr id="dfdf"class="hrkuk"> 
+                                            </td></tr>
+                                        </table>
+                                    </td>
+                                    
+                                </tr>
+                                <!-- <tr>
+                                      <td>
+                                        https://kumparan.com/info-otomotif/syarat-pengambilan-bpkb-di-fif-beserta-prosedurnya-1wMkfO3Pdf8/1
+                                        https://www.numerade.com/test-prep/exam/sat-practice-test-2/?gclid=CjwKCAjwxZqSBhAHEiwASr9n9HkLYSNMCgfOf3BWqWJp5VKdkb83GlisnHD4Rvvg1QXCj8MsS_8DmxoCSe4QAvD_BwE
+                                   
+                                    </td>  
+                                </tr> -->
+                                 
+                            </table>
+                        </td>
+                    </tr>
+                </table> 
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var i = 0;
+        var timer = null;
+        var myit;
+        var myat;
+        elemst = document.getElementById("ooo");
+        var poscawal = 0;
+        elemst.addEventListener('scroll', function () {
+            if (i == 0) {
+                poscawal = elemst.scrollTop;
+            }
+            i++;
+            if (timer !== null) {
+                clearTimeout(timer);
+            }
+            timer = setTimeout(function () {
+                if (i >= 5) {
+                    if (poscawal > 0) {
+                        //alert(posakhir+" sc awal "+ poscawal +" sc akhir"+elemst.scrollTop);
+                        //location.href="#coba";
+                    }
+                    poscawal = 0;
+                }
+                i = 0;
+            }, 150);
+        }, false);
  
-.dv {
-    border-radius: 4px;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: red;
-    transition: all 2s ;
-    cursor: pointer;color:yellow;
-}
+        function testOver() {
+            document.getElementById("mesage").innerHTML = (document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth);
+             
+            el = document.getElementById("porto"); 
 
-.fadeout {
- opacity: 0;
-}
+            // if((document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth) <= 0.9 ){
+            //     f = document.getElementById("ai").style.fontSize.replace("pt", "");
+            //         f = f + 2;
+            //     document.getElementById("ai").style.fontSize = f + "pt";
+            // } 
+            // else{
+            //    if ((el.clientWidth < el.scrollWidth) || (el.clientHeight < el.scrollHeight)) {
+            //         f = document.getElementById("ai").style.fontSize.replace("pt", "");
+            //             f = f - 1;
+            //             document.getElementById("ai").style.fontSize = f + "pt"; 
+            //         // document.getElementById("ai").style.transition = "ease-in-out 0.2s"; 
+            //     }    
+            // }
+                    var max = 0
+                    for (j = 0; j <= 4; j++) {
+                        if (urutan[j] == 1) {
+                            if (j >= max) {
+                                max = j;
+                            }
+                        }
+                    }
+                    document.getElementById("pg").innerHTML = (max + 1) + " of 2"; 
+        }
 
-.button {
-    border-radius: 4px;
-    background-color: #f4511e;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px; 
-    cursor: pointer;
-    margin: 5px;
-  }
-  
-  .button ooo { /*untuk tulisan */
-    cursor: pointer;
-    display: inline-block;
-    position: relative;    
-    transition: 0.5s;
-  }
-  
-  .button ooo:after {  /*untuk setelah tulisan di dalam*/
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button:hover ooo {
-    padding-right: 25px; 
-  }
-  
-  .button:hover ooo:after {
-    opacity: 1;
-    right: 0;
-  }
+        var modar = 0;
+        var dtakhir = 1;
+        var dtujuan = 0; 
+        var panellen = 0;
+        elemst2 = document.getElementById("molor");
+        elemst2.addEventListener('scroll', function() {
+        if(i==0){ poscawal = elemst.scrollLeft; }
+            i++;
+            if(timer !== null) {  clearTimeout(timer); }
+            timer = setTimeout(function() {  
+                 ketarik();
+                    poscawal=0; 
+                i=0;
+            }, 250);
+        }, false);
+
+        function awal(){
+            // pan = document.getElementById("molor");
+            // pan.scrollLeft = 0; 
+            // document.getElementById('bio').style.display = "none";
+            //     document.getElementById('data').style.display = "none";
+            //     document.getElementById('data').style.height = document.getElementById('tmolor').rows[1].cells[0].offsetHeight+"px";
+            //     document.getElementById('data').style.display = "block"; 
+            // document.getElementById('bio').style.height = document.getElementById('tmolor').rows[0].cells[0].offsetHeight+"px";
+            // document.getElementById('bio').style.display= "block"; 
+         
+            //location.href = "#porto";
+            // ajaxakudong('a','1','beige');
+            // document.getElementById(  "1a").style.background = keles[s - 1];
+            // document.getElementById(  "1a").style.color = "white";
+            // document.getElementById(  "1a").style.transition = "ease-in-out 0.5s";
+            
+        }
+
+        function dt(s) {
+            let bef = s.split("-"); 
+            if (dtakhir > bef[1]) {
+                mode = 'mundur';
+            } else {
+                mode = 'maju';
+            }
+            dtujuan = s;
+            el = document.getElementById(s + "s");
+            elm = document.getElementById("d-" + dtakhir);
+            elm.style.backgroundColor = "#bbb";
+            let ss = s.split("-");
+
+            elll = document.getElementById(s);
+            elll.style.backgroundColor = "black";
+            dtakhir = ss[1];
+
+            // pan = document.getElementById("molor");
+            // pan.scrollLeft = panellen * (ss[1] - 1); 
+
+              var m = parseInt(bef[1]);
+              m = (m-1) *   Math.floor(  celltampil) ;
+          
+            document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  m +"px";
+            document.getElementById('hopef').scrollIntoView(); 
+        }
+
+        function bletak(){
+            let go = document.getElementById('tb').rows[0].cells[0].offsetWidth;            
+            go =  ( (go-50) /  go  ) * 100;
+             
+
+            document.getElementById("cl1").style.left = go+"%";
+            document.getElementById("cl1").style.opacity = "1";
+            document.getElementById("cl1").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cl2").style.left = go+"%";
+            document.getElementById("cl2").style.opacity = "1";
+            document.getElementById("cl2").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cl3").style.left = go+"%";
+            document.getElementById("cl3").style.opacity = "1";
+            document.getElementById("cl3").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cr1").style.left = "0%";
+            document.getElementById("cr1").style.opacity = "1";
+            document.getElementById("cr1").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cr2").style.left = "0%";
+            document.getElementById("cr2").style.opacity = "1";
+            document.getElementById("cr2").style.transition = "ease-in-out 1.5s";
+
+            document.getElementById("cr3").style.left = "0%";
+            document.getElementById("cr3").style.opacity = "1";
+            document.getElementById("cr3").style.transition = "ease-in-out 1.5s"; 
+
+        }
+        function takble(){
+            document.getElementById("cl1").style.left = "20%";
+            document.getElementById("cl1").style.opacity = "0";
+
+            document.getElementById("cl2").style.left = "60%";
+            document.getElementById("cl2").style.opacity = "0"; 
+
+            document.getElementById("cl3").style.left = "20%";
+            document.getElementById("cl3").style.opacity = "0"; 
+
+            document.getElementById("cr1").style.left = "80%";
+            document.getElementById("cr1").style.opacity = "0"; 
+
+            document.getElementById("cr2").style.left = "40%";
+            document.getElementById("cr2").style.opacity = "0"; 
+
+            document.getElementById("cr3").style.left = "80%";
+            document.getElementById("cr3").style.opacity = "0"; 
+        }
+
+
+        myit = setInterval(testOver, 20);
+        var celltampil;
+        function makeDot() {
+            el = document.getElementById("titik");
+            ell = document.getElementById("molor");
+            elll = document.getElementById("panel"); 
+            var cell = document.getElementById('thope').rows[0].cells[1].offsetWidth ; 
+            panellen = (ell.clientWidth); 
+
+            elll.style.width = ((Math.ceil((400 * 5) / ell.clientWidth)) * 100) + "%";
+           
+            var cell2 = document.getElementById('thope').rows[0].cells[1].offsetWidth ;
+            // celltampil = ell.clientWidth/ cell2;
+
+            // for(  i = 1; i <= Math.ceil  ( 5 / ( Math.floor(  celltampil ) )); i++ ){
+            //     if(i==1){
+            //         el.innerHTML = el.innerHTML + " <div class='dit' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
+            //     }else{
+            //         el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
+            //     }
+            // }
+        }       
+        testOver();
+       makeDot();
+         awal();
+    </script>
+</body> 
+</html> 
+ 
+        <!-- <div id="tengen">
+                <center>
+                    <table>
+                        <tr>
+                            <td><a href="#porto"></a><span id="1" class="bunder"></span></td>
+                            <td><a href="#porto">1</a></td>
+                        </tr>
+                        <tr>
+                            <td><span id="2" class="bunder"></span></td>
+                            <td><a href="#coba">2</a> </td>
+                        </tr>
+                        <tr>
+                            <td><span id="3" class="bunder"></span></td>
+                            <td><a href="#tiga">3</a></td>
+                        </tr>
+                        <tr>
+                            <td><span id="4" class="bunder"></span></td>
+                            <td><a href="#empat">4</a> </td>
+                        </tr>
+                        <tr>
+                            <td><span id="5" class="bunder"></span></td>
+                            <td><a href="#limo">5</a> </td>
+                        </tr>
+                    </table>
+                </center>
+            </div> -->
