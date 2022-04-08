@@ -461,7 +461,7 @@
                             "<table style='width: 100%;'>"+
                                 " <tr>"+
                                     "<td align='center'> "+
-                                        "<img  id='g"+j+"' src='"+exs[i][j-1]+"' style=' box-shadow: 10px 5px 8px #fcc201; opacity:0; border-radius: 7px;  width: 450px; height: auto; '>"+
+                                        "<img  id='g"+j+"' src='"+exs[i][j-1]+"' style=' box-shadow: 10px 5px 8px #fcc201; opacity:0; border-radius: 7px;  width: 100%; height: auto; max-width:400px '>"+
                                         "<hr class='hrku'"+
                                             "<a class='ex'>"+
                                                 notes[i][j-1] +
@@ -616,15 +616,13 @@
         const kotaks = ["g", "h", "ii", "jj", "kk"];
         function ketarik(){ 
              document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  ratios.indexOf( Math.max(...ratios) ) +"px";
-             document.getElementById('hopef').scrollIntoView();
-             
-        }
-        
+             document.getElementById('hopef').scrollIntoView();             
+        }        
     </script>
 </head>
 
 <body onload="mlaku()" onmousemove="test(event)" style="background-color: white;">
-    <div id="gambar" style=" background-color:beige;width: 60%; height: 100%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
+    <div id="gambar" style=" background-color:beige;width: 80%; height: 100%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
         <div style="width: 100%; height: 5%; background:  linear-gradient(45deg,yellow,goldenrod); ">
             <a id="singitan" style="font-weight: bold;"> </a>
         </div>
