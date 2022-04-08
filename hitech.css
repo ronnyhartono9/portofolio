@@ -347,7 +347,7 @@ br {
   position: fixed;
   cursor:pointer;    
   top:10%;
-  left:25%;
+  left:15%;
   z-index:61677; 
   border: 1px solid gold; 
 }
