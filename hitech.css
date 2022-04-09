@@ -164,7 +164,7 @@ word-wrap: break-word;
 
 @media screen and (max-width: 800px) {
   .moloran {
-    height: 300px;width: 300px;
+    height: "300px";width: "300px";
   }
 }
 
