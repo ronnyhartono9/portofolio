@@ -265,7 +265,7 @@ br {
 .a3{
   font-size: 22px;
   font-family: 'Times New Roman', Times, serif;
-  color: black;font-weight: bold;
+  color: black;font-weight: bold; 
 }
 
 .abo{
@@ -303,6 +303,7 @@ br {
   }
 
   #atas {
+  
      /* visibility: hidden; */
     height:5%;
     text-align: center;
