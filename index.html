@@ -472,7 +472,7 @@
                                 "</table>"+
                             "</div> <br> ";
                         }
-                 // document.getElementById('pp').innerHTML = isi;
+                 document.getElementById('pp').innerHTML = isi;
                     document.getElementById('gb'+ sx[posx-1]).scrollIntoView();               
                 document.getElementById('ooo').style.opacity=0;
                 document.getElementById('g'+sx[posx-1]).style.opacity=1;
@@ -649,7 +649,7 @@
                             <a href="#coba" onclick="ajaxakudong('a','2','limegreen')">
                                 <div class="kelas" id="2a" style="  border-radius:5px;background-color: white;height: 200%;float:left;width: 15%;"
                                     ;>
-                                    Edu
+                                    Educations
                                 </div>
                             </a>
     
@@ -682,10 +682,10 @@
                     <table style="width: 100%; height: 100%;">
                         <tr>
                             <td>
-                               <a onclick="prev()">  Prev </a> 
+                               <a onclick="prev()" style="color: white;font-weight: bold;">  Prev </a> 
                             </td>
                             <td align="right">
-                                <a onclick="next()">  Next </a>
+                                <a onclick="next()" style="color: white; font-weight: bold;">  Next </a>
                             </td>
                         </tr>
                     </table> 
@@ -761,13 +761,12 @@
                                         <table style="width: 100%; overflow: scroll;">
                                             <tr>
                                                 <td align="right">
-                                                    <div id="yell"
-                                                        style=" box-shadow: 10px -5px 8px #888888; background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold); text-align: center;  border-radius:5px;width: 350px; height: 420px;  opacity: 0;">
+                                                    <div id="yell" style=" box-shadow: 10px -5px 8px #888888; background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold); text-align: center;  border-radius:5px;width: 300px; height: 400px;  opacity: 0;">
                                                         <div style="  width: 100%; height: 10%; float: left;">
-                                                            <strong> <A style="font-size: 19px;">D3 MANAJEMEN INFORMATIKA</A></strong> 
+                                                            <strong> <A style="font-size: 16px;">D3 MANAJEMEN INFORMATIKA</A></strong> 
                                                         </div>
                                                         <div
-                                                            style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; max-width: 300px; ">
+                                                            style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; ">
                                                             <img src="skul.png">
                                                         </div>
                                                         <div style="  width: 100%; height: 10%; float: left;">
@@ -776,13 +775,12 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div id="gell"
-                                                        style=" box-shadow: 10px -5px 8px #888888; background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold); text-align: center; border-radius:5px;width: 350px; height: 420px;  background-color: red;opacity: 0;">
+                                                    <div id="gell" style=" box-shadow: 10px -5px 8px #888888; background:linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold); text-align: center; border-radius:5px;width: 300px; height: 400px;  background-color: red;opacity: 0;">
                                                         <div style="  width: 100%; height: 10%; float: left;">
-                                                            <strong> <A style="font-size: 19px;">S1 SISTEM INFORMASI BISNIS</A></strong>
+                                                            <strong> <A style="font-size: 16px;">S1 SISTEM INFORMASI BISNIS</A></strong>
                                                         </div>
                                                         <div
-                                                            style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; max-width: 300px; ">
+                                                            style="  width: 100%; height: 80%; float: left;  vertical-align: bottom; ">
                                                             <img src="skul.png">
                                                         </div>
                                                         <div style="  width: 100%; height: 10%; float: left;">
@@ -800,9 +798,10 @@
                 </div>
     
                 <div style=" align-content: center; width: 100%;height: 100%;  overflow: scroll;"id="tiga">
-                    <div id="sikil"style="width: 100%;  position: fixed; top:3%; opacity: 0; background: linear-gradient(45deg,rgb(250, 189, 242),rgb(199, 114, 255));">                     
+                    <div id="sikil"style="width: 100%; height: 10%; position: fixed; top:5%; opacity: 0;   background: linear-gradient(45deg,rgb(250, 189, 242),rgb(199, 114, 255));              ">             
+                 
                         <h1 > Skills</h1>
-                        <div id="likis"style="width: 100%;  position: fixed; top:16%; opacity: 0; ">
+                        <div id="likis"style="width: 100%;  position: fixed; top:15%; opacity: 0; ">
                             <div class="lhel" style="text-align: center; font-size: 13pt;">
                                 Here My Skill Lists
                             </div>
@@ -963,22 +962,12 @@
                 </div>
                 
                 <div style=" overflow:hidden; width:100%;height: 100%;" id="empat">
-                    <table style="background: linear-gradient(45deg,yellow,goldenrod); width: 100%;height: 15%" ;>
-                        <tr style="height: 5%;">
-                            <td>
-    
-                            </td>
-                        </tr>
-    
-                        <tr style="height: 90%;">
-                            <td>
-                                <h1>CV</h1>
-                            </td>
-                        </tr>
-                    </table>
+                    <div style="height: 10%;background: linear-gradient(45deg,yellow,goldenrod); vertical-align: middle;">
+                        <h1><br><br>CV</h1>
+                    </div>
                     <!-- https://www.malasngoding.com/menampilkan-file-pdf-di-html-dengan-mudah/ -->
                   
-                    <table  style="height: 85%; width: 100%;">
+                    <table  style="height: 90%; width: 100%;">
                         <tr>
                             <td>
                                 <table  style="height: 100%; width: 100%;"> 
@@ -1055,12 +1044,10 @@
                 </div>
     
                 <div id="limo" style="width:100%; height: 100%; ">
+                    <div style="height: 5%;"></div>
                     <table style="background:linear-gradient(45deg,rgb(46, 167, 46),palegreen);width: 100%; height: 100%;">
                         <tr align="left" style="height:10%; vertical-align: top;">
-                            <td>
-                                <div style="height: 50px;">
-    
-                                </div>
+                            <td>                               
                                 <h1>Contacts</h1>
                                 <A class="a3" href="mailto: ronnyhartono9@gmail.com">Ronnyhartono9@gmail.com</A> <hr class="hrku">
                             </td>
@@ -1127,8 +1114,7 @@
                             </td>
                         </tr>
                     </table> 
-                </div>
-    
+                </div>    
             </div>
         </div>
     
