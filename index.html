@@ -612,8 +612,10 @@
             var p; 
             const kotaks = ["g", "h", "ii", "jj", "kk"];
             function ketarik(){ 
+                
                  document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  ratios.indexOf( Math.max(...ratios) ) +"px";
                  document.getElementById('hopef').scrollIntoView();
+                 alert("eit");
             }        
         </script>
     </head>
@@ -1181,9 +1183,8 @@
             if(i==0){ poscawal = elemst.scrollLeft; }
                 i++;
                 if(timer !== null) {  clearTimeout(timer); }
-                timer = setTimeout(function() {  alert("eit");
-                        ketarik();
-                        
+                timer = setTimeout(function() { 
+                        ketarik();                        
                         poscawal=0; 
                     i=0;
                 }, 250);
