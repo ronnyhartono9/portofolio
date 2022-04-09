@@ -159,7 +159,7 @@ word-wrap: break-word;
 }
 
 .moloran{
-  height: 400px;width: 400px;
+  height: "400px";width: "400px";
 }
 
 @media screen and (max-width: 800px) {
