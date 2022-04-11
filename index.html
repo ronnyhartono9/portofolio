@@ -21,19 +21,12 @@
                 background-size: 100% 100%;
             }
             .bg2 {
-                background-image: url("back.jpg");
-                height: 90%;
+                background-image: url("back.jpg");              
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 90% 90%;
-            }
-            .bg2 {
-                background-image: url("pr.jpg");
-                height: 90%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 90% 90%;
-            }
+                border-radius: 10px;
+            } 
         </style>
     
     <script type="text/javascript">
@@ -453,21 +446,20 @@
              }
             var posx;
             function blereg(i){
-                alert(document.getElementById("se").clientWidth);
+             // alert(document.getElementById("se").clientWidth);
              posx=i;         
-             document.getElementById("singitan").innerHTML =sx[posx-1]+" of "+exs[i].length
-              
+             document.getElementById("singitan").innerHTML =sx[posx-1]+" of "+exs[i].length              
               emak = exs[i].length;          
-                document.getElementById('gambar').style.visibility ="visible";
+                document.getElementById('gambar').style.visibility ="visible";                
                     let meBeYourHeroBaby = "";
                     let isi ="";
                         for(j=1;j<=exs[i].length;j++){
                                 isi = isi + 
                             " <div id='gb"+j+"' style='"+meBeYourHeroBaby+" background-color:beige;width: 100%; height: 100%;'> "+
-                                "<table style='width: 100%;'>"+
+                                "<table style='width: 100%;height:100%'>"+
                                     " <tr>"+
-                                        "<td align='center'> "+
-                                            "<img  id='g"+j+"' src='"+exs[i][j-1]+"' style=' box-shadow: 10px 5px 8px #fcc201; opacity:0; border-radius: 7px;  width: 100%; height: auto; max-width:350px '>"+
+                                        "<td  style='vertical-align:top'  align='center'> "+
+                                            "<img  id='g"+j+"' src='"+exs[i][j-1]+"' style=' box-shadow: 10px 5px 8px #fcc201; opacity:0; border-radius: 7px;  width: 320px; height: 320px;'>"+
                                             "<br>"+
                                                 "<a class='ex'>"+
                                                     notes[i][j-1] +
@@ -478,10 +470,10 @@
                             "</div> <br> ";
                         }
                  document.getElementById('pp').innerHTML = isi;
-                    document.getElementById('gb'+ sx[posx-1]).scrollIntoView();               
+                document.getElementById('gb'+ sx[posx-1]).scrollIntoView();               
                 document.getElementById('ooo').style.opacity=0;
-                document.getElementById('g'+sx[posx-1]).style.opacity=1;
-                document.getElementById('ooo').style.transition = "ease-in-out 1.26s"; 
+                document.getElementById('g'+sx[posx-1]).style.opacity=1;                
+                document.getElementById('ooo').style.transition = "ease-in-out 1.26s";
             }
             
             function smut(mode){
@@ -632,7 +624,7 @@
     </head>
     
     <body onload="mlaku()" onmousemove="test(event)" style="background-color: white;" id="se">
-        <div id="gambar" style="background-color:beige; width: 70%; height: 90%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
+        <div id="gambar" style="background-color:beige; width: 100%; height: 100%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
             <div style="width: 100%; height: 5%; background:  linear-gradient(45deg,yellow,goldenrod); ">
                 <a id="singitan" style="font-weight: bold;"> </a>
             </div>
@@ -640,7 +632,7 @@
               <a onclick="terang()" style="color:red; background-color:beige"> <strong> Close Me (X)</strong> </a>
             <a href="#" class="next round" onclick="smut('next')" >&#8250; </a>
             <br> 
-            <div id="pp" style="width: 100%; height: 80%; overflow: hidden;"> </div>
+            <div id="pp" style="width: 100%; height: 85%; overflow: hidden;"> </div>
         </div> 
     
         <div id="canva" class="b1g" style="background-color: white;">
@@ -847,7 +839,9 @@
                                         <div id="g" style=" width:320px; height:320px; position: relative;  border-radius: 10px;  background-color: white;">
                                             <table style="width: 100%; height: 100%;">
                                                 <tr style="height: 90%;">
-                                                    <td class="bg2" style="background-image: url('skill 1.jpg');"></td>
+                                                    <td class="bg2" style="background-image: url('skill 1.jpg');">
+                                                      
+                                                    </td>
                                                 </tr>
                                                 <tr style="height: 10%;">
                                                     <td align="center" onclick="blereg(1)" style="cursor: pointer">
