@@ -302,8 +302,7 @@ br {
     cursor: pointer;
   }
 
-  #atas {
-  
+  #atas {  
      /* visibility: hidden; */
     height:5%;
     text-align: center;
@@ -316,6 +315,7 @@ br {
     color: brown;
     background-color: white;
     opacity: 1;z-index: 200;
+    box-shadow: 10px 5px 8px grey;
      
 }
   #info {
