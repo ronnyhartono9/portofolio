@@ -32,8 +32,10 @@
             //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
             //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
             //https://colorlib.com/wp/template/personalportfolio/
-    
+            var boleh;
+            var pakhir;
             var detik = 0;
+            var ngglondang = 100;
             const divs = ["porto", "coba", "tiga", "empat", "limo"];
             var pposakhir;
             var ss;//background:linear-gradient(45deg,rgb(255, 255, 255),rgb(199, 114, 255),rgb(255, 255, 255));"
@@ -79,132 +81,148 @@
                 }
             }
     
-            function ajaxakudong(grace, s, kelir) {            
+            function ajaxakudong(grace, s, kelir,leboh) { 
                 for (i = 1; i <= 5; i++) {
                     document.getElementById(i + "a").style.background = 'white';
                     document.getElementById(i + "a").style.color = 'blue';
                 }
+                
                 document.getElementById(s + "a").style.background = keles[s - 1];
                 document.getElementById(s + "a").style.color = "white";
-                document.getElementById(s + "a").style.transition = "ease-in-out 0.5s";
+                document.getElementById(s + "a").style.transition = "ease-in-out 12.5s";
+
                 ss = s;
                 if( s != "3"  ){
                     document.getElementById("sikil").style.opacity="0";
                     document.getElementById("likis").style.opacity="0";
-                    document.getElementById("sikil").style.transition = "ease-in-out 0.5s";
-                    document.getElementById("likis").style.transition = "ease-in-out 0.5s";
+                    document.getElementById("sikil").style.transition = "ease-in-out 2.5s";
+                    document.getElementById("likis").style.transition = "ease-in-out 2.5s";
                     document.getElementById("sikil").style.display="none";
                     document.getElementById("likis").style.display="none";
                 }else{                   
                     document.getElementById("sikil").style.opacity="1";
                     document.getElementById("likis").style.opacity="1";
-                    document.getElementById("sikil").style.transition = "ease-in-out 0.5s";
-                    document.getElementById("likis").style.transition = "ease-in-out 0.5s";
+                    document.getElementById("sikil").style.transition = "ease-in-out 2.5s";
+                    document.getElementById("likis").style.transition = "ease-in-out 2.5s";
                     document.getElementById("sikil").style.display="block";
                     document.getElementById("likis").style.display="block";
                 }
                
     
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("f").innerHTML = this.responseText;
-                    }
-                };
-                xhttp.open("GET", grace, true);
-                xhttp.send();
+                // var xhttp = new XMLHttpRequest();
+                // xhttp.onreadystatechange = function () {
+                //     if (this.readyState == 4 && this.status == 200) {
+                //         document.getElementById("f").innerHTML = this.responseText;
+                //     }
+                // };
+                // xhttp.open("GET", grace, true);
+                // xhttp.send();
     
                 pposakhir =  (divs[s-1]);
+                
             }
     
-            // var pro = new IntersectionObserver(function (entries) {
-            //     // var dot = document.getElementById("1");
-            //     if (entries[0].isIntersecting === true) {
-            //         // dot.style.backgroundColor = 'grey';
-            //         // dot.style.border = "0px";
-            //         // dot.style.borderColor = "white";
-            //         // dot.style.width = "18px";
-            //         // dot.style.height = "18px";
-            //         ajaxakudong('a', '1');
-            //         pposakhir = "porto";
+            var pro = new IntersectionObserver(function (entries) {
+                // var dot = document.getElementById("1");
+                if (entries[0].isIntersecting === true) {
+                    // dot.style.backgroundColor = 'grey';
+                    // dot.style.border = "0px";
+                    // dot.style.borderColor = "white";
+                    // dot.style.width = "18px";
+                    // dot.style.height = "18px"; 
+                     
+                        ajaxakudong('a','1','beige',true);
+                 
                     
-            //     } else {
-            //         // dot.style.backgroundColor = 'transparent';
-            //         // dot.style.border = "solid 2px grey";
-            //         // dot.style.width = "12px";
-            //         // dot.style.height = "12px";
-            //     }
-            //     dot.style.transition = "all 1s";
-            // }, {
-            //     threshold: [0.5]
-            // });
+                    pposakhir = "porto";
+                    
+                } else {
+                    // dot.style.backgroundColor = 'transparent';
+                    // dot.style.border = "solid 2px grey";
+                    // dot.style.width = "12px";
+                    // dot.style.height = "12px";
+                }
+                // dot.style.transition = "all 1s";
+            }, {
+                threshold: [0.9]
+            });
     
-            // var section2 = new IntersectionObserver(function (entries) {
-            //     var dot = document.getElementById("2");
-            //     if (entries[0].isIntersecting === true) {
-            //         //    tran3("masuk");
-            //         dot.style.backgroundColor = 'grey';
-            //         dot.style.border = "0px";
-            //         dot.style.borderColor = "white";
-            //         dot.style.width = "18px";
-            //         dot.style.height = "18px";
-            //         ajaxakudong('a', '2');
-            //         pposakhir = "coba";
-            //     } else {
-            //         // tran3("metu"); 
-            //         dot.style.backgroundColor = 'transparent';
-            //         dot.style.border = "solid 2px grey";
-            //         dot.style.width = "12px";
-            //         dot.style.height = "12px";
-            //         //  location.href = "#tiga";
-            //     }
-            //     dot.style.transition = "all 1s";
-            // }, {
-            //     threshold: [0.8]
-            // });
+            var section2 = new IntersectionObserver(function (entries) {
+                // var dot = document.getElementById("2");
+                if (entries[0].isIntersecting === true) {                  
+                    //    tran3("masuk");
+                    // dot.style.backgroundColor = 'grey';
+                    // dot.style.border = "0px";
+                    // dot.style.borderColor = "white";
+                    // dot.style.width = "18px";
+                    // dot.style.height = "18px";
+             
+                        ajaxakudong('a','2','limegreen',true);
+             
+                        
+                  
+                    
+                    pposakhir = "coba";
+                } else {
+                    // tran3("metu"); 
+                    // dot.style.backgroundColor = 'transparent';
+                    // dot.style.border = "solid 2px grey";
+                    // dot.style.width = "12px";
+                    // dot.style.height = "12px";
+                    //  location.href = "#tiga";
+                }
+                // dot.style.transition = "all 1s";
+            }, {
+                threshold: [0.9]
+            });
     
-            // var telu = new IntersectionObserver(function (entries) {
-            //     var dot = document.getElementById("3");
-            //     if (entries[0].isIntersecting === true) {
-            //         dot.style.backgroundColor = 'grey';
-            //         dot.style.border = "0px";
-            //         dot.style.borderColor = "white";
-            //         dot.style.width = "18px";
-            //         dot.style.height = "18px";
-            //         ajaxakudong('a', '3');
-            //         pposakhir = "tiga";
-            //     } else {
-            //         dot.style.backgroundColor = 'transparent';
-            //         dot.style.border = "solid 2px grey";
-            //         dot.style.width = "12px";
-            //         dot.style.height = "12px";
-            //     }
-            //     dot.style.transition = "all 1s";
-            // }, {
-            //     threshold: [0.8]
-            // });
+            var telu = new IntersectionObserver(function (entries) {
+                // var dot = document.getElementById("3");
+                if (entries[0].isIntersecting === true) {
+                    // dot.style.backgroundColor = 'grey';
+                    // dot.style.border = "0px";
+                    // dot.style.borderColor = "white";
+                    // dot.style.width = "18px";
+                    // dot.style.height = "18px"; 
+                  
+                        ajaxakudong('a','3','gold',true); 
+                    
+                    pposakhir = "tiga";
+                } else {
+                    // dot.style.backgroundColor = 'transparent';
+                    // dot.style.border = "solid 2px grey";
+                    // dot.style.width = "12px";
+                    // dot.style.height = "12px";
+                }
+                // dot.style.transition = "all 1s";
+            }, {
+                threshold: [0.9]
+            });
     
-            // var papat = new IntersectionObserver(function (entries) {
-            //     var dot = document.getElementById("4");
-            //     if (entries[0].isIntersecting === true) {
-            //         dot.style.backgroundColor = 'grey';
-            //         dot.style.border = "0px";
-            //         dot.style.borderColor = "white";
-            //         dot.style.width = "18px";
-            //         dot.style.height = "18px";
-            //         ajaxakudong('a', '4');
-            //         pposakhir = "empat";
+            var papat = new IntersectionObserver(function (entries) {
+                // var dot = document.getElementById("4");
+                if (entries[0].isIntersecting === true) {
+                    // dot.style.backgroundColor = 'grey';
+                    // dot.style.border = "0px";
+                    // dot.style.borderColor = "white";
+                    // dot.style.width = "18px";
+                    // dot.style.height = "18px";
+                
+                        ajaxakudong('a','4','pink',true);
+                    
+                    
+                    pposakhir = "empat";
     
-            //     } else {
-            //         dot.style.backgroundColor = 'transparent';
-            //         dot.style.border = "solid 2px grey";
-            //         dot.style.width = "12px";
-            //         dot.style.height = "12px";
-            //     }
-            //     dot.style.transition = "all 1s";
-            // }, {
-            //     threshold: [0.8]
-            // });
+                } else {
+                    // dot.style.backgroundColor = 'transparent';
+                    // dot.style.border = "solid 2px grey";
+                    // dot.style.width = "12px";
+                    // dot.style.height = "12px";
+                }
+                // dot.style.transition = "all 1s";
+            }, {
+                threshold: [0.9]
+            });
     
             var lima = new IntersectionObserver(function (entries) {
                 // var dot = document.getElementById("5");
@@ -214,17 +232,18 @@
                     // dot.style.borderColor = "white";
                     // dot.style.width = "18px";
                     // dot.style.height = "18px";
-                    // ajaxakudong('a', '5');
-                    // pposakhir = "limo";
-                    // console.log(ss);
+                    
+                        ajaxakudong('a','5','blue',true);
+                   
+                    
+                    pposakhir = "limo"; 
                    bletak();
                 } else {
                     takble();
                     // dot.style.backgroundColor = 'transparent';
                     // dot.style.border = "solid 2px grey";
                     // dot.style.width = "12px";
-                    // dot.style.height = "12px";
-                  
+                    // dot.style.height = "12px"; 
                 }
     
                 // dot.style.transition = "all 1s";
@@ -291,11 +310,11 @@
     
             function mlaku() {
                 document.getElementById('gambar').style.visibility = "hidden";
-                // pro.observe(document.querySelector("#porto"));
-                // section2.observe(document.querySelector("#coba"));
-                // telu.observe(document.querySelector("#tiga"));
-                // papat.observe(document.querySelector("#empat"));
-                lima.observe(document.querySelector("#limo"));
+                 pro.observe(document.querySelector("#porto"));
+                 section2.observe(document.querySelector("#coba"));
+                 telu.observe(document.querySelector("#tiga"));
+                 papat.observe(document.querySelector("#empat"));
+                 lima.observe(document.querySelector("#limo"));
                 y1.observe(document.querySelector("#yell"));
                 y2.observe(document.querySelector("#yell"));
                 g1.observe(document.querySelector("#gell"));
@@ -420,7 +439,7 @@
                 [ "php1.png", "php2.png", ""],
                 [ "jv1.png"],
                 [ "jv1.png", "php1.png"],
-                [ "skill 5.jpg", "skill 5.jpg","skill 5.jpg"]
+                [ "jv1.png", "skill 5.jpg","skill 5.jpg"]
             ];
     
             let sx = [1,1,1,1,1];
@@ -453,10 +472,10 @@
                         for(j=1;j<=exs[i].length;j++){
                                 isi = isi + 
                             " <div id='gb"+j+"' style='"+meBeYourHeroBaby+" background-color:beige;width: 100%; height: 100%;'> "+
-                                "<table style='width: 100%;height:100%'>"+
+                                "<table border=1 style='width: 100%;height:100%'>"+
                                     " <tr>"+
-                                        "<td  style='vertical-align:top'  align='center'> "+
-                                            "<img  id='g"+j+"' src='"+exs[i][j-1]+"' style=' box-shadow: 10px 5px 8px #fcc201; opacity:0; border-radius: 7px;  width: 60%; height: auto;'>"+
+                                        "<td style='vertical-align:top' align='center'> "+
+                                            "<img  id='g"+j+"' src='"+exs[i][j-1]+"' style=' box-shadow: 10px 5px 8px #fcc201; opacity:0; border-radius: 7px;  width: 60%; height: auto; '>"+
                                             "<br>"+
                                                 "<a class='ex'>"+
                                                     notes[i][j-1] +
@@ -466,7 +485,7 @@
                                 "</table>"+
                             "</div> <br> ";
                         }
-                 document.getElementById('pp').innerHTML = isi;
+                document.getElementById('pp').innerHTML = isi;
                 document.getElementById('gb'+ sx[posx-1]).scrollIntoView();               
                 document.getElementById('ooo').style.opacity=0;
                 document.getElementById('g'+sx[posx-1]).style.opacity=1;                
@@ -563,8 +582,7 @@
                 thresholds.push(0);
                 return thresholds;
             }
-    
-            
+                
             function handleIntersect(entries, observer) {
                 entries.forEach((entry) => {
                     ratios[0] = entry.intersectionRatio;    
@@ -613,15 +631,13 @@
                 }
                 catch(err) {
                     alert("lha");
-                }
-                 
-                
+                }                
             }        
         </script>
     </head>
     
     <body onload="mlaku()" onmousemove="test(event)" style="background-color: white;" id="se">
-        <div id="gambar" style="background-color:beige; width: 100%; height: 100%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
+        <div id="gambar" style="background-color:beige; width: 100%; height: 100%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; visibility: hidden; ">
             <div style="width: 100%; height: 5%; background:  linear-gradient(45deg,yellow,goldenrod); ">
                 <a id="singitan" style="font-weight: bold;"> </a>
             </div>
@@ -633,15 +649,14 @@
         </div> 
     
         <div id="canva" class="b1g" style="background-color: white;">
-            <div onscroll="sekerol()" data-role="page" id="ooo" style="  scroll-behavior: smooth; overflow:hidden; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
+            <div onscroll="sekerol()" data-role="page" id="ooo" style="  scroll-behavior: smooth; overflow:scroll; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
                 <div style="background-color: transparent;">
                     <center>
                         <Div id="atas"> 
                             <div class="kelas" style="height: 100%;float:left;width:10%;" ;>  </div>
     
-                            <a href="#porto" onclick="ajaxakudong('a','1','beige')">                                 
-                                <div class="kelas" id="1a"
-                                    style="border-radius:5px;background-color: white;height: 200%;float:left;width: 18%;" ;>                                
+                            <a href="#porto" onclick="ajaxakudong('a','1','beige',false)">                                 
+                                <div class="kelas" id="1a" style="border-radius:5px;background-color: white;height: 200%;float:left;width: 18%;" ;>                                
                                     <table style="width: 100%;">
                                         <tr>
                                             <td align="center" style="vertical-align: middle;"class="telp">
@@ -652,7 +667,7 @@
                                 </div>
                             </a>
     
-                            <a href="#coba" onclick="ajaxakudong('a','2','limegreen')">
+                            <a href="#coba" onclick="ajaxakudong('a','2','limegreen',false)">
                                 <div class="kelas" id="2a" style=" border-radius:5px;background-color: white;height: 200%;float:left;width: 18%;"
                                     ;>
                                     <table style="width: 100%;">
@@ -666,7 +681,7 @@
                                 </div>
                             </a>
     
-                            <a href="#tiga" onclick="ajaxakudong('a','3','gold')">
+                            <a href="#tiga" onclick="ajaxakudong('a','3','gold',false)">
                                 <div class="kelas" id="3a"
                                     style="border-radius:5px;background-color: white;height: 200%;float:left;width: 18%;" ;>
                                     <table style="width: 100%;">
@@ -680,7 +695,7 @@
                                 </div>
                             </a>
     
-                            <a href="#empat" onclick="ajaxakudong('mycv.html','4','pink')">
+                            <a href="#empat" onclick="ajaxakudong('a','4','pink',false)">
                                 <div class="kelas" id="4a"
                                     style="border-radius:5px;background-color: white;height: 200%;float:left;width: 18%;" ;>
                                     <table style="width: 100%;">
@@ -694,7 +709,7 @@
                                 </div>
                             </a>
     
-                            <a href="#limo" onclick="ajaxakudong('a','5','blue')">
+                            <a href="#limo" onclick="ajaxakudong('a','5','blue',false)">
                                 <div class="kelas" id="5a"
                                     style="border-radius:5px;background-color: white;height: 200%;float:left;width: 18%;" ;>                                    
                                     <table style="width: 100%;">
@@ -737,7 +752,7 @@
                     </center>
                 </div> --> 
                 
-                <div id="porto" style="overflow:hidden;background: white;width: 100%; height: 100%;  ">                     
+                <div id="porto" style="overflow:hidden;background: white;width: 100%; ">                     
                      <table style="width: 100%; height: 100%; ">
                         <tr style="height: 10%;">
                             <td>
@@ -758,7 +773,6 @@
                                         <td style="width: 40%; vertical-align: top; ">
                                             <a id="mesage" style="display: none;"></a>
                                             <div class="lhe">
-                                                
                                                 Senior Developer<br>
                                                 Ronny Hartono                                            
                                                 <div style="height: 10px;"></div>
@@ -779,7 +793,7 @@
                     </table> 
                 </div>
     
-                <div style=" width: 100%;height: 100%;" id="coba"> 
+                <div style=" width: 100%;" id="coba"> 
                     <div style="height: 5%;"></div>
                     <div style="height: 10%;background:linear-gradient(45deg,lightskyblue,rgb(7, 150, 207)); box-shadow: 10px 5px 14px lightskyblue;">
                         <table>
@@ -840,7 +854,7 @@
                     </center>
                 </div>
     
-                <div style=" align-content: center; width: 100%;height: 100%;  overflow: scroll;"id="tiga">
+                <div style=" align-content: center; width: 100%; overflow: scroll;"id="tiga">
                     <div id="sikil"style="width: 100%; height: 10%; position: fixed; top:5%; opacity: 0;   background: linear-gradient(45deg,rgb(250, 189, 242),rgb(199, 114, 255));   box-shadow: 10px 5px 14px pink;           ">             
                         <table  style="width: 100%; height: 100%;">
                             <tr>
@@ -1012,7 +1026,7 @@
                     </div>
                 </div>
                 
-                <div style=" overflow:hidden; width:100%;height: 100%;" id="empat">                   
+                <div style=" overflow:hidden; width:100%;" id="empat">                   
                       <!-- https://www.malasngoding.com/menampilkan-file-pdf-di-html-dengan-mudah/ -->   
                     <div style=" height: 5%;"></div>
                         <table  style=" width: 100%; height: 95%;">
@@ -1098,7 +1112,7 @@
                     </div> -->
                 </div>
     
-                <div id="limo" style="width:100%; height: 100%; ">
+                <div id="limo" style="width:100%; ">
                     <div style=" height: 5%;"></div>
                      
                     <table style="background:linear-gradient(45deg,rgb(46, 167, 46),palegreen);width: 100%; height: 95%;">
@@ -1246,8 +1260,8 @@
             }, false);
     
             function awal(){
-                ajaxakudong('a','1','beige');
-                location.href = "#porto";                
+                 ajaxakudong('a','1','beige',false);
+                 location.href = "#porto";
             }
     
             function dt(s) {
