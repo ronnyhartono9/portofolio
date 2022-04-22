@@ -34,7 +34,7 @@
             //https://colorlib.com/wp/template/personalportfolio/
     var pakir="";var pawal="";
             var detik = 0;
-            const divs = ["porto", "coba", "tiga", "empat", "limo"];
+            const divs = ["porto", "coba", "tiga", "empat"];  //, "limo"
             var pposakhir;
             var ss;//background:linear-gradient(45deg,rgb(255, 255, 255),rgb(199, 114, 255),rgb(255, 255, 255));"
             const keles = ["linear-gradient(45deg,lightgrey,rgb(209, 207, 207),lightgrey,rgb(209, 207, 207))", "linear-gradient(45deg,lightskyblue,rgb(7, 150, 207))", "linear-gradient(45deg,rgb(250, 189, 242),rgb(199, 114, 255))", "linear-gradient(45deg,yellow,goldenrod)", "linear-gradient(45deg,rgb(46, 167, 46),palegreen)"]; 
@@ -116,7 +116,7 @@
                 xhttp.send();
     
                 pposakhir =  (divs[s-1]);
-                pakir=s;
+                pakir=s; 
             }
     
             var pro = new IntersectionObserver(function (entries) {
@@ -658,7 +658,7 @@
                                     <table style="width: 100%;">
                                         <tr>
                                             <td align="center" class="telp">
-                                                Educations
+                                                Education
                                             </td>
                                         </tr>
                                     </table>
@@ -778,7 +778,7 @@
                     </table> 
                 </div>
     
-                <div style=" width: 100%; " id="coba"> 
+                <div style=" width: 100%; opacity: 20%;" id="coba">
                     <div style="height: 5%;"></div>
                     <div style="height: 10%;background:linear-gradient(45deg,lightskyblue,rgb(7, 150, 207)); box-shadow: 10px 5px 14px lightskyblue;">
                         <table>
@@ -791,7 +791,7 @@
                     </div>
                     <center>
                         <strong> <a id="pg"></a> </strong>
-                        <div style="width:100%; height: 80%;  ">
+                        <div style="width:100%; ">
                             <div id="panell" style="overflow: scroll;"> 
                                 <table>
                                     <tr align="left" style="height:10%; vertical-align: top;">
@@ -1249,8 +1249,14 @@
             elemst3.addEventListener('scroll', function() {
                 if(timer2 !== null) {  clearTimeout(timer2); }
                 timer2 = setTimeout(function() {
-                 if(pawal!= pakir){                   
+                 if(pawal!= pakir){
+
+                    for(j=0;j<=divs.length-1;j++){                      
+                      document.getElementById(  divs[j]).style.opacity=0.3;
+                    }
+
                      location.href = "#"+divs[pakir-1];
+                      document.getElementById(  divs[pakir-1]).style.opacity=1;
                  }
                  pawal=pakir;
                         poscawal2=0;                   
