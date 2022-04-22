@@ -89,19 +89,19 @@
                 document.getElementById(s + "a").style.transition = "ease-in-out 0.5s";
                 ss = s;
                 if( s != "3"  ){
-                    document.getElementById("sikil").style.opacity="0";
-                    document.getElementById("likis").style.opacity="0";
-                    document.getElementById("sikil").style.transition = "ease-in-out 0.5s";
-                    document.getElementById("likis").style.transition = "ease-in-out 0.5s";
-                    document.getElementById("sikil").style.display="none";
-                    document.getElementById("likis").style.display="none";
+                    // document.getElementById("sikil").style.opacity="0";
+                    // document.getElementById("likis").style.opacity="0";
+                    // document.getElementById("sikil").style.transition = "ease-in-out 0.5s";
+                    // document.getElementById("likis").style.transition = "ease-in-out 0.5s";
+                    // document.getElementById("sikil").style.display="none";
+                    // document.getElementById("likis").style.display="none";
                 }else{                   
-                    document.getElementById("sikil").style.opacity="1";
-                    document.getElementById("likis").style.opacity="1";
-                    document.getElementById("sikil").style.transition = "ease-in-out 0.5s";
-                    document.getElementById("likis").style.transition = "ease-in-out 0.5s";
-                    document.getElementById("sikil").style.display="block";
-                    document.getElementById("likis").style.display="block";
+                    // document.getElementById("sikil").style.opacity="1";
+                    // document.getElementById("likis").style.opacity="1";
+                    // document.getElementById("sikil").style.transition = "ease-in-out 0.5s";
+                    // document.getElementById("likis").style.transition = "ease-in-out 0.5s";
+                    // document.getElementById("sikil").style.display="block";
+                    // document.getElementById("likis").style.display="block";
                 }
                
     
@@ -117,94 +117,94 @@
                 pposakhir =  (divs[s-1]);
             }
     
-            // var pro = new IntersectionObserver(function (entries) {
-            //     // var dot = document.getElementById("1");
-            //     if (entries[0].isIntersecting === true) {
-            //         // dot.style.backgroundColor = 'grey';
-            //         // dot.style.border = "0px";
-            //         // dot.style.borderColor = "white";
-            //         // dot.style.width = "18px";
-            //         // dot.style.height = "18px";
-            //         ajaxakudong('a', '1');
-            //         pposakhir = "porto";
+            var pro = new IntersectionObserver(function (entries) {
+                // var dot = document.getElementById("1");
+                if (entries[0].isIntersecting === true) {
+                    // dot.style.backgroundColor = 'grey';
+                    // dot.style.border = "0px";
+                    // dot.style.borderColor = "white";
+                    // dot.style.width = "18px";
+                    // dot.style.height = "18px";
+                    ajaxakudong('a', '1');
+                    pposakhir = "porto";
                     
-            //     } else {
-            //         // dot.style.backgroundColor = 'transparent';
-            //         // dot.style.border = "solid 2px grey";
-            //         // dot.style.width = "12px";
-            //         // dot.style.height = "12px";
-            //     }
-            //     dot.style.transition = "all 1s";
-            // }, {
-            //     threshold: [0.5]
-            // });
+                } else {
+                    // dot.style.backgroundColor = 'transparent';
+                    // dot.style.border = "solid 2px grey";
+                    // dot.style.width = "12px";
+                    // dot.style.height = "12px";
+                }
+                // dot.style.transition = "all 1s";
+            }, {
+                threshold: [0.5]
+            });
     
-            // var section2 = new IntersectionObserver(function (entries) {
-            //     var dot = document.getElementById("2");
-            //     if (entries[0].isIntersecting === true) {
-            //         //    tran3("masuk");
-            //         dot.style.backgroundColor = 'grey';
-            //         dot.style.border = "0px";
-            //         dot.style.borderColor = "white";
-            //         dot.style.width = "18px";
-            //         dot.style.height = "18px";
-            //         ajaxakudong('a', '2');
-            //         pposakhir = "coba";
-            //     } else {
-            //         // tran3("metu"); 
-            //         dot.style.backgroundColor = 'transparent';
-            //         dot.style.border = "solid 2px grey";
-            //         dot.style.width = "12px";
-            //         dot.style.height = "12px";
-            //         //  location.href = "#tiga";
-            //     }
-            //     dot.style.transition = "all 1s";
-            // }, {
-            //     threshold: [0.8]
-            // });
+            var section2 = new IntersectionObserver(function (entries) {
+                // var dot = document.getElementById("2");
+                if (entries[0].isIntersecting === true) {
+                    //    tran3("masuk");
+                    // dot.style.backgroundColor = 'grey';
+                    // dot.style.border = "0px";
+                    // dot.style.borderColor = "white";
+                    // dot.style.width = "18px";
+                    // dot.style.height = "18px";
+                    ajaxakudong('a', '2');
+                    pposakhir = "coba";
+                } else {
+                    // tran3("metu"); 
+                    // dot.style.backgroundColor = 'transparent';
+                    // dot.style.border = "solid 2px grey";
+                    // dot.style.width = "12px";
+                    // dot.style.height = "12px";
+                    //  location.href = "#tiga";
+                }
+                // dot.style.transition = "all 1s";
+            }, {
+                threshold: [0.8]
+            });
     
-            // var telu = new IntersectionObserver(function (entries) {
-            //     var dot = document.getElementById("3");
-            //     if (entries[0].isIntersecting === true) {
-            //         dot.style.backgroundColor = 'grey';
-            //         dot.style.border = "0px";
-            //         dot.style.borderColor = "white";
-            //         dot.style.width = "18px";
-            //         dot.style.height = "18px";
-            //         ajaxakudong('a', '3');
-            //         pposakhir = "tiga";
-            //     } else {
-            //         dot.style.backgroundColor = 'transparent';
-            //         dot.style.border = "solid 2px grey";
-            //         dot.style.width = "12px";
-            //         dot.style.height = "12px";
-            //     }
-            //     dot.style.transition = "all 1s";
-            // }, {
-            //     threshold: [0.8]
-            // });
+            var telu = new IntersectionObserver(function (entries) {
+                var dot = document.getElementById("3");
+                if (entries[0].isIntersecting === true) {
+                    // dot.style.backgroundColor = 'grey';
+                    // dot.style.border = "0px";
+                    // dot.style.borderColor = "white";
+                    // dot.style.width = "18px";
+                    // dot.style.height = "18px";
+                    ajaxakudong('a', '3');
+                    pposakhir = "tiga";
+                } else {
+                    // dot.style.backgroundColor = 'transparent';
+                    // dot.style.border = "solid 2px grey";
+                    // dot.style.width = "12px";
+                    // dot.style.height = "12px";
+                }
+                // dot.style.transition = "all 1s";
+            }, {
+                threshold: [0.8]
+            });
     
-            // var papat = new IntersectionObserver(function (entries) {
-            //     var dot = document.getElementById("4");
-            //     if (entries[0].isIntersecting === true) {
-            //         dot.style.backgroundColor = 'grey';
-            //         dot.style.border = "0px";
-            //         dot.style.borderColor = "white";
-            //         dot.style.width = "18px";
-            //         dot.style.height = "18px";
-            //         ajaxakudong('a', '4');
-            //         pposakhir = "empat";
+            var papat = new IntersectionObserver(function (entries) {
+                var dot = document.getElementById("4");
+                if (entries[0].isIntersecting === true) {
+                    // dot.style.backgroundColor = 'grey';
+                    // dot.style.border = "0px";
+                    // dot.style.borderColor = "white";
+                    // dot.style.width = "18px";
+                    // dot.style.height = "18px";
+                    ajaxakudong('a', '4');
+                    pposakhir = "empat";
     
-            //     } else {
-            //         dot.style.backgroundColor = 'transparent';
-            //         dot.style.border = "solid 2px grey";
-            //         dot.style.width = "12px";
-            //         dot.style.height = "12px";
-            //     }
-            //     dot.style.transition = "all 1s";
-            // }, {
-            //     threshold: [0.8]
-            // });
+                } else {
+                    // dot.style.backgroundColor = 'transparent';
+                    // dot.style.border = "solid 2px grey";
+                    // dot.style.width = "12px";
+                    // dot.style.height = "12px";
+                }
+                // dot.style.transition = "all 1s";
+            }, {
+                threshold: [0.8]
+            });
     
             var lima = new IntersectionObserver(function (entries) {
                 // var dot = document.getElementById("5");
@@ -214,8 +214,8 @@
                     // dot.style.borderColor = "white";
                     // dot.style.width = "18px";
                     // dot.style.height = "18px";
-                    // ajaxakudong('a', '5');
-                    // pposakhir = "limo";
+                    ajaxakudong('a', '5');
+                     pposakhir = "limo";
                     // console.log(ss);
                    bletak();
                 } else {
@@ -229,7 +229,7 @@
     
                 // dot.style.transition = "all 1s";
             }, {
-                threshold: [0.3]
+                threshold: [0.8]
             });
     
     
@@ -291,10 +291,10 @@
     
             function mlaku() {
                 document.getElementById('gambar').style.visibility = "hidden";
-                // pro.observe(document.querySelector("#porto"));
-                // section2.observe(document.querySelector("#coba"));
-                // telu.observe(document.querySelector("#tiga"));
-                // papat.observe(document.querySelector("#empat"));
+                pro.observe(document.querySelector("#porto"));
+                section2.observe(document.querySelector("#coba"));
+                telu.observe(document.querySelector("#tiga"));
+                papat.observe(document.querySelector("#empat"));
                 lima.observe(document.querySelector("#limo"));
                 y1.observe(document.querySelector("#yell"));
                 y2.observe(document.querySelector("#yell"));
@@ -851,9 +851,9 @@
                                 Here My Skill Lists
                             </div>
                         </div>
-                    </div>                   
+                    </div>
     
-                    <div id="molor" style="  scroll-behavior: smooth;  overflow: scroll; opacity: 1; width: 100%; height: 90%; "> 
+                    <div id="molor" style="scroll-behavior: smooth;  overflow: scroll; opacity: 1; width: 100%; height: 90%; "> 
                         <div id="hopef" style=" height: 2px;  opacity: 1; visibility: visible; position: relative; top:1%;   background-color: purple; width: 100%;"> 
                            <hr>
                         </div>
