@@ -778,7 +778,7 @@
                     </table> 
                 </div>
     
-                <div style=" width: 100%; opacity: 20%;" id="coba">
+                <div style=" width: 100%;" id="coba">
                     <div style="height: 5%;"></div>
                     <div style="height: 10%;background:linear-gradient(45deg,lightskyblue,rgb(7, 150, 207)); box-shadow: 10px 5px 14px lightskyblue;">
                         <table>
@@ -1250,16 +1250,16 @@
                 if(timer2 !== null) {  clearTimeout(timer2); }
                 timer2 = setTimeout(function() {
                  if(pawal!= pakir){
-
                     for(j=0;j<=divs.length-1;j++){                      
-                      document.getElementById(  divs[j]).style.opacity=0.3;
+                      document.getElementById(  divs[j]).style.filter="blur(8px)";
+                      document.getElementById(  divs[j]).style.transition = "ease-in-out 0.5s";
                     }
-
                      location.href = "#"+divs[pakir-1];
-                      document.getElementById(  divs[pakir-1]).style.opacity=1;
+                     document.getElementById(  divs[pakir-1]).style.filter="blur(0px)";
+                      document.getElementById(  divs[pakir-1]).style.transition = "ease-in-out 0.5s";
                  }
                  pawal=pakir;
-                        poscawal2=0;                   
+                 poscawal2=0;                   
                 }, 250);
             }, false);
     
