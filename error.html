@@ -32,7 +32,7 @@
             //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
             //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
             //https://colorlib.com/wp/template/personalportfolio/
-    
+    var pakir="";var pawal="";
             var detik = 0;
             const divs = ["porto", "coba", "tiga", "empat", "limo"];
             var pposakhir;
@@ -79,7 +79,9 @@
                 }
             }
     
-            function ajaxakudong(grace, s, kelir) {            
+            function ajaxakudong(grace, s, kelir) {
+                 pakir = s; 
+
                 for (i = 1; i <= 5; i++) {
                     document.getElementById(i + "a").style.background = 'white';
                     document.getElementById(i + "a").style.color = 'blue';
@@ -102,8 +104,7 @@
                     document.getElementById("likis").style.transition = "ease-in-out 0.5s";
                     document.getElementById("sikil").style.display="block";
                     document.getElementById("likis").style.display="block";
-                }
-               
+                }               
     
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
@@ -115,6 +116,7 @@
                 xhttp.send();
     
                 pposakhir =  (divs[s-1]);
+                pakir=s;
             }
     
             var pro = new IntersectionObserver(function (entries) {
@@ -607,7 +609,7 @@
             const kotaks = ["g", "h", "ii", "jj", "kk"];
             function ketarik(){                
                  document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  ratios.indexOf( Math.max(...ratios) ) +"px";
-                
+               
                 try { 
                     document.getElementById('hopef').scrollIntoView();
                 }
@@ -1172,7 +1174,7 @@
                                     </tr> -->
         <script>
             var i = 0;
-            var timer = null;
+            var timer = null;var timer2 = null;
             var myit;
             var myat;
             elemst = document.getElementById("ooo");
@@ -1230,6 +1232,7 @@
             var dtakhir = 1;
             var dtujuan = 0; 
             var panellen = 0;
+
             elemst2 = document.getElementById("molor");
             elemst2.addEventListener('scroll', function() {
             if(i==0){ poscawal = elemst.scrollLeft; }
@@ -1241,10 +1244,22 @@
                     i=0;
                 }, 250);
             }, false);
+
+            elemst3 = document.getElementById("ooo");
+            elemst3.addEventListener('scroll', function() {
+                if(timer2 !== null) {  clearTimeout(timer2); }
+                timer2 = setTimeout(function() {
+                 if(pawal!= pakir){                   
+                     location.href = "#"+divs[pakir-1];
+                 }
+                 pawal=pakir;
+                        poscawal2=0;                   
+                }, 250);
+            }, false);
     
-            function awal(){
+            function awal(){pawal="1";
                 ajaxakudong('a','1','beige');
-                location.href = "#porto";                
+                location.href = "#porto";
             }
     
             function dt(s) {
