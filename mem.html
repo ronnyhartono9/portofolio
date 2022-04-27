@@ -56,10 +56,22 @@
             }, {
                 threshold: [0.5]
             });
+            function glek(tt){
+                document.getElementById("ige").style.visibility='visible';
+                if(tt == 't'){
+                    document.getElementById("ige").style.visibility='hidden';
+                }                 
+            }
         </script>
     </head>
     
-    <body style="background-color: white;" id="se">    
+    <body style="background-color: white;" id="se">
+        <div id="ige" style=" visibility: hidden; z-index:61677; position: fixed; left:10%; top:10%;background-color:beige; width: 80%; height: 80%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
+          <a onclick="glek('t')">Close(x)</a>
+
+        </div>
+
+
         <div id="canva" class="b1g" style="background-color: white;">
             <div data-role="page" id="ooo" style="scroll-behavior: smooth; overflow:scroll; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
                 <div style="background-color: transparent;">
@@ -101,7 +113,7 @@
 
                                                 <thead style="background-color: grey; color: aliceblue; height: 5%;">
                                                     <tr>
-                                                    <th style="width: 40%;">Notes</th>
+                                                    <th style="width: 40%;font-size: 100%;">Notes</th>
                                                     <th style="width: 10%;">Account Number</th>
                                                     <th style="width: 10%;">Debet</th>
                                                     <th style="width: 10%;">Credit</th>
@@ -129,10 +141,18 @@
                                         </td>
                                         <td colspan="3"style="width: 35%;">
                                             <table border="0" style="width: 100%; height: 100%;">
-                                                <tr><td>
-                                                    <input placeholder="Account Name"type="text"style=" width: 50%; height: 100%;"id="accnm" disabled> 
-                                                    
-                                                </td></tr>
+                                                <tr>
+                                                    <td>                                                        
+                                                        <table border="0" style="width: 100%; height: 100%; ">
+                                                            <Tr>
+                                                                <td style="width:50%">
+                                                                    <input placeholder="Account Name"type="text"style=" width: 100%; height: 100%;"id="accnm" disabled> 
+                                                                </td>
+                                                                <td><div onclick="glek('')"   style="float:left;cursor: pointer;">Show Acount</div></td>
+                                                            </Tr>
+                                                        </table>
+                                                     </td>
+                                                </tr>
                                                 <tr><td><input type="text"style=" border:0px; width: 50%; height: 100%; background:transparent  "id="accno" value="xx.xx.xx" disabled> </td></tr>
                                                 <tr><td>
                                                     <select>
