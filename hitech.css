@@ -371,10 +371,9 @@ br {
   box-shadow: 0 0 18px #fff; 
 }
 #gambar { 
-  border-radius: 5px;  
+  border-radius: 5px;
   position: fixed;
-  cursor:pointer;    
-  
+  cursor:pointer;  
   z-index:61677; 
 }
 
@@ -470,4 +469,12 @@ div.bottom { text-align: center;
   .button:hover ooo:after {
     opacity: 1;
     right: 0;
+  }
+  input[type=text],[type=date] {   
+     
+    margin: 8px 0;
+    box-sizing: border-box;
+    padding: 2px 2px;
+    border-radius: 5px;
+    border: 0px;
   }
