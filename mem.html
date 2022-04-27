@@ -10,18 +10,20 @@
                 margin: 0;
             }
             .bg {
-                background-image: url("back.jpg");
+                background-image: url("jurnal.png");
                 height: 100%;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
             }
             .bg2 {
-                background-image: url("back.jpg");              
+                background-image: url("jurnal.png");
+                height: 100%;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 90% 90%;
                 border-radius: 10px;
+                z-index:9009;
             }
         </style>
     
@@ -114,7 +116,7 @@
         </script>
     </head>
     
-    <body style="background-color: white;" id="se">
+    <body style="background-color: transparent;" id="se">
 
         <div id="ige" style=" border-radius: 5px;   visibility: hidden; z-index:61677; position: fixed; left:10%; top:30%;background-color:beige; width: 80%; height: 40%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
           <a onclick="glek('t')" style="cursor: pointer;">Close(x)</a><br>
@@ -130,7 +132,17 @@
             </div>
         </div>
 
-        <div id="canva" class="b1g" style="background-color: white;">
+          <div id="gei" style=" opacity: 10%; vertical-align: middle; border-radius: 5px; visibility: visible; z-index:6167; position: fixed; left:-0%; top:0%;background-color:transparent; width: 105%; height: 100%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
+            <table border=0 style="height: 100%; width: 100%;">
+                <tr>
+                    <td align="right" style="vertical-align: bottom;">
+                        <img src="jurnal.png" style="width: 40%; height: auto;" >
+                    </td>
+                </tr>
+            </table>            
+          </div>
+
+        <div id="canva" class="bg1" style="background: rgb(250, 250, 237);">
             <div data-role="page" id="ooo" style="scroll-behavior: smooth; overflow:scroll; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
                 <div style="background-color: transparent;">
                     <center>
@@ -140,7 +152,7 @@
                                     <table style="width: 100%;">
                                         <tr>
                                             <td align="center" style="vertical-align: middle;"class="telp">
-                                              Jurnal Memorial
+                                              Entry Journal
                                             </td>
                                         </tr>
                                     </table>
@@ -150,7 +162,7 @@
                     </center>
                 </div>
                 
-                <div id="porto" style="overflow:hidden;background: white;width: 100%; ">
+                <div id="porto" style="overflow:hidden;background: rgb(250, 250, 237);width: 100%; ">
                     <div style="height: 8%;"></div>
                         <form action="mem.html" method="post">
                             <center>
@@ -222,26 +234,19 @@
                                                     <input required placeholder="Please input the nominal"  type="text"style="width: 90%; height: 100%;"id="nom" > </td></tr>
                                             </table>
                                         </td>
-                                        <!-- <td style="width: 50%;">
-                                            <img src="jurnal.png" style="width: 100%; height: auto; max-width: 128px;" >
-                                        </td> -->
                                     </tr>
 
-                                    <tr style="height: 9%;">
-                                        
+                                    <tr style="height: 9%;">                                        
                                         <td style="vertical-align:bottom ;">Terbilang </td>
                                         <td colspan="3"style="vertical-align:bottom ;">
-                                        blablablabla
-                                        </td> 
-
+                                            blablablabla
+                                        </td>
                                     </tr>
-                                    <tr style="height: 1%;">
-                                        
+                                    <tr style="height: 1%;">                                        
                                         <td> </td>
                                         <td colspan="3" style="vertical-align: top;">
                                             <hr CLASS="hrkuku">
-                                        </td> 
-
+                                        </td>
                                     </tr>
                                     <tr style="height: 10%;">
                                         <td colspan="4"> 
