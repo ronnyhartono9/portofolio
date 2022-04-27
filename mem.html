@@ -1,0 +1,184 @@
+<html>
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta name="theme-color" content="chocolate" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="hitech.css">
+    <head>
+        <style>
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+            }
+            .bg {
+                background-image: url("back.jpg");
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            .bg2 {
+                background-image: url("back.jpg");              
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 90% 90%;
+                border-radius: 10px;
+            }
+        </style>
+    
+    <script type="text/javascript"> 
+            const divs = ["porto"];
+           
+            const keles = ["linear-gradient(45deg,lightgrey,rgb(209, 207, 207),lightgrey,rgb(209, 207, 207))", "linear-gradient(45deg,lightskyblue,rgb(7, 150, 207))", "linear-gradient(45deg,rgb(250, 189, 242),rgb(199, 114, 255))", "linear-gradient(45deg,yellow,goldenrod)", "linear-gradient(45deg,rgb(46, 167, 46),palegreen)"]; 
+            
+            function ajaxakudong(grace, s, kelir) {                 
+                for (i = 1; i <= 1; i++) {
+                    document.getElementById(i + "a").style.background = 'white';
+                    document.getElementById(i + "a").style.color = 'blue';
+                }
+                document.getElementById(s + "a").style.background = keles[s - 1];
+                document.getElementById(s + "a").style.color = "white";
+                document.getElementById(s + "a").style.transition = "ease-in-out 0.5s";
+    
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("f").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", grace, true);
+                xhttp.send();
+            }
+    
+            var pro = new IntersectionObserver(function (entries) { 
+                if (entries[0].isIntersecting === true) {
+                    ajaxakudong('a', '1');
+                }
+            }, {
+                threshold: [0.5]
+            });
+        </script>
+    </head>
+    
+    <body style="background-color: white;" id="se">    
+        <div id="canva" class="b1g" style="background-color: white;">
+            <div data-role="page" id="ooo" style="scroll-behavior: smooth; overflow:scroll; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
+                <div style="background-color: transparent;">
+                    <center>
+                        <Div id="atas">
+                            <a href="#porto" onclick="ajaxakudong('a','1','beige')">                                 
+                                <div class="kelas" id="1a"style="border-radius:5px;background-color: white;height: 200%;float:left;width: 100%;" ;>                                
+                                    <table style="width: 100%;">
+                                        <tr>
+                                            <td align="center" style="vertical-align: middle;"class="telp">
+                                              Jurnal Memorial
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </a>
+                        </Div>
+                    </center>
+                </div>
+                
+                <div id="porto" style="overflow:hidden;background: white;width: 100%; ">
+                    <div style="height: 8%;"></div>
+                        <form action="mem.html" method="post">
+                            <table border=0 cellpading="0px" cellspacing="0px"  style="width: 100%; height: 87%;" >
+                                <tr style="height: 5%;">
+                                    <td style="width: 8%;">Journal Number</td>
+                                    <td style="width: 35%;"><input type="text" value="" style=" width: 100%; height: 100%;"></td>
+                                    
+                                    <td style="width: 8%;">Date Document</td>
+                                    <td style="width: 35%;"><input type="date"style="width: 100%; height: 100%;"> </td>
+                                </tr>
+                                <tr style="height: 30%;">
+                                    <td>
+                                        <img src="jurnal.png" style="height: 128px; width: 128px;" >
+                                    </td>
+                                    <td colspan="3">
+                                        <table border="0" cellpading="0px" cellspacing="0px" style="width: 100%; height: 100%;"> 
+
+                                            <thead style="background-color: grey; color: aliceblue; height: 5%;">
+                                                <tr>
+                                                <th style="width: 40%;">Notes</th>
+                                                <th style="width: 10%;">Account Number</th>
+                                                <th style="width: 10%;">Debet</th>
+                                                <th style="width: 10%;">Credit</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody style="background-color: aliceblue; color: maroon; height: 80%;">
+                                                <tr>
+                                                    <td>blablablabla</td>
+                                                    <td>xx.xx.xx</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>                             
+                                </tr>
+                                <tr style="height: 20%;">
+                                    <td style="width: 8%;">
+                                        <table border="0" style="width: 100%; height: 100%;">
+                                            <tr><td>Account Name</td></tr>
+                                            <tr><td>Account No</td></tr>
+                                            <tr><td>Debet / Credit</td></tr>
+                                            <tr><td>Nominal </td></tr>
+                                        </table>
+                                    </td>
+                                    <td colspan="3"style="width: 35%;">
+                                        <table border="0" style="width: 100%; height: 100%;">
+                                            <tr><td><input placeholder="Account Name"type="text"style=" width: 50%; height: 100%;"id="accnm" disabled> </td></tr>
+                                            <tr><td><input placeholder="......."  type="text"style="width: 50%; height: 100%;"id="accno" disabled> </td></tr>
+                                            <tr><td>
+                                                <select>
+                                                    <option>Debet</option>
+                                                    <option>Credit</option>
+                                                </select>
+
+                                            </td></tr>
+                                            <tr><td><input required placeholder="Please input the nominal"  type="text"style="width: 50%; height: 100%;"id="nom" > </td></tr>
+                                        </table>                                    
+                                    </td>
+                                    
+                                </tr>
+                                <tr style="height: 9%;">
+                                     
+                                    <td style="vertical-align:bottom ;">Terbilang </td>
+                                    <td colspan="3"style="vertical-align:bottom ;">
+                                      blablablabla
+                                    </td> 
+
+                                </tr>
+                                <tr style="height: 1%;">
+                                     
+                                    <td> </td>
+                                    <td colspan="3" style="vertical-align: top;">
+                                        <hr CLASS="hrkuku">
+                                    </td> 
+
+                                </tr>
+                                <tr style="height: 10%;">
+                                    <td colspan="4"> 
+                                    <table style="width: 100%; height: 100%;">
+                                        <tr>
+                                            <td><input type="submit" name="b1" value="New"class="submit"></td>
+                                            <td><input type="submit" name="b1" value="Posting"class="submit"></td>
+                                            <td><input type="submit" name="b1" value="Save"class="submit"></td>
+                                            <td><input type="submit" name="b1" value="Callback"class="submit"></td>
+                                            <td><input type="submit" name="b1" value="Cancel"class="submit"></td>
+                                            
+                                        </tr>
+                                    </table>
+                                    </td> 
+                                </tr>
+                            </table>                            
+                        </form>
+                </div>
+            </div>
+        </div>
+    </body> 
+</html>
