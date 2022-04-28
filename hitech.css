@@ -370,6 +370,17 @@ br {
   background: linear-gradient(45deg,gold,goldenrod,gold,goldenrod,gold);
   box-shadow: 0 0 18px #fff; 
 }
+
+.biru{color:white;
+  border:0px;
+  cursor:pointer;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%; 
+  background: blue;
+  box-shadow: 0 0 18px #fff; 
+}
+
 #gambar { 
   border-radius: 5px;
   position: fixed;
@@ -470,21 +481,15 @@ div.bottom { text-align: center;
     opacity: 1;
     right: 0;
   }
-  input[type=text],[type=date] {   
-     
-    margin: 8px 0;
+  input[type=text],[type=date] {
+      /* margin: 8px 0;   */   
     box-sizing: border-box;
     padding: 2px 2px;
     border-radius: 5px;
-    border: 0px;
+    border: 1px solid goldenrod;     
+    box-shadow: 5px 5px 5px #888888;
   }
 
-  input[type=date] {   
-     
-    margin: 8px 0;
-    box-sizing: border-box;
-    padding: 2px 2px;
-    border-radius: 5px;
-    border: 0px;
+  input[type=date] {
     background-color: honeydew;
   }
