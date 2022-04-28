@@ -72,13 +72,14 @@
                 document.getElementById("gei").style.visibility='hidden';                
             }
 
-            function getcell(a1,b1){
-               // alert(a1+" "+b1);
+            function getcell(a1,b1){ 
+             
                muncul = 'visible'; hilang = 'hidden';
                glek('t');
                document.getElementById("accnm").value = a1;
                document.getElementById("accno").value = b1;
-
+                    
+                    
                 document.getElementById('dd1').style.visibility = muncul;
                 document.getElementById('dd2').style.visibility = muncul;
             }
@@ -166,8 +167,7 @@
                 document.getElementById("yom").rows[1].cells[4].innerHTML = "<a href='#' onclick='ed(1)' >Edit</a> <a href='#' onclick='de(1)' >Delete</a>";
             }
             var mode="";
-            function anyar(){
-                
+            function anyar(){                
                 mode="new";
                 muncul = 'visible'; hilang = 'hidden';
                 document.getElementById('sh').style.visibility = muncul;
@@ -206,7 +206,7 @@
                 cell5.innerHTML = "<a href='#' onclick='ed("+j+")' >Edit</a> <a href='#' onclick='de("+j+")'>Delete</a>";
             }
 
-            function ed(s){        
+            function ed(s){mode="edit";
                document.getElementById("accno").value = document.getElementById("yom").rows[s].cells[0].innerHTML;
                document.getElementById("accnm").value = document.getElementById("yom").rows[s].cells[1].innerHTML;
                   
@@ -224,6 +224,7 @@
 
             }
             function saved(){
+                
                 i = (document.getElementById("yom").rows.length);
                 if(i==2){
                    document.getElementById("yom").rows[1].cells[0].innerHTML = document.getElementById("accno").value;
@@ -245,6 +246,7 @@
                    }                    
                     tambahbaris();
                 }
+                mode="new";
             }
 
         </script>
