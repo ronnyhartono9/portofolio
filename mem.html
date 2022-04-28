@@ -58,13 +58,30 @@
             }, {
                 threshold: [0.5]
             });
+
             function glek(tt){
-                document.getElementById("ige").style.visibility='visible';
-                if(tt == 't'){
-                    document.getElementById("ige").style.visibility='hidden';
-                }readDB();
+               if(mode!=""){
+                    document.getElementById("ige").style.visibility='visible';
+                    if(tt == 't'){
+                        document.getElementById("ige").style.visibility='hidden';
+                    }
+               }readDB();
             }
 
+            function lek(){
+                document.getElementById("gei").style.visibility='hidden';                
+            }
+
+            function getcell(a1,b1){
+               // alert(a1+" "+b1);
+               muncul = 'visible'; hilang = 'hidden';
+               glek('t');
+               document.getElementById("accnm").value = a1;
+               document.getElementById("accno").value = b1;
+
+                document.getElementById('dd1').style.visibility = muncul;
+                document.getElementById('dd2').style.visibility = muncul;
+            }
             function readDB(){
                 var xmlDoc;
                 var xmlFile="1.xml";
@@ -98,10 +115,10 @@
                                         var cacc = tagObj[i].getElementsByTagName("cAccountNo")[0].childNodes[0].nodeValue;
                                         var cdes = tagObj[i].getElementsByTagName("cDescription")[0].childNodes[0].nodeValue;
                                         s = s+  " <tr>";
-                                        s = s+  " <td align='center'>";
+                                        s = s+  " <td align='center' onclick=getcell('"+cacc+"','"+cdes+"') style='cursor:pointer' >";
                                         s = s+  cacc;
                                         s = s+  " </td>";
-                                        s = s+  " <td align='center'>";
+                                        s = s+  " <td align='center' onclick=getcell('"+cacc+"','"+cdes+"') style='cursor:pointer'>";
                                         s = s+  cdes;
                                         s = s+  " </td>";
                                         s = s + " </tr>";
@@ -109,14 +126,92 @@
                         s = s + "</table>";
                     p.innerHTML = s;
             }
+            
             function ceklik(){
                 t = document.getElementById('gom');
                 //alert('tek');
             }
+        
+            function firststate(){mode="";
+
+                let ms = Date.now();
+               
+                document.getElementById('dt1').value = ms;
+
+                muncul = 'visible'; hilang = 'hidden';
+                document.getElementById('sh').style.visibility = hilang;
+                document.getElementById('bb1').style.visibility = muncul;
+                document.getElementById('bb2').style.visibility = hilang;
+                document.getElementById('bb3').style.visibility = hilang;
+                document.getElementById('bb4').style.visibility = muncul;
+                document.getElementById('bb5').style.visibility = hilang;
+
+                document.getElementById('dd1').style.visibility = hilang;
+                document.getElementById('dd2').style.visibility = hilang;
+
+                document.getElementById("accnm").value = '';
+                document.getElementById("accno").value = '';
+                
+                if(document.getElementById("yom").rows.length >= 2){
+                    while (document.getElementById("yom").rows.length >= 2) {
+                        document.getElementById("yom").deleteRow(2); 
+                    }
+                }                
+            }
+            var mode="";
+            function anyar(){
+                
+                mode="new";
+                muncul = 'visible'; hilang = 'hidden';
+                document.getElementById('sh').style.visibility = muncul;
+                document.getElementById('bb1').style.visibility = hilang;
+                document.getElementById('bb2').style.visibility = hilang;
+                document.getElementById('bb3').style.visibility = muncul;
+                document.getElementById('bb4').style.visibility = muncul;
+                document.getElementById('bb5').style.visibility = muncul; 
+            }
+
+            function cb(){
+                document.getElementById("gei").style.visibility='visible';
+            }
+
+            function cl(){firststate();}
+
+            function cld(){
+                document.getElementById("accnm").value = '';
+                document.getElementById("accno").value = '';
+            }
+            
+            function tambahbaris(){
+                i = (document.getElementById("yom").rows.length)  ;
+                var table = document.getElementById("yom");
+                var row = table.insertRow(i);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                cell1.innerHTML = "";
+                cell2.innerHTML = "";
+                cell3.innerHTML = "0";
+                cell4.innerHTML = "0";
+                cell5.innerHTML = "<a href='#''>Edit</a> <a href='#'' >Delete</a>";                
+            }
+            function saved(){
+                i = (document.getElementById("yom").rows.length);
+                if(i==2){
+                   document.getElementById("yom").rows[1].cells[0].innerHTML = document.getElementById("accno").value;
+                   document.getElementById("yom").rows[1].cells[1].innerHTML = document.getElementById("accnm").value;
+                   tambahbaris();
+                }else{
+                    tambahbaris();
+                }
+            }
+
         </script>
     </head>
     
-    <body style="background-color: transparent;" id="se">
+    <body onload = "firststate()"style="background-color: transparent;" id="se">
 
         <div id="ige" style=" border-radius: 5px;   visibility: hidden; z-index:61677; position: fixed; left:10%; top:30%;background-color:beige; width: 80%; height: 40%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
           <a onclick="glek('t')" style="cursor: pointer;">Close(x)</a><br>
@@ -132,16 +227,28 @@
             </div>
         </div>
 
-          <!-- <div id="gei" style=" opacity: 10%; vertical-align: middle; border-radius: 5px; visibility: visible; z-index:6167; position: fixed; left:-0%; top:0%;background-color:transparent; width: 105%; height: 100%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
-            <table border=0 style="height: 100%; width: 100%;">
-                <tr>
-                    <td align="right" style="vertical-align: bottom;">
-                        <img src="jurnal.png" style="width: 40%; height: auto;" >
-                    </td>
-                </tr>
-            </table>            
-          </div> -->
-
+        <div id="gei" style=" border-radius: 5px; visibility: hidden; z-index:61677; position: fixed; left:2.5%; top:2.5%;background-color:rgba(243, 199, 134, 0.842); width: 95%; height: 95%;  text-align: center;  vertical-align: middle; scroll-behavior: smooth; ">
+            <a onclick="lek('t')" style=" width: 100%;  cursor: pointer; ">Close(x)</a><br>
+            <table border="0"id="tbrowse" style="width: 100%; height: 96%;">
+                <thead style="background-color: goldenrod; color: aliceblue; height: 5%;">
+                    <tr>
+                     <th style="width: 40%;font-size: 80%; vertical-align: top;">Docno</th>                    
+                    </tr>
+                </thead>
+                <tbody style="background-color: aliceblue; color: maroon; height: 80%;">
+                    <tr>
+                        <td></td>                         
+                    </tr>
+                    <tr>
+                        <td> </td>                         
+                    </tr>
+                    <tr>
+                        <td> </td>                         
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
         <div id="canva" class="bg1" style="background: rgb(250, 250, 237);">
             <div data-role="page" id="ooo" style="scroll-behavior: smooth; overflow:scroll; position: absolute; left: 0px; top: 0px;height:100%;width:100%;z-index:1 ">
                 <div style="background-color: transparent;">
@@ -164,36 +271,43 @@
                 
                 <div id="porto" style="overflow:hidden;background: rgb(250, 250, 237);width: 100%; ">
                     <div style="height: 8%;"></div>
-                        <form action="mem.html" method="post">
+                        <!-- <form action="mem.html" method="post"> -->
                             <center>
                                 <table border=0 cellpading="0px" cellspacing="0px"  style="width: 95%; height: 87%;" >
                                     <tr style="height: 5%;">
                                         <td style="width: 8%;">Journal Number</td>
                                         <td style="width: 35%;"><input placeholder="xx/xx/xxxx"  type="text" value="" style=" width: 100%; height: 80%;"></td>
                                         
-                                        <td style="width: 8%;">Date Document</td>
-                                        <td style="width: 35%;"><input type="date"style="width: 100%; height: 80%;"> </td>
+                                        <td style="width: 8%;" align="center">Date Document</td>
+                                        <td style="width: 35%;"><input id="dt1"type="date"style="width: 100%; height: 80%;"> </td>
                                     </tr>
                                     <tr style="height: 30%;">
                                         <td colspan="4">
-                                            <table border="0" cellpading="0px" cellspacing="0px" style=" border-radius: 5px;  width: 100%; height: 100%;">
+                                            <div style=" width: 100%; height: 155px; overflow: scroll;">
+                                                <table border="0" id="yom"cellpading="0px" cellspacing="0px" style=" border-radius: 5px;  width: 100%; height: 155px;                                                box-shadow: 5px 5px 5px #888888;">
                                                 <thead style="background-color: grey; color: aliceblue; height: 5%;">
                                                     <tr>
                                                     <th style="width: 40%;font-size: 80%; vertical-align: top;">Account Name</th>
                                                     <th style="width: 10%;font-size: 80%;vertical-align: top;">Account Number</th>
                                                     <th style="width: 10%;font-size: 80%;vertical-align: top;">Debet</th>
                                                     <th style="width: 10%;font-size: 80%;vertical-align: top;">Credit</th>
+                                                    <th style="width: 10%;font-size: 80%;vertical-align: top;">Op</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody style="background-color: aliceblue; color: maroon; height: 80%;">
                                                     <tr>
-                                                        <td>blablablabla</td>
-                                                        <td>xx.xx.xx</td>
-                                                        <td>0</td>
-                                                        <td>0</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td align="right">0</td>
+                                                        <td align="right">0</td>
+                                                        <td>
+                                                            <a href="#">Edit</a> <a href="#" >Delete</a>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            </div>
+                                            
                                         </td>                             
                                     </tr>
 
@@ -216,13 +330,21 @@
                                                                     <input placeholder="Account Name"type="text"style=" width: 100%; height: 100%;"id="accnm" disabled> 
                                                                 </td>
                                                                 <td style="width:5%"> 
-                                                                    <div onclick="glek('')" style="cursor: pointer; text-align: center; font-size: 80%; font-weight: bold;">Show</div> 
+                                                                    <div id="sh"onclick="glek('')"  class="biru" style="cursor: pointer; text-align: center; font-size: 80%; font-weight: bold; vertical-align: middle;">
+                                                                        <table style="width: 100%; height: 100%;">
+                                                                            <tr>
+                                                                                <td align="center" style="color: white;">
+                                                                                    Show
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>    
+                                                                    </div> 
                                                                 </td>
                                                             </Tr>
                                                         </table>
                                                      </td>
                                                 </tr>
-                                                <tr><td><input type="text"style=" border:0px; width: 50%; height: 100%; background:transparent  "id="accno" value="xx.xx.xx" disabled> </td></tr>
+                                                <tr><td><input type="text"style=" box-shadow: 0px 0px 0px #888888; border:0px; width: 50%; height: 100%; background:transparent  "id="accno" value="xx.xx.xx" disabled> </td></tr>
                                                 <tr><td>
                                                     <select>
                                                         <option>Debet</option>
@@ -248,22 +370,34 @@
                                             <hr CLASS="hrkuku">
                                         </td>
                                     </tr>
+
+                                    <tr>
+                                        <td colspan="4" style="height: 5%;" >
+                                            <table border="0" cellpading="0" cellspacing="0" style="width: 30%; height: 100%;">
+                                                <Tr>
+                                                    <td><input type="submit" name="d1" id="dd1"value="Save"class="biru" onclick="saved()" style="box-shadow: 5px 5px 5px #888888;"></td>
+                                                    <td><input type="submit" name="d2" id="dd2"value="Cancel"class="biru" onclick="cld()" style="box-shadow: 5px 5px 5px #888888;"></td>
+                                                </Tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+
                                     <tr style="height: 10%;">
                                         <td colspan="4"> 
-                                        <table style="width: 100%; height: 100%;">
-                                            <tr>
-                                                <td><input type="submit" name="b1" value="New"class="submit"></td>
-                                                <td><input type="submit" name="b2" value="Posting"class="submit"></td>
-                                                <td><input type="submit" name="b3" value="Save"class="submit"></td>
-                                                <td><input type="submit" name="b4" value="Callback"class="submit"></td>
-                                                <td><input type="submit" name="b5" value="Cancel"class="submit"></td>                                            
-                                            </tr>
-                                        </table>
+                                            <table style="width: 100%; height: 100%;">
+                                                <tr>
+                                                    <td><input type="submit" name="b1" id="bb1"value="New"class="submit" onclick="anyar()" style="box-shadow: 5px 5px 5px #888888;"></td>
+                                                    <td><input type="submit" name="b2" id="bb2"value="Posting"class="submit"style="box-shadow: 5px 5px 5px #888888;"></td>
+                                                    <td><input type="submit" name="b3" id="bb3"value="Save"class="submit"style="box-shadow: 5px 5px 5px #888888;"></td>
+                                                    <td><input type="submit" name="b4" id="bb4"value="Callback"class="submit"onclick="cb()"style="box-shadow: 5px 5px 5px #888888;"></td>
+                                                    <td><input type="submit" name="b5" id="bb5"value="Cancel"class="submit"onclick="cl()"style="box-shadow: 5px 5px 5px #888888;"></td>                                            
+                                                </tr>
+                                            </table>
                                         </td> 
                                     </tr>
                                 </table>
                             </center>
-                        </form>
+                        <!-- </form> -->
                 </div>
             </div>
         </div>
