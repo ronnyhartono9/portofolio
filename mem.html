@@ -224,28 +224,29 @@
 
             }
             function saved(){
-                
-                i = (document.getElementById("yom").rows.length);
-                if(i==2){
-                   document.getElementById("yom").rows[1].cells[0].innerHTML = document.getElementById("accno").value;
-                   document.getElementById("yom").rows[1].cells[1].innerHTML = document.getElementById("accnm").value;
-                   if(document.getElementById("hayo").value == "Debet"){
-                    document.getElementById("yom").rows[1].cells[2].innerHTML = document.getElementById("nom").value.toLocaleString();
-                   }else{
-                    document.getElementById("yom").rows[1].cells[3].innerHTML = document.getElementById("nom").value.toLocaleString();
-                   }
-                   tambahbaris();
-                }else{
-                   j = (document.getElementById("yom").rows.length) - 1;
-                   document.getElementById("yom").rows[j].cells[0].innerHTML = document.getElementById("accno").value;
-                   document.getElementById("yom").rows[j].cells[1].innerHTML = document.getElementById("accnm").value;                    
-                   if(document.getElementById("hayo").value == "Debet"){
-                    document.getElementById("yom").rows[j].cells[2].innerHTML = document.getElementById("nom").value.toLocaleString();
-                   }else{
-                    document.getElementById("yom").rows[j].cells[3].innerHTML = document.getElementById("nom").value.toLocaleString();
-                   }                    
+                if(mode =="new"){
+                    i = (document.getElementById("yom").rows.length);
+                    if(i==2){
+                    document.getElementById("yom").rows[1].cells[0].innerHTML = document.getElementById("accno").value;
+                    document.getElementById("yom").rows[1].cells[1].innerHTML = document.getElementById("accnm").value;
+                    if(document.getElementById("hayo").value == "Debet"){
+                        document.getElementById("yom").rows[1].cells[2].innerHTML = document.getElementById("nom").value.toLocaleString();
+                    }else{
+                        document.getElementById("yom").rows[1].cells[3].innerHTML = document.getElementById("nom").value.toLocaleString();
+                    }
                     tambahbaris();
-                }
+                    }else{
+                    j = (document.getElementById("yom").rows.length) - 1;
+                    document.getElementById("yom").rows[j].cells[0].innerHTML = document.getElementById("accno").value;
+                    document.getElementById("yom").rows[j].cells[1].innerHTML = document.getElementById("accnm").value;                    
+                    if(document.getElementById("hayo").value == "Debet"){
+                        document.getElementById("yom").rows[j].cells[2].innerHTML = document.getElementById("nom").value.toLocaleString();
+                    }else{
+                        document.getElementById("yom").rows[j].cells[3].innerHTML = document.getElementById("nom").value.toLocaleString();
+                    }                    
+                        tambahbaris();
+                    }
+                }                    
                 mode="new";
             }
 
