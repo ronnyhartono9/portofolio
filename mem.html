@@ -145,7 +145,10 @@
                 document.getElementById('bb2').style.visibility = hilang;
                 document.getElementById('bb3').style.visibility = hilang;
                 document.getElementById('bb4').style.visibility = muncul;
-                document.getElementById('bb5').style.visibility = hilang;
+
+                //document.getElementById('bb5').style.visibility = hilang;
+                document.getElementById('t1').style.opacity = 0;
+                document.getElementById('t1').style.transition = "ease-in-out 0.5s";
 
                 document.getElementById('dd1').style.visibility = hilang;
                 document.getElementById('dd2').style.visibility = hilang;
@@ -165,6 +168,8 @@
                 document.getElementById("yom").rows[1].cells[2].innerHTML = "0";
                 document.getElementById("yom").rows[1].cells[3].innerHTML = "0";
                 document.getElementById("yom").rows[1].cells[4].innerHTML = "<a href='#' onclick='ed(1)' >Edit</a> <a href='#' onclick='de(1)' >Delete</a>";
+                
+                
             }
             var mode="";
             function anyar(){                
@@ -175,7 +180,10 @@
                 document.getElementById('bb2').style.visibility = hilang;
                 document.getElementById('bb3').style.visibility = muncul;
                 document.getElementById('bb4').style.visibility = muncul;
-                document.getElementById('bb5').style.visibility = muncul; 
+
+                //document.getElementById('bb5').style.visibility = muncul;
+                document.getElementById('t1').style.opacity = 1;
+                document.getElementById('t1').style.transition = "ease-in-out 0.5s";
             }
 
             function cb(){
@@ -428,11 +436,19 @@
                                         <td colspan="4"> 
                                             <table style="width: 100%; height: 100%;">
                                                 <tr>
-                                                    <td><input type="submit" name="b1" id="bb1"value="New"class="submit" onclick="anyar()" style="box-shadow: 5px 5px 5px #888888;"></td>
+                                                    <td>
+                                                        
+                                                            <input type="submit" name="b1" id="bb1"value="New"class="submit" onclick="anyar()" style="box-shadow: 5px 5px 5px #888888;">
+                                                       
+                                                    </td>
                                                     <td><input type="submit" name="b2" id="bb2"value="Posting"class="submit"style="box-shadow: 5px 5px 5px #888888;"></td>
                                                     <td><input type="submit" name="b3" id="bb3"value="Save"class="submit"style="box-shadow: 5px 5px 5px #888888;"></td>
                                                     <td><input type="submit" name="b4" id="bb4"value="Callback"class="submit"onclick="cb()"style="box-shadow: 5px 5px 5px #888888;"></td>
-                                                    <td><input type="submit" name="b5" id="bb5"value="Cancel"class="submit"onclick="cl()"style="box-shadow: 5px 5px 5px #888888;"></td>                                            
+                                                    <td>
+                                                        <div id ="t1" style="width: 100%; height: 100%;">
+                                                            <input type="submit" name="b5" id="bb5"value="Cancel"class="submit"onclick="cl()"style="box-shadow: 5px 5px 5px #888888;">
+                                                        </div>
+                                                    </td>                                            
                                                 </tr>
                                             </table>
                                         </td> 
