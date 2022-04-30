@@ -59,7 +59,7 @@
                 threshold: [0.5]
             });
 
-            function glek(tt){
+            function glek(tt){ 
                if(mode!=""){
                     document.getElementById("ige").style.visibility='visible';
                     if(tt == 't'){
@@ -72,13 +72,13 @@
                 document.getElementById("gei").style.visibility='hidden';                
             }
 
+            
             function getcell(a1,b1){ 
              
                muncul = 'visible'; hilang = 'hidden';
                glek('t');
                document.getElementById("accnm").value = a1;
-               document.getElementById("accno").value = b1;
-                    
+               document.getElementById("accno").value = b1;                    
                     
                 document.getElementById('dd1').style.visibility = muncul;
                 document.getElementById('dd2').style.visibility = muncul;
@@ -264,6 +264,13 @@
             //   alert(  document.getElementById("yom").rows[s].cells[0].innerHTML);
 
             }
+            
+            function koma(s){
+                var number = s; 
+                console.log(new Intl.NumberFormat().format(number));
+                return new Intl.NumberFormat().format(number);
+            }
+
             function saved(){
                 if(mode =="new"){
                     i = (document.getElementById("yom").rows.length);
@@ -271,19 +278,19 @@
                     document.getElementById("yom").rows[1].cells[0].innerHTML = document.getElementById("accno").value;
                     document.getElementById("yom").rows[1].cells[1].innerHTML = document.getElementById("accnm").value;
                     if(document.getElementById("hayo").value == "Debet"){
-                        document.getElementById("yom").rows[1].cells[2].innerHTML = document.getElementById("nom").value.toLocaleString();
+                        document.getElementById("yom").rows[1].cells[2].innerHTML = koma(document.getElementById("nom").value);
                     }else{
-                        document.getElementById("yom").rows[1].cells[3].innerHTML = document.getElementById("nom").value.toLocaleString();
+                        document.getElementById("yom").rows[1].cells[3].innerHTML = koma(document.getElementById("nom").value);
                     }
                     tambahbaris();
                     }else{
                     j = (document.getElementById("yom").rows.length) - 1;
                     document.getElementById("yom").rows[j].cells[0].innerHTML = document.getElementById("accno").value;
                     document.getElementById("yom").rows[j].cells[1].innerHTML = document.getElementById("accnm").value;                    
-                    if(document.getElementById("hayo").value == "Debet"){
-                        document.getElementById("yom").rows[j].cells[2].innerHTML = document.getElementById("nom").value.toLocaleString();
+                    if(document.getElementById("hayo").value == "Debet"){ 
+                        document.getElementById("yom").rows[j].cells[2].innerHTML = koma(document.getElementById("nom").value);
                     }else{
-                        document.getElementById("yom").rows[j].cells[3].innerHTML = document.getElementById("nom").value.toLocaleString();
+                        document.getElementById("yom").rows[j].cells[3].innerHTML = koma(document.getElementById("nom").value);
                     }                    
                         tambahbaris();
                     }
@@ -367,7 +374,7 @@
                                     <tr style="height: 30%;">
                                         <td colspan="4">
                                             <div style=" width: 100%; height: 155px; overflow: scroll;">
-                                                <table border="1" id="yom"cellpading="0px" cellspacing="0px" style=" border-radius: 5px;  width: 100%; height: 155px;                                                box-shadow: 5px 5px 5px #888888;">
+                                                <table border="0" id="yom"cellpading="0px" cellspacing="0px" style=" border-radius: 5px;  width: 100%; height: 155px;                                                box-shadow: 5px 5px 5px #888888;">
                                                 <thead style="background-color: grey; color: aliceblue; height: 5%;">
                                                     <tr>
                                                     <th style="width: 40%;font-size: 80%; vertical-align: top;">Account Name</th>
@@ -379,11 +386,11 @@
                                                 </thead>
                                                 <tbody style="background-color: aliceblue; color: maroon; height: 80%;">
                                                     <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td>0</td>
-                                                        <td >0</td>
-                                                        <td>
+                                                        <td style="font-size: 80%;"></td>
+                                                        <td style="font-size: 80%;"></td>
+                                                        <td style="font-size: 80%;">0</td>
+                                                        <td style="font-size: 80%;">0</td>
+                                                        <td style="font-size: 80%;">
                                                             <a href="#" onclick="ed('1')">Edit</a> <a href="#" onclick="de('1')">Delete</a>
                                                         </td>
                                                     </tr>
