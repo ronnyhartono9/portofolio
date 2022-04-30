@@ -139,15 +139,29 @@
                
                 document.getElementById('dt1').value = ms;
 
-                muncul = 'visible'; hilang = 'hidden';
-                document.getElementById('sh').style.visibility = hilang;
-                document.getElementById('bb1').style.visibility = muncul;
-                document.getElementById('bb2').style.visibility = hilang;
-                document.getElementById('bb3').style.visibility = hilang;
-                document.getElementById('bb4').style.visibility = muncul;
+                muncul = 'visible'; hilang = 'hidden';muncull = 1; hilangg = 0;
+                // document.getElementById('sh').style.visibility = hilang;
+                document.getElementById('sh').style.opacity = hilangg;
+                document.getElementById('sh').style.transition = "ease-in-out 0.5s";
+
+                // document.getElementById('bb1').style.visibility = muncul;
+                document.getElementById('t5').style.opacity = muncull;
+                document.getElementById('t5').style.transition = "ease-in-out 0.5s";
+
+                // document.getElementById('bb2').style.visibility = hilang;
+                document.getElementById('t4').style.opacity = hilangg;
+                document.getElementById('t4').style.transition = "ease-in-out 0.5s";
+
+                // document.getElementById('bb3').style.visibility = hilang;
+                document.getElementById('t3').style.opacity = hilangg;
+                document.getElementById('t3').style.transition = "ease-in-out 0.5s";
+                
+                // document.getElementById('bb4').style.visibility = muncul;
+                document.getElementById('t2').style.opacity = muncull;
+                document.getElementById('t2').style.transition = "ease-in-out 0.5s";
 
                 //document.getElementById('bb5').style.visibility = hilang;
-                document.getElementById('t1').style.opacity = 0;
+                document.getElementById('t1').style.opacity = hilangg;
                 document.getElementById('t1').style.transition = "ease-in-out 0.5s";
 
                 document.getElementById('dd1').style.visibility = hilang;
@@ -175,14 +189,33 @@
             function anyar(){                
                 mode="new";
                 muncul = 'visible'; hilang = 'hidden';
-                document.getElementById('sh').style.visibility = muncul;
-                document.getElementById('bb1').style.visibility = hilang;
-                document.getElementById('bb2').style.visibility = hilang;
-                document.getElementById('bb3').style.visibility = muncul;
-                document.getElementById('bb4').style.visibility = muncul;
+                muncull = 1; hilangg = 0;
+
+                // document.getElementById('sh').style.visibility = muncul;
+                document.getElementById('sh').style.opacity = muncull;
+                document.getElementById('sh').style.transition = "ease-in-out 0.5s";
+
+
+                //document.getElementById('bb1').style.visibility = hilang;
+                document.getElementById('t5').style.opacity = hilangg;
+                document.getElementById('t5').style.transition = "ease-in-out 0.5s";
+
+
+                // document.getElementById('bb2').style.visibility = hilang;
+                document.getElementById('t4').style.opacity = hilangg;
+                document.getElementById('t4').style.transition = "ease-in-out 0.5s";
+
+                // document.getElementById('bb3').style.visibility = muncul;
+                document.getElementById('t3').style.opacity = muncull;
+                document.getElementById('t3').style.transition = "ease-in-out 0.5s";
+
+                // document.getElementById('bb4').style.visibility = muncul;
+                document.getElementById('t2').style.opacity = hilangg;
+                document.getElementById('t2').style.transition = "ease-in-out 0.5s";
+
 
                 //document.getElementById('bb5').style.visibility = muncul;
-                document.getElementById('t1').style.opacity = 1;
+                document.getElementById('t1').style.opacity = muncull;
                 document.getElementById('t1').style.transition = "ease-in-out 0.5s";
             }
 
@@ -334,7 +367,7 @@
                                     <tr style="height: 30%;">
                                         <td colspan="4">
                                             <div style=" width: 100%; height: 155px; overflow: scroll;">
-                                                <table border="0" id="yom"cellpading="0px" cellspacing="0px" style=" border-radius: 5px;  width: 100%; height: 155px;                                                box-shadow: 5px 5px 5px #888888;">
+                                                <table border="1" id="yom"cellpading="0px" cellspacing="0px" style=" border-radius: 5px;  width: 100%; height: 155px;                                                box-shadow: 5px 5px 5px #888888;">
                                                 <thead style="background-color: grey; color: aliceblue; height: 5%;">
                                                     <tr>
                                                     <th style="width: 40%;font-size: 80%; vertical-align: top;">Account Name</th>
@@ -388,7 +421,7 @@
                                                                                 </td>
                                                                             </tr>
                                                                         </table>    
-                                                                    </div> 
+                                                                    </div>
                                                                 </td>
                                                             </Tr>
                                                         </table>
@@ -403,7 +436,7 @@
 
                                                 </td></tr>
                                                 <tr><td>
-                                                    <input required placeholder="Please input the nominal" type="text"style="width: 90%; height: 100%;"id="nom" > </td></tr>
+                                                    <input required placeholder="Please input the nominal" type="number"style="width: 90%; height: 100%;"id="nom" > </td></tr>
                                             </table>
                                         </td>
                                     </tr>
@@ -437,13 +470,28 @@
                                             <table style="width: 100%; height: 100%;">
                                                 <tr>
                                                     <td>
-                                                        
+                                                        <div id ="t5" style="width: 100%; height: 100%;">                                                        
                                                             <input type="submit" name="b1" id="bb1"value="New"class="submit" onclick="anyar()" style="box-shadow: 5px 5px 5px #888888;">
-                                                       
+                                                        </div>
                                                     </td>
-                                                    <td><input type="submit" name="b2" id="bb2"value="Posting"class="submit"style="box-shadow: 5px 5px 5px #888888;"></td>
-                                                    <td><input type="submit" name="b3" id="bb3"value="Save"class="submit"style="box-shadow: 5px 5px 5px #888888;"></td>
-                                                    <td><input type="submit" name="b4" id="bb4"value="Callback"class="submit"onclick="cb()"style="box-shadow: 5px 5px 5px #888888;"></td>
+                                                    <td>
+                                                        <div id ="t4" style="width: 100%; height: 100%;">
+                                                         
+                                                        <input type="submit" name="b2" id="bb2"value="Posting"class="submit"style="box-shadow: 5px 5px 5px #888888;">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div id ="t3" style="width: 100%; height: 100%;">
+                                                       
+                                                        <input type="submit" name="b3" id="bb3"value="Save"class="submit"style="box-shadow: 5px 5px 5px #888888;">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div id ="t2" style="width: 100%; height: 100%;">
+                                                       
+                                                        <input type="submit" name="b4" id="bb4"value="Callback"class="submit"onclick="cb()"style="box-shadow: 5px 5px 5px #888888;">
+                                                        </div>
+                                                    </td>
                                                     <td>
                                                         <div id ="t1" style="width: 100%; height: 100%;">
                                                             <input type="submit" name="b5" id="bb5"value="Cancel"class="submit"onclick="cl()"style="box-shadow: 5px 5px 5px #888888;">
