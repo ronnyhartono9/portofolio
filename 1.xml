@@ -1,24 +1,25 @@
  <db>
+  
+    <maccount>
+        <cAccountNo>1.1.1.01.0.0.00</cAccountNo>
+        <cDescription>Kas dan Setara Kas</cDescription>
+    </maccount>
+  
     <maccount>
         <cAccountNo>1.0.1.00.0.0.00</cAccountNo>
         <cDescription>AKTIVA</cDescription>
     </maccount>
 
     <maccount>
-        <cAccountNo>b1.1.1.01.0.0.00</cAccountNo>
-        <cDescription>Kas dan Setara Kas</cDescription>
-    </maccount>
-
+        <cAccountNo>8.1.1.09.0.0.01</cAccountNo>
+        <cDescription>Pendapatan</cDescription>
+    </maccount> 
+  
     <maccount>
         <cAccountNo>c7.1.1.18.0.0.00</cAccountNo>
         <cDescription>Biaya Umum</cDescription>
     </maccount>
-
-    <maccount>
-        <cAccountNo>8.1.1.09.0.0.01</cAccountNo>
-        <cDescription>Pendapatan</cDescription>
-    </maccount>
- 
+  
 </db>
 <!-- cAccountNo	cDescription	nLevel	cAccountUp	nTransactional	cBook	cCategory	cCode	nRowID	cYear	cGUID	cCreatedBy	dCreatedDate	cUpdatedBy	dUpdatedDate	final
 1.0.1.00.0.0.00	AKTIVA	1		0	SDHN	A		20625	2015	B088C5D3-F7FA-4869-968F-EC1837BD4E82		2015-04-29 14:18:54.000		2015-04-29 14:18:54.000	1
