@@ -216,7 +216,9 @@ br {
    border-radius: 3px;
    box-shadow: 0 0 18px coral;
     animation: love 1s infinite;
-   animation-direction: alternate;   
+   animation-direction: alternate;  
+   width: 500px;
+    height: 500px; 
 }
 
 @media screen and (max-width: 800px) {
