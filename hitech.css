@@ -209,6 +209,15 @@ br {
   font-size: 24%;
 }
 
+.yayang{
+   border: 0px solid pink; 
+   object-fit: cover; 
+   border-radius: 3px;
+   box-shadow: 0 0 18px coral;
+    animation: love 1s infinite;
+   animation-direction: alternate;
+   
+}
 .section{
   width: 100%; 
   height: 100%;
@@ -217,6 +226,8 @@ br {
   /* animation: example 1s infinite;
   animation-direction: alternate; */
 }
+
+@keyframes love {  from{box-shadow: 0 0 28px coral} to {box-shadow: 0 0 0px white} } 
 
 @keyframes example {
   /*from {background: linear-gradient(#222, #222),linear-gradient(90deg, rgb(236, 13, 13), rgb(255, 217, 0));}
