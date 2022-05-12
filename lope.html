@@ -110,6 +110,7 @@
             }
     
             var pro = new IntersectionObserver(function (entries) {
+                document.getElementById("y").play();
                 // var dot = document.getElementById("1");
                 if (entries[0].isIntersecting === true) {
                     // dot.style.backgroundColor = 'grey';
@@ -132,6 +133,8 @@
     
             var section2 = new IntersectionObserver(function (entries) {
                 // var dot = document.getElementById("2");
+             
+                document.getElementById("y").pause();
                 if (entries[0].isIntersecting === true) { 
                     // dot.style.backgroundColor = 'grey';
                     // dot.style.border = "0px";
@@ -660,7 +663,7 @@
                             <td align="center">
                                 <!-- <img src="pp.jpg" style="border-radius: 10px; width: 45%; height: auto; max-width: 300px;">  -->
 
-                                <video width="250" height="250" autoplay="" loop class="yayang" >
+                                <video autoplay="" loop class="yayang" id="y"  >
                                     <source src="vd.mp4" type="video/mp4">
                                 </video>
                             </td>
@@ -673,8 +676,8 @@
                                         <td style="width: 40%; vertical-align: top; ">
                                             <a id="mesage" style="display: none;"></a>
                                             <div class="lhe">
-                                                Senior Developer<br>
-                                                Ronny Hartono
+                                                Senior Tutor<br>
+                                                Lisa Arianto
                                                 <div style="height: 10px;"></div>
                                             </div>
                                         </td>
