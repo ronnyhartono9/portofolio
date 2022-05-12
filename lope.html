@@ -1019,21 +1019,7 @@
                     if (i >= 5) {  poscawal = 0; }
                     i = 0;
                 }, 150);
-            }, false);
-     
-            function testOver() {
-                document.getElementById("mesage").innerHTML = (document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth);
-                el = document.getElementById("porto"); 
-                        var max = 0
-                        for (j = 0; j <= 4; j++) {
-                            if (urutan[j] == 1) {
-                                if (j >= max) {
-                                    max = j;
-                                }
-                            }
-                        }
-                document.getElementById("pg").innerHTML = (max + 1) + " of 2"; 
-            }
+            }, false); 
     
             var modar = 0;
             var dtakhir = 1;
@@ -1148,8 +1134,6 @@
                 document.getElementById("cr3").style.left = "80%";
                 document.getElementById("cr3").style.opacity = "0";
             }    
-    
-            myit = setInterval(testOver, 20);
             var celltampil;
             function makeDot() {
                 el = document.getElementById("titik");
@@ -1168,8 +1152,7 @@
                         el.innerHTML = el.innerHTML + " <div class='dot' id='d-"+i+"' onclick=dt('d-"+i+"') ></div>&nbsp; ";
                     }
                 }
-            }
-            testOver();
+            } 
             makeDot();
             awal();
         </script>
