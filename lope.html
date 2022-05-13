@@ -110,9 +110,10 @@
             }
     
             var pro = new IntersectionObserver(function (entries) {
-                document.getElementById("y").play();
+                // document.getElementById("y").play();
                 // var dot = document.getElementById("1");
                 if (entries[0].isIntersecting === true) {
+                    //alert('aaa');
                     // dot.style.backgroundColor = 'grey';
                     // dot.style.border = "0px";
                     // dot.style.borderColor = "white";
@@ -134,8 +135,9 @@
             var section2 = new IntersectionObserver(function (entries) {
                 // var dot = document.getElementById("2");
              
-                document.getElementById("y").pause();
-                if (entries[0].isIntersecting === true) { 
+                // document.getElementById("y").pause();
+                if (entries[0].isIntersecting === true) {  
+                    //alert('ddd');
                     // dot.style.backgroundColor = 'grey';
                     // dot.style.border = "0px";
                     // dot.style.borderColor = "white";
@@ -152,12 +154,13 @@
                 }
                 // dot.style.transition = "all 1s";
             }, {
-                threshold: [0.9]
+                threshold: [1]
             });
     
             var telu = new IntersectionObserver(function (entries) {
                 var dot = document.getElementById("3");
                 if (entries[0].isIntersecting === true) {
+                    // alert('teliu');
                     // dot.style.backgroundColor = 'grey';
                     // dot.style.border = "0px";
                     // dot.style.borderColor = "white";
