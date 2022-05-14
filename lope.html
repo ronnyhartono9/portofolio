@@ -750,7 +750,7 @@
                     </div>
     
                     <div id="molor" style="scroll-behavior: smooth;  overflow: scroll; opacity: 1; width: 100%; height: 90%; ">
-                        <div id="hopef" style=" height: 2px;  opacity: 1; visibility: hidden; position: relative; top:1%;background-color: purple; width: 100%; "> 
+                        <div id="hopef" style=" height: 2px;  opacity: 1; visibility: visible; position: relative; top:2%;background-color: purple; width: 100%; "> 
                            <hr style="visibility: hidden;">
                         </div>
 
@@ -1035,7 +1035,7 @@
                 i++;
                 if(timer !== null) {  clearTimeout(timer); }
                 timer = setTimeout(function() {                    
-                        // ketarik();                        
+                         ketarik();                        
                         poscawal=0;
                     i=0;
                 }, 250);
@@ -1080,8 +1080,8 @@
                   var m = parseInt(bef[1]);
                   m = (m-1) *   Math.floor(  celltampil) ;
               
-                // document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  m +"px";
-                // document.getElementById('hopef').scrollIntoView(); 
+                document.getElementById('hopef').style.left =  document.getElementById('thope').rows[0].cells[1].offsetWidth *  m +"px";
+                document.getElementById('hopef').scrollIntoView(); 
             }
     
             function bletak(){
@@ -1156,7 +1156,7 @@
                     }
                 }
             } 
-            //makeDot();
+            makeDot();
             awal();
         </script>
     </body> 
