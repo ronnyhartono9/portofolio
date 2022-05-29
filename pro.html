@@ -118,10 +118,13 @@
                 pposakhir =  (divs[s-1]);
                 pakir=s; 
             }
-    
+            var intermilan = "";
             var pro = new IntersectionObserver(function (entries) {
                 // var dot = document.getElementById("1");
-                if (entries[0].isIntersecting === true) {
+                if (entries[0].isIntersecting === true) {intermilan = intermilan+",1";
+                   
+                    // alert("masuk 1"); 
+                    // alert(intermilan);
                     // dot.style.backgroundColor = 'grey';
                     // dot.style.border = "0px";
                     // dot.style.borderColor = "white";
@@ -130,7 +133,9 @@
                     ajaxakudong('a', '1');
                     pposakhir = "porto";
                     
-                } else {
+                } else { intermilan = intermilan.replace("1", ""); 
+                // alert("keluar 1"); 
+                // alert(intermilan);
                     // dot.style.backgroundColor = 'transparent';
                     // dot.style.border = "solid 2px grey";
                     // dot.style.width = "12px";
@@ -143,7 +148,9 @@
     
             var section2 = new IntersectionObserver(function (entries) {
                 // var dot = document.getElementById("2");
-                if (entries[0].isIntersecting === true) {
+                if (entries[0].isIntersecting === true) {intermilan = intermilan+",2";
+                // alert("masuk 2");
+                // alert(intermilan);
                     //    tran3("masuk");
                     // dot.style.backgroundColor = 'grey';
                     // dot.style.border = "0px";
@@ -153,6 +160,9 @@
                     ajaxakudong('a', '2');
                     pposakhir = "coba";
                 } else {
+                    intermilan = intermilan.replace(",2", "");
+                    // alert(" keluar 2"); 
+                    // alert(intermilan);
                     // tran3("metu"); 
                     // dot.style.backgroundColor = 'transparent';
                     // dot.style.border = "solid 2px grey";
@@ -167,7 +177,7 @@
     
             var telu = new IntersectionObserver(function (entries) {
                 var dot = document.getElementById("3");
-                if (entries[0].isIntersecting === true) {
+                if (entries[0].isIntersecting === true) {intermilan = intermilan+",3";
                     // dot.style.backgroundColor = 'grey';
                     // dot.style.border = "0px";
                     // dot.style.borderColor = "white";
@@ -175,7 +185,7 @@
                     // dot.style.height = "18px";
                     ajaxakudong('a', '3');
                     pposakhir = "tiga";
-                } else {
+                } else {intermilan = intermilan.replace(",3", "");
                     // dot.style.backgroundColor = 'transparent';
                     // dot.style.border = "solid 2px grey";
                     // dot.style.width = "12px";
@@ -188,7 +198,7 @@
     
             var papat = new IntersectionObserver(function (entries) {
                 var dot = document.getElementById("4");
-                if (entries[0].isIntersecting === true) {
+                if (entries[0].isIntersecting === true) {intermilan = intermilan+",4";
                     // dot.style.backgroundColor = 'grey';
                     // dot.style.border = "0px";
                     // dot.style.borderColor = "white";
@@ -197,7 +207,7 @@
                     ajaxakudong('a', '4');
                     pposakhir = "empat";
     
-                } else {
+                } else {intermilan = intermilan.replace(",4", "");
                     // dot.style.backgroundColor = 'transparent';
                     // dot.style.border = "solid 2px grey";
                     // dot.style.width = "12px";
@@ -210,7 +220,7 @@
     
             var lima = new IntersectionObserver(function (entries) {
                 // var dot = document.getElementById("5");
-                if (entries[0].isIntersecting === true) {
+                if (entries[0].isIntersecting === true) {intermilan = intermilan+",5";
                     // dot.style.backgroundColor = 'grey';
                     // dot.style.border = "0px";
                     // dot.style.borderColor = "white";
@@ -220,7 +230,7 @@
                      pposakhir = "limo";
                     // console.log(ss);
                    bletak();
-                } else {
+                } else {intermilan = intermilan.replace(",5", "");
                     takble();
                     // dot.style.backgroundColor = 'transparent';
                     // dot.style.border = "solid 2px grey";
@@ -469,7 +479,7 @@
                             "</div> <br> ";
                         }
                  document.getElementById('pp').innerHTML = isi;
-                document.getElementById('gb'+ sx[posx-1]).scrollIntoView();               
+                document.getElementById('gb'+ sx[posx-1]).scrollIntoView();
                 document.getElementById('ooo').style.opacity=0;
                 document.getElementById('g'+sx[posx-1]).style.opacity=1;                
                 document.getElementById('ooo').style.transition = "ease-in-out 1.26s";
@@ -490,7 +500,7 @@
                   document.getElementById('g'+sx[posx-1]).style.opacity=0;
                   document.getElementById('g'+sx[posx-1]).style.opacity=1;
                  document.getElementById('g'+sx[posx-1]).style.transition = "ease-in-out 0.5s";
-                 document.getElementById('gb'+sx[posx-1]).scrollIntoView(); 
+                 document.getElementById('gb'+sx[posx-1]).scrollIntoView();
             } 
           
             const numSteps = 20.0;
@@ -1196,6 +1206,7 @@
                 }, 150);
             }, false);
      
+            
             function testOver() {
                 document.getElementById("mesage").innerHTML = (document.getElementById('ai').clientWidth / document.getElementById('babi').rows[0].cells[1].offsetWidth);
                  
@@ -1236,25 +1247,49 @@
                 i++;
                 if(timer !== null) {  clearTimeout(timer); }
                 timer = setTimeout(function() { 
-                        ketarik();                        
+                        ketarik();
                         poscawal=0; 
                     i=0;
                 }, 250);
             }, false);
 
+
+            function spllit(){
+                // lihat di array intermilan cari yg paling kecil
+                 //alert(intermilan);
+                 var myArray = intermilan.split(",");
+                 var minim = 1000;
+                 for(i=0;i<=myArray.length-1;i++){
+                    if( myArray[i] <= minim  && myArray[i] != ""     ){ minim = myArray[i] ;}
+                    //alert(myArray[i]);
+                 }
+                //alert(minim);
+
+                for(j=0;j<=divs.length-1;j++){                      
+                      document.getElementById(  divs[j]).style.filter="blur(21px)";
+                      document.getElementById(  divs[j]).style.transition = "ease-in-out 0.5s";
+                }
+                    location.href = "#"+divs[minim-1]; //magnet
+                    document.getElementById(  divs[minim-1]).style.filter="blur(0px)";
+                    document.getElementById(  divs[minim-1]).style.transition = "ease-in-out 0.5s";
+            }
+
             elemst3 = document.getElementById("ooo");
             elemst3.addEventListener('scroll', function() {
                 if(timer2 !== null) {  clearTimeout(timer2); }
                 timer2 = setTimeout(function() {
-                 if(pawal!= pakir){
-                    for(j=0;j<=divs.length-1;j++){                      
-                      document.getElementById(  divs[j]).style.filter="blur(21px)";
-                      document.getElementById(  divs[j]).style.transition = "ease-in-out 0.5s";
-                    }
-                     location.href = "#"+divs[pakir-1];
-                     document.getElementById(  divs[pakir-1]).style.filter="blur(0px)";
-                      document.getElementById(  divs[pakir-1]).style.transition = "ease-in-out 0.5s";
-                 }
+
+                //  if(pawal!= pakir){
+                //     for(j=0;j<=divs.length-1;j++){                      
+                //       document.getElementById(  divs[j]).style.filter="blur(21px)";
+                //       document.getElementById(  divs[j]).style.transition = "ease-in-out 0.5s";
+                //     }
+                //      location.href = "#"+divs[pakir-1]; //magnet
+                //      document.getElementById(  divs[pakir-1]).style.filter="blur(0px)";
+                //       document.getElementById(  divs[pakir-1]).style.transition = "ease-in-out 0.5s";
+                //  }
+
+                 spllit();
                  pawal=pakir;
                  poscawal2=0;                   
                 }, 250);
