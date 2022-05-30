@@ -32,7 +32,7 @@
             //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes 
             //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
             //https://colorlib.com/wp/template/personalportfolio/
-    var pakir="";var pawal="";
+    var pakir="";var pawal="";var ppakhir = 1;
             var detik = 0;
             const divs = ["porto", "coba", "tiga", "empat", "limo"];  //
             
@@ -1062,7 +1062,10 @@
                       document.getElementById(  divs[j]).style.filter="blur(21px)";
                       document.getElementById(  divs[j]).style.transition = "ease-in-out 0.5s";
                 }
-                    location.href = "#"+divs[minim-1]; //magnet
+                if(ppakhir != minim){
+                    location.href = "#"+divs[minim-1]; //magnet 
+                    ppakhir = minim;
+                 }
                     document.getElementById(  divs[minim-1]).style.filter="blur(0px)";
                     document.getElementById(  divs[minim-1]).style.transition = "ease-in-out 0.5s";
             }
