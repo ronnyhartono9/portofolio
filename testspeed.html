@@ -1,0 +1,776 @@
+<html>
+    <meta name="viewport" content="width=device-width,initial-scale=1"> 
+    <link rel="stylesheet" type="text/css" href="hitech.css?>1661205425" />
+    <script type="text/javascript"src="sekerip.js?1661205425"></script>
+    <head>
+        <style>
+            body,html {height: 100%;margin: 0;}
+        </style>
+    <body>
+        <center>
+          <Div id="atas">        
+            <table border="0" style="width: 100%;" cellpadding="0px"cellspacing="0px">
+                <tr>
+                    <td align="left" style=" width:18%;vertical-align: middle;font-size: 1.3vw;color:darkviolet;font-weight: bold;">
+                        <a class="desc">Sumarry Account</a> <br>
+                        <a class="desc"href="index.php" style=" width: 100%;  cursor: pointer; ">
+                            <table cellpadding="0px"cellspacing="0px" >
+                                <tr>
+                                    <td>
+                                    <a class="desc">Back &nbsp;</a> 
+                                    </td>
+                                    <td style="vertical-align: top;">
+                                        <img src="home.png" width="30px" height="30px"> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </a>
+                    </td>
+                    <td style="width: 15%; " align="right">
+                        <table border=0 style="width: 50%; height: 100%;">
+                            <tr>
+                                <td style="width: 1%;" align="right">
+                                    <a href="shoppingchart.php">  
+                                        <img src="sp.png" style="height: 45px;width: 45px;">
+                                    </a>
+                                </td>
+                                <td style="width: 1%;">
+                                                                            <a href="http://localhost/canvas/destroyer.php">
+                                            <div style=" color:red;  width: 100%;height: 100%;  text-align: center; font-size: 2.5vw;
+                                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                            ">
+                                                LogOut
+                                            </div>
+                                        </a>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        
+                    </td>
+                </tr>
+            </table>       
+        </div>            <div class="pkeng" style="width:100%;height:100%;">
+                
+                    <div style="height: 10%;"></div>
+
+                    <div style=" overflow:hidden; z-index: 2; position: fixed;  top:11%;  width: 100%; height: 150px;  display: d;">
+                        <table border=0 style="width: 100%;height: 100%;display: d;" cellspacing=0 cellpading=0>
+                            <tr style="height: 10%;">
+                                <td align="left" colspan=3>
+                                    <table border=0 style="width: 100%;height:100%">
+                                        <tr>
+                                            <td>                                             
+                                                <div id="s">
+                                                    <table border=0 style="width: 100%;height: 100%;">
+                                                        <tr>
+                                                            <td style="width:1% ; display:d">
+                                                                                                                                <table border=0 style=" display:; height: 50%; " cellspacing="0px" cellpadding="0px" class="r">
+                                                                    <tr>
+                                                                            <td align="center"> Start Date
+                                                                                <input id="tgl1"type="date"value=2020-08-01>
+                                                                            </td>
+                                                                            <td align="center">End Date
+                                                                                <input id="tgl2"type="date"value=2022-08-22>
+                                                                            </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td> 
+                                                            
+                                                        </tr>
+                                                        <tr> 
+                                                            <td colspan="2" >
+
+                                                                <table style="width:100%" cellpadding="0px"cellspacing="0px">
+                                                                    <tr>
+                                                                        <td style="width:2%">
+                                                                        <a class="desc"> Search By</a>
+                                                                        </td>
+                                                                        <td style="width:35%"> 
+                                                                            
+                                                                            
+                                                                            
+                                                                                                                                                            <select id="kolom" >
+                                                                                    <option value="ACCNO">Account Number</option >
+                                                                                    <option value="`ACCOUNT NAME`" selected>Account Name</option >
+                                                                                    <option value="BEGINBALANCE">BEGIN BALANCE</option >
+                                                                                    <option value="`MUTASI DEBET`" >MUTASI DEBET</option >
+                                                                                    <option value="`MUTASI kredit`">MUTASI KREDIT</option >
+                                                                                    <option value="ENDBALANCE" >END BALANCE</option >                                                                     
+                                                                                </select>
+                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </td>
+                                                                    </tr>
+                                                                </table>
+                                                                        
+                                                            </td> 
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" >
+                                                                <input placeholder="write here...."id="filter"name="sch"type="text"value="" style="height: 100%; border:0px solid red;">
+                                                                <button onclick="mencolot('sr')" name="tombol"type="button"value="Filter"style="border:1px solid SILVER;
+                                                                        border-radius:0px;  width: 100px;position: absolute;top:0px;right:0px;
+                                                                        height:57px;background:linear-gradient(45deg,white,beige);">
+                                                                        <div style="font-weight: bold;height: 100%; width: 100%; overflow:hidden;z-index: 2; ">
+                                                                            <table border=0 style="height:100%;width:100%;">
+                                                                                <tr> 
+                                                                                    <td>
+                                                                                        <img src="src.png?>1661205425" width="30px"height="30px">
+                                                                                    </td>
+                                                                                    <td style="font-size:0.8vw; font-weight:bold">
+                                                                                        <a  class="serc" >Filter</a> 
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                </button>                                                                
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan=2 align="center">
+                                                                <table id="jth" border=0 cellpadding="0"cellspacing="0" style="width: 95%;">
+                                                                    <thead id="batok3" style=" width:90%; height: 130%;color:black">
+                                                                        
+                                                                                                                                                
+                                                                                                                                                    <tr>
+                                                                                <td style="width: 20%;vertical-align: top;display:d;">Account #</td>
+                                                                                <td style="width: 20%;vertical-align: top;display:d;">Name</td>
+                                                                                <td style="width: 20%;vertical-align: top;display:d;">BEGIN BALANCE</td>
+                                                                                <td style="width: 20%;vertical-align: top;display:d;">MUTASI DEBET</td> 
+                                                                                <td style="width: 20%;vertical-align: top;display:d;">MUTASI KREDIT</td>
+                                                                                <td style="width: 20%;vertical-align: top;display:d;">END BALANCE</td> 
+                                                                            </tr>
+                                                                                                                                                
+                                                                         
+                                                                    
+                                                                        
+                                                                        
+                                                                        
+                                                                                                                                            </thead>
+                                                                </table>
+                                                            </td>
+                                                        </tr>                    
+                                                    </table>
+                                                </div>
+                                            </td>                                         
+                                        </tr> 
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div style=" border-radius: 0px; z-index: 1;
+                        position: fixed;  top:11%;  width: 100%; 
+                        height: 150px; 
+                        background: linear-gradient(45deg,rgb(255, 255, 255,0.45),rgba(192, 192, 192, 0.14),rgb(255, 255, 255,0.45));
+                        backdrop-filter: blur(15px); /* Chrome and Opera */ 
+                        webkit-backdrop-filter: blur(8px); /* Safari 9+ */
+                        box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 15%);
+                        background-color: rgb(228 228 228 / 15%);
+                        display: d;
+                    "></div>
+
+                    <div style="height: 150px;"></div>
+
+                    <div id="gei" style=" display:d;width:100%;  overflow:scroll; border-radius: 5px; visibility: visible;scroll-behavior: smooth; ">            
+                        <table id="jth"style="width: 90%;height:0%">
+                            <tr style="height: 80%;">
+                                <td colspan="2" align="center">
+                                        <table border=1 cellpading="0px" id="kipur"cellspacing="0px" style=" border-radius: 10px;  width: 99%; height: 100%;box-shadow: 5px 5px 5px #888888;">
+                                            <thead style="display:none; background-color: grey; color: aliceblue; height: 5%;">
+                                                <tr></tr>
+                                            </thead>
+                                            
+        <script>
+            document.getElementById('kolom').value = '`ACCOUNT NAME`';
+        </script>                                                                                                
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.0.1.00.0.0.00</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">AKTIVA</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.00.0.0.00</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Aktiva Lancar</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.0.00</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas & Setara Kas</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.1.00</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas Operasional Kantor Pusat</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.2.01</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas Operasional Pabrik Purwosari</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.00</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas - Valuta Asing</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.01</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas USD</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.02</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas BRL</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.03</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas TRY</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.04</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas HKD</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.05</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas CNY</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.06</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas SGD</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.07</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas AUD</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.08</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas EUR</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.09</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas JOD</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.10</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas RUR</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.11</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas THB</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.12</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas PHP</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.13</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas ARS</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                                                                            
+                                                
+                                                                                                    <tr style="height: 50px;"> 
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">1.1.1.01.0.3.14</a>
+                                                        </td>                         
+                                                        <td style="width: 20%;">
+                                                            <a class="desc3">Kas VND</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>  
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00</a>
+                                                        </td>
+                                                        <td style="width: 20%;background-color: white;">
+                                                            <a class="desc3">0.00 </a>
+                                                        </td>
+                                                    </tr>
+                                                                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                                                    </table>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                 
+                    <center>
+                        <div style=" width:50%;z-index:223;position: fixed;  top:1%; left:25%">                            
+                                <table border=0 style=" height: 50%; width:10% " cellspacing="0px" cellpadding="0px">
+                                    <tr>
+                                        <td  align="right"  >
+                                            <a class="pag">&nbsp;Prev&nbsp;</a> 
+                                        </td>
+                                        <td align="center">
+                                            <div style="height: 100%;  width: 100%;   overflow: hidden;">
+                                                 <div style='overflow:scroll;width:200px;overflow-y: hidden;'><table border='0' cellspacing='0px' cellpadding='0px' style='width:100%' ><tr><td align='center' style=' border-radius:100px;background-color:green;'>&nbsp;<a style='color:white'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=1&q=&kolom=`ACCOUNT NAME`'>1</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=2&q=&kolom=`ACCOUNT NAME`'>2</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=3&q=&kolom=`ACCOUNT NAME`'>3</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=4&q=&kolom=`ACCOUNT NAME`'>4</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=5&q=&kolom=`ACCOUNT NAME`'>5</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=6&q=&kolom=`ACCOUNT NAME`'>6</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=7&q=&kolom=`ACCOUNT NAME`'>7</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=8&q=&kolom=`ACCOUNT NAME`'>8</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=9&q=&kolom=`ACCOUNT NAME`'>9</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=10&q=&kolom=`ACCOUNT NAME`'>10</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=11&q=&kolom=`ACCOUNT NAME`'>11</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=12&q=&kolom=`ACCOUNT NAME`'>12</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=13&q=&kolom=`ACCOUNT NAME`'>13</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=14&q=&kolom=`ACCOUNT NAME`'>14</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=15&q=&kolom=`ACCOUNT NAME`'>15</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=16&q=&kolom=`ACCOUNT NAME`'>16</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=17&q=&kolom=`ACCOUNT NAME`'>17</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=18&q=&kolom=`ACCOUNT NAME`'>18</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=19&q=&kolom=`ACCOUNT NAME`'>19</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=20&q=&kolom=`ACCOUNT NAME`'>20</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=21&q=&kolom=`ACCOUNT NAME`'>21</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=22&q=&kolom=`ACCOUNT NAME`'>22</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=23&q=&kolom=`ACCOUNT NAME`'>23</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=24&q=&kolom=`ACCOUNT NAME`'>24</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=25&q=&kolom=`ACCOUNT NAME`'>25</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=26&q=&kolom=`ACCOUNT NAME`'>26</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=27&q=&kolom=`ACCOUNT NAME`'>27</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=28&q=&kolom=`ACCOUNT NAME`'>28</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=29&q=&kolom=`ACCOUNT NAME`'>29</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=30&q=&kolom=`ACCOUNT NAME`'>30</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=31&q=&kolom=`ACCOUNT NAME`'>31</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=32&q=&kolom=`ACCOUNT NAME`'>32</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=33&q=&kolom=`ACCOUNT NAME`'>33</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='mlist.php?t1=2020-08-01&t2=2022-08-22&md=sr&p=34&q=&kolom=`ACCOUNT NAME`'>34</a>&nbsp;</a></td></tr></table></div>                                            </div>
+                                        </td>
+                                        <td align="left" >
+                                            <a class="pag">&nbsp;Next&nbsp;</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                        </div>
+                    </center> 
+            </div>
+        </center>
+    </body>
+</html>
