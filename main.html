@@ -1,246 +1,97 @@
+
  <html>
-    <body> 
-        <div id="pepes" style="background-color: gainboro;border: 2px solid gainsboro;  width: 100%; height: 100%;box-shadow: 5px 10px 18px #888888; border-radius: 5px;">
-            <form action="index.php"method="post" id="ff">
-                <div style=" z-index: 2; position: fixed;  top:11%;  width: 100%; height: 100px;  display: d;">
-                    <table  style="width: 98%;height: 50%;display: d;" cellspacing=0 cellpading=0>
-                        <tr style="height: 10%;">
-                            <td align="center" colspan=3>
-                                <table border=0 style="width: 100%; height: 100%;">
-                                    <tr>
-                                        <td style="width: 3%;"> 
-                                            <div class="peng" id="additem" style=" width: 100%;height: 100%;">
-                                                <center>
-                                                    <table style="width: 80%; height: 80%;">
-                                                        <tr>
-                                                            <td align="center">
-                                                                <a class="serv" href="service.php" >Add Service</a>       
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </center> 
-                                            </div>
-                                        </td>
-                                        <td style="width: 3%;">
-                                            <div class="peng" id="additem" style=" width: 100%;height: 100%;">
-                                                    <center>
-                                                        <table style="width: 80%; height: 80%;">
-                                                            <tr>
-                                                                <td align="center">
-                                                                    <a href="product.php" class="serv">Add Item</a>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </center>
-                                            </div>
-                                        </td> 
-                                        <td> 
-                                            <div id="s">
-                                                <input style=" float:left;width:50%; height: 100%";placeholder="write here...." type="text"value=""name="sch">
-                                                <input  oninput="bacabarcode()" style="float:left; width:50%; height: 100%";placeholder="barcode here...." type="text"value=""name="bcd"id="bcdx">
-                                                <button type="submit"value="search"name="srcitem" style="border:1px solid SILVER;
-                                                 border-radius:0px;  width: 100px;position: absolute;top:0px;right:0px;
-                                                 height:100%;background:linear-gradient(45deg,white,beige);">                                                
-                                                    <div style="font-weight: bold;height: 100%; width: 100%; overflow:hidden;z-index: 2; ">
-                                                        <table border=0 style="height:100%;;width:100%;">
-                                                            <tr> 
-                                                                <td>
-                                                                    <img src="src.png?>1661207696" width="30px"height="30px">
-                                                                </td>
-                                                                <td style="font-size:0.8vw; font-weight:bold">
-                                                                   <a  class="serc"  >Search</a> 
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </td>                                       
-                                    </tr>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="h2.css?>1661397640" />
+    <head> <style> body,html {height: 100%;margin: 0;}</style></head>
+    <script type="text/javascript"src="sekerip.js?1661397640"></script>
+    <body>
+        <div style="background-color:white; height: 100%; width:100%">
+            <div style="background-color: transparent;">
+                <center>
+                    <Div id="atas">
+                        <Table border=0 style="width: 100%;  ">
+                            <tr>
+                                <td style="width: 15%;">
+                                    <div onclick="ajaxakudong('sec.php','1','beige')" class="kelas" style="height: 100%;float:left;width:14%;" ;>
+                                        <table style="width:100%; height:100%;">
+                                            <tr>
+                                                <td align="center" style=" vertical-align: top;">
+                                                    <img src="admin.png" style="height: 34px;width: 34px;"><br>
+                                                        Admin
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                                
+                                <td style="width: 25%; vertical-align: top;">
+                                    <a href="#Home" onclick="ajaxakudong('main.php?','1','beige')">
+                                        <div class="kelas" id="1a"style="border-radius:5px;height: 100%;width: 100%;";>
+                                            <table style="width: 100%;">
+                                                <tr> 
+                                                    <td align="center" style="vertical-align: top;"> 
+                                                        <img src="home.png" width="34px" height="34px"><br>
+                                                        Home
+                                                                                                            </td> 
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </a>
+                                </td>
 
-                                    <tr>
-                                        <Td colspan="4" align="center">
-                                            <!-- <a href="index.php?src=a">coba link</a> -->
-                                             <div style='overflow:scroll;width:200px;overflow-y: hidden;'><table border='0' cellspacing='0px' cellpadding='0px' style='width:100%' ><tr><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-23&t2=2022-08-23&md=item&p=1&q=&kolom='>1</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-23&t2=2022-08-23&md=item&p=2&q=&kolom='>2</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-23&t2=2022-08-23&md=item&p=3&q=&kolom='>3</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-23&t2=2022-08-23&md=item&p=4&q=&kolom='>4</a>&nbsp;</a></td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-23&t2=2022-08-23&md=item&p=5&q=&kolom='>5</a>&nbsp;</a></td></tr></table></div>                                             
-                                        </Td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                                <td style="width: 25%;vertical-align: top;">
+                                    <a href="#Contacts" onclick="ajaxakudong('','5','blue')">
+                                        <div class="kelas" id="5a"style="border-radius:5px;height: 100%;width: 100%;";>
+                                            <table style="width: 100%;">
+                                                <tr>
+                                                    <td align="center"style="vertical-align: top;">
+                                                        <img src="kontek.png" width="34px" height="34px"><br>
+                                                        Contacts
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </a>
+                                </td>
 
-                <div style=" border-radius: 10px; z-index: 1;  
-                    position: fixed;  top:11%;  width: 100%; 
-                    height: 100px;  display: d; 
-                    background: linear-gradient(45deg,rgb(255, 255, 255,0.45),rgba(192, 192, 192, 0.14),rgb(255, 255, 255,0.45));
-                    
-                    backdrop-filter: blur(15px); /* Chrome and Opera */ 
-                    webkit-backdrop-filter: blur(8px); /* Safari 9+ */
-                    box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 15%);
-                    background-color: rgb(228 228 228 / 15%);
-                "> 
-                </div>
-                
-                <div id="d" style=" width: 100%; display: d;">
-
-                    <div style="height: 100px;"></div>
-                    
-                    <table border=0 id="jth" style="width: 100%;" cellspacing=0 cellpading=0>
-                        <tr style="display: d;">
-                            <td align="center" style="vertical-align: top;background: rgba(192, 192, 192, 0.14) ">                                
-                                    <table border=0 cellpadding="10px"cellspacing="0px" style="width: 100%;" > 
-                                        <tr> 
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=1&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        barang gae web 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
+                                <td style="width: 15%; ">
+                                    <table  style="width: 100%; height: 100%; background-color: aliceblue; border-radius: 5px;">
+                                        <tr>
+                                            <td style="vertical-align: top;">
+                                                                                                    <a href="shoppingchart.php">
+                                                        <img src="sp.png" style="height: 45px;width: 45px;">
                                                     </a>
-
-                                                    <a class="desc"href="setgudang.php?i=1&sv=0">
-                                                        set Warehouse
+                                                                                            </td>                                            
+                                            <td align="center" style="vertical-align: top;">
+                                                                                                                                                    <a href="destroyer.php" class="desc">
+                                                        <div style="color:red;">
+                                                             LogOut 
+                                                        </div>
                                                     </a>
+                                                    <a clas="desc">Welcome ronny </a>
+                                                                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </Table> 
+                    </Div>
+                </center>
+            </div> 
+        
+            <div style="width: 100%; height: 10%;"></div>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=2&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        malkis bulu roma 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
-
-                                                    <a class="desc"href="setgudang.php?i=2&sv=0">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=4&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        barang gae web 2 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
-
-                                                    <a class="desc"href="setgudang.php?i=4&sv=0">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                        </tr><tr> 
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=5&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        botol aqua 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
-
-                                                    <a class="desc"href="setgudang.php?i=5&sv=0">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=6&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        milo coklat enak 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
-
-                                                    <a class="desc"href="setgudang.php?i=6&sv=0">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                                                            </table> 
-                            </td>
-                        </tr>
-                    </table>
-                </div> 
-            </form>
+            <div id="Home" style="overflow:scroll;width: 100%; height:90%;">            
+                <table style="width:100%; height: 100%; ">
+                    <tr>
+                        <td style="vertical-align: top;" align="center">
+                            <div id="f" style="border:0px solid gold;  border-radius:3px; width: 100%; height: 100%; "> 
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
-    </body>
+
+        <script>ajaxakudong('main.php','1','limegreen');</script>    </body>
 </html>
