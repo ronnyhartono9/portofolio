@@ -1,48 +1,51 @@
 <html>
-
-    <meta name="viewport"  content="width=device-width,initial-scale=1"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1"> 
     <meta name="theme-color"content="gold"/>
-    <link rel="stylesheet" type="text/css" href="h2.css" />     
+    <link rel="stylesheet" type="text/css" href="h2.css" /> 
     <head>
         <style>
             body,html {height: 100%;margin: 0;}
         </style>
     <body>
         <center>
-                    <Div id="atas">        
-            <table border="0" style="width: 100%;" cellpadding="0px"cellspacing="0px">
-                <tr>
-                    <td align="left" style=" width:18%;vertical-align: middle;font-size: 1.3vw;color:darkviolet;font-weight: bold;">
-                        <a class="desc">Stok In Warehouse</a> <br>
-                    </td>
-                    <td align="center">
-                    <a class="desc"href="" style=" width: 100%;  cursor: pointer; ">
-                                                    </a>
-                    </td>
-                    <td style="width: 15%; " align="right">
-                        <table border=0 style="width: 50%; height: 100%;">
-                            <tr>
-                                <td style="width: 1%;" align="right">
-                                    <a href="">  
-                                        <img src="sp.png" style="height: 45px;width: 45px;">
-                                    </a>
-                                </td>
-                                <td style="width: 1%;">
-                                        <a href="">
-                                            <div style=" color:red;  width: 100%;height: 100%;  text-align: center; font-size: 2.5vw;
-                                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                                            ">
-                                                LogOut
-                                            </div>
+                    <Div id="atas">
+            <center>
+
+                <table border="0" style="width: 98%;" cellpadding="0px"cellspacing="0px">
+                    <tr>
+                        <td align="left" style=" width:18%;vertical-align: middle;font-size: 1.3vw;color:darkviolet;font-weight: bold;">
+                            <a class="desc">Stok In Warehouse</a> <br>                        
+                        </td>
+                        <td align="center">
+                        <a class="desc"href="" style=" width: 100%;  cursor: pointer; ">
+                                                            </a>
+                        </td>
+                        <td style="width: 15%; " align="right">
+                            <table border=0 style="width: 50%; height: 100%;">
+                                <tr>
+                                    <td style="width: 1%;" align="right">
+                                        <a href="">  
+                                            <img src="sp.png" style="height: 45px;width: 45px;">
                                         </a>
-                                                                    </td>
-                            </tr>
-                        </table>
-                        
-                        
-                    </td>
-                </tr>
-            </table>       
+                                    </td>
+                                    <td style="width: 1%;">
+                                                                                    <a href="">
+                                                <div style=" color:red;  width: 100%;height: 100%;  text-align: center; font-size: 2.5vw;
+                                                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                                ">
+                                                    LogOut
+                                                </div>
+                                            </a>
+                                                                            </td>
+                                </tr>
+                            </table>
+                            
+                            
+                        </td>
+                    </tr>
+                </table>
+                
+            </center>            
         </div>            <div class="pkeng" style="width:100%;height:100%;">
                 
                     <div style="height: 10%;"></div>
@@ -73,12 +76,12 @@
                                                         </tr>
                                                         <tr> 
                                                             <td colspan="2" >
-                                                                <table style="width:100%" cellpadding="0px"cellspacing="0px">
+                                                                <table border=0 cellpadding="0px"cellspacing="0px">
                                                                     <tr>
-                                                                        <td style="width:2%">
-                                                                        <a class="desc"> Search By</a>
+                                                                        <td style="width:23%">
+                                                                            <a class="des"> Search By </a>
                                                                         </td>
-                                                                        <td style="width:35%"> 
+                                                                        <td style="width:45%"> 
                                                                             
                                                                             
                                                                                                                                                             <select id="kolom" >
@@ -92,6 +95,31 @@
                                                                             
                                                                             
                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </td>
+
+                                                                        <td>
+                                                                             
+                                                                            <!-- position: absolute;top:0px;right:0px;height:77px; -->
+
+                                                                            <button onclick="mencolot('qw')" name="tombol"type="button"value="Filter"style="border:1px solid SILVER;
+                                                                            border-radius:0px;width: 100px;height:100%;display:none;
+                                                                            background:linear-gradient(45deg,white,beige);">
+                                                                                <div style="font-weight: bold;height: 100%; width: 100%; overflow:hidden; ">
+                                                                                    <table border=0 style="height:100%;width:100%;">
+                                                                                        <tr> 
+                                                                                            <td>
+                                                                                                <!-- <img src="src.png?>" width="19px"height="19px"> -->
+                                                                                            </td>
+                                                                                            <td style="font-size:0.8vw; font-weight:bold">
+                                                                                                <!-- <a  class="serc" >Filter</a>  -->
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </button>  
+                                                                            <button onclick="mencolot('qw')" name="tombol"type="button"value="Filter">
+                                                                                       <A class="desc">Search</A>  
+                                                                            </button>
+                                                                        </td>
                                                                     </tr>
                                                                 </table>                                                                        
                                                             </td> 
@@ -99,22 +127,7 @@
                                                         <tr>
                                                             <td colspan="2" >
                                                                 <input placeholder="write here...."id="filter"name="sch"type="text"value="" style="height: 100%; border:0px solid red;">
-                                                                <button onclick="mencolot('qw')" name="tombol"type="button"value="Filter"style="border:1px solid SILVER;
-                                                                        border-radius:0px;  width: 100px;position: absolute;top:0px;right:0px;
-                                                                        height:77px;background:linear-gradient(45deg,white,beige);">
-                                                                        <div style="font-weight: bold;height: 100%; width: 100%; overflow:hidden; ">
-                                                                            <table border=0 style="height:100%;width:100%;">
-                                                                                <tr> 
-                                                                                    <td>
-                                                                                        <img src="src.png?>1661797240" width="30px"height="30px">
-                                                                                    </td>
-                                                                                    <td style="font-size:0.8vw; font-weight:bold">
-                                                                                        <a  class="serc" >Filter</a> 
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </div>
-                                                                </button>                                                                
+                                                                                                                             
                                                             </td>
                                                         </tr>
                                                         <tr>
