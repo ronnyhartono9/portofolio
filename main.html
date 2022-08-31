@@ -79,736 +79,713 @@
 
     <div style="width: 10%;height: 10%;"></div>
 
- <div id="pepes" style="background-color: gainboro;border: 2px solid gainsboro;  width: 100%; height: 100%;box-shadow: 5px 10px 18px #888888; border-radius: 5px;">
-            <form action="index.php"method="post" id="ff">
-                <div style=" z-index: 2; position: fixed;  top:11%;  width: 100%; height: 100px;  display: d;">
-                    <table  style="width: 98%;height: 50%;display: d;" cellspacing=0 cellpading=0>
-                        <tr style="height: 10%;">
-                            <td align="center" colspan=3>
-                                <table border=0 style="width: 100%; height: 100%;">
-                                    <tr>
-                                        <td style="width: 3%;"> 
-                                            <div class="peng" id="additem" style=" width: 100%;height: 100%;">
-                                                <center>
-                                                    <table style="width: 80%; height: 80%;">
-                                                        <tr>
-                                                            <td align="center">
-                                                                <a class="serv" href="service.php" >Add Service</a>       
+    <div id="pepes" style="  background-color: gainboro;border: 2px solid gainsboro;  width: 100%; height: 100%;box-shadow: 5px 10px 18px #888888; border-radius: 5px;">
+        <form action="index.php"method="post" id="ff">
+            <div style="   z-index: 2; position: fixed;  top:11%;  width: 100%; height: 120px;  display: d; border:0px solid gold">
+                <table border=0 style="width: 100%;height: 100%;display: d;" cellspacing=0 cellpading=0>
+                    <tr style="height: 10%;">
+                        <td align="center" colspan=3>
+                            <table border=0 style="width: 100%; height: 100%;" cellspacing="0"cellpading="0">
+                                <tr> 
+                                    <td> 
+                                        <div id="s">
+                                            <input type="text"style=" float:left;width:50%; height: 100%"placeholder="write here...." value=""name="sch">  
+                                            <input oninput="bacabarcode()" style="Display:d;float:left; width:50%; height: 100%"placeholder="barcode here...." type="text"value=""name="bcd"id="bcdx">  
+
+                                            <button type="submit"value="search"name="srcitem" style="border:1px solid SILVER;
+                                             border-radius:0px;  width: 100px;position: absolute;top:0px;right:0px;
+                                             height:100%;background:linear-gradient(45deg,white,beige);">                                                
+                                                <div style="font-weight: bold;height: 100%; width: 100%; overflow:hidden;z-index: 2; ">
+                                                    <table border=0 style="height:100%;;width:100%;">
+                                                        <tr> 
+                                                            <td>
+                                                                <img src="src.png?>1661972369" width="30px"height="30px">
+                                                            </td>
+                                                            <td style="font-size:0.8vw; font-weight:bold">
+                                                               <a  class="serc"  >Search</a> 
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                </center> 
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </td>                                       
+                                </tr>
+
+                                <tr>
+                                    <Td colspan="4" align="center">
+                                        <div class="toa">
+                                                                                                <table border=0 style=" cursor: pointer;  height: 100%;width: 100%;" cellspacing=0 cellpadding=0>
+                                                <tr>
+                                                                                                                <td align="center">
+                                                            <a class="des">all</a>
+                                                            <a style="display: none;"onclick="katego('all')">
+                                                                all                                                                </a>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <a class="des">Food</a>
+                                                            <a style="display: none;"onclick="katego('fd')">
+                                                                fd                                                                </a>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <a class="des">Drinks</a>
+                                                            <a style="display: none;"onclick="katego('mn')">
+                                                                mn                                                                </a>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <a class="des">Goods</a>
+                                                            <a style="display: none;"onclick="katego('bg')">
+                                                                bg                                                                </a>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <a class="des">Medicine</a>
+                                                            <a style="display: none;"onclick="katego('ob')">
+                                                                ob                                                                </a>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <a class="des">Electronic</a>
+                                                            <a style="display: none;"onclick="katego('ek')">
+                                                                ek                                                                </a>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <a class="des">Watch</a>
+                                                            <a style="display: none;"onclick="katego('wc')">
+                                                                wc                                                                </a>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <a class="des">Service</a>
+                                                            <a style="display: none;"onclick="katego('js')">
+                                                                js                                                                </a>
+                                                        </td>
+                                                                                                        </tr>
+                                                <tr>
+                                                                                                                <td align="center">
+                                                            <div onclick="katego('all')"style="width: 30px;height: 30px;border-radius:25px;
+                                                                                                                            ">
+                                                                <img src="all.png?1661972369" width="25px"height="25px">
+                                                            </div>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <div onclick="katego('fd')"style="width: 30px;height: 30px;border-radius:25px;
+                                                                                                                            ">
+                                                                <img src="Food.png?1661972369" width="25px"height="25px">
+                                                            </div>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <div onclick="katego('mn')"style="width: 30px;height: 30px;border-radius:25px;
+                                                                                                                            ">
+                                                                <img src="Drinks.png?1661972369" width="25px"height="25px">
+                                                            </div>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <div onclick="katego('bg')"style="width: 30px;height: 30px;border-radius:25px;
+                                                                                                                            ">
+                                                                <img src="Goods.png?1661972369" width="25px"height="25px">
+                                                            </div>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <div onclick="katego('ob')"style="width: 30px;height: 30px;border-radius:25px;
+                                                                                                                            ">
+                                                                <img src="Medicine.png?1661972369" width="25px"height="25px">
+                                                            </div>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <div onclick="katego('ek')"style="width: 30px;height: 30px;border-radius:25px;
+                                                                                                                            ">
+                                                                <img src="Electronic.png?1661972369" width="25px"height="25px">
+                                                            </div>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <div onclick="katego('wc')"style="width: 30px;height: 30px;border-radius:25px;
+                                                                                                                            ">
+                                                                <img src="Watch.png?1661972369" width="25px"height="25px">
+                                                            </div>
+                                                        </td>
+                                                                                                                <td align="center">
+                                                            <div onclick="katego('js')"style="width: 30px;height: 30px;border-radius:25px;
+                                                                                                                            ">
+                                                                <img src="Service.png?1661972369" width="25px"height="25px">
+                                                            </div>
+                                                        </td>
+                                                                                                        </tr>
+                                            </table>
+                                        </div>
+
+                                        <input type="text"name="kate"id="kateg"value="" style="display:none">
+                                        <!-- <a href="index.php?src=a">coba link</a> -->
+                                         <div style='overflow:scroll;width:200px;overflow-y: hidden;'><table border='0' cellspacing='0px' cellpadding='0px'><tr><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=1&q=&kolom='>1</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=2&q=&kolom='>2</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=3&q=&kolom='>3</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=4&q=&kolom='>4</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=5&q=&kolom='>5</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=6&q=&kolom='>6</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=7&q=&kolom='>7</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=8&q=&kolom='>8</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=9&q=&kolom='>9</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=10&q=&kolom='>10</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=11&q=&kolom='>11</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=12&q=&kolom='>12</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=13&q=&kolom='>13</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=14&q=&kolom='>14</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=15&q=&kolom='>15</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=16&q=&kolom='>16</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=17&q=&kolom='>17</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=18&q=&kolom='>18</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=19&q=&kolom='>19</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=20&q=&kolom='>20</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=21&q=&kolom='>21</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=22&q=&kolom='>22</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=23&q=&kolom='>23</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=24&q=&kolom='>24</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=25&q=&kolom='>25</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=26&q=&kolom='>26</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=27&q=&kolom='>27</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=28&q=&kolom='>28</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=29&q=&kolom='>29</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=30&q=&kolom='>30</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=31&q=&kolom='>31</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=32&q=&kolom='>32</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=33&q=&kolom='>33</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=34&q=&kolom='>34</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=35&q=&kolom='>35</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=36&q=&kolom='>36</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=37&q=&kolom='>37</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=38&q=&kolom='>38</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=39&q=&kolom='>39</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=40&q=&kolom='>40</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=41&q=&kolom='>41</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=42&q=&kolom='>42</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=43&q=&kolom='>43</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=44&q=&kolom='>44</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=45&q=&kolom='>45</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=46&q=&kolom='>46</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=47&q=&kolom='>47</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=48&q=&kolom='>48</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=49&q=&kolom='>49</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=50&q=&kolom='>50</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=51&q=&kolom='>51</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=52&q=&kolom='>52</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=53&q=&kolom='>53</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=54&q=&kolom='>54</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=55&q=&kolom='>55</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=56&q=&kolom='>56</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=57&q=&kolom='>57</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=58&q=&kolom='>58</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=59&q=&kolom='>59</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=60&q=&kolom='>60</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=61&q=&kolom='>61</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=62&q=&kolom='>62</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=63&q=&kolom='>63</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=64&q=&kolom='>64</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=65&q=&kolom='>65</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=66&q=&kolom='>66</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=67&q=&kolom='>67</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=68&q=&kolom='>68</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=69&q=&kolom='>69</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=70&q=&kolom='>70</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=71&q=&kolom='>71</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=72&q=&kolom='>72</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=73&q=&kolom='>73</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=74&q=&kolom='>74</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=75&q=&kolom='>75</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=76&q=&kolom='>76</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=77&q=&kolom='>77</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=78&q=&kolom='>78</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=79&q=&kolom='>79</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=80&q=&kolom='>80</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=81&q=&kolom='>81</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=82&q=&kolom='>82</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=83&q=&kolom='>83</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=84&q=&kolom='>84</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=85&q=&kolom='>85</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=86&q=&kolom='>86</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=87&q=&kolom='>87</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=88&q=&kolom='>88</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=89&q=&kolom='>89</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=90&q=&kolom='>90</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=91&q=&kolom='>91</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=92&q=&kolom='>92</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=93&q=&kolom='>93</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=94&q=&kolom='>94</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=95&q=&kolom='>95</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=96&q=&kolom='>96</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=97&q=&kolom='>97</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=98&q=&kolom='>98</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=99&q=&kolom='>99</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=100&q=&kolom='>100</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=101&q=&kolom='>101</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=102&q=&kolom='>102</a>&nbsp;</a>&nbsp;</td></tr></table></div>                                        </Td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div style=" border-radius: 10px; z-index: 1;  
+                position: fixed;  top:11%;  width: 100%; 
+                height: 120px;  display: d; 
+                background: linear-gradient(45deg,rgb(255, 255, 255,0.45),rgba(192, 192, 192, 0.14),rgb(255, 255, 255,0.45));
+                
+                backdrop-filter: blur(15px); /* Chrome and Opera */ 
+                webkit-backdrop-filter: blur(8px); /* Safari 9+ */
+                box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 15%);
+                background-color: rgb(228 228 228 / 15%);
+            "> 
+            </div>
+            
+            
+
+                <div style="height: 125px;"></div>
+                
+                <table border=0 id="jth" cellspacing=0 cellpading=0>
+                    <tr style="display: d;">
+                        <td align="center" style="vertical-align: top;background: rgba(192, 192, 192, 0.14) ">                                    <table border=0 cellpadding="0px"cellspacing="0px" style="width: 90%;">
+                                    <tr> 
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=1&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    barang gae web 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
+
+                                                <a class="desc"href="setgudang.php?i=1&sv=0">
+                                                    set Warehouse
+                                                </a>
+
                                             </div>
                                         </td>
-                                        <td style="width: 3%;">
-                                            <div class="peng" id="additem" style=" width: 100%;height: 100%;">
-                                                    <center>
-                                                        <table style="width: 80%; height: 80%;">
-                                                            <tr>
-                                                                <td align="center">
-                                                                    <a href="product.php" class="serv">Add Item</a>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </center>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=2&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    malkis bulu roma 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
+
+                                                <a class="desc"href="setgudang.php?i=2&sv=0">
+                                                    set Warehouse
+                                                </a>
+
                                             </div>
-                                        </td> 
-                                        <td> 
-                                            <div id="s">
-                                                 
-                                                <input type="text"style=" float:left;width:50%; height: 100%"placeholder="write here...." value=""name="sch">  
-                                                 <input  oninput="bacabarcode()" style="float:left; width:50%; height: 100%"placeholder="barcode here...." type="text"value=""name="bcd"id="bcdx">  
-    
-                                                <button type="submit"value="search"name="srcitem" style="border:1px solid SILVER;
-                                                 border-radius:0px;  width: 100px;position: absolute;top:0px;right:0px;
-                                                 height:100%;background:linear-gradient(45deg,white,beige);">                                                
-                                                    <div style="font-weight: bold;height: 100%; width: 100%; overflow:hidden;z-index: 2; ">
-                                                        <table border=0 style="height:100%;;width:100%;">
-                                                            <tr> 
-                                                                <td>
-                                                                    <img src="src.png?>1661901172" width="30px"height="30px">
-                                                                </td>
-                                                                <td style="font-size:0.8vw; font-weight:bold">
-                                                                   <a  class="serc"  >Search</a> 
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </div>
-                                                </button>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=4&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    barang gae web 2 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
+
+                                                <a class="desc"href="setgudang.php?i=4&sv=0">
+                                                    set Warehouse
+                                                </a>
+
                                             </div>
-                                        </td>                                       
-                                    </tr>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=5&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    botol aqua 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                    <tr>
-                                        <Td colspan="4" align="center">
+                                                <a class="desc"href="setgudang.php?i=5&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                            <div class="toa">
-                                                <table border=0 style=" cursor: pointer;  height: 100%;width: 100%;" cellspacing=0 cellpadding=0>
-                                                    <tr>
-                                                        <td align="center">
-                                                            <a class="des">All</a>
-                                                            <a style="display: none;"onclick="katego('all')">fd</a>
-                                                        </td>
-                                                        <td align="center">
-                                                            <a class="des">Food</a>
-                                                            <a style="display: none;"onclick="katego('fd')">fd</a>
-                                                        </td>
-                                                        <td align="center">
-                                                            <a class="des">Goods</a>
-                                                            <a style="display: none;"onclick="katego('bg')">bg</a>
-                                                        </td>
-                                                        <td align="center">
-                                                            <a class="des">Drinks</a>
-                                                            <a style="display: none;"onclick="katego('mb')">mn</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center">
-                                                            <div onclick="katego('all')"style="width: 30px;height: 30px;border-radius:25px;
-                                                                                                                            border:1px solid green;
-                                                                box-shadow: 0px 0px 8px green; background:green
-                                                                                                                        ">
-                                                                <img src="kate.png?1661901172" width="25px"height="25px">                                                               
-                                                            </div>
-                                                        </td>
-                                                        <td align="center">
-                                                            <div onclick="katego('fd')"style="width: 30px;height: 30px;border-radius:25px;
-                                                                                                                        ">
-                                                                <img src="food.png?1661901172" width="25px"height="25px">
-                                                            </div>
-                                                        </td>
-                                                        <td align="center">
-                                                            <div onclick="katego('bg')"style="width: 30px;height: 30px;border-radius:25px;
-                                                                                                                        ">
-                                                                <img src="item.png" width="25px"height="25px">
-                                                            </div>
-                                                        </td>
-                                                        <td align="center">
-                                                            <div onclick="katego('mn')"style="width: 30px;height: 30px;border-radius:25px;
-                                                                                                                        ">
-                                                                <img src="drinks.png?1661901172" width="25px"height="25px">
-                                                            </div> 
-                                                        </td>
-                                                    </tr>                                                         
-                                                </table>
                                             </div>
+                                        </td>
+                                    </tr><tr> 
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=6&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    milo coklat enak 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                            <input type="text"name="kate"id="kateg"value="" style="display:none">
-                                            <!-- <a href="index.php?src=a">coba link</a> -->
-                                             <div style='overflow:scroll;width:200px;overflow-y: hidden;'><table border='0' cellspacing='0px' cellpadding='0px'><tr><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=1&q=&kolom='>1</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=2&q=&kolom='>2</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=3&q=&kolom='>3</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=4&q=&kolom='>4</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=5&q=&kolom='>5</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=6&q=&kolom='>6</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=7&q=&kolom='>7</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=8&q=&kolom='>8</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=9&q=&kolom='>9</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=10&q=&kolom='>10</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=11&q=&kolom='>11</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=12&q=&kolom='>12</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=13&q=&kolom='>13</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=14&q=&kolom='>14</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=15&q=&kolom='>15</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=16&q=&kolom='>16</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=17&q=&kolom='>17</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=18&q=&kolom='>18</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=19&q=&kolom='>19</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=20&q=&kolom='>20</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=21&q=&kolom='>21</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=22&q=&kolom='>22</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=23&q=&kolom='>23</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=24&q=&kolom='>24</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=25&q=&kolom='>25</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=26&q=&kolom='>26</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=27&q=&kolom='>27</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=28&q=&kolom='>28</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=29&q=&kolom='>29</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=30&q=&kolom='>30</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=31&q=&kolom='>31</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=32&q=&kolom='>32</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=33&q=&kolom='>33</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=34&q=&kolom='>34</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=35&q=&kolom='>35</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=36&q=&kolom='>36</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=37&q=&kolom='>37</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=38&q=&kolom='>38</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=39&q=&kolom='>39</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=40&q=&kolom='>40</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=41&q=&kolom='>41</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=42&q=&kolom='>42</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=43&q=&kolom='>43</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=44&q=&kolom='>44</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=45&q=&kolom='>45</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=46&q=&kolom='>46</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=47&q=&kolom='>47</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=48&q=&kolom='>48</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=49&q=&kolom='>49</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=50&q=&kolom='>50</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=51&q=&kolom='>51</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=52&q=&kolom='>52</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=53&q=&kolom='>53</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=54&q=&kolom='>54</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=55&q=&kolom='>55</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=56&q=&kolom='>56</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=57&q=&kolom='>57</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=58&q=&kolom='>58</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=59&q=&kolom='>59</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=60&q=&kolom='>60</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=61&q=&kolom='>61</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=62&q=&kolom='>62</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=63&q=&kolom='>63</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=64&q=&kolom='>64</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=65&q=&kolom='>65</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=66&q=&kolom='>66</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=67&q=&kolom='>67</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=68&q=&kolom='>68</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=69&q=&kolom='>69</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=70&q=&kolom='>70</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=71&q=&kolom='>71</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=72&q=&kolom='>72</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=73&q=&kolom='>73</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=74&q=&kolom='>74</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=75&q=&kolom='>75</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=76&q=&kolom='>76</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=77&q=&kolom='>77</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=78&q=&kolom='>78</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=79&q=&kolom='>79</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=80&q=&kolom='>80</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=81&q=&kolom='>81</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=82&q=&kolom='>82</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=83&q=&kolom='>83</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=84&q=&kolom='>84</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=85&q=&kolom='>85</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=86&q=&kolom='>86</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=87&q=&kolom='>87</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=88&q=&kolom='>88</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=89&q=&kolom='>89</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=90&q=&kolom='>90</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=91&q=&kolom='>91</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=92&q=&kolom='>92</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=93&q=&kolom='>93</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=94&q=&kolom='>94</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=95&q=&kolom='>95</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=96&q=&kolom='>96</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=97&q=&kolom='>97</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=98&q=&kolom='>98</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=99&q=&kolom='>99</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=100&q=&kolom='>100</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=101&q=&kolom='>101</a>&nbsp;</a>&nbsp;</td><td align='center' style=' border-radius:100px;background-color:transparent;'>&nbsp;&nbsp;<a style='color:green'class='pag'href='index.php?t1=2022-08-31&t2=2022-08-31&md=item&p=102&q=&kolom='>102</a>&nbsp;</a>&nbsp;</td></tr></table></div>                                        </Td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                                                <a class="desc"href="setgudang.php?i=6&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                <div style=" border-radius: 10px; z-index: 1;  
-                    position: fixed;  top:11%;  width: 100%; 
-                    height: 100px;  display: d; 
-                    background: linear-gradient(45deg,rgb(255, 255, 255,0.45),rgba(192, 192, 192, 0.14),rgb(255, 255, 255,0.45));
-                    
-                    backdrop-filter: blur(15px); /* Chrome and Opera */ 
-                    webkit-backdrop-filter: blur(8px); /* Safari 9+ */
-                    box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 15%);
-                    background-color: rgb(228 228 228 / 15%);
-                "> 
-                </div>
-                
-                <div id="d" style=" width: 100%; display: d;">
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=7&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    indomie spesial 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                    <div style="height: 100px;"></div>
-                    
-                    <table border=0 id="jth" style="width: 100%;" cellspacing=0 cellpading=0>
-                        <tr style="display: d;">
-                            <td align="center" style="vertical-align: top;background: rgba(192, 192, 192, 0.14) ">                                    <table border=0 cellpadding="10px"cellspacing="0px" >
-                                        <tr> 
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=1&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        barang gae web 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=7&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=1&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=8&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    energen cereal 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=2&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        malkis bulu roma 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=8&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=2&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=9&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    NEW ITEM 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=4&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        barang gae web 2 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=9&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=4&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                    </tr><tr> 
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=10&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    biskuit khong guan 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=5&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        botol aqua 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=10&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=5&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=11&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    biskuit roma 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                        </tr><tr> 
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=6&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        milo coklat enak 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=11&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=6&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=12&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    telur mantab 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=7&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        indomie spesial 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=12&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=7&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=13&sv=1">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    jasa babu 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=8&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        energen cereal 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=13&sv=1">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=8&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                    </tr><tr> 
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=14&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    lampu neon 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=9&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        NEW ITEM 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=14&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=9&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=15&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    obat gila 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                        </tr><tr> 
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=10&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        biskuit khong guan 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=15&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=10&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=16&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    tahu lembut 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=11&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        biskuit roma 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=16&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=11&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=17&sv=1">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    JASA SUPIR 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=12&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        telur mantab 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=17&sv=1">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=12&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                    </tr><tr> 
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=18&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    TELUR PINGUIN  
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=13&sv=1">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        jasa babu 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=18&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=13&sv=1">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=19&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    telur asin manis 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                        </tr><tr> 
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=14&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        lampu neon 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=19&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=14&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=20&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    telur burung unta 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=15&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        obat gila 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=20&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=15&sv=0">
-                                                        set Warehouse
-                                                    </a>
+                                            </div>
+                                        </td>
+                                     
+                                        <td align="center" style="vertical-align: top;width: 25%;" >
+                                            <div class="divmain">
+                                                <a href="item.php?i=21&sv=0">
+                                                    <table  style="width: 100%;" cellspacing=0 cellpading=0>
+                                                        <Tr>
+                                                            <td align="center" style="vertical-align:bottom ;">
+                                                                 <img src="item.png"class="imgmain">
+                                                                <a id="repot"></a>
+                                                            </td>
+                                                        </Tr>
+                                                        <Tr>
+                                                            <td align="center" >
+                                                                <a  class="desc" >  
+                                                                    beras mantab 3s 
+                                                                </a>
+                                                            </td>
+                                                        </Tr>
+                                                    </table>
+                                                </a>
 
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=16&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        tahu lembut 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
+                                                <a class="desc"href="setgudang.php?i=21&sv=0">
+                                                    set Warehouse
+                                                </a>
 
-                                                    <a class="desc"href="setgudang.php?i=16&sv=0">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=17&sv=1">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        JASA SUPIR 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
-
-                                                    <a class="desc"href="setgudang.php?i=17&sv=1">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                        </tr><tr> 
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=18&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        TELUR PINGUIN  
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
-
-                                                    <a class="desc"href="setgudang.php?i=18&sv=0">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=19&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        telur asin manis 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
-
-                                                    <a class="desc"href="setgudang.php?i=19&sv=0">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=20&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        telur burung unta 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
-
-                                                    <a class="desc"href="setgudang.php?i=20&sv=0">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                         
-                                            <td align="center" style="vertical-align: top;width: 33%;" >
-                                                <div class="divmain">                                                
-                                                    <a href="item.php?i=21&sv=0">
-                                                        <table style="width: 100%;" cellspacing=0 cellpading=0>
-                                                            <Tr>
-                                                                <td align="center" style="vertical-align:bottom ;">
-                                                                    <!-- <img src="img/1.jpg"class="imgmain"> -->
-                                                                    <img src="item.png"class="imgmain">
-                                                                    <a id="repot"></a>
-                                                                    <!-- item.png -->
-                                                                </td>
-                                                            </Tr>
-                                                            <Tr>
-                                                                <td align="center" >
-                                                                    <a  class="desc" >  
-                                                                        beras mantab 3s 
-                                                                    </a>
-                                                                </td>
-                                                            </Tr>
-                                                        </table>
-                                                    </a>
-
-                                                    <a class="desc"href="setgudang.php?i=21&sv=0">
-                                                        set Warehouse
-                                                    </a>
-
-                                                </div>
-                                            </td>
-                                        </tr>                                    </table> 
-                            </td>
-                        </tr>
-                    </table>
-                </div> 
-            </form>
-        </div>
+                                            </div>
+                                        </td>
+                                    </tr>                                    </table> 
+                        </td>
+                    </tr>
+                </table>
+        </form>
+    </div>
 
     </body>
 </html>
