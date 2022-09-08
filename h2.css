@@ -540,15 +540,15 @@ input[type=number] {
 .divmain{
   font-size:1.5vw; 
   border-radius: 12px;  
-  width: 180px;height: 210px; border: 0px solid silver; 
+  /* width: 180px;height: 210px;  */
+  border: 0px solid silver; 
 }
 
 .wmain{ 
   width: 80px;height: 80px;
 }
 
-.imgmain{
- 
+.imgmain{ 
   width: 105px;height: 105px;
 }
 .imgatas{
@@ -557,7 +557,7 @@ input[type=number] {
 }
 .pag{
   color: #1d9405;
-  vertical-align: top;font-size:1.4vw;
+  vertical-align: top;font-size:1vw;
 }
 .des{
   color: #1d9405;
@@ -748,12 +748,13 @@ input[type=number] {
 
   .divmain{ 
   font-size:1.5vw; 
-  border-radius: 12px;  
-  width: 100px;height: 100px; border: 0px solid silver; 
+  border-radius: 12px;
+  height: 92px;
+   border: 0px solid silver; 
   }
 
   .imgmain{
-  width: 50px;height: 50px;
+  width: 30px;height: 30px;
   }
 
   .sec{
