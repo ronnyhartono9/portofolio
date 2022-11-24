@@ -179,14 +179,14 @@ outline: none;
         background-attachment: fixed;
         font-family: 'Roboto', sans-serif;
         
-        /* background-image:
+        background-image:
         linear-gradient(gold, transparent),
         linear-gradient(to bottom left, #96e6a1, transparent),
         linear-gradient(to bottom right, #00f2fe, transparent);
         background-blend-mode: screen;
-        background-size: 100% 100%;   */
+        background-size: 100% 100%;  
 
-        background-image: linear-gradient(to right top, #ecf89e, #e2f89a, #d7f797, #ccf795, #bff794, #a2f6a1, #84f5b0, #63f2c0, #21ebdf, #00e0f6, #47d4ff, #7ac5ff);
+        /* background-image: linear-gradient(to right top, #ecf89e, #e2f89a, #d7f797, #ccf795, #bff794, #a2f6a1, #84f5b0, #63f2c0, #21ebdf, #00e0f6, #47d4ff, #7ac5ff); */
     } 
 
     h1 {
