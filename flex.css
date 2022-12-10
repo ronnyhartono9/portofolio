@@ -55,6 +55,12 @@ display: table-cell;
 vertical-align: middle;
  
 }
+.tombol{  
+    background-image: linear-gradient(to right top, #ffca9a, #ffd48f, #fae186, #edee82, #d8fd85);
+       border-radius: 5px;  
+       box-shadow: 5px 5px 8px #10D164;
+  
+}
 a{font-size:1.2vw}
 input,
 button {
@@ -72,10 +78,11 @@ font-size:1.5vw
     left: 0%;
     top:0%;
     padding: 2px; padding-right: 2px;       
-    background-image: linear-gradient(to bottom right, #72FFB6, #10D164); 
+    background-image: linear-gradient(to  top, #bfd16b, #cdd986, #dbe2a1, #e7eabd );
     background-size: 100% 100%;
-    width: 100%; height: 15%;
-    box-shadow: 10px 5px 8px #10D164;
+    width: 100%; height: 14%;
+    box-shadow: 10px 5px 8px #bcc27f;
+    font-size: 1vw; 
 }
 
 input[type="text"] {
@@ -168,10 +175,7 @@ outline: none;
     table{
         border-collapse:collapse;
         border-spacing:0;
-    }
-    
-    
-    /* @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500); */
+    } 
     
     body {
         margin: 0px 10px;
@@ -184,9 +188,7 @@ outline: none;
         linear-gradient(to bottom left, #96e6a1, transparent),
         linear-gradient(to bottom right, #00f2fe, transparent);
         background-blend-mode: screen;
-        background-size: 100% 100%;  
-
-        /* background-image: linear-gradient(to right top, #ecf89e, #e2f89a, #d7f797, #ccf795, #bff794, #a2f6a1, #84f5b0, #63f2c0, #21ebdf, #00e0f6, #47d4ff, #7ac5ff); */
+        background-size: 100% 100%;
     } 
 
     h1 {
